@@ -1,8 +1,24 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inconsolata, Inter, Jua, Lilita_One, Reddit_Mono, Roboto_Mono, Source_Code_Pro } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const sans = Inter({
+  subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-sans'
+});
+
+const mono = Source_Code_Pro({
+  subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-mono'
+});
+
+const display = Jua({
+  weight: ['400'],
+  subsets: ["latin"],
+  variable: '--font-display'
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,9 +30,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${sans.variable} ${mono.variable} ${display.variable} `}>
+        {children}
+      </body>
     </html>
   );
 }
