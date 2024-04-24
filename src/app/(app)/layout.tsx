@@ -2,13 +2,24 @@ import { authors } from "@/data/authors"
 import Link from "next/link"
 import SidebarItem from "./SidebarItem"
 import { IconParkSolidTwitter, UimGithubAlt } from "./[author]/page"
+import { SVGProps } from "react"
+import MobileSidebar from "./Sidebar"
+
+
+
 
 export default function GlobalLayout(props: any) {
   return (
     <div className="mx-auto max-w-screen-lg min-h-screen flex flex-col gap-8 font-mono tracking-tight text-slate-700 ">
+
       <div className="grow flex items-stretch">
-        <div className="w-48 flex flex-col gap-px p-1 pt-48 rounded-lg">
-          <div className="flex flex-col gap-3 p-5 rounded-2xl bg-slate-100 sticky top-20">
+        <div className="flex flex-col md:w-48 gap-px p-1 pt-48 rounded-lg">
+
+
+          <MobileSidebar />
+          {/* Sidebar */}
+          <div className="hidden md:flex  flex-col gap-3 p-5 rounded-r-2xl lg:rounded-l-2xl bg-slate-100 sticky top-20">
+
             <SidebarItem href="/" label="Home" />
             {
               Object.values(authors).sort((a, b) => (a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1)).map(author => {

@@ -30,37 +30,37 @@ export const getImages = cache(async (): Promise<DataImage[]> => [
   {
     title: 'Skrillex',
     author: authors.disphing,
-    src: '',
+    src: 'https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/src/assets/GLh5aGWakAAM3dk.jpeg',
     raw: 'https://drive.google.com/file/d/1mumHSFG6k8O1uKG29rYc9s0Wm_jQDSpP/view?usp=sharing',
   },
   {
     title: 'Porter Robinson',
     author: authors.disphing,
-    src: '',
+    src: 'https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/src/assets/GLh9h3rbQAA7wik.jpeg',
     raw: 'https://drive.google.com/file/d/19bMQzV2ZseW-pyV8NSjDyitiuyeJNJ1G/view?usp=sharing',
   },
   {
     title: 'FL Studio',
     author: authors.disphing,
-    src: '',
+    src: 'https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/src/assets/GLhep0Za8AAyBff.jpeg',
     raw: 'https://drive.google.com/file/d/1wMi3TOs-egixz6wuf4NNJpMfzArMcZZ2/view?usp=sharing',
   },
   {
     title: 'Bitwig Studio',
     author: authors.disphing,
-    src: '',
+    src: 'https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/src/assets/GLhesuxaYAAqS__.jpeg',
     raw: 'https://drive.google.com/file/d/1Dc5icFqOCOm_6qyZh1MxsFN4QtmI6RcH/view?usp=sharing',
   },
   {
     title: 'Ableton Live',
     author: authors.disphing,
-    src: '',
+    src: 'https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/src/assets/GLhevYka0AAmU7e.jpeg',
     raw: 'https://drive.google.com/file/d/1HkvgRiaexWQ2TssE2ZSatUsAm5ZhGLTh/view?usp=sharing',
   },
   {
     title: 'Logic Pro',
     author: authors.disphing,
-    src: '',
+    src: 'https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/src/assets/GLm7MOob0AAimzf.jpeg',
   },
 
   {

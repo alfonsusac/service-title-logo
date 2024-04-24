@@ -11,7 +11,7 @@ export default async function Home() {
       </div>
       <p className="font-display tracking-widest text-slate-400 text-2xl">A collection of service logos with the VTuber style.</p>
       <p className="font-display tracking-widest text-slate-400">You may find other variation by clicking source.</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-2 gap-y-8 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 gap-y-8 mt-8">
         {
           (await getImages()).sort((a, b) => (a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1)).map((image, index) => {
             return (
