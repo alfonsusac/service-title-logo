@@ -5,9 +5,12 @@ const octokit = new Octokit({
   auth: process.env.GH_KEY ?? undefined,
 })
 
+
 export const getContent = unstable_cache(async function (owner: string, repo: string, path?: string) {
   const res = await octokit.repos.getContent({ owner, repo, path: path ?? '' })
   if (!Array.isArray(res.data)) return []
+  const rl = await octokit.rateLimit.get()
+  console.log(rl.data.rate.remaining, 'requests remaining')
   return res.data
 }, undefined, {
   revalidate: 60 * 60 * 4,// 4 hour 

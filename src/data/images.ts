@@ -16,8 +16,8 @@ export const getImages = cache(async (): Promise<DataImage[]> => [
   {
     title: 'Elysia',
     author: authors.saltyaom,
-    src: 'https://pbs.twimg.com/media/GLl87akbUAAQC2o?format=jpg&name=4096x4096',
-    raw: 'https://elysiajs.com/assets/elysia_v.webp'
+    src: 'https://raw.githubusercontent.com/elysiajs/documentation/6e13f140b53fb69d9a82993cd80a82df55325b9e/docs/public/assets/elysia_v.svg',
+    raw: 'https://github.com/elysiajs/documentation/blob/main/docs/public/assets/elysia_v.svg'
   },
 
 
