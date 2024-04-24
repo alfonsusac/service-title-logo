@@ -2,6 +2,8 @@ import { Octokit } from "@octokit/rest"
 import { Author, authors } from "./authors"
 import { unstable_cache } from "next/cache"
 import { cache } from "react"
+import { getContent, getIconFiles, getIconPaths, isIconFolder } from "@/util/octokit"
+import path from "path"
 
 const octokit = new Octokit({
   auth: process.env.GH_KEY,
@@ -67,14 +69,6 @@ export const getImages = cache(async (): Promise<DataImage[]> => [
     src: "https://github.com/hvpexe/ProgrammingVTuberLogos-VisualStudio/blob/master/VisualStudio/VisualStudioLogo.png?raw=true",
     raw: "https://github.com/hvpexe/ProgrammingVTuberLogos-VisualStudio/blob/master/VisualStudio/VisualStudioLogo.png",
   },
-
-  {
-    title: 'KATE',
-    author: authors["g2-games"],
-    src: "https://raw.githubusercontent.com/G2-Games/fun-logos/e17a9f8aba91f191a1cbbbac7d5b5b79e4910c92/kate/kate.svg",
-    raw: "https://github.com/G2-Games/fun-logos/blob/main/kate/kate.svg",
-  },
-
   {
     title: 'Visual Studio Code Korea',
     author: authors['IDMDiamondl'],
@@ -82,93 +76,53 @@ export const getImages = cache(async (): Promise<DataImage[]> => [
     raw: "https://github.com/lDMDiamondl/ProgrammingVTuberLogosKR/blob/main/VSCode/VSCode-Thick.png",
   },
 
-  ...await (async () => {
-    const icons: DataImage[] = []
+  ...await getAuthorIcon({
+    ownerRepoPath: 'Aikoyori/ProgrammingVTuberLogos',
+    author: authors.aikoyori,
+    className: 'object-contain'
+  }),
+  ...await getAuthorIcon({
+    ownerRepoPath: 'Crysta1221/tech_logos',
+    author: authors.cr1sta_dev,
+    className: 'object-contain'
+  }),
+  ...await getAuthorIcon({
+    ownerRepoPath: 'SAWARATSUKI/ServiceLogos',
+    author: authors.sawaratsuki,
+    className: 'object-contain'
+  }),
+  ...await getAuthorIcon({
+    ownerRepoPath: 'G2-Games/fun-logos',
+    author: authors["g2-games"],
+    className: 'object-contain'
+  }),
 
-    // const res = await octokit.rest.repos.getContent({
-    //   owner: 'Aikoyori',
-    //   repo: 'ProgrammingVTuberLogos',
-    //   path: '',
-    // })
-    const res = await unstable_cache(async () => {
-      return await octokit.rest.repos.getContent({
-        owner: 'Aikoyori',
-        repo: 'ProgrammingVTuberLogos',
-        path: '',
-      })
-    })()
-
-    if (!Array.isArray(res.data)) return []
-    const aikoIconPaths = res.data.filter((d) => d.type === 'dir' && !d.path.startsWith('.')).map((dir) => {
-      return dir.path
-    })
-
-    for (const dir of aikoIconPaths) {
-      // const res = await octokit.rest.repos.getContent({
-      //   owner: 'Aikoyori',
-      //   repo: 'ProgrammingVTuberLogos',
-      //   path: dir,
-      // })
-      const res = await unstable_cache(async () => {
-        return await octokit.rest.repos.getContent({
-          owner: 'Aikoyori',
-          repo: 'ProgrammingVTuberLogos',
-          path: dir,
-        })
-      }, [dir])()
-      if (!Array.isArray(res.data)) continue
-      console.log(res.data[0].download_url)
-      icons.push({
-        author: authors.aikoyori,
-        src: res.data[0].download_url!,
-        title: dir,
-        raw: res.data[0].html_url!,
-        className: 'object-contain'
-      })
-    }
-
-    return icons
-  })(),
-  ...await (async () => {
-    const icons: DataImage[] = []
-
-    const res = await unstable_cache(async () => {
-      return await octokit.rest.repos.getContent({
-        owner: 'Crysta1221',
-        repo: 'tech_logos',
-        path: '',
-      })
-    })()
-
-    if (!Array.isArray(res.data)) return []
-    const aikoIconPaths = res.data.filter((d) => d.type === 'dir' && !d.path.startsWith('.')).map((dir) => {
-      return dir.path
-    })
-
-    for (const dir of aikoIconPaths) {
-      // const res = await octokit.rest.repos.getContent({
-      //   owner: 'Aikoyori',
-      //   repo: 'ProgrammingVTuberLogos',
-      //   path: dir,
-      // })
-      const res = await unstable_cache(async () => {
-        return await octokit.rest.repos.getContent({
-          owner: 'Crysta1221',
-          repo: 'tech_logos',
-          path: dir,
-        })
-      }, [dir])()
-      if (!Array.isArray(res.data)) continue
-      console.log(res.data[0].download_url)
-      icons.push({
-        author: authors.cr1sta_dev,
-        src: res.data[0].download_url!,
-        title: dir,
-        raw: res.data[0].html_url!,
-        className: 'object-contain'
-      })
-    }
-
-    return icons
-  })()
 ])
+
+async function getAuthorIcon(props: {
+  ownerRepoPath: `${ string }/${ string }`,
+  baseRepoPath?: string, // e.g. '' | '/src'
+  className?: string,
+  author: Author,
+}) {
+  const owner = props.ownerRepoPath.split('/')[0]
+  const repo = props.ownerRepoPath.split('/')[1]
+
+  const icons: DataImage[] = []
+  const res = await getContent(owner, repo, props.baseRepoPath)
+
+  for (const dir of getIconPaths(res)) {
+    const res = await getContent(owner, repo, props.baseRepoPath ? path.join(props.baseRepoPath, dir) : dir)
+
+    for (const file of getIconFiles(res)) {
+      icons.push({
+        author: props.author,
+        className: props.className,
+        src: new URL(file.download_url).toString().replaceAll(dir, encodeURIComponent(dir)),
+        raw: new URL(file.html_url).toString(),
+        title: file.title,
+      })
+    }
+  }
+  return icons
+}

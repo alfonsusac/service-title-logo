@@ -13,6 +13,19 @@ export type Author = {
 }
 
 export const authors = {
+  sawaratsuki: {
+    name: 'sawaratsuki',
+    pfp: 'https://avatars.githubusercontent.com/u/64746703?v=4',
+    link: {
+      github: 'https://github.com/SAWARATSUKI',
+      twitter: 'https://twitter.com/sawaratsuki1004',
+    },
+    repository: 'https://github.com/SAWARATSUKI/ServiceLogos',
+    license: {
+      label: 'CC BY-NC-SA 4.0',
+      href: 'https://github.com/SAWARATSUKI/ServiceLogos/blob/main/LICENSE',
+    }
+  },
   cr1sta_dev: {
     name: 'cr1sta_dev',
     pfp: 'https://avatars.githubusercontent.com/u/70198466?v=4',
@@ -42,9 +55,7 @@ export const authors = {
     link: {
       twitter: 'https://twitter.com/dsphng',
     },
-    license: {
-      label: 'Unknown',
-    },
+    license: {},
     repository: 'https://drive.google.com/drive/folders/1Hy1_pAWx95QTv1nZFKUl96GImq4iKdf8',
   },
   aikoyori: {
@@ -79,8 +90,11 @@ export const authors = {
       github: 'https://github.com/G2-Games',
     },
     pfp: "https://avatars.githubusercontent.com/u/72430668",
-    license: {},
-    repository: ""
+    license: {
+      label: 'CC BY-NC-SA 4.0',
+      href: 'https://github.com/G2-Games/fun-logos/blob/main/LICENSE'
+    },
+    repository: "https://github.com/G2-Games/fun-logos"
   },
   "IDMDiamondl": {
     name: 'IDMDiamondl',
