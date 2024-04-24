@@ -48,13 +48,13 @@ export const getImages = cache(async (): Promise<DataImage[]> => [
   {
     title: 'Bitwig Studio',
     author: authors.disphing,
-    src: 'https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/src/assets/GLhesuxaYAAqS__.jpeg',
+    src: 'https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/src/assets/GLhevYka0AAmU7e.jpeg',
     raw: 'https://drive.google.com/file/d/1Dc5icFqOCOm_6qyZh1MxsFN4QtmI6RcH/view?usp=sharing',
   },
   {
     title: 'Ableton Live',
     author: authors.disphing,
-    src: 'https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/src/assets/GLhevYka0AAmU7e.jpeg',
+    src: 'https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/src/assets/GLhesuxaYAAqS__.jpeg',
     raw: 'https://drive.google.com/file/d/1HkvgRiaexWQ2TssE2ZSatUsAm5ZhGLTh/view?usp=sharing',
   },
   {
