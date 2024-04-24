@@ -30,37 +30,37 @@ export const getImages = cache(async (): Promise<DataImage[]> => [
   {
     title: 'Skrillex',
     author: authors.disphing,
-    src: 'https://pbs.twimg.com/media/GLh5aGWakAAM3dk?format=jpg&name=large',
+    src: '',
     raw: 'https://drive.google.com/file/d/1mumHSFG6k8O1uKG29rYc9s0Wm_jQDSpP/view?usp=sharing',
   },
   {
     title: 'Porter Robinson',
     author: authors.disphing,
-    src: 'https://pbs.twimg.com/media/GLh9h3rbQAA7wik?format=jpg&name=large',
+    src: '',
     raw: 'https://drive.google.com/file/d/19bMQzV2ZseW-pyV8NSjDyitiuyeJNJ1G/view?usp=sharing',
   },
   {
     title: 'FL Studio',
     author: authors.disphing,
-    src: 'https://pbs.twimg.com/media/GLhep0Za8AAyBff?format=jpg&name=large',
+    src: '',
     raw: 'https://drive.google.com/file/d/1wMi3TOs-egixz6wuf4NNJpMfzArMcZZ2/view?usp=sharing',
   },
   {
     title: 'Bitwig Studio',
     author: authors.disphing,
-    src: 'https://pbs.twimg.com/media/GLhevYka0AAmU7e?format=jpg&name=large',
+    src: '',
     raw: 'https://drive.google.com/file/d/1Dc5icFqOCOm_6qyZh1MxsFN4QtmI6RcH/view?usp=sharing',
   },
   {
     title: 'Ableton Live',
     author: authors.disphing,
-    src: 'https://pbs.twimg.com/media/GLhesuxaYAAqS__?format=jpg&name=large',
+    src: '',
     raw: 'https://drive.google.com/file/d/1HkvgRiaexWQ2TssE2ZSatUsAm5ZhGLTh/view?usp=sharing',
   },
   {
     title: 'Logic Pro',
     author: authors.disphing,
-    src: 'https://pbs.twimg.com/media/GLm7MOob0AAimzf?format=jpg&name=large',
+    src: '',
   },
 
   {

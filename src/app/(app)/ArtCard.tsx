@@ -16,9 +16,12 @@ export default function ArtCard(props: {
       </div>
       <div className="p-2 flex justify-between text-xs font-mono text-slate-500">
         <div className="flex items-center gap-1">
-          <div className="w-4 h-4 rounded-full bg-slate-400 relative overflow-hidden">
-            <Image unoptimized src={image.author.pfp} fill className="object-cover" alt="" />
-          </div>
+          {
+            image.author.pfp &&
+            <div className="w-4 h-4 rounded-full bg-slate-400 relative overflow-hidden">
+              <Image unoptimized src={image.author.pfp} fill className="object-cover" alt="" />
+            </div>
+          }
           <Link
             href={'/' + image?.author?.name}
             className="hover:underline grow">{image?.author?.name}</Link>

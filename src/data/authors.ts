@@ -1,6 +1,6 @@
 export type Author = {
   name: string,
-  pfp: string,
+  pfp?: string,
   link: {
     github?: string,
     twitter?: string,
@@ -51,7 +51,7 @@ export const authors = {
   },
   disphing: {
     name: 'disphing',
-    pfp: 'https://pbs.twimg.com/profile_images/1755004716046864384/ZUdGbYVD_400x400.jpg',
+    // pfp: 'https://pbs.twimg.com/profile_images/1755004716046864384/ZUdGbYVD_400x400.jpg',
     link: {
       twitter: 'https://twitter.com/dsphng',
     },
