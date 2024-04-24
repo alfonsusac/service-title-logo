@@ -2,7 +2,7 @@ import { Octokit } from "@octokit/rest"
 import { unstable_cache } from "next/cache"
 
 const octokit = new Octokit({
-  auth: process.env.GH_KEY,
+  auth: process.env.GH_KEY ?? undefined,
 })
 
 export const getContent = unstable_cache(async function (owner: string, repo: string, path?: string) {
@@ -10,7 +10,7 @@ export const getContent = unstable_cache(async function (owner: string, repo: st
   if (!Array.isArray(res.data)) return []
   return res.data
 }, undefined, {
-  revalidate: 60 * 60,// 1 hour 
+  revalidate: 60 * 60 * 4,// 4 hour 
   tags: ['all']
 })
 

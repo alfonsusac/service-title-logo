@@ -1,13 +1,7 @@
-import { Octokit } from "@octokit/rest"
 import { Author, authors } from "./authors"
-import { unstable_cache } from "next/cache"
 import { cache } from "react"
-import { getContent, getIconFiles, getIconPaths, isIconFolder } from "@/util/octokit"
+import { getContent, getIconFiles, getIconPaths } from "@/util/octokit"
 import path from "path"
-
-const octokit = new Octokit({
-  auth: process.env.GH_KEY,
-})
 
 export type DataImage = {
   title: string
