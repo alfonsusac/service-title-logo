@@ -12,6 +12,10 @@ export default async function Home() {
       <h1 className="text-6xl font-display tracking-wider text-slate-600 relative z-[1]">VTuber Service Logo</h1>
       <p className="font-display tracking-widest text-slate-400 text-2xl">A collection of service logos with the VTuber style.</p>
       <p className="font-display tracking-widest text-slate-400">You may find other variation by clicking source.</p>
+      <p className="font-display tracking-widest text-slate-400">Last updated:{' '}
+        {Intl.DateTimeFormat('en-us', { dateStyle: "medium", timeStyle:'short' }).format(new Date())}{' '}
+        {Intl.DateTimeFormat('en-us', { timeZoneName: "short" }).format(new Date()).split(' ').slice(1).join(' ')}{' '}
+      </p>
       <Suspense>
         <SearchBar className="" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 gap-y-8 mt-8">

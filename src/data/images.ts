@@ -114,9 +114,9 @@ async function getAuthorIcon(props: {
   await Promise.all(getIconPaths(res).map(async (dir) => {
     const res = await getContent(owner, repo, props.baseRepoPath ? path.join(props.baseRepoPath, dir) : dir)
 
-    if (dir.startsWith('N') || dir.startsWith('n')) {
-      console.log(res)
-    }
+    // if (dir.startsWith('N') || dir.startsWith('n')) {
+    //   console.log(res)
+    // }
 
     for (const file of getIconFiles(res)) {
       icons.push({
