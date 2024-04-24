@@ -31,7 +31,7 @@ export default function GlobalLayout(props: any) {
           </div>
 
         </div>
-        <div className="grow overflow-auto pt-20 px-8 bg-white">
+        <div className="grow overflow-auto pt-20 px-8">
           {props.children}
           <footer className="my-20 py-16 bg-slate-50 rounded-3xl flex flex-col gap-3 items-center justify-center text-sm text-slate-400 font-display tracking-widest text-center">
             <p>All rights reserved to the respective artists © {new Date().getFullYear()}</p>

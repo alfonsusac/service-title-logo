@@ -33,7 +33,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${sans.variable} ${mono.variable} ${display.variable} `}>
+      <body className={`${sans.variable} ${mono.variable} ${display.variable} bg-[#fdfdff]`}>
         {children}
       </body>
     </html>
