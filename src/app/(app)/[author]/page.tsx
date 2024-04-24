@@ -62,7 +62,7 @@ export default async function AuthorPage(context: { params: { author: string } }
         {
           (await getImages()).filter(i => i.author.name === authorid).map((image, index) => {
             return (
-              <ArtCard key={index} image={image} />
+              <ArtCard key={index} image={image} order={index} />
             )
           })
         }

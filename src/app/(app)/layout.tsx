@@ -18,7 +18,7 @@ export default function GlobalLayout(props: any) {
 
           <MobileSidebar />
           {/* Sidebar */}
-          <div className="hidden md:flex  flex-col gap-3 p-5 rounded-r-2xl lg:rounded-l-2xl bg-slate-100 sticky top-20">
+          <div className="hidden md:flex  flex-col gap-3 p-5 rounded-r-2xl lg:rounded-l-2xl bg-slate-100 sticky top-20 animate-in duration-300 fade-in-0 slide-in-from-left-10">
 
             <SidebarItem href="/" label="Home" />
             {
