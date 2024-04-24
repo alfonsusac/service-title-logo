@@ -4,6 +4,10 @@ import { Author, authors } from "@/data/authors"
 import Link from "next/link"
 import { SVGProps } from "react"
 
+export async function generateStaticParams() {
+  return Object.keys(authors)
+}
+
 export default async function AuthorPage(context: { params: { author: string } }) {
 
   const authorid = context.params.author
@@ -19,9 +23,6 @@ export default async function AuthorPage(context: { params: { author: string } }
   const author = authors[authorid as keyof typeof authors]
   const license = author.license as Author['license']
   const link = author.link as Author['link']
-
-
-
 
   return (
     <main className="*:mb-2">
