@@ -23,6 +23,7 @@ const display = Jua({
 export const metadata: Metadata = {
   title: "VTuber Service Icons",
   description: "See all the VTuber-styled service icons made by artists.",
+  metadataBase: new URL('https://service-title-logo.vercel.app/')
 };
 
 export default function RootLayout({

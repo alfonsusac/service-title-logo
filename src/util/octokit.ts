@@ -10,7 +10,8 @@ export const getContent = unstable_cache(async function (owner: string, repo: st
   if (!Array.isArray(res.data)) return []
   return res.data
 }, undefined, {
-  // revalidate: 60 * 60 * 24,
+  revalidate: 60 * 60,// 1 hour 
+  tags: ['all']
 })
 
 export function isIconFolder(dir: Awaited<ReturnType<typeof getContent>>[0]) {

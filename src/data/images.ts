@@ -111,8 +111,12 @@ async function getAuthorIcon(props: {
   const icons: DataImage[] = []
   const res = await getContent(owner, repo, props.baseRepoPath)
 
-  for (const dir of getIconPaths(res)) {
+  await Promise.all(getIconPaths(res).map(async (dir) => {
     const res = await getContent(owner, repo, props.baseRepoPath ? path.join(props.baseRepoPath, dir) : dir)
+
+    if (dir.startsWith('N') || dir.startsWith('n')) {
+      console.log(res)
+    }
 
     for (const file of getIconFiles(res)) {
       icons.push({
@@ -123,6 +127,7 @@ async function getAuthorIcon(props: {
         title: file.title,
       })
     }
-  }
+  }))
+  
   return icons
 }
