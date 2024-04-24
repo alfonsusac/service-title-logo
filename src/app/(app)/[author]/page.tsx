@@ -5,7 +5,7 @@ import Link from "next/link"
 import { SVGProps } from "react"
 
 export async function generateStaticParams() {
-  return Object.keys(authors)
+  return Object.keys(authors).map(author => ({ author }))
 }
 
 export default async function AuthorPage(context: { params: { author: string } }) {
@@ -70,6 +70,8 @@ export default async function AuthorPage(context: { params: { author: string } }
     </main>
   )
 }
+
+export const dynamicParams = false
 
 
 export function IconParkSolidTwitter(props: SVGProps<SVGSVGElement>) {
