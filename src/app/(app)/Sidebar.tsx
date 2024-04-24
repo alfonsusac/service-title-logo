@@ -9,7 +9,7 @@ export default function MobileSidebar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="md:hidden top-0 left-0 fixed flex items-center justify-between bg-transparent z-10">
+    <div className="md:hidden top-0 left-0 fixed flex items-center justify-between bg-transparent z-10 select-none">
       <div
         onClick={() => setOpen(!open)}
         className="bg-slate-100 relative top-4 left-4  w-12 h-12 text-2xl text-slate-500 rounded-xl flex items-center justify-center">
