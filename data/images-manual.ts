@@ -58,7 +58,7 @@ export const manuallyListedImages: DataImage[] = [
   {
     title: 'Fumadocs',
     author: authors['fuma-nama'],
-    src: 'https://github.com/fuma-nama/fumadocs/blob/dev/documents/logo.png',
-    raw: 'https://raw.githubusercontent.com/fuma-nama/fumadocs/dev/documents/logo.png'
+    src: 'https://raw.githubusercontent.com/fuma-nama/fumadocs/dev/documents/logo.png',
+    raw: 'https://github.com/fuma-nama/fumadocs/blob/dev/documents/logo.png'
   }
 ]
