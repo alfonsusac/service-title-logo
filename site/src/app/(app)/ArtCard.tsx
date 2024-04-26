@@ -1,5 +1,5 @@
 
-import { DataImage } from "@/data/images"
+import { DataImage } from "../../data/images"
 import { cn } from "lazy-cn"
 import Image from "next/image"
 import Link from "next/link"

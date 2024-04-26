@@ -1,4 +1,4 @@
-import { authors } from "@/data/authors"
+import { authors } from "../../data/authors"
 import Link from "next/link"
 import SidebarItem from "./SidebarItem"
 import { IconParkSolidTwitter, UimGithubAlt } from "./[author]/page"

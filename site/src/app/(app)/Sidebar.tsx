@@ -3,7 +3,7 @@
 import { cn } from "lazy-cn"
 import { SVGProps, useState } from "react"
 import SidebarItem from "./SidebarItem"
-import { authors } from "@/data/authors"
+import { authors } from "../../data/authors"
 
 export default function MobileSidebar() {
   const [open, setOpen] = useState(false)

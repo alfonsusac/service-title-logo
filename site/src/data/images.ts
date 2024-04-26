@@ -1,6 +1,6 @@
 import { Author, authors } from "./authors"
 import { cache } from "react"
-import { getContent, getIconFiles, getIconPaths } from "@/util/octokit"
+import { getContent, getIconFiles, getIconPaths } from "../util/octokit"
 import path from "path"
 
 export type DataImage = {

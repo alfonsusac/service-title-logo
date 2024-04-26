@@ -1,6 +1,6 @@
 "use client"
 
-import { DataImage } from "@/data/images"
+import { DataImage } from "../../data/images"
 import ArtCard from "./ArtCard"
 import { useQueryState } from "nuqs"
 

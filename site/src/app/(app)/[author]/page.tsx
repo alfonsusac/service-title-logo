@@ -1,6 +1,6 @@
-import { getImages } from "@/data/images"
+import { getImages } from "../../../data/images"
 import ArtCard from "../ArtCard"
-import { Author, authors } from "@/data/authors"
+import { Author, authors } from "../../../data/authors"
 import Link from "next/link"
 import { SVGProps } from "react"
 

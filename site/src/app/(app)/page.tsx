@@ -1,4 +1,4 @@
-import { getImages } from "@/data/images"
+import { getImages } from "../../data/images"
 import Image from "next/image"
 import Link from "next/link"
 import ArtCard from "./ArtCard"
