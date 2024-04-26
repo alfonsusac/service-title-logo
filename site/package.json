@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@octokit/rest": "^20.1.0",
+    "@radix-ui/react-portal": "^1.0.4",
     "install": "^0.13.0",
     "lazy-cn": "^1.0.0",
     "next": "14.2.2",

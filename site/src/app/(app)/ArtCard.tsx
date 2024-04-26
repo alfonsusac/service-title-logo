@@ -11,9 +11,10 @@ export default function ArtCard(props: {
   const image = props.image
   return (
     <div
-      className="relative  rounded-lg flex flex-col  group animate-in fill-mode-both  fade-in-0 slide-in-from-bottom-5"
+      className="relative  rounded-lg flex flex-col  group"
       style={{
-        animationDelay: `${ (props.order ?? 0) * 10 }ms`,
+        // animationDelay: `${ (props.order ?? 0) * 10 }ms`,
+        // viewTransitionName: `img-${ image.title.replace('.','') }`,
       }}
     >
       <div className="relative aspect-video w-full overflow-hidden rounded-2xl">

@@ -15,13 +15,13 @@ export default function GlobalLayout(props: any) {
   return (
     <div className="mx-auto max-w-screen-lg min-h-screen flex flex-col gap-8 font-mono tracking-tight text-slate-700 ">
 
+      <MobileSidebar />
       <div className="grow flex items-stretch">
         <div className="flex flex-col md:w-48 gap-px p-1 pt-48 rounded-lg">
 
 
-          <MobileSidebar />
           {/* Sidebar */}
-          <div className="hidden md:flex  flex-col gap-3 p-5 rounded-r-2xl lg:rounded-l-2xl bg-slate-100 sticky top-20 animate-in duration-300 fade-in-0 slide-in-from-left-10">
+          <div className="hidden md:flex select-none flex-col gap-3 p-5 rounded-r-2xl lg:rounded-l-2xl bg-slate-100 sticky top-20 animate-in duration-300 fade-in-0 slide-in-from-left-10">
 
             <SidebarItem href="/" label="Home" />
             {
@@ -36,7 +36,11 @@ export default function GlobalLayout(props: any) {
         </div>
         <div className="grow overflow-auto pt-20 px-8">
           <main className="*:mb-2">
-            {props.children}
+            <header style={{
+              // viewTransitionName: 'header'
+            }}>
+              {props.children}
+            </header>
             <Suspense>
               <ArtListServer />
             </Suspense>
@@ -65,7 +69,11 @@ async function ArtListServer() {
   return (
     <>
       <SearchBar className="" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 gap-y-8 mt-8">
+      <div
+        style={{
+          // viewTransitionName: 'artlist'
+        }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 gap-y-8 mt-8">
         <ArtList images={(response.data).sort((a, b) => (a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1))} />
       </div>
     </>

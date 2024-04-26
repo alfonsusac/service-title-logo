@@ -1,8 +1,8 @@
 import { getImages } from "../../../data/images"
 import ArtCard from "../ArtCard"
 import { Author, authors } from "../../../data/authors"
-import Link from "next/link"
 import { SVGProps } from "react"
+import { Link } from "next-view-transitions"
 
 export async function generateStaticParams() {
   return Object.keys(authors).map(author => ({ author }))
@@ -29,7 +29,9 @@ export default async function AuthorPage(context: { params: { author: string } }
       <div className='relative'>
         <Link
           href="/"
-          className="font-display text-slate-400 tracking-widest">VTuber Service Logo</Link>
+          className="font-display text-slate-400 tracking-widest"
+          // style={{ viewTransitionName: 'title-text' }}
+        >VTuber Service Logo</Link>
         <h1 className="text-4xl font-display tracking-wider text-slate-600 relative z-[1]">
           {authorid}{' '}
           <span className="text-xl align-middle">
@@ -44,16 +46,31 @@ export default async function AuthorPage(context: { params: { author: string } }
         </h1>
       </div>
       <div className="font-display tracking-widest text-slate-400 *:my-1">
-        <p className="">This is a collection of images by {authorid}</p>
+        <p style={{
+          // viewTransitionName: 'author-info'
+        }}>This is a collection of images by <span
+            // style={{ viewTransitionName: `author-info-${ authorid }` }}
+          >{authorid}</span></p>
         {
           license && license.label &&
           <>
-            <p>{`Please read the artist's license & readme before using!`}</p>
-            <p className="">license: <a className="text-slate-500 hover:underline" href={license?.href} target="_blank">{license?.label}</a></p>
+            <p
+              // style={{ viewTransitionName: `author-license-disclaimer` }}
+            >{`Please read the artist's license & readme before using!`}</p>
+            <p className="">
+              <span
+                // style={{ viewTransitionName: `author-license-label` }}
+              >license: </span>
+              <a className="text-slate-500 hover:underline" href={license?.href} target="_blank"
+                // style={{ viewTransitionName: `author-license-label-${ license.label }` }}
+              >{license.label}</a>
+            </p>
           </>
         }
         {
-          author.repository && <p className="">links:{' '}
+          author.repository && <p className=""
+            // style={{ viewTransitionName: `author-links-label` }}
+          ><span >links: </span>{' '}
             <a className="text-slate-500 hover:underline" href={author.repository} target="_blank">repository</a>{' '}
           </p>
         }
