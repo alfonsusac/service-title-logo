@@ -13,7 +13,6 @@ export default function ArtCard(props: {
     <div
       className="relative  rounded-lg flex flex-col  group"
       style={{
-        // animationDelay: `${ (props.order ?? 0) * 10 }ms`,
         viewTransitionName: `img-${ image.title.replace('.','') }`,
       }}
     >
