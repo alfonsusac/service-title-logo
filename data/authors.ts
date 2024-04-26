@@ -1,18 +1,14 @@
-export type Author = {
-  name: string,
-  pfp?: string,
-  link: {
-    github?: string,
-    twitter?: string,
-  },
-  repository: string,
-  license: {
-    label?: string,
-    href?: string,
-  },
-}
 
 export const authors = {
+  "fuma-nama": {
+    name: 'fuma-nama',
+    pfp: 'https://avatars.githubusercontent.com/u/76240755?v=4',
+    link: {
+      github: 'https://github.com/fuma-nama',
+    },
+    license: {},
+    repository: '',
+  },
   sawaratsuki: {
     name: 'sawaratsuki',
     pfp: 'https://avatars.githubusercontent.com/u/64746703?v=4',
@@ -110,4 +106,18 @@ export const authors = {
   }
 } satisfies {
   [key: string]: Author
+}
+
+type Author = {
+  name: string,
+  pfp?: string,
+  link: {
+    github?: string,
+    twitter?: string,
+  },
+  repository?: string,
+  license: {
+    label?: string,
+    href?: string,
+  },
 }

@@ -1,9 +1,9 @@
 "use client"
 
 import { useParams } from "next/navigation"
-import { DataImage } from "../../data/images"
 import ArtCard from "./ArtCard"
 import { useQueryState } from "nuqs"
+import { DataImage } from "../../../../types/types"
 
 export default function ArtList(props: {
   images: DataImage[]

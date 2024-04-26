@@ -1,11 +1,3 @@
-import { getImages } from "../../data/images"
-import Image from "next/image"
-import Link from "next/link"
-import ArtCard from "./ArtCard"
-import SearchBar from "./Searchbar"
-import ArtList from "./ArtList"
-import { Suspense } from "react"
-
 export default async function Home() {
   return (
     <>

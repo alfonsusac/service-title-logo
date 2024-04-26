@@ -1,8 +1,8 @@
 
-import { DataImage } from "../../data/images"
 import { cn } from "lazy-cn"
 import Image from "next/image"
 import Link from "next/link"
+import { DataImage } from "../../../../types/types"
 
 export default function ArtCard(props: {
   image: DataImage,

@@ -1,8 +1,7 @@
-import { getImages } from "../../../data/images"
-import ArtCard from "../ArtCard"
-import { Author, authors } from "../../../data/authors"
 import { SVGProps } from "react"
 import { Link } from "next-view-transitions"
+import { authors } from "../../../../../data/authors"
+import { Author } from "../../../../../types/types"
 
 export async function generateStaticParams() {
   return Object.keys(authors).map(author => ({ author }))

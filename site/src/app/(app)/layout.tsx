@@ -1,12 +1,12 @@
-import { authors } from "../../data/authors"
 import Link from "next/link"
 import SidebarItem from "./SidebarItem"
 import { IconParkSolidTwitter, UimGithubAlt } from "./[author]/page"
-import { Suspense, SVGProps } from "react"
+import { Suspense } from "react"
 import MobileSidebar from "./Sidebar"
 import SearchBar from "./Searchbar"
 import ArtList from "./ArtList"
-import { DataImage } from "@/data/images"
+import { authors } from "../../../../data/authors"
+import { DataImage } from "../../../../types/types"
 
 
 
