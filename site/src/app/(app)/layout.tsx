@@ -17,8 +17,7 @@ export default function GlobalLayout(props: any) {
 
       <MobileSidebar />
       <div className="grow flex items-stretch">
-        <div className="flex flex-col md:w-48 gap-px p-1 pt-48 rounded-lg">
-
+        <div className="flex flex-none flex-col md:w-48 gap-px p-1 pt-48 rounded-lg">
 
           {/* Sidebar */}
           <div className="hidden md:flex select-none flex-col gap-3 p-5 rounded-r-2xl lg:rounded-l-2xl bg-slate-100 sticky top-20 animate-in duration-300 fade-in-0 slide-in-from-left-10">
@@ -71,7 +70,7 @@ async function ArtListServer() {
       <SearchBar className="" />
       <div
         style={{
-          // viewTransitionName: 'artlist'
+          viewTransitionName: 'artlist'
         }}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 gap-y-8 mt-8">
         <ArtList images={(response.data).sort((a, b) => (a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1))} />

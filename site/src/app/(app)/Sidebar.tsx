@@ -8,13 +8,14 @@ import { Portal } from "@radix-ui/react-portal"
 
 export default function MobileSidebar() {
   const [open, setOpen] = useState(false)
+  const close = () => setOpen(false)
 
   return (
 
     <div
-      className="md:hidden top-0 left-0 fixed flex items-center justify-between bg-transparent isolate z-50 select-none"
+      className="md:hidden transform-gpu top-0 left-0 fixed flex items-center justify-between bg-transparent isolate z-50 select-none"
       style={{
-        // viewTransitionName: `mobile-sidebar`
+        viewTransitionName: `mobile-sidebar`
       }}
     >
       <div
@@ -39,11 +40,11 @@ export default function MobileSidebar() {
             open ? 'translate-x-full rotate-0' : '',
             "absolute top-20 flex flex-col gap-3 p-5 rounded-r-2xl lg:rounded-l-2xl bg-slate-100"
           )}>
-          <SidebarItem href="/" label="Home" />
+          <SidebarItem href="/" label="Home" onClick={close} />
           {
             Object.values(authors).sort((a, b) => (a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1)).map(author => {
               return (
-                <SidebarItem key={author.name} href={'/' + author.name} label={author.name} />
+                <SidebarItem key={author.name} href={'/' + author.name} label={author.name} onClick={close} />
               )
             })
           }

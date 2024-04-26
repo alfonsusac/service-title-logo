@@ -12,7 +12,7 @@ export default function SearchBar(props: {
   return (
     <div
       style={{
-        // viewTransitionName: 'searchbar'
+        viewTransitionName: 'searchbar'
       }}
       className={cn(
         'p-1 px-3 rounded-full bg-slate-100 sticky top-1',

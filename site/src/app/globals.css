@@ -6,3 +6,17 @@
   min-width: 0;
   min-height: 0;
 }
+
+::view-transition {
+
+  z-index: -5;
+}
+
+::view-transition-group(*) {
+  animation-duration: 500ms;
+  z-index: -5;
+}
+
+::view-transition-group(mobile-sidebar) {
+  animation-duration: 0ms;
+}
