@@ -19,8 +19,6 @@ export const getImages = cache(async (): Promise<DataImage[]> => [
     src: 'https://raw.githubusercontent.com/elysiajs/documentation/6e13f140b53fb69d9a82993cd80a82df55325b9e/docs/public/assets/elysia_v.svg',
     raw: 'https://github.com/elysiajs/documentation/blob/main/docs/public/assets/elysia_v.svg'
   },
-
-
   {
     title: 'Skrillex',
     author: authors.disphing,

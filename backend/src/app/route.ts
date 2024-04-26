@@ -3,9 +3,9 @@ import { NextResponse } from "next/server"
 import path from "path"
 import fetch2 from "node-fetch"
 
-// export const revalidate = 60 * 60 * 4 // 4 hour
+export const revalidate = 60 * 60 * 4 // 4 hour
 
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'
 
 export async function GET() {
   return NextResponse.json({

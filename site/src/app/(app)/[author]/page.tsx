@@ -25,7 +25,7 @@ export default async function AuthorPage(context: { params: { author: string } }
   const link = author.link as Author['link']
 
   return (
-    <main className="*:mb-2">
+    <>
       <div className='relative'>
         <Link
           href="/"
@@ -58,16 +58,7 @@ export default async function AuthorPage(context: { params: { author: string } }
           </p>
         }
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 gap-y-8 mt-8">
-        {
-          (await getImages()).filter(i => i.author.name === authorid).map((image, index) => {
-            return (
-              <ArtCard key={index} image={image} order={index} />
-            )
-          })
-        }
-      </div>
-    </main>
+    </>
   )
 }
 

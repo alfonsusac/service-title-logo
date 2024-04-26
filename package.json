@@ -6,7 +6,7 @@
   "scripts": {
     "site": "cd site && pnpm dev",
     "backend": "cd backend && pnpm dev",
-    "dev": "concurrently \"pnpm site\" \"pnpm backend\" "
+    "dev": "concurrently --names \"site,api\" -c \"blue,magenta\"  \"pnpm site\" \"pnpm backend\" "
   },
   "keywords": [],
   "author": "",

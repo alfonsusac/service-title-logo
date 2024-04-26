@@ -2,8 +2,11 @@ import { authors } from "../../data/authors"
 import Link from "next/link"
 import SidebarItem from "./SidebarItem"
 import { IconParkSolidTwitter, UimGithubAlt } from "./[author]/page"
-import { SVGProps } from "react"
+import { Suspense, SVGProps } from "react"
 import MobileSidebar from "./Sidebar"
+import SearchBar from "./Searchbar"
+import ArtList from "./ArtList"
+import { DataImage } from "@/data/images"
 
 
 
@@ -32,7 +35,12 @@ export default function GlobalLayout(props: any) {
 
         </div>
         <div className="grow overflow-auto pt-20 px-8">
-          {props.children}
+          <main className="*:mb-2">
+            {props.children}
+            <Suspense>
+              <ArtListServer />
+            </Suspense>
+          </main>
           <footer className="my-20 py-16 bg-slate-50 rounded-3xl flex flex-col gap-3 items-center justify-center text-sm text-slate-400 font-display tracking-widest text-center">
             <p>All rights reserved to the respective artists © {new Date().getFullYear()}</p>
             <p>Contributions are welcome!</p>
@@ -44,5 +52,22 @@ export default function GlobalLayout(props: any) {
         </div>
       </div>
     </div>
+  )
+}
+
+const apiUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:4000' : 'https://service-title-logo-backend.vercel.app'
+
+async function ArtListServer() {
+  const response = await fetch(apiUrl).then(res => res.json()) as {
+    data: DataImage[]
+  }
+
+  return (
+    <>
+      <SearchBar className="" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 gap-y-8 mt-8">
+        <ArtList images={(response.data).sort((a, b) => (a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1))} />
+      </div>
+    </>
   )
 }

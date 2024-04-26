@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@octokit/rest": "^20.1.0",
+    "install": "^0.13.0",
     "lazy-cn": "^1.0.0",
     "next": "14.2.2",
+    "next-view-transitions": "^0.1.1",
     "nuqs": "^1.17.1",
+    "pnpm": "^9.0.6",
     "react": "^18",
     "react-dom": "^18"
   },
