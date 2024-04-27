@@ -58,10 +58,16 @@ export default function GlobalLayout(props: any) {
   )
 }
 
-const apiUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:4000' : 'https://service-title-logo-backend.vercel.app'
+const apiUrl = process.env.NODE_ENV === 'development'
+  ? 'http://localhost:4000/revalidate'
+  : `https://service-title-logo-backend.vercel.app/revalidate?key=${ process.env['REVALIDATE_KEY'] }`
 
 async function ArtListServer() {
-  const response = await fetch(apiUrl).then(res => res.json()) as {
+  const response = await fetch(apiUrl, {
+    next: {
+      revalidate: 60 * 30 // half an hour
+    }
+  }).then(res => res.json()) as {
     data: DataImage[]
   }
 
