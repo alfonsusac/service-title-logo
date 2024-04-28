@@ -4,7 +4,8 @@ import { authors } from "./authors"
 type ScrapedImages = {
   ownerRepoPath: `${ string }/${ string }`,
   author: Author,
-  className: string
+  path?: string,
+  className?: string
 }
 
 export const scrapedImages: ScrapedImages[] = [
@@ -28,4 +29,10 @@ export const scrapedImages: ScrapedImages[] = [
     author: authors["g2-games"],
     className: 'object-contain'
   },
+  {
+    ownerRepoPath: 'mkpoli/VTuber-Styled-Logos',
+    path: 'logos',
+    author: authors["mkpoli"],
+    className: ''
+  }
 ]

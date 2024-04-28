@@ -15,7 +15,7 @@ export default function SearchBar(props: {
         viewTransitionName: 'searchbar'
       }}
       className={cn(
-        'p-1 px-3 rounded-full bg-slate-100 sticky top-1',
+        'p-1 px-3 mt-4 rounded-full bg-slate-100 sticky top-1',
         props.className)}>
       <input
         className="font-display tracking-widest text-slate-500 text-xl rounded-md p-2 w-full outline-none bg-transparent"

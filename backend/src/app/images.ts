@@ -13,21 +13,12 @@ export const getImages = async (): Promise<DataImage[]> => [
       const author = scrapedImage.author
       const ownerRepoPath = scrapedImage.ownerRepoPath
       const className = scrapedImage.className
-      const baseRepoPath = ''
+      const baseRepoPath = scrapedImage.path || ''
       const authoricons = await getAuthorIcon({ ownerRepoPath, baseRepoPath, className, author })
       icons.push(...authoricons)
     }))
 
     return icons
 
-
-    // return [ await Promise.all(scrapedImages.map(async (scrapedImage) => {
-    //   const author = scrapedImage.author
-    //   const ownerRepoPath = scrapedImage.ownerRepoPath
-    //   const className = scrapedImage.className
-    //   const baseRepoPath = ''
-    //   const icons = await getAuthorIcon({ ownerRepoPath, baseRepoPath, className, author })
-    //   return icons
-    // }))]
   })(),
 ]

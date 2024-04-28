@@ -1,5 +1,27 @@
 
 export const authors = {
+  styxpilled: {
+    name: 'styxpilled',
+    pfp: '',
+    link: {
+      twitter: 'https://twitter.com/styxpilled'
+    },
+    license: {},
+    repository: '',
+  },
+  mkpoli: {
+    name: 'mkpoli',
+    pfp: 'https://avatars.githubusercontent.com/u/3502597?v=4',
+    link: {
+      github: 'https://github.com/mkpoli',
+      twitter: 'https://twitter.com/mkpoli'
+    },
+    license: {
+      label: 'CC0',
+      href: 'https://github.com/mkpoli/VTuber-Styled-Logos/blob/main/LICENSE'
+    },
+    repository: 'https://github.com/mkpoli/VTuber-Styled-Logos/blob/main/LICENSE'
+  },
   "fuma-nama": {
     name: 'fuma-nama',
     pfp: 'https://avatars.githubusercontent.com/u/76240755?v=4',
@@ -18,8 +40,8 @@ export const authors = {
     },
     repository: 'https://github.com/SAWARATSUKI/ServiceLogos',
     license: {
-      label: 'CC BY-NC-SA 4.0',
-      href: 'https://github.com/SAWARATSUKI/ServiceLogos/blob/main/LICENSE',
+      label: 'CC BY-NC-SA 4.0 with Additional Notes',
+      href: 'https://github.com/SAWARATSUKI/ServiceLogos#license',
     }
   },
   cr1sta_dev: {

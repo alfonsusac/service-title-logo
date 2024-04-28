@@ -60,5 +60,17 @@ export const manuallyListedImages: DataImage[] = [
     author: authors['fuma-nama'],
     src: 'https://raw.githubusercontent.com/fuma-nama/fumadocs/dev/documents/logo.png',
     raw: 'https://github.com/fuma-nama/fumadocs/blob/dev/documents/logo.png'
-  }
+  },
+  {
+    title: 'svelte',
+    author: authors['styxpilled'],
+    src: 'https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLlkf9EWwAAq3N9.jpeg',
+    raw: 'https://twitter.com/styxpilled/status/1781565832251719868',
+  },
+  {
+    title: 'sveltekit',
+    author: authors['styxpilled'],
+    src: "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLmrDPdXgAAlKvW.jpeg",
+    raw: 'https://twitter.com/styxpilled/status/1781643208130216015',
+  },
 ]

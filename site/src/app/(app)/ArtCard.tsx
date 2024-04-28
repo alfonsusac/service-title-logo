@@ -11,9 +11,9 @@ export default function ArtCard(props: {
   const image = props.image
   return (
     <div
-      className="relative  rounded-lg flex flex-col  group"
+      className="relative  rounded-lg flex flex-col  group "
       style={{
-        viewTransitionName: `img-${ image.title.replace('.','') }`,
+        // viewTransitionName: `img-${ image.title.replace('.','') }`,
       }}
     >
       <div className="relative aspect-video w-full overflow-hidden rounded-2xl">

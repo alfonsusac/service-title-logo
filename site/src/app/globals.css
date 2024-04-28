@@ -13,10 +13,12 @@
 }
 
 ::view-transition-group(*) {
-  animation-duration: 500ms;
-  z-index: -5;
+  animation-duration: 150ms;
 }
 
 ::view-transition-group(mobile-sidebar) {
+  animation-duration: 0ms;
+}
+::view-transition-group(sidebar) {
   animation-duration: 0ms;
 }

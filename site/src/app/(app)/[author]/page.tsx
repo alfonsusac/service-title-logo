@@ -19,7 +19,7 @@ export default async function AuthorPage(context: { params: { author: string } }
     </main>
   }
 
-  const author = authors[authorid as keyof typeof authors]
+  const author = authors[authorid as keyof typeof authors] as Author
   const license = author.license as Author['license']
   const link = author.link as Author['link']
 
@@ -53,19 +53,24 @@ export default async function AuthorPage(context: { params: { author: string } }
         {
           license && license.label &&
           <>
-            <p
-              // style={{ viewTransitionName: `author-license-disclaimer` }}
-            >{`Please read the artist's license & readme before using!`}</p>
-            <p className="">
-              <span
-                // style={{ viewTransitionName: `author-license-label` }}
-              >license: </span>
-              <a className="text-slate-500 hover:underline" href={license?.href} target="_blank"
-                // style={{ viewTransitionName: `author-license-label-${ license.label }` }}
-              >{license.label}</a>
-            </p>
           </>
         }
+        <p
+          // style={{ viewTransitionName: `author-license-disclaimer` }}
+        >{`Please read the artist's license & readme before using!`}</p>
+        <p className="">
+          <span
+            // style={{ viewTransitionName: `author-license-label` }}
+          >license: </span>
+          {
+            license?.href
+              ? <a className="text-slate-500 hover:underline" href={license.href} target="_blank"
+              // style={{ viewTransitionName: `author-license-label-${ license.label }` }}
+              >{license.label}</a>
+              : <span className="">Unknown</span>
+          }
+
+        </p>
         {
           author.repository && <p className=""
             // style={{ viewTransitionName: `author-links-label` }}

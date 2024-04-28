@@ -28,8 +28,7 @@ export const getAuthorIcon = async (props: {
   await printOctocatRateLimit(`${ owner }/${ repo }`)
 
   async function processIcons(dir: string) {
-    // console.log(`${ owner }/${ repo }/${ dir }`)
-    const res = await getContent(owner, repo, props.baseRepoPath ? path.join(props.baseRepoPath, dir) : dir)
+    const res = await getContent(owner, repo, dir)
 
     await printOctocatRateLimit(`${ owner }/${ repo }/${ dir }`)
 
@@ -101,6 +100,7 @@ function getIconFiles(dir: Awaited<ReturnType<typeof getContent>>) {
 
 
 const getContent = async (owner: string, repo: string, path?: string, revalidate?: number) => {
+  console.log(`Owner: ${ owner } Repo: ${ repo } Path: ${ path }`)
   const res = await octokit.repos.getContent({
     owner, repo, path: path ?? '',
     request: {

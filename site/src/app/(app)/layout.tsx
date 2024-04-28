@@ -20,7 +20,11 @@ export default function GlobalLayout(props: any) {
         <div className="flex flex-none flex-col md:w-48 gap-px p-1 pt-48 rounded-lg">
 
           {/* Sidebar */}
-          <div className="hidden md:flex select-none flex-col gap-3 p-5 rounded-r-2xl lg:rounded-l-2xl bg-slate-100 sticky top-20 animate-in duration-300 fade-in-0 slide-in-from-left-10">
+          <div
+            style={{
+              viewTransitionName: 'sidebar'
+            }}
+            className="hidden md:flex select-none flex-col gap-3 p-5 rounded-r-2xl lg:rounded-l-2xl bg-slate-100 sticky top-20 animate-in duration-300 fade-in-0 slide-in-from-left-10">
 
             <SidebarItem href="/" label="Home" />
             {
