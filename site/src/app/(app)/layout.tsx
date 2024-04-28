@@ -7,6 +7,7 @@ import SearchBar from "./Searchbar"
 import ArtList from "./ArtList"
 import { authors } from "../../../../data/authors"
 import { DataImage } from "../../../../types/types"
+import { getData } from "./data"
 
 
 
@@ -67,13 +68,7 @@ const apiUrl = process.env.NODE_ENV === 'development'
   : `https://service-title-logo-backend.vercel.app/revalidate?key=${ process.env['REVALIDATE_KEY'] }`
 
 async function ArtListServer() {
-  const response = await fetch(apiUrl, {
-    next: {
-      revalidate: 60 * 30 // half an hour
-    }
-  }).then(res => res.json()) as {
-    data: DataImage[]
-  }
+  const response = await getData()
 
   return (
     <>

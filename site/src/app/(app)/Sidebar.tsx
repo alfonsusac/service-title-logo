@@ -12,14 +12,14 @@ export default function MobileSidebar() {
   return (
 
     <div
-      className="md:hidden transform-gpu top-0 left-0 fixed flex items-center justify-between bg-transparent isolate z-50 select-none"
+      className="md:hidden transform-gpu top-0 left-0 fixed flex items-center justify-between bg-transparent isolate z-50 select-none bg-red-500"
       style={{
         viewTransitionName: `mobile-sidebar`
       }}
     >
       <div
         onClick={() => setOpen(!open)}
-        className="bg-slate-100 relative top-4 left-4  w-12 h-12 text-2xl text-slate-500 rounded-xl flex items-center justify-center"
+        className="bg-slate-100 relative top-3 left-3  w-12 h-12 text-2xl text-slate-500 rounded-xl flex items-center justify-center"
 
       >
         <CharmMenuHamburger className={cn(
