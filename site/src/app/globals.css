@@ -78,3 +78,51 @@
   --strong: #4e74e4;
   --stronger: #ffffff;
 }
+.nord {
+    --bg: #2E3440;
+  --card: #3B4252;
+  --cardHover: #434C5E;
+  --text: #D8DEE9;
+  --strong: #88C0D0;
+  --stronger: #ECEFF4;
+}
+.monokai {
+  --bg: #272822;
+  --card: #3e3d32;
+  --cardHover: #4a493c;
+  --text: #a6a597;
+  --strong: #6c99bb;
+  --stronger: #e5b567;
+}
+.poimandres {
+  --bg: #252B37;
+  --card: #313a4b;
+  --cardHover: #3e495e;
+  --text: #91B4D5;
+  --strong: #5DE4C7;
+  --stronger: #E4F0FB;
+}
+.vitesse {
+  --bg: #121212;
+  --card: #232623;
+  --cardHover: #313631;
+  --text: #677567;
+  --strong: #BD976A;
+  --stronger: #5EA994;
+}
+.github {
+  --bg: #02040A;
+  --card: #0D1116;
+  --cardHover: #161B22;
+  --text: #848D97;
+  --strong: #4593F8;
+  --stronger: #E6EDF3;
+}
+.dracula {
+  --bg: #282A36;
+  --card: #34394C;
+  --cardHover: #3D455E;
+  --text: #A0B1E2;
+  --strong: #FF79C6;
+  --stronger: #8BE9FD;
+}

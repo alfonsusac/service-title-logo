@@ -3,4 +3,10 @@ export const themes = [
   'dark',
   'catppuccin',
   'vercel',
+  'nord',
+  'monokai',
+  'poimandres',
+  'vitesse',
+  'github',
+  'dracula',
 ]
