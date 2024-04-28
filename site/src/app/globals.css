@@ -8,7 +8,6 @@
 }
 
 ::view-transition {
-
   z-index: -5;
 }
 
@@ -21,4 +20,61 @@
 }
 ::view-transition-group(sidebar) {
   animation-duration: 0ms;
+}
+
+
+@keyframes searchbarSqueeze {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 2.5rem;
+  }
+}
+
+/* Unused */
+@media only screen and (max-width: 768px) {
+  .searchbar {
+    /* @apply bg-red-400 */
+    view-timeline: --subjectReveal y;
+    view-timeline-inset: 0% 0%;
+    animation-timeline: --subjectReveal;
+    animation-name: searchbarSqueeze;
+    animation-fill-mode: both;
+    animation-timing-function: linear();
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+  }
+}
+
+.light {
+  --bg: #fdfdff;
+  --card: #f1f5f9; /* slate-100 */
+  --cardHover: #e2e8f0; /* slate-200 */
+  --text: #94a3b8; /* slate-400 */
+  --strong: #64748b; /* slate-500 */
+  --stronger: #475569; /* slate-600 */
+}
+.dark {
+  --bg: #292a30;
+  --card: #373942;
+  --cardHover: #484a53;
+  --text: #8e90a3;
+  --strong: #cccbde;
+  --stronger: rgb(219, 221, 245);
+}
+.catppuccin {
+  --bg: #24273a;
+  --card: #363a4f;
+  --cardHover: #494d64;
+  --text: #939ab7;
+  --strong: #b7bdf8;
+  --stronger: #f5bde6;
+}
+.vercel {
+  --bg: #000000;
+  --card: #131313;
+  --cardHover: #1b1b1b;
+  --text: #adadad;
+  --strong: #4e74e4;
+  --stronger: #ffffff;
 }

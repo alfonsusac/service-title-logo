@@ -14,7 +14,7 @@ export default async function AuthorPage(context: { params: { author: string } }
   if (authorid in authors === false) {
     return <main>
       <div className='relative'>
-        <h1 className="text-6xl font-display tracking-wider text-slate-600 relative z-[1]">Author Not Found!</h1>
+        <h1 className="text-6xl font-display tracking-wider text-theme-strong relative z-[1]">Author Not Found!</h1>
       </div>
     </main>
   }
@@ -25,27 +25,27 @@ export default async function AuthorPage(context: { params: { author: string } }
 
   return (
     <>
-      <div className='relative'>
+      <div className='relative overflow-visible'>
         <Link
           href="/"
-          className="font-display text-slate-400 tracking-widest"
+          className="font-display text-theme-strong tracking-widest"
           // style={{ viewTransitionName: 'title-text' }}
         >VTuber Service Logo</Link>
-        <h1 className="text-4xl font-display tracking-wider text-slate-600 relative z-[1]">
+        <h1 className="text-4xl font-display tracking-wider text-theme-stronger z-[1] sticky top-2">
           {authorid}{' '}
           <span className="text-xl align-middle">
             {
-              link.github && <a className="text-slate-500 hover:underline" href={link.github} target="_blank"><UimGithubAlt className="inline" /></a>
+              link.github && <a className="text-theme-strong hover:underline" href={link.github} target="_blank"><UimGithubAlt className="inline" /></a>
             }
             {' '}
             {
-              link.twitter && <a className="text-slate-500 hover:underline" href={link.twitter} target="_blank"><IconParkSolidTwitter className="inline" /></a>
+              link.twitter && <a className="text-theme-strong hover:underline" href={link.twitter} target="_blank"><IconParkSolidTwitter className="inline" /></a>
             }
           </span>
         </h1>
       </div>
-      <div className="font-display tracking-widest text-slate-400 *:my-1">
-        <p style={{
+      <div className="font-display tracking-widest py-1 *:my-2 leading-tight">
+        <p className="text-pretty" style={{
           // viewTransitionName: 'author-info'
         }}>This is a collection of images by <span
             // style={{ viewTransitionName: `author-info-${ authorid }` }}
@@ -55,7 +55,7 @@ export default async function AuthorPage(context: { params: { author: string } }
           <>
           </>
         }
-        <p
+        <p  className="text-pretty"
           // style={{ viewTransitionName: `author-license-disclaimer` }}
         >{`Please read the artist's license & readme before using!`}</p>
         <p className="">
@@ -64,7 +64,7 @@ export default async function AuthorPage(context: { params: { author: string } }
           >license: </span>
           {
             license?.href
-              ? <a className="text-slate-500 hover:underline" href={license.href} target="_blank"
+              ? <a className="text-theme-strong hover:underline" href={license.href} target="_blank"
               // style={{ viewTransitionName: `author-license-label-${ license.label }` }}
               >{license.label}</a>
               : <span className="">Unknown</span>
@@ -75,7 +75,7 @@ export default async function AuthorPage(context: { params: { author: string } }
           author.repository && <p className=""
             // style={{ viewTransitionName: `author-links-label` }}
           ><span >links: </span>{' '}
-            <a className="text-slate-500 hover:underline" href={author.repository} target="_blank">repository</a>{' '}
+            <a className="text-theme-strong hover:underline" href={author.repository} target="_blank">repository</a>{' '}
           </p>
         }
       </div>

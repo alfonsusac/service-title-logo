@@ -14,14 +14,16 @@ export default function SidebarItem(props: {
   return (
     <Link
       href={props.href}
-      className="cursor-pointer md:text-base leading-none -m-2 md:p-2 md:px-5 rounded-md font-medium text-slate-400 
-      hover:text-slate-500 hover:bg-slate-200 font-display tracking-widest first:rounded-t-xl last:rounded-b-xl
-      data-[active=true]:text-slate-500
-      data-[active=true]:bg-slate-200
+      className="cursor-pointer md:text-base leading-none -m-2 md:p-2 md:px-5 rounded-md font-medium 
+      hover:text-theme-strong hover:bg-theme-cardHover font-display tracking-widest first:rounded-t-xl last:rounded-b-xl
+      data-[active=true]:text-theme-strong
+      data-[active=true]:bg-theme-cardHover
       data-[active=true]:pointer-events-none
       overflow-hidden text-nowrap
       text-xl p-4 px-6
-"
+      transition-all
+      flex-none
+" 
       data-active={props.href === pathname}
       onClick={props.onClick}
     >

@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import { Inconsolata, Inter, Jua, Lilita_One, Reddit_Mono, Roboto_Mono, Source_Code_Pro } from "next/font/google"
 import "./globals.css"
 import { ViewTransitions } from "next-view-transitions"
+import { ThemeProvider } from "next-themes"
+import { themes } from "./themes"
 
 const sans = Inter({
   subsets: ["latin"],
@@ -35,9 +37,11 @@ export default function RootLayout({
 
   return (
     <ViewTransitions>
-      <html lang="en">
-        <body className={`${ sans.variable } ${ mono.variable } ${ display.variable } bg-[#fdfdff]`}>
-          {children}
+      <html lang="en" suppressHydrationWarning>
+        <body className={`${ sans.variable } ${ mono.variable } ${ display.variable } bg-theme-bg text-theme-text transition-all`}>
+          <ThemeProvider themes={themes} attribute="class">
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </ViewTransitions>

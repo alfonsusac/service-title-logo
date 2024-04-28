@@ -15,8 +15,19 @@ const config: Config = {
         mono: ['var(--font-mono)'],
         display: ['var(--font-display)'],
       },
+      colors: {
+        theme: {
+          bg: 'var(--bg)',
+          card: 'var(--card)',
+          cardHover: 'var(--cardHover)',
+          text: 'var(--text)',
+          strong: 'var(--strong)',
+          stronger: 'var(--stronger)',
+        },
+      }
     },
   },
   plugins: [tailwindanimate],
+  darkMode: 'class',
 };
 export default config;
