@@ -11,6 +11,9 @@ Artists:
 - IDMDiamondl
 - saltyaom
 - sawaratsuki
+- mkpoli
+- fuma-nama
+- styxpilled
 
 ## Contributions
 
