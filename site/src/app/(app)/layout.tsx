@@ -13,7 +13,9 @@ import ThemeChanger from "./ThemeChanger";
 export default function GlobalLayout(props: any) {
   return (
     <div className="mx-auto max-w-screen-lg min-h-screen flex flex-col gap-8 font-display tracking-tight">
-      <MobileSidebar />
+      <Suspense>
+        <MobileSidebar />
+      </Suspense>
       <div className="grow flex items-stretch">
         <div className="flex flex-none flex-col md:w-48 gap-px pt-48 rounded-lg ">
           {/* Sidebar */}
@@ -53,7 +55,9 @@ export default function GlobalLayout(props: any) {
             >
               {props.children}
             </header>
-            <DesktopSearchBar />
+            <Suspense>
+              <DesktopSearchBar />
+            </Suspense>
             <section className="rounded-2xl">
               <Suspense>
                 <ArtListServer />
