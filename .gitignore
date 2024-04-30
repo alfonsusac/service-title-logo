@@ -1,1 +1,3 @@
-*\n!images.json\n!.gitignore
+*
+!images.json
+!.gitignore
