@@ -1,0 +1,6 @@
+{
+  "name": "scrape",
+  "devDependencies": {
+    "@types/bun": "^1.1.1"
+  }
+}
