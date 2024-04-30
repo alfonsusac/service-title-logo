@@ -1,663 +1,18 @@
 {
-  "updatedAt": "2024-04-30T06:16:41.333Z",
+  "updatedAt": "2024-04-30T06:22:08.513Z",
   "data": [
     {
+      "title": "Ableton Live",
       "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "name": "disphing",
         "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
+          "twitter": "https://twitter.com/dsphng"
         },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+        "license": {},
+        "repository": "https://drive.google.com/drive/folders/1Hy1_pAWx95QTv1nZFKUl96GImq4iKdf8"
       },
-      "className": "object-contain",
-      "createdAt": "2024-04-18T09:08:15.000Z",
-      "title": "VSCode.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/VSCode/VSCode.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/VSCode/VSCode.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-18T09:08:15.000Z",
-      "title": "VSCode-Thick.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/VSCode/VSCode-Thick.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/VSCode/VSCode-Thick.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-18T10:43:56.000Z",
-      "title": "intelliJShadow.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/IntelliJIDEA/intelliJShadow.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/IntelliJIDEA/intelliJShadow.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-18T10:43:56.000Z",
-      "title": "IntellijLogo.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/IntelliJIDEA/IntellijLogo.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/IntelliJIDEA/IntellijLogo.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-18T12:46:16.000Z",
-      "title": "kubernetesLogoShadow.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Kubernetes/kubernetesLogoShadow.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Kubernetes/kubernetesLogoShadow.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-18T12:46:16.000Z",
-      "title": "kubernetesLogo.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Kubernetes/kubernetesLogo.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Kubernetes/kubernetesLogo.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-18T20:36:12.000Z",
-      "title": "GodotLogo.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/GodotEngine/GodotLogo.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/GodotEngine/GodotLogo.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-18T20:36:12.000Z",
-      "title": "GodotLogoShadow.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/GodotEngine/GodotLogoShadow.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/GodotEngine/GodotLogoShadow.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-19T09:56:31.000Z",
-      "title": "NeovimLogo.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Neovim/NeovimLogo.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Neovim/NeovimLogo.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-19T09:56:31.000Z",
-      "title": "NeovimShadowed.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Neovim/NeovimShadowed.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Neovim/NeovimShadowed.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-19T11:50:00.000Z",
-      "title": "BunLogoShadowed.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Bun/BunLogoShadowed.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Bun/BunLogoShadowed.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-19T11:50:00.000Z",
-      "title": "BunLogo.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Bun/BunLogo.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Bun/BunLogo.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-19T12:15:07.000Z",
-      "title": "BunLogoOld.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Bun/BunLogoOld.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Bun/BunLogoOld.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-19T12:15:07.000Z",
-      "title": "BunLogoShadowedOld.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Bun/BunLogoShadowedOld.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Bun/BunLogoShadowedOld.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-19T16:26:12.000Z",
-      "title": "PaperMCLogoShadowed.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/PaperMC/PaperMCLogoShadowed.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/PaperMC/PaperMCLogoShadowed.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-19T16:26:12.000Z",
-      "title": "PaperMCLogo.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/PaperMC/PaperMCLogo.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/PaperMC/PaperMCLogo.png"
-    },
-    {
-      "author": {
-        "name": "g2-games",
-        "link": {
-          "github": "https://github.com/G2-Games"
-        },
-        "pfp": "https://avatars.githubusercontent.com/u/72430668",
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/G2-Games/fun-logos/blob/main/LICENSE"
-        },
-        "repository": "https://github.com/G2-Games/fun-logos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-19T16:45:56.000Z",
-      "title": "kate.svg",
-      "src": "https://raw.githubusercontent.com/G2-Games/fun-logos/main/kate/kate.svg",
-      "raw": "https://github.com/G2-Games/fun-logos/blob/main/kate/kate.svg"
-    },
-    {
-      "author": {
-        "name": "g2-games",
-        "link": {
-          "github": "https://github.com/G2-Games"
-        },
-        "pfp": "https://avatars.githubusercontent.com/u/72430668",
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/G2-Games/fun-logos/blob/main/LICENSE"
-        },
-        "repository": "https://github.com/G2-Games/fun-logos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-19T16:45:56.000Z",
-      "title": "kate-animated.svg",
-      "src": "https://raw.githubusercontent.com/G2-Games/fun-logos/main/kate/kate-animated.svg",
-      "raw": "https://github.com/G2-Games/fun-logos/blob/main/kate/kate-animated.svg"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-20T17:25:12.000Z",
-      "title": "ElysiaJSLogoShadowed.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ElysiaJS/ElysiaJSLogoShadowed.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ElysiaJS/ElysiaJSLogoShadowed.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-20T17:25:12.000Z",
-      "title": "ElysiaJSLogo.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ElysiaJS/ElysiaJSLogo.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ElysiaJS/ElysiaJSLogo.png"
-    },
-    {
-      "author": {
-        "name": "cr1sta_dev",
-        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
-        "link": {
-          "github": "https://github.com/Crysta1221",
-          "twitter": "https://twitter.com/cr1sta_dev"
-        },
-        "repository": "https://github.com/Crysta1221/tech_logos",
-        "license": {
-          "label": "Custom",
-          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-22T09:56:53.000Z",
-      "title": "nuxtjs.png",
-      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/nuxtjs/nuxtjs.png",
-      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/nuxtjs/nuxtjs.png"
-    },
-    {
-      "author": {
-        "name": "cr1sta_dev",
-        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
-        "link": {
-          "github": "https://github.com/Crysta1221",
-          "twitter": "https://twitter.com/cr1sta_dev"
-        },
-        "repository": "https://github.com/Crysta1221/tech_logos",
-        "license": {
-          "label": "Custom",
-          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-22T09:56:53.000Z",
-      "title": "svelte.png",
-      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/svelte/svelte.png",
-      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/svelte/svelte.png"
-    },
-    {
-      "author": {
-        "name": "cr1sta_dev",
-        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
-        "link": {
-          "github": "https://github.com/Crysta1221",
-          "twitter": "https://twitter.com/cr1sta_dev"
-        },
-        "repository": "https://github.com/Crysta1221/tech_logos",
-        "license": {
-          "label": "Custom",
-          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-22T09:56:53.000Z",
-      "title": "react.png",
-      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/react/react.png",
-      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/react/react.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-22T16:34:38.000Z",
-      "title": "ImHexLogoSVGBG.svg",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ImHex/ImHexLogoSVGBG.svg",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ImHex/ImHexLogoSVGBG.svg"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-22T16:34:38.000Z",
-      "title": "ImHexLogoSVGFilled.svg",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ImHex/ImHexLogoSVGFilled.svg",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ImHex/ImHexLogoSVGFilled.svg"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-22T16:34:38.000Z",
-      "title": "ImHexLogoSVGBG.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ImHex/ImHexLogoSVGBG.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ImHex/ImHexLogoSVGBG.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-22T16:34:38.000Z",
-      "title": "ImHexLogoSVGFilled.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ImHex/ImHexLogoSVGFilled.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ImHex/ImHexLogoSVGFilled.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-22T16:34:38.000Z",
-      "title": "ImHexLogoSVGBGShadows.svg",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ImHex/ImHexLogoSVGBGShadows.svg",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ImHex/ImHexLogoSVGBGShadows.svg"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-22T16:34:38.000Z",
-      "title": "ImHexLogoSVGBGShadows.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ImHex/ImHexLogoSVGBGShadows.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ImHex/ImHexLogoSVGBGShadows.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T04:44:34.000Z",
-      "title": "DockerLogo.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Docker/DockerLogo.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Docker/DockerLogo.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T04:44:34.000Z",
-      "title": "DockerLogoShadowed.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Docker/DockerLogoShadowed.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Docker/DockerLogoShadowed.png"
-    },
-    {
-      "author": {
-        "name": "cr1sta_dev",
-        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
-        "link": {
-          "github": "https://github.com/Crysta1221",
-          "twitter": "https://twitter.com/cr1sta_dev"
-        },
-        "repository": "https://github.com/Crysta1221/tech_logos",
-        "license": {
-          "label": "Custom",
-          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T15:27:24.000Z",
-      "title": "rubyonrails.png",
-      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/rubyonrails/rubyonrails.png",
-      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/rubyonrails/rubyonrails.png"
-    },
-    {
-      "author": {
-        "name": "cr1sta_dev",
-        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
-        "link": {
-          "github": "https://github.com/Crysta1221",
-          "twitter": "https://twitter.com/cr1sta_dev"
-        },
-        "repository": "https://github.com/Crysta1221/tech_logos",
-        "license": {
-          "label": "Custom",
-          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T15:27:24.000Z",
-      "title": "rubyonrails_fix.png",
-      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/rubyonrails/rubyonrails_fix.png",
-      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/rubyonrails/rubyonrails_fix.png"
+      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLhesuxaYAAqS__.jpeg",
+      "raw": "https://drive.google.com/file/d/1HkvgRiaexWQ2TssE2ZSatUsAm5ZhGLTh/view?usp=sharing"
     },
     {
       "author": {
@@ -675,9 +30,9 @@
       },
       "className": "object-contain",
       "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "FlutterTransparent.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Flutter/FlutterTransparent.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Flutter/FlutterTransparent.png"
+      "title": "Angular_Old.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Angular/Angular_Old.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Angular/Angular_Old.png"
     },
     {
       "author": {
@@ -695,9 +50,22 @@
       },
       "className": "object-contain",
       "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "CroudStrike.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Crowdstrike/CroudStrike.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Crowdstrike/CroudStrike.png"
+      "title": "Angular.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Angular/Angular.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Angular/Angular.png"
+    },
+    {
+      "title": "Bitwig Studio",
+      "author": {
+        "name": "disphing",
+        "link": {
+          "twitter": "https://twitter.com/dsphng"
+        },
+        "license": {},
+        "repository": "https://drive.google.com/drive/folders/1Hy1_pAWx95QTv1nZFKUl96GImq4iKdf8"
+      },
+      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLhevYka0AAmU7e.jpeg",
+      "raw": "https://drive.google.com/file/d/1Dc5icFqOCOm_6qyZh1MxsFN4QtmI6RcH/view?usp=sharing"
     },
     {
       "author": {
@@ -715,229 +83,9 @@
       },
       "className": "object-contain",
       "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Rust.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Rust/Rust.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Rust/Rust.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Tailwindcss6.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Tailwindcss/Tailwindcss6.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Tailwindcss/Tailwindcss6.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "All.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/C,C#,C++/All.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/C,C#,C++/All.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Vite.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Vite/Vite.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Vite/Vite.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Haskell.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Haskell/Haskell.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Haskell/Haskell.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Haskell $.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Haskell/Haskell $.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Haskell/Haskell $.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Kotlin.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Kotlin/Kotlin.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Kotlin/Kotlin.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "TeamSpeak.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Teamspeak/TeamSpeak.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Teamspeak/TeamSpeak.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Streamloots.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Streamloots/Streamloots.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Streamloots/Streamloots.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "VIM.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Vim/VIM.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Vim/VIM.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "C++.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/C++/C++.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/C++/C++.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "htmx.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Htmx/htmx.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Htmx/htmx.png"
+      "title": "C.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/C/C.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/C/C.png"
     },
     {
       "author": {
@@ -995,69 +143,9 @@
       },
       "className": "object-contain",
       "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Swift.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Swift/Swift.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Swift/Swift.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Angular.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Angular/Angular.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Angular/Angular.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Angular_Old.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Angular/Angular_Old.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Angular/Angular_Old.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Node.js.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Node.js/Node.js.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Node.js/Node.js.png"
+      "title": "C++.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/C++/C++.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/C++/C++.png"
     },
     {
       "author": {
@@ -1100,224 +188,19 @@
       "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Cloudflare/Cloudflare.png"
     },
     {
+      "title": "Elysia",
       "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "name": "saltyaom",
+        "pfp": "https://avatars.githubusercontent.com/u/35027979?v=4",
         "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
+          "github": "https://github.com/SaltyAom",
+          "twitter": "https://twitter.com/saltyaom"
         },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
+        "license": {},
+        "repository": ""
       },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "VRChat.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Vrchat/VRChat.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Vrchat/VRChat.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "X.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/X/X.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/X/X.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Laravel.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Laravel/Laravel.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Laravel/Laravel.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "UnityBlenderT.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/UnityBlender/UnityBlenderT.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/UnityBlender/UnityBlenderT.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "C.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/C/C.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/C/C.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Qwik.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Qwik.js/Qwik.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Qwik.js/Qwik.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Java.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Java/Java.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Java/Java.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Rider.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Rider/Rider.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Rider/Rider.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Vue.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Vue/Vue.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Vue/Vue.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "HTML.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Html/HTML.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Html/HTML.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "RhineLab.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/RhineLab/RhineLab.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/RhineLab/RhineLab.png"
+      "src": "https://raw.githubusercontent.com/elysiajs/documentation/6e13f140b53fb69d9a82993cd80a82df55325b9e/docs/public/assets/elysia_v.svg",
+      "raw": "https://github.com/elysiajs/documentation/blob/main/docs/public/assets/elysia_v.svg"
     },
     {
       "author": {
@@ -1340,84 +223,31 @@
       "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Figma/Figma.png"
     },
     {
+      "title": "FL Studio",
       "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "name": "disphing",
         "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
+          "twitter": "https://twitter.com/dsphng"
         },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
+        "license": {},
+        "repository": "https://drive.google.com/drive/folders/1Hy1_pAWx95QTv1nZFKUl96GImq4iKdf8"
       },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Voicemod.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Voicemod/Voicemod.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Voicemod/Voicemod.png"
+      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLhep0Za8AAyBff.jpeg",
+      "raw": "https://drive.google.com/file/d/1wMi3TOs-egixz6wuf4NNJpMfzArMcZZ2/view?usp=sharing"
     },
     {
+      "title": "Fumadocs",
       "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "name": "fuma-nama",
+        "pfp": "https://avatars.githubusercontent.com/u/76240755?v=4",
         "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
+          "github": "https://github.com/fuma-nama"
         },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
+        "license": {},
+        "repository": ""
       },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Golang.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Go/Golang.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Go/Golang.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Ruby.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Ruby/Ruby.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Ruby/Ruby.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Python.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Python/Python.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Python/Python.png"
+      "src": "https://raw.githubusercontent.com/fuma-nama/fumadocs/dev/documents/logo.png",
+      "raw": "https://github.com/fuma-nama/fumadocs/blob/dev/documents/logo.png"
     },
     {
       "author": {
@@ -1455,9 +285,692 @@
       },
       "className": "object-contain",
       "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Golang.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Go/Golang.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Go/Golang.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Haskell $.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Haskell/Haskell $.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Haskell/Haskell $.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Haskell.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Haskell/Haskell.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Haskell/Haskell.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "HTML.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Html/HTML.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Html/HTML.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "htmx.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Htmx/htmx.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Htmx/htmx.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Java.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Java/Java.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Java/Java.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Kotlin.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Kotlin/Kotlin.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Kotlin/Kotlin.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Laravel.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Laravel/Laravel.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Laravel/Laravel.png"
+    },
+    {
+      "title": "Logic Pro",
+      "author": {
+        "name": "disphing",
+        "link": {
+          "twitter": "https://twitter.com/dsphng"
+        },
+        "license": {},
+        "repository": "https://drive.google.com/drive/folders/1Hy1_pAWx95QTv1nZFKUl96GImq4iKdf8"
+      },
+      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLm7MOob0AAimzf.jpeg"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-19T09:56:31.000Z",
+      "title": "NeovimLogo.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Neovim/NeovimLogo.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Neovim/NeovimLogo.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-19T09:56:31.000Z",
+      "title": "NeovimShadowed.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Neovim/NeovimShadowed.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Neovim/NeovimShadowed.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-19T12:15:07.000Z",
+      "title": "BunLogoOld.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Bun/BunLogoOld.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Bun/BunLogoOld.png"
+    },
+    {
+      "author": {
+        "name": "g2-games",
+        "link": {
+          "github": "https://github.com/G2-Games"
+        },
+        "pfp": "https://avatars.githubusercontent.com/u/72430668",
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/G2-Games/fun-logos/blob/main/LICENSE"
+        },
+        "repository": "https://github.com/G2-Games/fun-logos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-19T16:45:56.000Z",
+      "title": "kate-animated.svg",
+      "src": "https://raw.githubusercontent.com/G2-Games/fun-logos/main/kate/kate-animated.svg",
+      "raw": "https://github.com/G2-Games/fun-logos/blob/main/kate/kate-animated.svg"
+    },
+    {
+      "author": {
+        "name": "g2-games",
+        "link": {
+          "github": "https://github.com/G2-Games"
+        },
+        "pfp": "https://avatars.githubusercontent.com/u/72430668",
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/G2-Games/fun-logos/blob/main/LICENSE"
+        },
+        "repository": "https://github.com/G2-Games/fun-logos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-19T16:45:56.000Z",
+      "title": "kate.svg",
+      "src": "https://raw.githubusercontent.com/G2-Games/fun-logos/main/kate/kate.svg",
+      "raw": "https://github.com/G2-Games/fun-logos/blob/main/kate/kate.svg"
+    },
+    {
+      "author": {
+        "name": "cr1sta_dev",
+        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
+        "link": {
+          "github": "https://github.com/Crysta1221",
+          "twitter": "https://twitter.com/cr1sta_dev"
+        },
+        "repository": "https://github.com/Crysta1221/tech_logos",
+        "license": {
+          "label": "Custom",
+          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-22T09:56:53.000Z",
+      "title": "nuxtjs.png",
+      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/nuxtjs/nuxtjs.png",
+      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/nuxtjs/nuxtjs.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Node.js.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Node.js/Node.js.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Node.js/Node.js.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
       "title": "Photoshop.png",
       "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Photoshop/Photoshop.png",
       "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Photoshop/Photoshop.png"
+    },
+    {
+      "title": "Porter Robinson",
+      "author": {
+        "name": "disphing",
+        "link": {
+          "twitter": "https://twitter.com/dsphng"
+        },
+        "license": {},
+        "repository": "https://drive.google.com/drive/folders/1Hy1_pAWx95QTv1nZFKUl96GImq4iKdf8"
+      },
+      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLh9h3rbQAA7wik.jpeg",
+      "raw": "https://drive.google.com/file/d/19bMQzV2ZseW-pyV8NSjDyitiuyeJNJ1G/view?usp=sharing"
+    },
+    {
+      "author": {
+        "name": "cr1sta_dev",
+        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
+        "link": {
+          "github": "https://github.com/Crysta1221",
+          "twitter": "https://twitter.com/cr1sta_dev"
+        },
+        "repository": "https://github.com/Crysta1221/tech_logos",
+        "license": {
+          "label": "Custom",
+          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-22T09:56:53.000Z",
+      "title": "react.png",
+      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/react/react.png",
+      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/react/react.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T04:44:34.000Z",
+      "title": "DockerLogo.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Docker/DockerLogo.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Docker/DockerLogo.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T04:44:34.000Z",
+      "title": "DockerLogoShadowed.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Docker/DockerLogoShadowed.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Docker/DockerLogoShadowed.png"
+    },
+    {
+      "author": {
+        "name": "cr1sta_dev",
+        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
+        "link": {
+          "github": "https://github.com/Crysta1221",
+          "twitter": "https://twitter.com/cr1sta_dev"
+        },
+        "repository": "https://github.com/Crysta1221/tech_logos",
+        "license": {
+          "label": "Custom",
+          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T15:27:24.000Z",
+      "title": "rubyonrails_fix.png",
+      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/rubyonrails/rubyonrails_fix.png",
+      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/rubyonrails/rubyonrails_fix.png"
+    },
+    {
+      "author": {
+        "name": "cr1sta_dev",
+        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
+        "link": {
+          "github": "https://github.com/Crysta1221",
+          "twitter": "https://twitter.com/cr1sta_dev"
+        },
+        "repository": "https://github.com/Crysta1221/tech_logos",
+        "license": {
+          "label": "Custom",
+          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T15:27:24.000Z",
+      "title": "rubyonrails.png",
+      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/rubyonrails/rubyonrails.png",
+      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/rubyonrails/rubyonrails.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Python.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Python/Python.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Python/Python.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Qwik.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Qwik.js/Qwik.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Qwik.js/Qwik.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Raspberry Pi.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/RaspberryPi/Raspberry Pi.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/RaspberryPi/Raspberry Pi.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "RhineLab.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/RhineLab/RhineLab.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/RhineLab/RhineLab.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Rider.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Rider/Rider.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Rider/Rider.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Ruby.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Ruby/Ruby.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Ruby/Ruby.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Streamloots.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Streamloots/Streamloots.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Streamloots/Streamloots.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "TeamSpeak.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Teamspeak/TeamSpeak.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Teamspeak/TeamSpeak.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "UnityBlenderT.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/UnityBlender/UnityBlenderT.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/UnityBlender/UnityBlenderT.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "VIM.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Vim/VIM.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Vim/VIM.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Voicemod.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Voicemod/Voicemod.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Voicemod/Voicemod.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "VRChat.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Vrchat/VRChat.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Vrchat/VRChat.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Vue.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Vue/Vue.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Vue/Vue.png"
     },
     {
       "author": {
@@ -1495,9 +1008,9 @@
       },
       "className": "object-contain",
       "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "Raspberry Pi.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/RaspberryPi/Raspberry Pi.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/RaspberryPi/Raspberry Pi.png"
+      "title": "X.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/X/X.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/X/X.png"
     },
     {
       "author": {
@@ -1518,6 +1031,86 @@
       "title": "Next.js.png",
       "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Next.js/Next.js.png",
       "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Next.js/Next.js.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-24T05:05:20.000Z",
+      "title": "MirinTemplateLogoFilled.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Mirin Template for NotITG/MirinTemplateLogoFilled.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Mirin Template for NotITG/MirinTemplateLogoFilled.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-24T05:05:20.000Z",
+      "title": "MirinTemplateLogoFilled.svg",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Mirin Template for NotITG/MirinTemplateLogoFilled.svg",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Mirin Template for NotITG/MirinTemplateLogoFilled.svg"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-24T05:05:20.000Z",
+      "title": "MirinTemplateLogoFlattened.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Mirin Template for NotITG/MirinTemplateLogoFlattened.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Mirin Template for NotITG/MirinTemplateLogoFlattened.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-24T05:05:20.000Z",
+      "title": "MirinTemplateLogoFlattened.svg",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Mirin Template for NotITG/MirinTemplateLogoFlattened.svg",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Mirin Template for NotITG/MirinTemplateLogoFlattened.svg"
     },
     {
       "author": {
@@ -1561,86 +1154,6 @@
     },
     {
       "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-24T05:05:20.000Z",
-      "title": "MirinTemplateLogoFlattened.svg",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Mirin Template for NotITG/MirinTemplateLogoFlattened.svg",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Mirin Template for NotITG/MirinTemplateLogoFlattened.svg"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-24T05:05:20.000Z",
-      "title": "MirinTemplateLogoFlattened.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Mirin Template for NotITG/MirinTemplateLogoFlattened.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Mirin Template for NotITG/MirinTemplateLogoFlattened.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-24T05:05:20.000Z",
-      "title": "MirinTemplateLogoFilled.svg",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Mirin Template for NotITG/MirinTemplateLogoFilled.svg",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Mirin Template for NotITG/MirinTemplateLogoFilled.svg"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-24T05:05:20.000Z",
-      "title": "MirinTemplateLogoFilled.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Mirin Template for NotITG/MirinTemplateLogoFilled.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Mirin Template for NotITG/MirinTemplateLogoFilled.png"
-    },
-    {
-      "author": {
         "name": "sawaratsuki",
         "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
         "link": {
@@ -1674,50 +1187,57 @@
         }
       },
       "className": "object-contain",
-      "createdAt": "2024-04-24T11:21:43.000Z",
-      "title": "Ubuntu.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Ubuntu/Ubuntu.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Ubuntu/Ubuntu.png"
+      "createdAt": "2024-04-25T04:25:44.000Z",
+      "title": "GitLab.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/GitLab/GitLab.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/GitLab/GitLab.png"
+    },
+    {
+      "title": "Skrillex",
+      "author": {
+        "name": "disphing",
+        "link": {
+          "twitter": "https://twitter.com/dsphng"
+        },
+        "license": {},
+        "repository": "https://drive.google.com/drive/folders/1Hy1_pAWx95QTv1nZFKUl96GImq4iKdf8"
+      },
+      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLh5aGWakAAM3dk.jpeg",
+      "raw": "https://drive.google.com/file/d/1mumHSFG6k8O1uKG29rYc9s0Wm_jQDSpP/view?usp=sharing"
+    },
+    {
+      "title": "svelte",
+      "author": {
+        "name": "styxpilled",
+        "pfp": "",
+        "link": {
+          "twitter": "https://twitter.com/styxpilled"
+        },
+        "license": {},
+        "repository": ""
+      },
+      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLlkf9EWwAAq3N9.jpeg",
+      "raw": "https://twitter.com/styxpilled/status/1781565832251719868"
     },
     {
       "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "name": "cr1sta_dev",
+        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
         "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
+          "github": "https://github.com/Crysta1221",
+          "twitter": "https://twitter.com/cr1sta_dev"
         },
+        "repository": "https://github.com/Crysta1221/tech_logos",
         "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+          "label": "Custom",
+          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
+        }
       },
       "className": "object-contain",
-      "createdAt": "2024-04-24T16:47:32.000Z",
-      "title": "GameChangerLogo.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/GameChanger/GameChangerLogo.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/GameChanger/GameChangerLogo.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-24T16:47:32.000Z",
-      "title": "GameChangerLogoShadowed.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/GameChanger/GameChangerLogoShadowed.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/GameChanger/GameChangerLogoShadowed.png"
+      "createdAt": "2024-04-22T09:56:53.000Z",
+      "title": "svelte.png",
+      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/svelte/svelte.png",
+      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/svelte/svelte.png"
     },
     {
       "author": {
@@ -1734,10 +1254,10 @@
         }
       },
       "className": "object-contain",
-      "createdAt": "2024-04-24T17:36:02.000Z",
-      "title": "Twitter.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Twitter/Twitter.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Twitter/Twitter.png"
+      "createdAt": "2024-04-24T11:21:43.000Z",
+      "title": "Ubuntu.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Ubuntu/Ubuntu.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Ubuntu/Ubuntu.png"
     },
     {
       "author": {
@@ -1774,50 +1294,10 @@
         }
       },
       "className": "object-contain",
-      "createdAt": "2024-04-25T04:25:44.000Z",
-      "title": "GitLab.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/GitLab/GitLab.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/GitLab/GitLab.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
       "createdAt": "2024-04-25T18:11:07.000Z",
       "title": "NotFound.png",
       "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/404Notfound/NotFound.png",
       "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/404Notfound/NotFound.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-26T13:20:50.000Z",
-      "title": "preview.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ReplaceGuide/VSCode/preview.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ReplaceGuide/VSCode/preview.png"
     },
     {
       "author": {
@@ -1898,6 +1378,675 @@
       "title": "Svelte.svg",
       "src": "https://raw.githubusercontent.com/mkpoli/VTuber-Styled-Logos/main/logos/Svelte/Svelte.svg",
       "raw": "https://github.com/mkpoli/VTuber-Styled-Logos/blob/main/logos/Svelte/Svelte.svg"
+    },
+    {
+      "title": "sveltekit",
+      "author": {
+        "name": "styxpilled",
+        "pfp": "",
+        "link": {
+          "twitter": "https://twitter.com/styxpilled"
+        },
+        "license": {},
+        "repository": ""
+      },
+      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLmrDPdXgAAlKvW.jpeg",
+      "raw": "https://twitter.com/styxpilled/status/1781643208130216015"
+    },
+    {
+      "title": "Visual Studio",
+      "author": {
+        "name": "hvpexe",
+        "link": {
+          "github": "https://github.com/hvpexe",
+          "twitter": "https://twitter.com/Manhkbrady"
+        },
+        "pfp": "https://avatars.githubusercontent.com/u/97070754",
+        "repository": "https://github.com/hvpexe/ProgrammingVTuberLogos-VisualStudio/",
+        "license": {
+          "label": "CC-BY-NC-SA-4.0",
+          "href": "https://github.com/hvpexe/ProgrammingVTuberLogos-VisualStudio/blob/master/LICENSE.md"
+        }
+      },
+      "src": "https://github.com/hvpexe/ProgrammingVTuberLogos-VisualStudio/blob/master/VisualStudio/VisualStudioLogo.png?raw=true",
+      "raw": "https://github.com/hvpexe/ProgrammingVTuberLogos-VisualStudio/blob/master/VisualStudio/VisualStudioLogo.png"
+    },
+    {
+      "title": "Visual Studio Code Korea",
+      "author": {
+        "name": "IDMDiamondl",
+        "link": {
+          "github": "https://github.com/lDMDiamondl"
+        },
+        "pfp": "https://avatars.githubusercontent.com/u/100426562",
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/lDMDiamondl/ProgrammingVTuberLogosKR/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/lDMDiamondl/ProgrammingVTuberLogosKR/"
+      },
+      "src": "https://raw.githubusercontent.com/lDMDiamondl/ProgrammingVTuberLogosKR/main/VSCode/VSCode-Thick.png",
+      "raw": "https://github.com/lDMDiamondl/ProgrammingVTuberLogosKR/blob/main/VSCode/VSCode-Thick.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-18T09:08:15.000Z",
+      "title": "VSCode-Thick.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/VSCode/VSCode-Thick.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/VSCode/VSCode-Thick.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-18T09:08:15.000Z",
+      "title": "VSCode.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/VSCode/VSCode.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/VSCode/VSCode.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-18T10:43:56.000Z",
+      "title": "IntellijLogo.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/IntelliJIDEA/IntellijLogo.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/IntelliJIDEA/IntellijLogo.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-18T10:43:56.000Z",
+      "title": "intelliJShadow.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/IntelliJIDEA/intelliJShadow.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/IntelliJIDEA/intelliJShadow.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-18T12:46:16.000Z",
+      "title": "kubernetesLogo.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Kubernetes/kubernetesLogo.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Kubernetes/kubernetesLogo.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-18T12:46:16.000Z",
+      "title": "kubernetesLogoShadow.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Kubernetes/kubernetesLogoShadow.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Kubernetes/kubernetesLogoShadow.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-18T20:36:12.000Z",
+      "title": "GodotLogo.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/GodotEngine/GodotLogo.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/GodotEngine/GodotLogo.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-18T20:36:12.000Z",
+      "title": "GodotLogoShadow.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/GodotEngine/GodotLogoShadow.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/GodotEngine/GodotLogoShadow.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-19T11:50:00.000Z",
+      "title": "BunLogo.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Bun/BunLogo.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Bun/BunLogo.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-19T11:50:00.000Z",
+      "title": "BunLogoShadowed.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Bun/BunLogoShadowed.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Bun/BunLogoShadowed.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-19T12:15:07.000Z",
+      "title": "BunLogoShadowedOld.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Bun/BunLogoShadowedOld.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Bun/BunLogoShadowedOld.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-19T16:26:12.000Z",
+      "title": "PaperMCLogo.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/PaperMC/PaperMCLogo.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/PaperMC/PaperMCLogo.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-19T16:26:12.000Z",
+      "title": "PaperMCLogoShadowed.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/PaperMC/PaperMCLogoShadowed.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/PaperMC/PaperMCLogoShadowed.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-20T17:25:12.000Z",
+      "title": "ElysiaJSLogo.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ElysiaJS/ElysiaJSLogo.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ElysiaJS/ElysiaJSLogo.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-20T17:25:12.000Z",
+      "title": "ElysiaJSLogoShadowed.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ElysiaJS/ElysiaJSLogoShadowed.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ElysiaJS/ElysiaJSLogoShadowed.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-22T16:34:38.000Z",
+      "title": "ImHexLogoSVGBG.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ImHex/ImHexLogoSVGBG.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ImHex/ImHexLogoSVGBG.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-22T16:34:38.000Z",
+      "title": "ImHexLogoSVGBG.svg",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ImHex/ImHexLogoSVGBG.svg",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ImHex/ImHexLogoSVGBG.svg"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-22T16:34:38.000Z",
+      "title": "ImHexLogoSVGBGShadows.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ImHex/ImHexLogoSVGBGShadows.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ImHex/ImHexLogoSVGBGShadows.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-22T16:34:38.000Z",
+      "title": "ImHexLogoSVGBGShadows.svg",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ImHex/ImHexLogoSVGBGShadows.svg",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ImHex/ImHexLogoSVGBGShadows.svg"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-22T16:34:38.000Z",
+      "title": "ImHexLogoSVGFilled.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ImHex/ImHexLogoSVGFilled.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ImHex/ImHexLogoSVGFilled.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-22T16:34:38.000Z",
+      "title": "ImHexLogoSVGFilled.svg",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ImHex/ImHexLogoSVGFilled.svg",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ImHex/ImHexLogoSVGFilled.svg"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "All.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/C,C#,C++/All.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/C,C#,C++/All.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "CroudStrike.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Crowdstrike/CroudStrike.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Crowdstrike/CroudStrike.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "FlutterTransparent.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Flutter/FlutterTransparent.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Flutter/FlutterTransparent.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Rust.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Rust/Rust.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Rust/Rust.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Tailwindcss6.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Tailwindcss/Tailwindcss6.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Tailwindcss/Tailwindcss6.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Vite.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Vite/Vite.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Vite/Vite.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-24T16:47:32.000Z",
+      "title": "GameChangerLogo.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/GameChanger/GameChangerLogo.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/GameChanger/GameChangerLogo.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-24T16:47:32.000Z",
+      "title": "GameChangerLogoShadowed.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/GameChanger/GameChangerLogoShadowed.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/GameChanger/GameChangerLogoShadowed.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-24T17:36:02.000Z",
+      "title": "Twitter.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Twitter/Twitter.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Twitter/Twitter.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-26T13:20:50.000Z",
+      "title": "preview.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/ReplaceGuide/VSCode/preview.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/ReplaceGuide/VSCode/preview.png"
     },
     {
       "author": {
@@ -2175,9 +2324,9 @@
       },
       "className": "object-contain",
       "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "React.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/React/React.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/React/React.png"
+      "title": "ArchLinux.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/ArchLinux/ArchLinux.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/ArchLinux/ArchLinux.png"
     },
     {
       "author": {
@@ -2275,9 +2424,49 @@
       },
       "className": "object-contain",
       "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "React.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/React/React.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/React/React.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
       "title": "RStudio.png",
       "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Rstudio/RStudio.png",
       "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Rstudio/RStudio.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T18:59:49.000Z",
+      "title": "Swift.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Swift/Swift.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Swift/Swift.png"
     },
     {
       "author": {
@@ -2358,26 +2547,6 @@
       "title": "Cobol.png",
       "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Cobol/Cobol.png",
       "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Cobol/Cobol.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T18:59:49.000Z",
-      "title": "ArchLinux.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/ArchLinux/ArchLinux.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/ArchLinux/ArchLinux.png"
     },
     {
       "author": {
@@ -2478,175 +2647,6 @@
       "title": "NullPointerException.png",
       "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/NullPointerException/NullPointerException.png",
       "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/NullPointerException/NullPointerException.png"
-    },
-    {
-      "title": "Elysia",
-      "author": {
-        "name": "saltyaom",
-        "pfp": "https://avatars.githubusercontent.com/u/35027979?v=4",
-        "link": {
-          "github": "https://github.com/SaltyAom",
-          "twitter": "https://twitter.com/saltyaom"
-        },
-        "license": {},
-        "repository": ""
-      },
-      "src": "https://raw.githubusercontent.com/elysiajs/documentation/6e13f140b53fb69d9a82993cd80a82df55325b9e/docs/public/assets/elysia_v.svg",
-      "raw": "https://github.com/elysiajs/documentation/blob/main/docs/public/assets/elysia_v.svg"
-    },
-    {
-      "title": "Skrillex",
-      "author": {
-        "name": "disphing",
-        "link": {
-          "twitter": "https://twitter.com/dsphng"
-        },
-        "license": {},
-        "repository": "https://drive.google.com/drive/folders/1Hy1_pAWx95QTv1nZFKUl96GImq4iKdf8"
-      },
-      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLh5aGWakAAM3dk.jpeg",
-      "raw": "https://drive.google.com/file/d/1mumHSFG6k8O1uKG29rYc9s0Wm_jQDSpP/view?usp=sharing"
-    },
-    {
-      "title": "Porter Robinson",
-      "author": {
-        "name": "disphing",
-        "link": {
-          "twitter": "https://twitter.com/dsphng"
-        },
-        "license": {},
-        "repository": "https://drive.google.com/drive/folders/1Hy1_pAWx95QTv1nZFKUl96GImq4iKdf8"
-      },
-      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLh9h3rbQAA7wik.jpeg",
-      "raw": "https://drive.google.com/file/d/19bMQzV2ZseW-pyV8NSjDyitiuyeJNJ1G/view?usp=sharing"
-    },
-    {
-      "title": "FL Studio",
-      "author": {
-        "name": "disphing",
-        "link": {
-          "twitter": "https://twitter.com/dsphng"
-        },
-        "license": {},
-        "repository": "https://drive.google.com/drive/folders/1Hy1_pAWx95QTv1nZFKUl96GImq4iKdf8"
-      },
-      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLhep0Za8AAyBff.jpeg",
-      "raw": "https://drive.google.com/file/d/1wMi3TOs-egixz6wuf4NNJpMfzArMcZZ2/view?usp=sharing"
-    },
-    {
-      "title": "Bitwig Studio",
-      "author": {
-        "name": "disphing",
-        "link": {
-          "twitter": "https://twitter.com/dsphng"
-        },
-        "license": {},
-        "repository": "https://drive.google.com/drive/folders/1Hy1_pAWx95QTv1nZFKUl96GImq4iKdf8"
-      },
-      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLhevYka0AAmU7e.jpeg",
-      "raw": "https://drive.google.com/file/d/1Dc5icFqOCOm_6qyZh1MxsFN4QtmI6RcH/view?usp=sharing"
-    },
-    {
-      "title": "Ableton Live",
-      "author": {
-        "name": "disphing",
-        "link": {
-          "twitter": "https://twitter.com/dsphng"
-        },
-        "license": {},
-        "repository": "https://drive.google.com/drive/folders/1Hy1_pAWx95QTv1nZFKUl96GImq4iKdf8"
-      },
-      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLhesuxaYAAqS__.jpeg",
-      "raw": "https://drive.google.com/file/d/1HkvgRiaexWQ2TssE2ZSatUsAm5ZhGLTh/view?usp=sharing"
-    },
-    {
-      "title": "Logic Pro",
-      "author": {
-        "name": "disphing",
-        "link": {
-          "twitter": "https://twitter.com/dsphng"
-        },
-        "license": {},
-        "repository": "https://drive.google.com/drive/folders/1Hy1_pAWx95QTv1nZFKUl96GImq4iKdf8"
-      },
-      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLm7MOob0AAimzf.jpeg"
-    },
-    {
-      "title": "Visual Studio",
-      "author": {
-        "name": "hvpexe",
-        "link": {
-          "github": "https://github.com/hvpexe",
-          "twitter": "https://twitter.com/Manhkbrady"
-        },
-        "pfp": "https://avatars.githubusercontent.com/u/97070754",
-        "repository": "https://github.com/hvpexe/ProgrammingVTuberLogos-VisualStudio/",
-        "license": {
-          "label": "CC-BY-NC-SA-4.0",
-          "href": "https://github.com/hvpexe/ProgrammingVTuberLogos-VisualStudio/blob/master/LICENSE.md"
-        }
-      },
-      "src": "https://github.com/hvpexe/ProgrammingVTuberLogos-VisualStudio/blob/master/VisualStudio/VisualStudioLogo.png?raw=true",
-      "raw": "https://github.com/hvpexe/ProgrammingVTuberLogos-VisualStudio/blob/master/VisualStudio/VisualStudioLogo.png"
-    },
-    {
-      "title": "Visual Studio Code Korea",
-      "author": {
-        "name": "IDMDiamondl",
-        "link": {
-          "github": "https://github.com/lDMDiamondl"
-        },
-        "pfp": "https://avatars.githubusercontent.com/u/100426562",
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/lDMDiamondl/ProgrammingVTuberLogosKR/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/lDMDiamondl/ProgrammingVTuberLogosKR/"
-      },
-      "src": "https://raw.githubusercontent.com/lDMDiamondl/ProgrammingVTuberLogosKR/main/VSCode/VSCode-Thick.png",
-      "raw": "https://github.com/lDMDiamondl/ProgrammingVTuberLogosKR/blob/main/VSCode/VSCode-Thick.png"
-    },
-    {
-      "title": "Fumadocs",
-      "author": {
-        "name": "fuma-nama",
-        "pfp": "https://avatars.githubusercontent.com/u/76240755?v=4",
-        "link": {
-          "github": "https://github.com/fuma-nama"
-        },
-        "license": {},
-        "repository": ""
-      },
-      "src": "https://raw.githubusercontent.com/fuma-nama/fumadocs/dev/documents/logo.png",
-      "raw": "https://github.com/fuma-nama/fumadocs/blob/dev/documents/logo.png"
-    },
-    {
-      "title": "svelte",
-      "author": {
-        "name": "styxpilled",
-        "pfp": "",
-        "link": {
-          "twitter": "https://twitter.com/styxpilled"
-        },
-        "license": {},
-        "repository": ""
-      },
-      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLlkf9EWwAAq3N9.jpeg",
-      "raw": "https://twitter.com/styxpilled/status/1781565832251719868"
-    },
-    {
-      "title": "sveltekit",
-      "author": {
-        "name": "styxpilled",
-        "pfp": "",
-        "link": {
-          "twitter": "https://twitter.com/styxpilled"
-        },
-        "license": {},
-        "repository": ""
-      },
-      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLmrDPdXgAAlKvW.jpeg",
-      "raw": "https://twitter.com/styxpilled/status/1781643208130216015"
     }
   ]
 }
