@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2024-04-30T06:22:08.513Z",
+  "updatedAt": "2024-04-30T06:22:35.835Z",
   "data": [
     {
       "title": "Ableton Live",
@@ -251,6 +251,104 @@
     },
     {
       "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-19T09:56:31.000Z",
+      "title": "NeovimLogo.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Neovim/NeovimLogo.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Neovim/NeovimLogo.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-19T09:56:31.000Z",
+      "title": "NeovimShadowed.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Neovim/NeovimShadowed.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Neovim/NeovimShadowed.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-19T12:15:07.000Z",
+      "title": "BunLogoOld.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Bun/BunLogoOld.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Bun/BunLogoOld.png"
+    },
+    {
+      "author": {
+        "name": "g2-games",
+        "link": {
+          "github": "https://github.com/G2-Games"
+        },
+        "pfp": "https://avatars.githubusercontent.com/u/72430668",
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/G2-Games/fun-logos/blob/main/LICENSE"
+        },
+        "repository": "https://github.com/G2-Games/fun-logos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-19T16:45:56.000Z",
+      "title": "kate-animated.svg",
+      "src": "https://raw.githubusercontent.com/G2-Games/fun-logos/main/kate/kate-animated.svg",
+      "raw": "https://github.com/G2-Games/fun-logos/blob/main/kate/kate-animated.svg"
+    },
+    {
+      "author": {
+        "name": "g2-games",
+        "link": {
+          "github": "https://github.com/G2-Games"
+        },
+        "pfp": "https://avatars.githubusercontent.com/u/72430668",
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/G2-Games/fun-logos/blob/main/LICENSE"
+        },
+        "repository": "https://github.com/G2-Games/fun-logos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-19T16:45:56.000Z",
+      "title": "kate.svg",
+      "src": "https://raw.githubusercontent.com/G2-Games/fun-logos/main/kate/kate.svg",
+      "raw": "https://github.com/G2-Games/fun-logos/blob/main/kate/kate.svg"
+    },
+    {
+      "author": {
         "name": "sawaratsuki",
         "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
         "link": {
@@ -443,104 +541,6 @@
     },
     {
       "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-19T09:56:31.000Z",
-      "title": "NeovimLogo.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Neovim/NeovimLogo.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Neovim/NeovimLogo.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-19T09:56:31.000Z",
-      "title": "NeovimShadowed.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Neovim/NeovimShadowed.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Neovim/NeovimShadowed.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-19T12:15:07.000Z",
-      "title": "BunLogoOld.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Bun/BunLogoOld.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Bun/BunLogoOld.png"
-    },
-    {
-      "author": {
-        "name": "g2-games",
-        "link": {
-          "github": "https://github.com/G2-Games"
-        },
-        "pfp": "https://avatars.githubusercontent.com/u/72430668",
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/G2-Games/fun-logos/blob/main/LICENSE"
-        },
-        "repository": "https://github.com/G2-Games/fun-logos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-19T16:45:56.000Z",
-      "title": "kate-animated.svg",
-      "src": "https://raw.githubusercontent.com/G2-Games/fun-logos/main/kate/kate-animated.svg",
-      "raw": "https://github.com/G2-Games/fun-logos/blob/main/kate/kate-animated.svg"
-    },
-    {
-      "author": {
-        "name": "g2-games",
-        "link": {
-          "github": "https://github.com/G2-Games"
-        },
-        "pfp": "https://avatars.githubusercontent.com/u/72430668",
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/G2-Games/fun-logos/blob/main/LICENSE"
-        },
-        "repository": "https://github.com/G2-Games/fun-logos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-19T16:45:56.000Z",
-      "title": "kate.svg",
-      "src": "https://raw.githubusercontent.com/G2-Games/fun-logos/main/kate/kate.svg",
-      "raw": "https://github.com/G2-Games/fun-logos/blob/main/kate/kate.svg"
-    },
-    {
-      "author": {
         "name": "cr1sta_dev",
         "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
         "link": {
@@ -631,86 +631,6 @@
       "title": "react.png",
       "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/react/react.png",
       "raw": "https://github.com/Crysta1221/tech_logos/blob/main/react/react.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T04:44:34.000Z",
-      "title": "DockerLogo.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Docker/DockerLogo.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Docker/DockerLogo.png"
-    },
-    {
-      "author": {
-        "name": "aikoyori",
-        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
-        "link": {
-          "twitter": "https://twitter.com/Aikoyori",
-          "github": "https://github.com/Aikoyori"
-        },
-        "license": {
-          "label": "CC BY-NC-SA 4.0",
-          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
-        },
-        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T04:44:34.000Z",
-      "title": "DockerLogoShadowed.png",
-      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Docker/DockerLogoShadowed.png",
-      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Docker/DockerLogoShadowed.png"
-    },
-    {
-      "author": {
-        "name": "cr1sta_dev",
-        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
-        "link": {
-          "github": "https://github.com/Crysta1221",
-          "twitter": "https://twitter.com/cr1sta_dev"
-        },
-        "repository": "https://github.com/Crysta1221/tech_logos",
-        "license": {
-          "label": "Custom",
-          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T15:27:24.000Z",
-      "title": "rubyonrails_fix.png",
-      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/rubyonrails/rubyonrails_fix.png",
-      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/rubyonrails/rubyonrails_fix.png"
-    },
-    {
-      "author": {
-        "name": "cr1sta_dev",
-        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
-        "link": {
-          "github": "https://github.com/Crysta1221",
-          "twitter": "https://twitter.com/cr1sta_dev"
-        },
-        "repository": "https://github.com/Crysta1221/tech_logos",
-        "license": {
-          "label": "Custom",
-          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-23T15:27:24.000Z",
-      "title": "rubyonrails.png",
-      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/rubyonrails/rubyonrails.png",
-      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/rubyonrails/rubyonrails.png"
     },
     {
       "author": {
@@ -833,6 +753,19 @@
       "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Ruby/Ruby.png"
     },
     {
+      "title": "Skrillex",
+      "author": {
+        "name": "disphing",
+        "link": {
+          "twitter": "https://twitter.com/dsphng"
+        },
+        "license": {},
+        "repository": "https://drive.google.com/drive/folders/1Hy1_pAWx95QTv1nZFKUl96GImq4iKdf8"
+      },
+      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLh5aGWakAAM3dk.jpeg",
+      "raw": "https://drive.google.com/file/d/1mumHSFG6k8O1uKG29rYc9s0Wm_jQDSpP/view?usp=sharing"
+    },
+    {
       "author": {
         "name": "sawaratsuki",
         "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
@@ -851,6 +784,120 @@
       "title": "Streamloots.png",
       "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Streamloots/Streamloots.png",
       "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/Streamloots/Streamloots.png"
+    },
+    {
+      "title": "svelte",
+      "author": {
+        "name": "styxpilled",
+        "pfp": "",
+        "link": {
+          "twitter": "https://twitter.com/styxpilled"
+        },
+        "license": {},
+        "repository": ""
+      },
+      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLlkf9EWwAAq3N9.jpeg",
+      "raw": "https://twitter.com/styxpilled/status/1781565832251719868"
+    },
+    {
+      "author": {
+        "name": "cr1sta_dev",
+        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
+        "link": {
+          "github": "https://github.com/Crysta1221",
+          "twitter": "https://twitter.com/cr1sta_dev"
+        },
+        "repository": "https://github.com/Crysta1221/tech_logos",
+        "license": {
+          "label": "Custom",
+          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-22T09:56:53.000Z",
+      "title": "svelte.png",
+      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/svelte/svelte.png",
+      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/svelte/svelte.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T04:44:34.000Z",
+      "title": "DockerLogo.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Docker/DockerLogo.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Docker/DockerLogo.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T04:44:34.000Z",
+      "title": "DockerLogoShadowed.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/Docker/DockerLogoShadowed.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/Docker/DockerLogoShadowed.png"
+    },
+    {
+      "author": {
+        "name": "cr1sta_dev",
+        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
+        "link": {
+          "github": "https://github.com/Crysta1221",
+          "twitter": "https://twitter.com/cr1sta_dev"
+        },
+        "repository": "https://github.com/Crysta1221/tech_logos",
+        "license": {
+          "label": "Custom",
+          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T15:27:24.000Z",
+      "title": "rubyonrails_fix.png",
+      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/rubyonrails/rubyonrails_fix.png",
+      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/rubyonrails/rubyonrails_fix.png"
+    },
+    {
+      "author": {
+        "name": "cr1sta_dev",
+        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
+        "link": {
+          "github": "https://github.com/Crysta1221",
+          "twitter": "https://twitter.com/cr1sta_dev"
+        },
+        "repository": "https://github.com/Crysta1221/tech_logos",
+        "license": {
+          "label": "Custom",
+          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-23T15:27:24.000Z",
+      "title": "rubyonrails.png",
+      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/rubyonrails/rubyonrails.png",
+      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/rubyonrails/rubyonrails.png"
     },
     {
       "author": {
@@ -1187,73 +1234,6 @@
         }
       },
       "className": "object-contain",
-      "createdAt": "2024-04-25T04:25:44.000Z",
-      "title": "GitLab.png",
-      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/GitLab/GitLab.png",
-      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/GitLab/GitLab.png"
-    },
-    {
-      "title": "Skrillex",
-      "author": {
-        "name": "disphing",
-        "link": {
-          "twitter": "https://twitter.com/dsphng"
-        },
-        "license": {},
-        "repository": "https://drive.google.com/drive/folders/1Hy1_pAWx95QTv1nZFKUl96GImq4iKdf8"
-      },
-      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLh5aGWakAAM3dk.jpeg",
-      "raw": "https://drive.google.com/file/d/1mumHSFG6k8O1uKG29rYc9s0Wm_jQDSpP/view?usp=sharing"
-    },
-    {
-      "title": "svelte",
-      "author": {
-        "name": "styxpilled",
-        "pfp": "",
-        "link": {
-          "twitter": "https://twitter.com/styxpilled"
-        },
-        "license": {},
-        "repository": ""
-      },
-      "src": "https://raw.githubusercontent.com/alfonsusac/service-title-logo/main/assets/GLlkf9EWwAAq3N9.jpeg",
-      "raw": "https://twitter.com/styxpilled/status/1781565832251719868"
-    },
-    {
-      "author": {
-        "name": "cr1sta_dev",
-        "pfp": "https://avatars.githubusercontent.com/u/70198466?v=4",
-        "link": {
-          "github": "https://github.com/Crysta1221",
-          "twitter": "https://twitter.com/cr1sta_dev"
-        },
-        "repository": "https://github.com/Crysta1221/tech_logos",
-        "license": {
-          "label": "Custom",
-          "href": "https://github.com/Crysta1221/tech_logos/blob/main/README.md#license"
-        }
-      },
-      "className": "object-contain",
-      "createdAt": "2024-04-22T09:56:53.000Z",
-      "title": "svelte.png",
-      "src": "https://raw.githubusercontent.com/Crysta1221/tech_logos/main/svelte/svelte.png",
-      "raw": "https://github.com/Crysta1221/tech_logos/blob/main/svelte/svelte.png"
-    },
-    {
-      "author": {
-        "name": "sawaratsuki",
-        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
-        "link": {
-          "github": "https://github.com/SAWARATSUKI",
-          "twitter": "https://twitter.com/sawaratsuki1004"
-        },
-        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
-        "license": {
-          "label": "CC BY-NC-SA 4.0 with Additional Notes",
-          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
-        }
-      },
-      "className": "object-contain",
       "createdAt": "2024-04-24T11:21:43.000Z",
       "title": "Ubuntu.png",
       "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Ubuntu/Ubuntu.png",
@@ -1278,6 +1258,26 @@
       "title": "FlipperZero.png",
       "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/FlipperZero/FlipperZero.png",
       "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/FlipperZero/FlipperZero.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-04-25T04:25:44.000Z",
+      "title": "GitLab.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/GitLab/GitLab.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/GitLab/GitLab.png"
     },
     {
       "author": {
