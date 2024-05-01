@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2024-05-01T15:12:15.670Z",
+  "updatedAt": "2024-05-01T16:15:43.085Z",
   "data": [
     {
       "title": "Elysia",
@@ -285,6 +285,26 @@
         "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
       },
       "className": "object-contain",
+      "createdAt": "2024-05-01T16:10:26.000Z",
+      "title": "osuLogoShadowedOld.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/osu/osuLogoShadowedOld.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/osu/osuLogoShadowedOld.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
       "createdAt": "2024-04-30T19:38:10.000Z",
       "title": "osuLogoShadowed.png",
       "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/osu/osuLogoShadowed.png",
@@ -309,6 +329,26 @@
       "title": "osuLogo.png",
       "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/osu/osuLogo.png",
       "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/osu/osuLogo.png"
+    },
+    {
+      "author": {
+        "name": "aikoyori",
+        "pfp": "https://avatars.githubusercontent.com/u/12034280?v=4",
+        "link": {
+          "twitter": "https://twitter.com/Aikoyori",
+          "github": "https://github.com/Aikoyori"
+        },
+        "license": {
+          "label": "CC BY-NC-SA 4.0",
+          "href": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/LICENSE.md"
+        },
+        "repository": "https://github.com/Aikoyori/ProgrammingVTuberLogos"
+      },
+      "className": "object-contain",
+      "createdAt": "2024-05-01T16:10:26.000Z",
+      "title": "osuLogoOld.png",
+      "src": "https://raw.githubusercontent.com/Aikoyori/ProgrammingVTuberLogos/main/osu/osuLogoOld.png",
+      "raw": "https://github.com/Aikoyori/ProgrammingVTuberLogos/blob/main/osu/osuLogoOld.png"
     },
     {
       "author": {
@@ -2069,6 +2109,26 @@
       "title": "UnityBlenderT.png",
       "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/UnityBlender/UnityBlenderT.png",
       "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/UnityBlender/UnityBlenderT.png"
+    },
+    {
+      "author": {
+        "name": "sawaratsuki",
+        "pfp": "https://avatars.githubusercontent.com/u/64746703?v=4",
+        "link": {
+          "github": "https://github.com/SAWARATSUKI",
+          "twitter": "https://twitter.com/sawaratsuki1004"
+        },
+        "repository": "https://github.com/SAWARATSUKI/ServiceLogos",
+        "license": {
+          "label": "CC BY-NC-SA 4.0 with Additional Notes",
+          "href": "https://github.com/SAWARATSUKI/ServiceLogos#license"
+        }
+      },
+      "className": "object-contain",
+      "createdAt": "2024-05-01T16:12:57.000Z",
+      "title": "PHP.png",
+      "src": "https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/PHP/PHP.png",
+      "raw": "https://github.com/SAWARATSUKI/ServiceLogos/blob/main/PHP/PHP.png"
     },
     {
       "author": {
