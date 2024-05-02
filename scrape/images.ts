@@ -2,6 +2,7 @@ import { DataImage } from "../types/types"
 import { manuallyListedImages } from "../data/images-manual"
 import { scrapedImages } from "../data/images-scraped"
 import { } from "bun"
+import { existsSync } from "node:fs"
 
 export const getImages = async (): Promise<DataImage[]> => [
     ...manuallyListedImages,
@@ -9,11 +10,10 @@ export const getImages = async (): Promise<DataImage[]> => [
     ...await (async () => {
         const i = await Promise.all(scrapedImages.map(async (scrapedImage) => {
             const cwd = `${import.meta.dir}/cloned/${scrapedImage.ownerRepoPath}`
-            try {
+            if (!existsSync(cwd)) {
                 await Bun.$`git clone https://github.com/${scrapedImage.ownerRepoPath}.git ${import.meta.dir}/cloned/${scrapedImage.ownerRepoPath}`
                     .cwd("./scrape")
-            } catch {
-                // pull instead
+            } else {
                 await Bun.$`git pull`.cwd(cwd)
             }
 

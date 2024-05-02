@@ -19,11 +19,11 @@ export const scrapedImages: ScrapedImages[] = [
     author: authors.aikoyori,
     className: 'object-contain'
   },
-  {
-    ownerRepoPath: 'SAWARATSUKI/ServiceLogos',
-    author: authors.sawaratsuki,
-    className: 'object-contain'
-  },
+  // {
+  //   ownerRepoPath: 'SAWARATSUKI/ServiceLogos',
+  //   author: authors.sawaratsuki,
+  //   className: 'object-contain'
+  // },
   {
     ownerRepoPath: 'G2-Games/fun-logos',
     author: authors["g2-games"],
