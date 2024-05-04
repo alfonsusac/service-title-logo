@@ -1,19 +1,19 @@
 name: Update Data
 
 on:
-    workflow_dispatch:
-    schedule:
-        # Every hour
-      - cron: '0 * * * *'
-    push: 
-        paths: 
-            - 'data/**'
-            - '.github/workflows/data.yml'
-            - 'scrape/**'
+  workflow_dispatch:
+  schedule:
+    # Every hour
+    - cron: "0 * * * *"
+  push:
+    paths:
+      - "data/**"
+      - ".github/workflows/data.yml"
+      - "scrape/**"
 
 permissions:
   contents: write
-  
+
 jobs:
   data:
     name: Check the repos
@@ -23,14 +23,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-        
+
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
-        
-      - run: |
-            git config --global user.name "Update Data"
-            git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      - run: bun scrape/images.ts
 
+      - run: |
+          git config --global user.name "Update Data"
+          git config --global user.email "alfonsusac@gmail.com"
+      - run: bun scrape/images.ts
