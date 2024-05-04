@@ -1,7 +1,6 @@
 import { DataImage } from "../types/types"
 import { manuallyListedImages } from "../data/images-manual"
 import { scrapedImages } from "../data/images-scraped"
-import { } from "bun"
 import { existsSync } from "node:fs"
 
 export const getImages = async (): Promise<DataImage[]> => [
