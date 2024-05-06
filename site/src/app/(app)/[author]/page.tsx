@@ -2,6 +2,7 @@ import { SVGProps } from "react"
 import { Link } from "next-view-transitions"
 import { getAuthors } from "../data"
 import { Author } from "kawaii-logos-data"
+import { notFound } from "next/navigation"
 
 export async function generateStaticParams() {
   const authors = await getAuthors()
@@ -13,11 +14,7 @@ export default async function AuthorPage(context: { params: { author: string } }
   const authorid = context.params.author
 
   if (authors?.findIndex(author => author.handleName === authorid) === -1) {
-    return <main>
-      <div className='relative'>
-        <h1 className="text-6xl font-display tracking-wider text-theme-strong relative z-[1]">Author Not Found!</h1>
-      </div>
-    </main>
+    return notFound()
   }
 
   const author = authors?.find(a => a.handleName === authorid) as Author
@@ -83,8 +80,6 @@ export default async function AuthorPage(context: { params: { author: string } }
     </>
   )
 }
-
-export const dynamicParams = false
 
 
 export function IconParkSolidTwitter(props: SVGProps<SVGSVGElement>) {
