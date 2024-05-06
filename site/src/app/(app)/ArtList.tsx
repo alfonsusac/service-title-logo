@@ -29,9 +29,7 @@ export default function ArtList(props: {
   return (
     props.variants.filter(filter).map((variant, index) => {
       return (
-        <>
-          <VariantCard key={variant.author.handleName + variant.name} variant={variant} order={index} />
-        </>
+        <VariantCard key={variant.author.handleName + variant.name} variant={variant} order={index} />
       )
     })
   )

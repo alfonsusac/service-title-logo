@@ -11,6 +11,7 @@ import SidebarItem from "./(app)/SidebarItem"
 import Link from "next/link"
 import { IconParkSolidTwitter, UimGithubAlt } from "./(app)/[author]/page"
 import { ThemeDropdown } from "./(app)/ThemeChanger"
+import { button } from "./(app)/AppButton"
 
 const getDataPromise = getData()
 
@@ -32,7 +33,7 @@ export default function NotFoundPage() {
         <div className="text-theme-stronger text-5xl md:text-6xl tracking-wide mb-8 leading-snug">
           <Untidy text={`Page \nnot found`} />
         </div>
-        <Link href="/" className="p-4 px-5 transition-all duration-100 text-xl rounded-xl hover:bg-theme-card">
+        <Link href="/" className={button()}>
           Back to Home
         </Link>
       </div>

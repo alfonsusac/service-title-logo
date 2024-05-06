@@ -28,7 +28,7 @@ export default function ArtCard(props: {
             // position: props.opened ? 'fixed' : undefined,
             // zIndex: props.opened ? 999 : 0,
             overflow: image.objectFit === 'contain' ? 'visible' : 'hidden',
-            viewTransitionName: `art-card-img-${ image.author.handleName }-${ image.title.replaceAll('.', '').replaceAll(' ', '') }`,
+            // viewTransitionName: `art-card-img-${ image.author.handleName }-${ image.title.replaceAll('.', '').replaceAll(' ', '') }`,
           }}
         >
           <Image

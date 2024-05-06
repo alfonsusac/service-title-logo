@@ -4,6 +4,7 @@ import "./globals.css"
 import { ViewTransitions } from "next-view-transitions"
 import { ThemeProvider } from "next-themes"
 import { themes } from "./themes"
+import { Toaster } from "react-hot-toast"
 
 const sans = Inter({
   subsets: ["latin"],
@@ -40,6 +41,19 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <body className={`${ sans.variable } ${ mono.variable } ${ display.variable } bg-theme-bg text-theme-text transition-all`}>
           <ThemeProvider themes={themes} attribute="class">
+            <Toaster
+              containerClassName="font-display tracking-wider text-lg"
+              position="bottom-right"
+              toastOptions={{
+                className: '!bg-theme-card text-theme-text bg-red-500 !px-4',
+                duration: 100000,
+                style: {
+                  background: 'var(--card)',
+                  color: 'var(--text)',
+                  viewTransitionName: `toast`,
+                },
+              }}
+            />
             {children}
           </ThemeProvider>
         </body>
