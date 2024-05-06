@@ -93,15 +93,20 @@ export default function VariantDialogContent(props: {
           }
           <div className="flex gap-2">
             <button
-              onClick={() => {
+              onClick={async () => {
                 // TODO: actually download the image
-                const a = document.createElement('a')
-                a.href = variant.imgSrc
+                async function toDataURL(url: string) {
+                  const blob = await fetch(url).then(res => res.blob())
+                  return URL.createObjectURL(blob)
+                }
+
+                const a = document.createElement("a")
+                a.href = await toDataURL(variant.imgSrc)
                 a.download = variant.title
-                a.target = '_blank'
                 document.body.appendChild(a)
                 a.click()
-                document.body.removeChild(a)
+                document.body.removeChild(a);
+                
               }}
               className={button('group flex-1 bg-theme-cardHover hover:bg-theme-bg')}
             >
