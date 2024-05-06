@@ -36,11 +36,11 @@ export default async function AuthorPage(context: { params: { author: string } }
           {authorid}{' '}
           <span className="text-xl align-middle">
             {
-              link.github && <a className="text-theme-strong hover:underline" href={link.github} target="_blank"><UimGithubAlt className="inline" /></a>
+              link.github && <a className="text-theme-strong hover:underline" href={`https://github.com/${link.github}`} target="_blank"><UimGithubAlt className="inline" /></a>
             }
             {' '}
             {
-              link.twitter && <a className="text-theme-strong hover:underline" href={link.twitter} target="_blank"><IconParkSolidTwitter className="inline" /></a>
+              link.twitter && <a className="text-theme-strong hover:underline" href={`https://twitter.com/${link.twitter}`} target="_blank"><IconParkSolidTwitter className="inline" /></a>
             }
           </span>
         </h1>
