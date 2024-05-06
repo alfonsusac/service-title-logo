@@ -20,7 +20,10 @@ export default function ArtCard(props: {
       }}
     >
       <div className="relative aspect-video w-full overflow-hidden rounded-2xl">
-        <Image unoptimized src={image.imgSrc} alt={image.title} title={image.title} fill className={cn(`object-cover ${ image.className } transition-all group-hover:scale-110`)} />
+        <Image
+          unoptimized src={image.imgSrc} alt={image.title} title={image.title}
+          fill style={{ objectFit: props.image.objectFit }}
+          className={cn(`object-cover transition-all group-hover:scale-110`)} />
       </div>
       <div className="text-xs font-mono px-2 pt-2 pb-1">
         {image.title}

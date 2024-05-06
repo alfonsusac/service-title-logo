@@ -4,32 +4,34 @@ import { useParams } from "next/navigation"
 import ArtCard from "./ArtCard"
 import { useQueryState } from "nuqs"
 import { Image } from "kawaii-logos-data"
-import { ImagesWithAuthor } from "./data"
+import { ImagesWithAuthor, VariantWithAuthor } from "./data"
+import VariantCard from "./VariantCard"
 
 export default function ArtList(props: {
-  images: ImagesWithAuthor
+  variants: VariantWithAuthor[]
+
 }) {
   const [search, setSearch] = useQueryState('search')
   const param = useParams()
 
-  const filter = (item: ImagesWithAuthor[0]) => {
+  const filter = (item: VariantWithAuthor) => {
     if (param.author !== undefined && item.author.handleName !== param.author) {
       return false
     }
     if (search === null) {
       return true
     }
-    if (item.title.toLowerCase().includes(search.toLowerCase())) {
+    if (item.name.toLowerCase().includes(search.toLowerCase())) {
       return true
     }
     return false
   }
 
   return (
-    props.images.filter(filter).map((image, index) => {
+    props.variants.filter(filter).map((variant, index) => {
       return (
-        <ArtCard key={image.imgSrc} image={image} order={index} />
+        <VariantCard key={variant.author.handleName + variant.name} variant={variant} order={index} />
       )
     })
-  ) 
+  )
 }

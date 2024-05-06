@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@octokit/rest':
-        specifier: ^20.1.0
+        specifier: ^20.1.1
         version: 20.1.1
       '@radix-ui/react-dropdown-menu':
         specifier: ^2.0.6
@@ -22,7 +22,7 @@ importers:
         version: 0.13.0
       kawaii-logos-data:
         specifier: github:alfonsusac/kawaii-logos-data#types
-        version: types@https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/930fe88627c7dd7640afd35f065dc2101d5cc710
+        version: types@https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/56c0a4b9b8c651a01bf217e65ddb4ce80bb6ec1f
       lazy-cn:
         specifier: ^1.0.0
         version: 1.0.0
@@ -42,41 +42,41 @@ importers:
         specifier: ^9.0.6
         version: 9.0.6
       react:
-        specifier: ^18
+        specifier: ^18.3.1
         version: 18.3.1
       react-dom:
-        specifier: ^18
+        specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       s-ago:
         specifier: ^2.2.0
         version: 2.2.0
     devDependencies:
       '@types/node':
-        specifier: ^20
+        specifier: ^20.12.8
         version: 20.12.8
       '@types/react':
-        specifier: ^18
+        specifier: 18.3.1
         version: 18.3.1
       '@types/react-dom':
-        specifier: ^18
+        specifier: 18.3.0
         version: 18.3.0
       eslint:
-        specifier: ^8
+        specifier: ^8.57.0
         version: 8.57.0
       eslint-config-next:
         specifier: 14.2.2
         version: 14.2.2(eslint@8.57.0)(typescript@5.4.5)
       postcss:
-        specifier: ^8
+        specifier: ^8.4.38
         version: 8.4.38
       tailwindcss:
-        specifier: ^3.4.1
+        specifier: ^3.4.3
         version: 3.4.3
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.3)
       typescript:
-        specifier: ^5
+        specifier: ^5.4.5
         version: 5.4.5
 
 packages:
@@ -1897,9 +1897,9 @@ packages:
     resolution: {integrity: sha512-/OxDN6OtAk5KBpGb28T+HZc2M+ADtvRxXrKKbUwtsLgdoxgX13hyy7ek6bFRl5+aBs2yZzB0c4CnQfAtVypW/g==}
     engines: {node: '>= 0.4'}
 
-  types@https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/930fe88627c7dd7640afd35f065dc2101d5cc710:
-    resolution: {tarball: https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/930fe88627c7dd7640afd35f065dc2101d5cc710}
-    version: 1.0.9
+  types@https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/56c0a4b9b8c651a01bf217e65ddb4ce80bb6ec1f:
+    resolution: {tarball: https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/56c0a4b9b8c651a01bf217e65ddb4ce80bb6ec1f}
+    version: 1.0.12
 
   typescript@5.4.5:
     resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
@@ -4028,7 +4028,7 @@ snapshots:
       is-typed-array: 1.1.13
       possible-typed-array-names: 1.0.0
 
-  types@https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/930fe88627c7dd7640afd35f065dc2101d5cc710: {}
+  types@https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/56c0a4b9b8c651a01bf217e65ddb4ce80bb6ec1f: {}
 
   typescript@5.4.5: {}
 

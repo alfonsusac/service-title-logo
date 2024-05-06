@@ -52,13 +52,14 @@ export default function SearchBar(props: { className?: string; style?: any }) {
         viewTransitionName: "searchbar",
       }}
       className={cn(
-        "transition-all p-1 px-3 h-12 rounded-full bg-theme-card  relative z-10",
+        "transition-all p-1 px-3 h-12 rounded-full bg-theme-card relative z-10 flex",
         props.className
       )}
     >
       <input
         className="font-display tracking-widest text-theme-stronger placeholder:text-theme-text text-xl rounded-md p-2 w-full outline-none bg-transparent"
         placeholder="search..."
+        value={search || ""}
         onChange={event => {
           if (event.target.value === "") {
             setSearch(null);
@@ -67,6 +68,18 @@ export default function SearchBar(props: { className?: string; style?: any }) {
           }
         }}
       />
+      <div className="flex-none flex items-center justify-center h-full aspect-square rounded-full -mr-2
+        select-none cursor-pointer text-xl
+        pointer-events-none data-[display=true]:pointer-events-auto
+        text-transparent 
+        data-[display=true]:text-theme-text
+        hover:data-[display=true]:text-theme-strong
+      "
+        data-display={search ? true : false}
+        onClick={() => setSearch(null)}
+      >
+        x
+      </div>
     </div>
   );
 }

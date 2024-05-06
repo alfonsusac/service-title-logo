@@ -1,30 +1,37 @@
 "use client"
 
 import { cn } from "lazy-cn"
-import { SVGProps, useState } from "react"
+import { SVGProps, use, useState } from "react"
 import SidebarItem from "./SidebarItem"
 import SearchBar from "./Searchbar"
 import { ThemeDropdown } from "./ThemeChanger"
-import { getAuthors } from "./data"
 import { stringSorter } from "@/util/sort"
+import { getAuthors } from "./data"
 
-export default async function MobileSidebar() {
+const authorPromise = getAuthors()
+
+export default function MobileSidebar() {
+  const authors = use(authorPromise)
+
   const [open, setOpen] = useState(false)
   const close = () => setOpen(false)
 
-  const authors = await getAuthors()
-
   return (
     <div
-      className="md:hidden transform-gpu top-0 left-0 fixed flex items-center justify-between bg-transparent isolate z-50 select-none bg-red-500"
+      className="md:hidden top-0 left-0 fixed flex items-center justify-between bg-transparent isolate z-50 select-none bg-red-500"
       style={{
         viewTransitionName: `mobile-sidebar`,
       }}
     >
-      <div className="flex relative p-3 gap-2 w-screen bg-theme-bg z-10">
+      <div className="flex relative p-3 gap-2 w-screen bg-theme-bg z-10 "
+        style={{
+          viewTransitionName: "mobile-top-bar",
+        }}
+      >
         <div
           onClick={() => setOpen(!open)}
-          className="bg-theme-card w-12 h-12 text-2xl text-theme-strong rounded-xl flex items-center justify-center"
+          className="flex-none bg-theme-card w-12 h-12 text-2xl text-theme-strong rounded-xl flex items-center justify-center"
+
         >
           <CharmMenuHamburger
             className={cn(
@@ -55,7 +62,8 @@ export default async function MobileSidebar() {
             "overflow-auto"
           )}
         >
-          <SidebarItem href="/" label="Home" onClick={close} />
+          <SidebarItem
+            href="/" label="Home" onClick={close} />
           {authors.sort(stringSorter(authors[0], "handleName"))
             .map(author => {
               return (
@@ -64,22 +72,23 @@ export default async function MobileSidebar() {
                   href={"/" + author.handleName}
                   label={author.handleName}
                   onClick={close}
+                  count={(author.groups?.length ?? 0) + (author.images?.length ?? 0)}
                 />
-              );
+              )
             })}
         </div>
       </div>
       {open && (
         <div
-          className="absolute inset-0 w-screen h-screen z-10"
+          className="absolute inset-0 w-screen h-screen z-10 animate-in fade-in-0 bg-black/50"
           onClick={event => {
-            event.stopPropagation();
-            setOpen(false);
+            event.stopPropagation()
+            setOpen(false)
           }}
         ></div>
       )}
     </div>
-  );
+  )
 }
 
 function CharmMenuHamburger(props: SVGProps<SVGSVGElement>) {

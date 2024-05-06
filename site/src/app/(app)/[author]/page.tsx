@@ -5,14 +5,14 @@ import { Author } from "kawaii-logos-data"
 
 export async function generateStaticParams() {
   const authors = await getAuthors()
-  return authors.map(author => ({ author: author.handleName }))
+  return authors?.map(author => ({ author: author.handleName }))
 }
 
 export default async function AuthorPage(context: { params: { author: string } }) {
   const authors = await getAuthors()
   const authorid = context.params.author
 
-  if (authors.findIndex(author => author.handleName === authorid) === -1) {
+  if (authors?.findIndex(author => author.handleName === authorid) === -1) {
     return <main>
       <div className='relative'>
         <h1 className="text-6xl font-display tracking-wider text-theme-strong relative z-[1]">Author Not Found!</h1>
@@ -20,7 +20,7 @@ export default async function AuthorPage(context: { params: { author: string } }
     </main>
   }
 
-  const author = authors.find(a => a.handleName === authorid) as Author
+  const author = authors?.find(a => a.handleName === authorid) as Author
   const license = author.license as Author['license']
   const link = author.link as Author['link']
 

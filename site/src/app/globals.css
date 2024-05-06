@@ -8,16 +8,16 @@
 }
 
 ::view-transition {
-  z-index: -5;
+  z-index: 10;
 }
 
 ::view-transition-group(*) {
   animation-duration: 150ms;
 }
-
+/* 
 ::view-transition-group(mobile-sidebar) {
   animation-duration: 0ms;
-}
+} */
 ::view-transition-group(sidebar) {
   animation-duration: 0ms;
 }
@@ -33,18 +33,6 @@
 }
 
 /* Unused */
-@media only screen and (max-width: 768px) {
-  .searchbar {
-    /* @apply bg-red-400 */
-    view-timeline: --subjectReveal y;
-    view-timeline-inset: 0% 0%;
-    animation-timeline: --subjectReveal;
-    animation-name: searchbarSqueeze;
-    animation-fill-mode: both;
-    animation-timing-function: linear();
-    animation-duration: 1ms; /* Firefox requires this to apply the animation */
-  }
-}
 
 .light {
   --bg: #fdfdff;
