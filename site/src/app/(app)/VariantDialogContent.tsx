@@ -181,7 +181,7 @@ export default function VariantDialogContent(props: {
               </section>
             }
             <section className="flex flex-col gap-2 flex-grow justify-end mt-4">
-              <Link href={`/${ variant.source }`} className={button('group hover:bg-theme-cardHover')}
+              <Link href={variant.source} className={button('group hover:bg-theme-cardHover')}
                 onClick={props.onClose}
               >
                 Visit File Source <span className="group-hover:text-theme-strong">{'>'}</span>
