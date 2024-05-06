@@ -15,8 +15,8 @@ export function ThemeDropdown() {
           role="button"
           className="flex-none text-theme-text z-10 tracking-wider flex items-center justify-center px-3 md:px-4 rounded-lg hover:bg-theme-card gap-2"
         >
-          <div className="hidden md:block">Theme</div>
-          <MaterialSymbolsPalette className="md:hidden text-2xl"/>
+          {/* <div className="hidden md:block">Theme</div> */}
+          <MaterialSymbolsPalette className="text-2xl"/>
           <IconamoonArrowDown2Fill />
         </div>
       </DropdownMenuTrigger>

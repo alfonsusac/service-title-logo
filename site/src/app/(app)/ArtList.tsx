@@ -1,11 +1,10 @@
 "use client"
 
 import { useParams } from "next/navigation"
-import ArtCard from "./ArtCard"
 import { useQueryState } from "nuqs"
-import { Image } from "kawaii-logos-data"
-import { ImagesWithAuthor, VariantWithAuthor } from "./data"
+import { VariantWithAuthor } from "./data"
 import VariantCard from "./VariantCard"
+import { Dialog, DialogContent, DialogOverlay, DialogPortal, DialogTrigger } from "@radix-ui/react-dialog"
 
 export default function ArtList(props: {
   variants: VariantWithAuthor[]
@@ -30,7 +29,9 @@ export default function ArtList(props: {
   return (
     props.variants.filter(filter).map((variant, index) => {
       return (
-        <VariantCard key={variant.author.handleName + variant.name} variant={variant} order={index} />
+        <>
+          <VariantCard key={variant.author.handleName + variant.name} variant={variant} order={index} />
+        </>
       )
     })
   )

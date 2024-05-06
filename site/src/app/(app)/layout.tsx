@@ -7,10 +7,12 @@ import ArtList from "./ArtList"
 import { getAuthors, getVariants } from "./data"
 import { stringSorter } from "@/util/sort"
 import Footer from "./Footer"
+import ImageDetailPage from "./ImageDetail"
 
 export default function GlobalLayout(props: any) {
   return (
     <div className="mx-auto max-w-screen-lg min-h-screen flex flex-col gap-8 font-display tracking-tight">
+      {/* <ImageDetailPage > */}
       <Suspense>
         <MobileSidebar />
       </Suspense>
@@ -50,6 +52,7 @@ export default function GlobalLayout(props: any) {
           <Footer />
         </div>
       </div>
+      {/* </ImageDetailPage> */}
     </div>
   )
 }
@@ -71,7 +74,6 @@ async function AuthorList() {
 }
 
 async function ArtListServer() {
-  // const images = await getImages()
   const variants = await getVariants()
   return (
     <>
@@ -83,7 +85,6 @@ async function ArtListServer() {
       >
         <ArtList
           variants={variants.sort(stringSorter(variants[0], "name"))}
-        // images={images.sort(stringSorter(images[0], "title"))}
         />
       </div>
     </>
