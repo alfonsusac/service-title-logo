@@ -1,17 +1,18 @@
 import { SVGProps } from "react"
 import { Link } from "next-view-transitions"
-import { authors } from "../../../../../data/authors"
-import { Author } from "../../../../../types/types"
+import { getAuthors } from "../data"
+import { Author } from "kawaii-logos-data"
 
 export async function generateStaticParams() {
-  return Object.keys(authors).map(author => ({ author }))
+  const authors = await getAuthors()
+  return authors.map(author => ({ author: author.handleName }))
 }
 
 export default async function AuthorPage(context: { params: { author: string } }) {
-
+  const authors = await getAuthors()
   const authorid = context.params.author
 
-  if (authorid in authors === false) {
+  if (authors.findIndex(author => author.handleName === authorid) === -1) {
     return <main>
       <div className='relative'>
         <h1 className="text-6xl font-display tracking-wider text-theme-strong relative z-[1]">Author Not Found!</h1>
@@ -19,7 +20,7 @@ export default async function AuthorPage(context: { params: { author: string } }
     </main>
   }
 
-  const author = authors[authorid as keyof typeof authors] as Author
+  const author = authors.find(a => a.handleName === authorid) as Author
   const license = author.license as Author['license']
   const link = author.link as Author['link']
 
@@ -29,7 +30,7 @@ export default async function AuthorPage(context: { params: { author: string } }
         <Link
           href="/"
           className="font-display text-theme-strong tracking-widest"
-          // style={{ viewTransitionName: 'title-text' }}
+        // style={{ viewTransitionName: 'title-text' }}
         >VTuber Service Logo</Link>
         <h1 className="text-4xl font-display tracking-wider text-theme-stronger z-[1] sticky top-2">
           {authorid}{' '}
@@ -48,19 +49,19 @@ export default async function AuthorPage(context: { params: { author: string } }
         <p className="text-pretty" style={{
           // viewTransitionName: 'author-info'
         }}>This is a collection of images by <span
-            // style={{ viewTransitionName: `author-info-${ authorid }` }}
-          >{authorid}</span></p>
+        // style={{ viewTransitionName: `author-info-${ authorid }` }}
+        >{authorid}</span></p>
         {
           license && license.label &&
           <>
           </>
         }
-        <p  className="text-pretty"
-          // style={{ viewTransitionName: `author-license-disclaimer` }}
+        <p className="text-pretty"
+        // style={{ viewTransitionName: `author-license-disclaimer` }}
         >{`Please read the artist's license & readme before using!`}</p>
         <p className="">
           <span
-            // style={{ viewTransitionName: `author-license-label` }}
+          // style={{ viewTransitionName: `author-license-label` }}
           >license: </span>
           {
             license?.href
@@ -73,7 +74,7 @@ export default async function AuthorPage(context: { params: { author: string } }
         </p>
         {
           author.repository && <p className=""
-            // style={{ viewTransitionName: `author-links-label` }}
+          // style={{ viewTransitionName: `author-links-label` }}
           ><span >links: </span>{' '}
             <a className="text-theme-strong hover:underline" href={author.repository} target="_blank">repository</a>{' '}
           </p>

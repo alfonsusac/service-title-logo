@@ -4,14 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "site": "cd site && pnpm dev",
-    "backend": "cd backend && pnpm dev",
-    "dev": "concurrently --names \"site,api\" -c \"blue,magenta\"  \"pnpm site\" \"pnpm backend\" "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^8.2.2"
   }
 }

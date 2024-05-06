@@ -3,13 +3,16 @@
 import { cn } from "lazy-cn"
 import { SVGProps, useState } from "react"
 import SidebarItem from "./SidebarItem"
-import { authors } from "../../../../data/authors"
 import SearchBar from "./Searchbar"
 import { ThemeDropdown } from "./ThemeChanger"
+import { getAuthors } from "./data"
+import { stringSorter } from "@/util/sort"
 
-export default function MobileSidebar() {
+export default async function MobileSidebar() {
   const [open, setOpen] = useState(false)
   const close = () => setOpen(false)
+
+  const authors = await getAuthors()
 
   return (
     <div
@@ -53,16 +56,13 @@ export default function MobileSidebar() {
           )}
         >
           <SidebarItem href="/" label="Home" onClick={close} />
-          {Object.values(authors)
-            .sort((a, b) =>
-              a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1
-            )
+          {authors.sort(stringSorter(authors[0], "handleName"))
             .map(author => {
               return (
                 <SidebarItem
-                  key={author.name}
-                  href={"/" + author.name}
-                  label={author.name}
+                  key={author.handleName}
+                  href={"/" + author.handleName}
+                  label={author.handleName}
                   onClick={close}
                 />
               );

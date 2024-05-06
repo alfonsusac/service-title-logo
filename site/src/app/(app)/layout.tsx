@@ -1,16 +1,15 @@
-import Link from "next/link";
-import SidebarItem from "./SidebarItem";
-import { IconParkSolidTwitter, UimGithubAlt } from "./[author]/page";
-import { Suspense } from "react";
-import MobileSidebar from "./Sidebar";
-import SearchBar, { DesktopSearchBar } from "./Searchbar";
-import ArtList from "./ArtList";
-import { authors } from "../../../../data/authors";
-import { DataImage } from "../../../../types/types";
-import { getData } from "./data";
-import ThemeChanger from "./ThemeChanger";
+import SidebarItem from "./SidebarItem"
+import { IconParkSolidTwitter, UimGithubAlt } from "./[author]/page"
+import { Suspense } from "react"
+import MobileSidebar from "./Sidebar"
+import { DesktopSearchBar } from "./Searchbar"
+import ArtList from "./ArtList"
+import { getAuthors, getImages } from "./data"
+import { stringSorter } from "@/util/sort"
 
-export default function GlobalLayout(props: any) {
+export default async function GlobalLayout(props: any) {
+  const authors = await getAuthors()
+
   return (
     <div className="mx-auto max-w-screen-lg min-h-screen flex flex-col gap-8 font-display tracking-tight">
       <Suspense>
@@ -28,19 +27,19 @@ export default function GlobalLayout(props: any) {
               className="hidden md:flex overflow-auto select-none flex-col gap-3 p-5 rounded-r-2xl lg:rounded-l-2xl bg-theme-card animate-in duration-300 fade-in-0 slide-in-from-left-10"
             >
               <SidebarItem href="/" label="Home" />
-              {Object.values(authors)
-                .sort((a, b) =>
-                  a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1
-                )
-                .map(author => {
-                  return (
-                    <SidebarItem
-                      key={author.name}
-                      href={"/" + author.name}
-                      label={author.name}
-                    />
-                  );
-                })}
+              {
+                authors
+                  .sort(stringSorter(authors[0], "handleName"))
+                  .map(author => {
+                    return (
+                      <SidebarItem
+                        key={author.handleName}
+                        href={"/" + author.handleName}
+                        label={author.handleName}
+                      />
+                    )
+                  })
+              }
             </div>
           </div>
         </div>
@@ -90,17 +89,11 @@ export default function GlobalLayout(props: any) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-const apiUrl =
-  process.env.NODE_ENV === "development"
-    ? "http://localhost:4000/revalidate"
-    : `https://service-title-logo-backend.vercel.app/revalidate?key=${process.env["REVALIDATE_KEY"]}`;
-
 async function ArtListServer() {
-  const response = await getData();
-
+  const images = await getImages()
   return (
     <>
       <div
@@ -109,12 +102,8 @@ async function ArtListServer() {
         }}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 gap-y-8 mt-8"
       >
-        <ArtList
-          images={response.data.sort((a, b) =>
-            a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1
-          )}
-        />
+        <ArtList images={images.sort(stringSorter(images[0], "title"))} />
       </div>
     </>
-  );
+  )
 }

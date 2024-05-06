@@ -1,18 +1,27 @@
-import { DataImage } from "../../../../types/types"
+import type { Author, Data, Image } from "kawaii-logos-data"
 
-// const apiUrl = process.env.NODE_ENV === 'development'
-//   ? 'http://localhost:4000/revalidate'
-//   : `https://service-title-logo-backend.vercel.app/revalidate?key=${ process.env['REVALIDATE_KEY'] }`
-const apiUrl = 'https://raw.githubusercontent.com/alfonsusac/service-title-logo/data/images.json'
+const src = 'https://raw.githubusercontent.com/alfonsusac/kawaii-logos-data/data/images.json'
 
 export async function getData() {
-  const response = await fetch(apiUrl, {
+  const response = await fetch(src, {
     next: {
       revalidate: 60 * 1 // 1 min
     }
-  }).then(res => res.json()) as {
-    updatedAt: string,
-    data: DataImage[]
-  }
+  }).then(res => res.json()) as Data
   return response
 }
+
+export async function getAuthors() {
+  const response = await getData()
+  return response.data
+}
+
+export async function getImages() {
+  const response = await getData()
+  return response.data.reduce((acc, cur) => {
+    acc.push(...cur.images.map(image => ({ ...image, author: cur })))
+    return acc
+  }, [] as (Image & { author: Author })[])
+}
+
+export type ImagesWithAuthor = Awaited<ReturnType<typeof getImages>>

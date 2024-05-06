@@ -25,3 +25,4 @@ Contributions are welcome!
 
 - [Vtuber style logos](https://vtuber-style-logos.vercel.app/) by [Ender-Wiggin2019](https://github.com/Ender-Wiggin2019)
 - [Programming VTuber Logos](https://narze.github.io/ProgrammingVTuberLogos/) by [narze](https://github.com/narze)
+- [KatoMelon/kawaii-dev-logos-website](https://github.com/KatoMelon/kawaii-dev-logos-website)

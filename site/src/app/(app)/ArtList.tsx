@@ -3,16 +3,17 @@
 import { useParams } from "next/navigation"
 import ArtCard from "./ArtCard"
 import { useQueryState } from "nuqs"
-import { DataImage } from "../../../../types/types"
+import { Image } from "kawaii-logos-data"
+import { ImagesWithAuthor } from "./data"
 
 export default function ArtList(props: {
-  images: DataImage[]
+  images: ImagesWithAuthor
 }) {
   const [search, setSearch] = useQueryState('search')
   const param = useParams()
 
-  const filter = (item: DataImage) => {
-    if (param.author !== undefined && item.author.name !== param.author) {
+  const filter = (item: ImagesWithAuthor[0]) => {
+    if (param.author !== undefined && item.author.handleName !== param.author) {
       return false
     }
     if (search === null) {
@@ -27,7 +28,7 @@ export default function ArtList(props: {
   return (
     props.images.filter(filter).map((image, index) => {
       return (
-        <ArtCard key={image.src} image={image} order={index} />
+        <ArtCard key={image.imgSrc} image={image} order={index} />
       )
     })
   ) 

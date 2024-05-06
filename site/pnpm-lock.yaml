@@ -6,9 +6,7 @@ settings:
 
 importers:
 
-  .: {}
-
-  site:
+  .:
     dependencies:
       '@octokit/rest':
         specifier: ^20.1.0
@@ -24,7 +22,7 @@ importers:
         version: 0.13.0
       kawaii-logos-data:
         specifier: github:alfonsusac/kawaii-logos-data#types
-        version: types@https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/b03c7714b021e470431549e081dd824622240eaf
+        version: types@https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/930fe88627c7dd7640afd35f065dc2101d5cc710
       lazy-cn:
         specifier: ^1.0.0
         version: 1.0.0
@@ -1899,9 +1897,9 @@ packages:
     resolution: {integrity: sha512-/OxDN6OtAk5KBpGb28T+HZc2M+ADtvRxXrKKbUwtsLgdoxgX13hyy7ek6bFRl5+aBs2yZzB0c4CnQfAtVypW/g==}
     engines: {node: '>= 0.4'}
 
-  types@https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/b03c7714b021e470431549e081dd824622240eaf:
-    resolution: {tarball: https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/b03c7714b021e470431549e081dd824622240eaf}
-    version: 1.0.8
+  types@https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/930fe88627c7dd7640afd35f065dc2101d5cc710:
+    resolution: {tarball: https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/930fe88627c7dd7640afd35f065dc2101d5cc710}
+    version: 1.0.9
 
   typescript@5.4.5:
     resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
@@ -4030,7 +4028,7 @@ snapshots:
       is-typed-array: 1.1.13
       possible-typed-array-names: 1.0.0
 
-  types@https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/b03c7714b021e470431549e081dd824622240eaf: {}
+  types@https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/930fe88627c7dd7640afd35f065dc2101d5cc710: {}
 
   typescript@5.4.5: {}
 

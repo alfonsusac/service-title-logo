@@ -2,10 +2,10 @@
 import { cn } from "lazy-cn"
 import Image from "next/image"
 import Link from "next/link"
-import { DataImage } from "../../../../types/types"
+import { ImagesWithAuthor } from "./data"
 
 export default function ArtCard(props: {
-  image: DataImage,
+  image: ImagesWithAuthor[0],
   order?: number,
 }) {
   const image = props.image
@@ -20,7 +20,7 @@ export default function ArtCard(props: {
       }}
     >
       <div className="relative aspect-video w-full overflow-hidden rounded-2xl">
-        <Image unoptimized src={image.src} alt={image.title} title={image.title} fill className={cn(`object-cover ${ image.className } transition-all group-hover:scale-110`)} />
+        <Image unoptimized src={image.imgSrc} alt={image.title} title={image.title} fill className={cn(`object-cover ${ image.className } transition-all group-hover:scale-110`)} />
       </div>
       <div className="text-xs font-mono px-2 pt-2 pb-1">
         {image.title}
@@ -34,12 +34,12 @@ export default function ArtCard(props: {
             </div>
           }
           <Link
-            href={'/' + image?.author?.name}
-            className="hover:underline grow">{image?.author?.name}</Link>
+            href={'/' + image?.author?.handleName}
+            className="hover:underline grow">{image?.author?.handleName}</Link>
         </div>
         {
-          image.raw && (
-            <Link href={image.raw} target="_blank" className="hover:underline">
+          image.source && (
+            <Link href={image.source} target="_blank" className="hover:underline">
               source
             </Link>
           )
