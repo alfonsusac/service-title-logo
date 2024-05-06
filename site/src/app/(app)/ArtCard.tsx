@@ -8,6 +8,7 @@ export default function ArtCard(props: {
   image: ImagesWithAuthor[0],
   order?: number,
   opened?: boolean,
+  variantCount?: number,
   onClick?: () => void
 }) {
   const image = props.image
@@ -56,7 +57,7 @@ export default function ArtCard(props: {
           className={cn(`object-cover transition-all group-hover:scale-110`)} />
       </div> */}
       <div className="text-xs font-mono px-2 pt-2 pb-1">
-        {image.title}
+        {image.title} {(props.variantCount ?? 0) > 1 ? `(${ props.variantCount })` : ''}
       </div>
       <div className="p-2 pt-0 flex justify-between text-xs font-mono text-theme-strong">
         <div className="flex items-center gap-1">

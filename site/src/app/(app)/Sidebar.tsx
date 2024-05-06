@@ -18,7 +18,7 @@ export default function MobileSidebar() {
 
   return (
     <div
-      className="md:hidden top-0 left-0 fixed flex items-center justify-between bg-transparent isolate z-50 select-none bg-red-500"
+      className="md:hidden top-0 left-0 fixed flex items-center justify-between bg-transparent isolate z-20 select-none bg-red-500"
       style={{
         viewTransitionName: `mobile-sidebar`,
       }}

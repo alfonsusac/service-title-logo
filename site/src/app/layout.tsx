@@ -46,7 +46,6 @@ export default function RootLayout({
               position="bottom-right"
               toastOptions={{
                 className: '!bg-theme-card text-theme-text bg-red-500 !px-4',
-                duration: 100000,
                 style: {
                   background: 'var(--card)',
                   color: 'var(--text)',

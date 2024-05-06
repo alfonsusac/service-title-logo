@@ -34,6 +34,7 @@ export default function VariantCard(props: {
             title: `${ props.variant.name }`,
             author: props.variant.author
           }} order={props.order}
+            variantCount={props.variant.files.length}
             opened={open}
             onClick={() => changeOpen(true)}
           />
