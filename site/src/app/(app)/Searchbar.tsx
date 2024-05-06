@@ -7,6 +7,7 @@ import { useQueryState } from "nuqs";
 import { SVGProps } from "react"
 import { themes } from "../themes"
 import { ThemeDropdown } from "./ThemeChanger"
+import { usePathname } from "next/navigation"
 
 export function DesktopSearchBar() {
   const {theme, setTheme} = useTheme()
@@ -48,6 +49,10 @@ export function IconamoonArrowDown2Fill(props: SVGProps<SVGSVGElement>) {
 
 export default function SearchBar(props: { className?: string; style?: any }) {
   const [search, setSearch] = useQueryState("search");
+
+  const pathname = usePathname()
+  if (pathname === "/about") return
+  if (pathname === "/request") return
 
   return (
     <div

@@ -1,7 +1,7 @@
-import SidebarItem from "./SidebarItem"
+import SidebarItem, { SidebarSeparator } from "./SidebarItem"
 import { IconParkSolidTwitter, UimGithubAlt } from "./[author]/page"
 import { Suspense } from "react"
-import MobileSidebar from "./Sidebar"
+import MobileSidebar, { IcRoundHome, IcRoundPlus, IcRoundQuestionMark } from "./Sidebar"
 import { DesktopSearchBar } from "./Searchbar"
 import ArtList from "./ArtList"
 import { getAuthors, getVariants } from "./data"
@@ -26,10 +26,14 @@ export default function GlobalLayout(props: any) {
               }}
               className="hidden md:flex overflow-auto select-none flex-col gap-3 p-5 rounded-r-2xl lg:rounded-l-2xl bg-theme-card animate-in duration-300 fade-in-0 slide-in-from-left-10"
             >
-              <SidebarItem href="/" label="Home" />
+              <SidebarItem href="/" label="Home" icon={<IcRoundHome className="text-xl" />} />
+              <SidebarSeparator />
               <Suspense>
                 <AuthorList />
               </Suspense>
+              <SidebarSeparator />
+              <SidebarItem href="/about" label="About" icon={<IcRoundQuestionMark className="text-xl" />} />
+              <SidebarItem href="/request" label="Request" icon={<IcRoundPlus className="text-xl" />} />
             </div>
           </div>
         </div>
@@ -43,7 +47,7 @@ export default function GlobalLayout(props: any) {
             <Suspense>
               <DesktopSearchBar />
             </Suspense>
-            <section className="rounded-2xl min-h-screen">
+            <section className="rounded-2xl min-h-[50vh]">
               <Suspense>
                 <ArtListServer />
               </Suspense>
@@ -67,7 +71,7 @@ async function AuthorList() {
           key={author.handleName}
           href={"/" + author.handleName}
           label={author.handleName}
-          count={(author.groups?.length ?? 0) + (author.images?.length ?? 0)}
+          icon={(author.groups?.length ?? 0) + (author.images?.length ?? 0)}
         />
       )
     })
@@ -90,3 +94,4 @@ async function ArtListServer() {
     </>
   )
 }
+

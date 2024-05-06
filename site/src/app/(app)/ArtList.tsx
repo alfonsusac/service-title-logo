@@ -1,6 +1,6 @@
 "use client"
 
-import { useParams } from "next/navigation"
+import { useParams, usePathname } from "next/navigation"
 import { useQueryState } from "nuqs"
 import { VariantWithAuthor } from "./data"
 import VariantCard from "./VariantCard"
@@ -12,6 +12,10 @@ export default function ArtList(props: {
 }) {
   const [search, setSearch] = useQueryState('search')
   const param = useParams()
+
+  const pathname = usePathname()
+  if(pathname === "/about") return
+  if(pathname === "/request") return
 
   const filter = (item: VariantWithAuthor) => {
     if (param.author !== undefined && item.author.handleName !== param.author) {

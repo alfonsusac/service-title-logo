@@ -2,11 +2,18 @@
 
 import { Link } from "next-view-transitions"
 import { usePathname } from "next/navigation"
+import { ReactNode } from "react"
+
+export function SidebarSeparator() {
+  return (
+    <div className="h-px bg-theme-cardHover flex-none" />
+  )
+}
 
 export default function SidebarItem(props: {
   href: string,
   label: string,
-  count?: number,
+  icon?: ReactNode,
   large?: string,
   onClick?: () => void
 }) {
@@ -33,7 +40,7 @@ export default function SidebarItem(props: {
         {props.label}
       </div>
       <div className="flex-none w-5 h-5 -mr-2 rounded-full text-center opacity-40 scale-90">
-        {props.count}
+        {props.icon}
       </div>
     </Link>
   )
