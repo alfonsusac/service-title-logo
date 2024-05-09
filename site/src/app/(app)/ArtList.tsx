@@ -24,6 +24,9 @@ export default function ArtList(props: {
     if (search === null) {
       return true
     }
+    if (item.author.handleName.toLowerCase().includes(search.toLowerCase())) {
+      return true
+    }
     if (item.name.toLowerCase().includes(search.toLowerCase())) {
       return true
     }
