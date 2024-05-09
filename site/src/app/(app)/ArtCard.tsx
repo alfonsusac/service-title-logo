@@ -16,23 +16,20 @@ export default function ArtCard(props: {
     <div
       className="relative  rounded-lg flex flex-col group animate-in fade-in-0 duration-300 slide-in-from-bottom-5"
       style={{
-        // viewTransitionName: `art-card`,
-        // viewTransitionName: `img-${ image.title.replace('.', '') }`,
         animationDelay: `${ (props.order ?? 0) * 50 }ms`,
         animationFillMode: 'both',
       }}
       onClick={props.onClick}
     >
-      <div className="relative aspect-video w-full overflow-hidden rounded-2xl"
+      <div className="relative aspect-video w-full overflow-visible rounded-2xl"
         style={{
-          overflow: image.objectFit === 'contain' ? 'visible' : 'hidden',
-          // viewTransitionName: `art-card-img-${image.author.handleName}-${image.title.replace('.', '')}`
+          overflow: image.objectFit === 'cover' ? 'hidden' : 'visible',
         }}
       >
         <Image
           unoptimized src={image.imgSrc} alt={image.title} title={image.title}
           fill style={{ objectFit: props.image.objectFit }}
-          className={cn(`object-contain transition-all group-hover:scale-110`)} />
+          className={cn(`object-contain transition-all group-hover:scale-110 overflow-visible`)} />
       </div>
       <div className="text-xs font-mono px-2 pt-2 pb-1">
         {image.title} {(props.variantCount ?? 0) > 1 ? `(${ props.variantCount })` : ''}

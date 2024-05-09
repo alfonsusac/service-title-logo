@@ -49,17 +49,16 @@ const VariantDialogContent = forwardRef(
                   overflow: variant.objectFit === 'contain' ? 'visible' : 'hidden',
                 }}
               >
-                <div className="absolute top-1 left-2 z-10 p-1 px-2 pr-3 bg-theme-cardHover rounded-br-lg">Preview:</div>
-                <div className="absolute top-2 right-2 h-10 z-10 flex bg-theme-cardHover rounded-bl-lg">
+                <div className="absolute top-2 right-2 h-10 z-10 flex rounded-bl-lg">
                   <ThemeDropdown />
                 </div>
-                <div className="relative w-full h-full">
+                <div className="relative w-full h-full mt-18">
                   <Image
                     unoptimized src={variant.imgSrc} alt={variant.title} title={variant.title}
                     fill style={{
                       objectFit: variant.objectFit,
                     }}
-                    className={cn(`object-cover transition-all group-hover:scale-110 rounded-lg`)}
+                    className={cn(`object-contain transition-all group-hover:scale-110 rounded-lg`)}
                   />
                 </div>
               </div>
