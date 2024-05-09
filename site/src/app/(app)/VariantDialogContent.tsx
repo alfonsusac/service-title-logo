@@ -3,202 +3,210 @@ import { VariantWithAuthor } from "./data"
 import { Link } from "next-view-transitions"
 import Image from "next/image"
 import { cn } from "lazy-cn"
-import { SVGProps, useState } from "react"
+import { forwardRef, LegacyRef, SVGProps, useState } from "react"
 import { makeTransition } from "./VariantCard"
 import { ThemeDropdown } from "./ThemeChanger"
 import { button } from "./AppButton"
 import toast from "react-hot-toast"
 
-export default function VariantDialogContent(props: {
-  variant: VariantWithAuthor,
-  onClose: () => void
-}) {
-  const hasVariants = props.variant.files.length > 1
-  const firstImage = props.variant.files[0]
-  const [variantTitle, _setVariant] = useState(firstImage.title)
+const VariantDialogContent = forwardRef(
+  function VariantDialogContent(props: {
+    variant: VariantWithAuthor,
+    onClose: () => void
+  }, ref: LegacyRef<HTMLDivElement>) {
+    const hasVariants = props.variant.files.length > 1
+    const firstImage = props.variant.files[0]
+    const [variantTitle, _setVariant] = useState(firstImage.title)
 
-  const setVariant = makeTransition(_setVariant)
+    const setVariant = makeTransition(_setVariant)
 
-  const variant = props.variant.files.find((file) => file.title === variantTitle) || firstImage
+    const variant = props.variant.files.find((file) => file.title === variantTitle) || firstImage
 
-  return (
-    <DialogContent className="z-[30] top-1/2 left-1/2 fixed -translate-x-1/2 -translate-y-1/2 
+    return (
+      <DialogContent className="z-[30] top-1/2 left-1/2 fixed -translate-x-1/2 -translate-y-1/2 
            w-full max-w-screen-lg p-8 
           h-full md:h-auto
           flex flex-col md:justify-center items-start
           font-display text-theme-text tracking-wider 
           "
-      style={{
-        viewTransitionName: `art-card-img-${ props.variant.author.handleName }-${ props.variant.name.replaceAll('.', '').replaceAll(' ', '') }-dialog`,
-      }}
-    >
-      <div className="
+        style={{
+          viewTransitionName: `dialog-content`,
+        }}
+        ref={ref}
+      >
+        <div className="
       bg-theme-card rounded-2xl shadow-2xl w-full p-8 relative my-auto overflow-auto
       ">
-        <DialogClose className="top-0 absolute right-0 m-4 p-3 px-5 text-lg rounded-xl hover:bg-theme-card">
-          X
-        </DialogClose>
-        <div className="flex flex-col md:flex-row gap-8 w-full pt-10 md:pt-0">
-          <div className=" flex flex-col flex-none md:flex-1 gap-2">
-            <div className="flex-none relative aspect-video w-full overflow-hidden rounded-2xl
+          <DialogClose className="top-0 absolute right-0 m-4 p-3 px-5 text-lg rounded-xl hover:bg-theme-card">
+            X
+          </DialogClose>
+          <div className="flex flex-col md:flex-row gap-8 w-full pt-10 md:pt-0">
+            <div className=" flex flex-col flex-none md:flex-1 gap-2">
+              <div className="flex-none relative aspect-video w-full overflow-hidden rounded-2xl
             bg-theme-cardHover p-4 transition-all shadow-inner
           "
-              style={{
-                overflow: variant.objectFit === 'contain' ? 'visible' : 'hidden',
-              }}
-            >
-              <div className="absolute top-1 left-2 z-10 p-1 px-2 pr-3 bg-theme-cardHover rounded-br-lg">Preview:</div>
-              <div className="absolute top-2 right-2 h-10 z-10 flex bg-theme-cardHover rounded-bl-lg">
-                <ThemeDropdown />
+                style={{
+                  overflow: variant.objectFit === 'contain' ? 'visible' : 'hidden',
+                }}
+              >
+                <div className="absolute top-1 left-2 z-10 p-1 px-2 pr-3 bg-theme-cardHover rounded-br-lg">Preview:</div>
+                <div className="absolute top-2 right-2 h-10 z-10 flex bg-theme-cardHover rounded-bl-lg">
+                  <ThemeDropdown />
+                </div>
+                <div className="relative w-full h-full">
+                  <Image
+                    unoptimized src={variant.imgSrc} alt={variant.title} title={variant.title}
+                    fill style={{
+                      objectFit: variant.objectFit,
+                    }}
+                    className={cn(`object-cover transition-all group-hover:scale-110 rounded-lg`)}
+                  />
+                </div>
               </div>
-              <div className="relative w-full h-full">
-                <Image
-                  unoptimized src={variant.imgSrc} alt={variant.title} title={variant.title}
-                  fill style={{
-                    objectFit: variant.objectFit,
-                  }}
-                  className={cn(`object-cover transition-all group-hover:scale-110 rounded-lg`)}
-                />
-              </div>
-            </div>
-            {
-              hasVariants && (
-                <div className="h-20 bg-theme-cardHover shadow-inner
+              {
+                hasVariants && (
+                  <div className="h-20 bg-theme-cardHover shadow-inner
               flex items-stretch gap-2 overflow-auto rounded-xl p-2">
-                  {
-                    props.variant.files.map((file) => {
-                      return (
-                        <div key={file.title} className="h-full aspect-video flex-none relative
+                    {
+                      props.variant.files.map((file) => {
+                        return (
+                          <div key={file.title} className="h-full aspect-video flex-none relative
                        rounded-lg p-1 cursor-pointer transition-all
                       "
-                          data-selected={file.title === variantTitle}
-                          onClick={() => {
-                            setVariant(file.title)
-                          }}
-                        >
-                          <MdiCircleMedium className="absolute top-0 left-0 text-transparent data-[selected=true]:text-theme-strong"
                             data-selected={file.title === variantTitle}
-                          />
-                          <div className="w-full h-full relative">
-                            <Image
-                              unoptimized src={file.imgSrc} alt={file.title} title={file.title}
-                              fill
-                              className={cn(`object-contain transition-all group-hover:scale-110`)}
+                            onClick={() => {
+                              setVariant(file.title)
+                            }}
+                          >
+                            <MdiCircleMedium className="absolute top-0 left-0 text-transparent data-[selected=true]:text-theme-strong"
+                              data-selected={file.title === variantTitle}
                             />
+                            <div className="w-full h-full relative">
+                              <Image
+                                unoptimized src={file.imgSrc} alt={file.title} title={file.title}
+                                fill
+                                className={cn(`object-contain transition-all group-hover:scale-110`)}
+                              />
+                            </div>
                           </div>
-                        </div>
-                      )
-                    })
-                  }
-                </div>
-              )
-            }
-            <div className="flex gap-2">
-              <button
-                onClick={async () => {
-                  // TODO: actually download the image
-                  async function toDataURL(url: string) {
-                    const blob = await fetch(url).then(res => res.blob())
-                    return URL.createObjectURL(blob)
-                  }
+                        )
+                      })
+                    }
+                  </div>
+                )
+              }
+              <div className="flex gap-2">
+                <button
+                  onClick={async () => {
+                    // TODO: actually download the image
+                    async function toDataURL(url: string) {
+                      const blob = await fetch(url).then(res => res.blob())
+                      return URL.createObjectURL(blob)
+                    }
 
-                  const a = document.createElement("a")
-                  a.href = await toDataURL(variant.imgSrc)
-                  a.download = variant.title
-                  document.body.appendChild(a)
-                  a.click()
-                  document.body.removeChild(a)
+                    const a = document.createElement("a")
+                    a.href = await toDataURL(variant.imgSrc)
+                    a.download = variant.title
+                    document.body.appendChild(a)
+                    a.click()
+                    document.body.removeChild(a)
 
-                }}
-                className={button('group flex-1 bg-theme-cardHover hover:bg-theme-bg')}
-              >
-                <IcRoundDownload
-                  className="flex-none text-2xl group-hover:text-theme-strong" />
-                Download
-              </button>
-              <button
-                className={button('group flex-1 bg-theme-cardHover hover:bg-theme-bg')}
-                onClick={async () => {
-                  try {
-                    // TODO: show toaster 
-                    const img = await fetch(variant.imgSrc)
-                    const imgBlob = await img.blob()
-                    const clipboardData = [new ClipboardItem({ [imgBlob.type]: imgBlob })]
-                    await navigator.clipboard.write(clipboardData)
-                    toast.success('Image copied to clipboard!')
-                  } catch (error) {
-                    console.log(error)
-                    toast.error('Failed to copy image to clipboard!')
-                  }
-                }}
-              >
-                <IcRoundFileCopy className="flex-none text-2xl group-hover:text-theme-strong" />
-                Copy
-              </button>
-            </div>
-          </div>
-          {/* RIGHT */}
-          <div className="flex flex-col flex-none md:flex-1 text-lg">
-            <header>
-              <div className="text-theme-stronger text-3xl">{props.variant.name}</div>
-              <div>by{' '}
-                <DialogClose>
-                  <Link
-                    href={`/${ props.variant.author.handleName }`}
-                    className="text-theme-strong hover:underline"
-                    onClick={() => {
-                      props.onClose()
-                    }}
-                  >{props.variant.author.handleName}</Link>
-                </DialogClose>
+                  }}
+                  className={button('group flex-1 bg-theme-cardHover hover:bg-theme-bg')}
+                >
+                  <IcRoundDownload
+                    className="flex-none text-2xl group-hover:text-theme-strong" />
+                  Download
+                </button>
+                <button
+                  className={button('group flex-1 bg-theme-cardHover hover:bg-theme-bg')}
+                  onClick={async () => {
+                    try {
+                      // TODO: show toaster 
+                      const img = await fetch(variant.imgSrc)
+                      const imgBlob = await img.blob()
+                      const clipboardData = [new ClipboardItem({ [imgBlob.type]: imgBlob })]
+                      await navigator.clipboard.write(clipboardData)
+                      toast.success('Image copied to clipboard!')
+                    } catch (error) {
+                      console.log(error)
+                      toast.error('Failed to copy image to clipboard!')
+                    }
+                  }}
+                >
+                  <IcRoundFileCopy className="flex-none text-2xl group-hover:text-theme-strong" />
+                  Copy
+                </button>
               </div>
-            </header>
-            {
-              hasVariants && <section className="pt-4">
-                <div className="text-base">Variants:</div>
-                <div className="flex flex-col mt-1">
-                  {
-                    props.variant.files.map((file) => {
-                      return (
-                        <div
-                          key={file.title}
-                          className="p-2 px-3 hover:bg-theme-cardHover -mx-3 -my-1 rounded-xl
+            </div>
+            {/* RIGHT */}
+            <div className="flex flex-col flex-none md:flex-1 text-lg">
+              <header>
+                <div className="text-theme-stronger text-3xl">{props.variant.name}</div>
+                <div>by{' '}
+                  <DialogClose>
+                    <Link
+                      href={`/${ props.variant.author.handleName }`}
+                      className="text-theme-strong hover:underline"
+                      onClick={() => {
+                        props.onClose()
+                      }}
+                    >{props.variant.author.handleName}</Link>
+                  </DialogClose>
+                </div>
+              </header>
+              {
+                hasVariants && <section className="pt-4">
+                  <div className="text-base">Variants:</div>
+                  <div className="flex flex-col mt-1">
+                    {
+                      props.variant.files.map((file) => {
+                        return (
+                          <div
+                            key={file.title}
+                            className="p-2 px-3 hover:bg-theme-cardHover -mx-3 -my-1 rounded-xl
                         data-[selected=true]:text-theme-strong
                         flex gap-2 items-center cursor-pointer transition-all
                         "
-                          data-selected={file.title === variantTitle}
-                          onClick={() => setVariant(file.title)}
-                        >
-                          <MdiCircleMedium className="text-transparent data-[selected=true]:text-theme-strong"
                             data-selected={file.title === variantTitle}
-                          />
-                          {file.title}
-                        </div>
-                      )
-                    })
-                  }
-                </div>
+                            onClick={() => setVariant(file.title)}
+                          >
+                            <MdiCircleMedium className="text-transparent data-[selected=true]:text-theme-strong"
+                              data-selected={file.title === variantTitle}
+                            />
+                            {file.title}
+                          </div>
+                        )
+                      })
+                    }
+                  </div>
+                </section>
+              }
+              <section className="flex flex-col gap-2 flex-grow justify-end mt-4">
+                <Link href={variant.source} className={button('group hover:bg-theme-cardHover')}
+                  onClick={props.onClose}
+                >
+                  Visit File Source <span className="group-hover:text-theme-strong">{'>'}</span>
+                </Link>
+                <Link href={`/${ props.variant.author.handleName }`} className={button('group hover:bg-theme-cardHover')}
+                  onClick={props.onClose}
+                >
+                  Visit Author <span className="group-hover:text-theme-strong">{'>'}</span>
+                </Link>
               </section>
-            }
-            <section className="flex flex-col gap-2 flex-grow justify-end mt-4">
-              <Link href={variant.source} className={button('group hover:bg-theme-cardHover')}
-                onClick={props.onClose}
-              >
-                Visit File Source <span className="group-hover:text-theme-strong">{'>'}</span>
-              </Link>
-              <Link href={`/${ props.variant.author.handleName }`} className={button('group hover:bg-theme-cardHover')}
-                onClick={props.onClose}
-              >
-                Visit Author <span className="group-hover:text-theme-strong">{'>'}</span>
-              </Link>
-            </section>
+            </div>
           </div>
         </div>
-      </div>
 
-    </DialogContent>
-  )
-}
+      </DialogContent>
+    )
+  }
+)
+
+export default VariantDialogContent
+
+
+
 
 
 

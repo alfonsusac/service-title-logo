@@ -23,39 +23,17 @@ export default function ArtCard(props: {
       }}
       onClick={props.onClick}
     >
-      {
-        !props.opened ? <div className="relative aspect-video w-full overflow-hidden rounded-2xl"
-          style={{
-            // position: props.opened ? 'fixed' : undefined,
-            // zIndex: props.opened ? 999 : 0,
-            overflow: image.objectFit === 'contain' ? 'visible' : 'hidden',
-            // viewTransitionName: `art-card-img-${ image.author.handleName }-${ image.title.replaceAll('.', '').replaceAll(' ', '') }`,
-          }}
-        >
-          <Image
-            unoptimized src={image.imgSrc} alt={image.title} title={image.title}
-            fill
-            className={cn(`object-cover transition-all group-hover:scale-110`)}
-            style={{
-              objectFit: props.image.objectFit,
-              // viewTransitionName: `art-card-img-${ image.author.handleName }-${ image.title.replaceAll('.', '').replaceAll(' ', '') }-img`
-            }}
-          />
-        </div> : <div className="relative aspect-video w-full rounded-2xl">
-
-        </div>
-      }
-      {/* <div className="relative aspect-video w-full overflow-hidden rounded-2xl"
+      <div className="relative aspect-video w-full overflow-hidden rounded-2xl"
         style={{
           overflow: image.objectFit === 'contain' ? 'visible' : 'hidden',
-          viewTransitionName: `art-card-img-${image.author.handleName}-${image.title.replace('.', '')}`
+          // viewTransitionName: `art-card-img-${image.author.handleName}-${image.title.replace('.', '')}`
         }}
       >
         <Image
           unoptimized src={image.imgSrc} alt={image.title} title={image.title}
           fill style={{ objectFit: props.image.objectFit }}
           className={cn(`object-cover transition-all group-hover:scale-110`)} />
-      </div> */}
+      </div>
       <div className="text-xs font-mono px-2 pt-2 pb-1">
         {image.title} {(props.variantCount ?? 0) > 1 ? `(${ props.variantCount })` : ''}
       </div>
