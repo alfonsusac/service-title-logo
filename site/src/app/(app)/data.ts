@@ -1,4 +1,4 @@
-import type { Author, Data, Group, Image } from "kawaii-logos-data"
+import type { Author, Data, Entry, Group, Image } from "kawaii-logos-data"
 
 const src = 'https://raw.githubusercontent.com/alfonsusac/kawaii-logos-data/data/images.json'
 
@@ -30,20 +30,25 @@ export type VariantWithAuthor = Group & { author: Author }
 export async function getVariants() {
   const response = await getData()
   return response.data.reduce<VariantWithAuthor[]>((acc, cur) => {
-    if (!cur.groups && cur.images) {
-      acc.push(
-        ...cur.images.map<VariantWithAuthor>(
-          image => ({
-            name: image.title,
-            author: cur,
-            files: [image]
-          })
-        )
-      )
+
+    // const hasGroups = cur.groups && cur.groups.length > 0
+
+    const hasGroups = (en: Entry): en is Required<Entry>  => {
+      return !!(en.groups && en.groups.length > 0)
     }
 
-    if (cur.groups) {
-      acc.push(...cur.groups.map(image => ({ ...image, author: cur })))
+    if (!hasGroups(cur) && cur.images) {
+      acc.push(
+        ...cur.images.map<VariantWithAuthor>(image => ({
+          name: image.title,
+          author: cur,
+          files: [image],
+        }))
+      );
+    }
+
+    if (hasGroups(cur)) {
+      acc.push(...cur.groups.map(image => ({ ...image, author: cur })));
     }
 
     return acc
