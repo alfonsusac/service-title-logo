@@ -32,7 +32,7 @@ export default function ArtCard(props: {
         <Image
           unoptimized src={image.imgSrc} alt={image.title} title={image.title}
           fill style={{ objectFit: props.image.objectFit }}
-          className={cn(`object-cover transition-all group-hover:scale-110`)} />
+          className={cn(`object-contain transition-all group-hover:scale-110`)} />
       </div>
       <div className="text-xs font-mono px-2 pt-2 pb-1">
         {image.title} {(props.variantCount ?? 0) > 1 ? `(${ props.variantCount })` : ''}
