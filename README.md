@@ -12,6 +12,16 @@ Contributions are welcome! Check out this page for more information!
 
 - https://service-title-logo.vercel.app/request
 
+## Todo
+
+- [ ] Localization
+- [ ] Better OG that showcases each of the artist’s logo
+- [ ] Timeline view
+- [ ] Copy Link Button
+- [ ] Add Axiom for Better Logging
+- [ ] Setup Google Console
+- [ ] Make more stickers
+
 ## Related Projects
 
 - [Vtuber style logos](https://vtuber-style-logos.vercel.app/) by [Ender-Wiggin2019](https://github.com/Ender-Wiggin2019)
