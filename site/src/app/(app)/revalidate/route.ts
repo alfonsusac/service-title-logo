@@ -6,7 +6,8 @@ export const dynamic = 'force-dynamic'
 
 export function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
-  if(process.env.NODE_ENV !== "development" && searchParams.get('key') !== process.env.REVALIDATE_KEY) return redirect('/')
+  if (process.env.NODE_ENV !== "development" && searchParams.get('key') !== process.env.REVALIDATE_KEY)
+    return redirect('/')
   revalidatePath('/')
   revalidateTag('all')
   return Response.json({
