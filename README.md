@@ -2,24 +2,25 @@
 
 This is a website that displays collection Vtuber-styles title icons.
 
-Artists:
-- aikoyori
-- cr1sta_dev
-- disphing
-- g2-games
-- hvpexe
-- IDMDiamondl
-- saltyaom
-- sawaratsuki
-- mkpoli
-- fuma-nama
-- styxpilled
+The data are scraped using github action that is hosted on a separate repository. You can check the repsository here: 
+
+- https://github.com/alfonsusac/kawaii-logos-data
 
 ## Contributions
 
-Required env: github key `GH_KEY` which will allow you to make more request to the API than as anonymous user
+Contributions are welcome! Check out this page for more information!
 
-Contributions are welcome!
+- https://service-title-logo.vercel.app/request
+
+## Todo
+
+- [ ] Localization
+- [ ] Better OG that showcases each of the artist’s logo
+- [ ] Timeline view
+- [ ] Copy Link Button
+- [ ] Add Axiom for Better Logging
+- [ ] Setup Google Console
+- [ ] Make more stickers
 
 ## Related Projects
 
