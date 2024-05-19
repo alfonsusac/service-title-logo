@@ -1,62 +1,52 @@
 import SidebarItem, { SidebarSeparator } from "./SidebarItem"
 import { IconParkSolidTwitter, UimGithubAlt } from "./[author]/page"
 import { Suspense } from "react"
-import MobileSidebar, { IcRoundHome, IcRoundPlus, IcRoundQuestionMark } from "./Sidebar"
+import MobileSidebar, { IcRoundHome, IcRoundPlus, IcRoundQuestionMark } from "./MobileSidebar"
 import { DesktopSearchBar } from "./Searchbar"
 import ArtList from "./ArtList"
 import { getAuthors, getVariants } from "./data"
 import { stringSorter } from "@/util/sort"
 import Footer from "./Footer"
 import ImageDetailPage from "./ImageDetail"
+import { sidebar, SidebarContent, SidebarContentAuthorList } from "./Sidebar"
 
-export default function GlobalLayout(props: any) {
+export default async function GlobalLayout(props: any) {
+  const authors = await getAuthors()
   return (
     <div className="mx-auto max-w-screen-lg min-h-screen flex flex-col gap-8 font-display tracking-tight">
       {/* <ImageDetailPage > */}
-      <Suspense>
-        <MobileSidebar />
-      </Suspense>
+      <MobileSidebar />
       <div className="grow flex items-stretch">
         <div className="flex flex-none flex-col md:w-48 gap-px pt-60 rounded-lg ">
           {/* Sidebar */}
-          <div className="py-5 sticky top-0 max-h-screen flex flex-col">
+          <div className="py-5 sticky top-0 max-h-screen flex flex-col h-full gap-4">
             <div
-              style={{
-                viewTransitionName: "sidebar",
-              }}
-              className="hidden md:flex overflow-auto select-none flex-col gap-3 p-5 rounded-r-2xl lg:rounded-l-2xl bg-theme-card animate-in duration-300 fade-in-0 slide-in-from-left-10"
+              style={{ viewTransitionName: "sidebar" }}
+              className={sidebar("flex-none")}
             >
-              <SidebarItem href="/" label="Home" icon={<IcRoundHome className="text-xl" />} />
-              <SidebarSeparator />
-              <Suspense>
-                <AuthorList />
-              </Suspense>
-              <SidebarSeparator />
-              <SidebarItem href="/about" label="About" icon={<IcRoundQuestionMark className="text-xl" />} />
-              <SidebarItem href="/request" label="Request" icon={<IcRoundPlus className="text-xl" />} />
+              <SidebarContent />
+            </div>
+            <div
+              style={{ viewTransitionName: "sidebar" }}
+              className={sidebar("h-full")}
+            >
+              <SidebarContentAuthorList authors={authors} />
             </div>
           </div>
         </div>
         <div className="grow px-4 md:px-8">
           <main className="*:mb-2 pt-32">
             <header>
-              <Suspense>
-                {props.children}
-              </Suspense>
+              {props.children}
             </header>
-            <Suspense>
-              <DesktopSearchBar />
-            </Suspense>
+            <DesktopSearchBar />
             <section className="rounded-2xl min-h-[50vh]">
-              <Suspense>
-                <ArtListServer />
-              </Suspense>
+              <ArtListServer />
             </section>
           </main>
           <Footer />
         </div>
       </div>
-      {/* </ImageDetailPage> */}
     </div>
   )
 }
