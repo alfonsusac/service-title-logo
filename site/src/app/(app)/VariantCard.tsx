@@ -1,20 +1,13 @@
-import { useQueryState } from "nuqs";
+"use client"
+
 import ArtCard from "./ArtCard";
 import { VariantWithAuthor } from "./data";
 import {
   Dialog,
-  DialogClose,
-  DialogContent,
   DialogOverlay,
   DialogPortal,
-  DialogTrigger,
 } from "@radix-ui/react-dialog";
-import { flushSync } from "react-dom";
 import { useState } from "react";
-import Image from "next/image";
-import { cn } from "lazy-cn";
-import { useImageView } from "./ImageDetail";
-import { Link } from "next-view-transitions";
 import VariantDialogContent from "./VariantDialogContent";
 
 export default function VariantCard(props: {

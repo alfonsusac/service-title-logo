@@ -1,32 +1,9 @@
-"use client";
+"use client"
 
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuPortal, DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu"
-import { cn } from "lazy-cn";
-import { useTheme } from "next-themes"
-import { useQueryState } from "nuqs";
-import { SVGProps } from "react"
-import { themes } from "../themes"
-import { ThemeDropdown } from "./ThemeChanger"
+import { cn } from "lazy-cn"
+import { useQueryState } from "nuqs"
+import {  SVGProps } from "react"
 import { usePathname } from "next/navigation"
-
-export function DesktopSearchBar() {
-  const {theme, setTheme} = useTheme()
-  return (
-    <div className="hidden md:flex gap-2 sticky top-5 z-10"
-      style={{
-        viewTransitionName: "desktop-searchbar",
-      }}
-    >
-      <div className="transition-all absolute inset-0 -mt-5 -mx-4 h-16 rounded-b-3xl bg-theme-bg" />
-      <div className="grow">
-        <SearchBar />
-      </div>
-      <ThemeDropdown />
-      <div className="transition-all absolute left-0 right-0 top-16 h-12 rounded-t-xl shadow-[0_-40px_0_0_var(--bg)] bg-transparent" />
-    </div>
-  );
-}
-
 
 export function IconamoonArrowDown2Fill(props: SVGProps<SVGSVGElement>) {
   return (
@@ -44,11 +21,11 @@ export function IconamoonArrowDown2Fill(props: SVGProps<SVGSVGElement>) {
         clipRule="evenodd"
       ></path>
     </svg>
-  );
+  )
 }
 
 export default function SearchBar(props: { className?: string; style?: any }) {
-  const [search, setSearch] = useQueryState("search");
+  const [search, setSearch] = useQueryState("search")
 
   const pathname = usePathname()
   if (pathname === "/about") return
@@ -70,9 +47,9 @@ export default function SearchBar(props: { className?: string; style?: any }) {
         value={search || ""}
         onChange={event => {
           if (event.target.value === "") {
-            setSearch(null);
+            setSearch(null)
           } else {
-            setSearch(event.target.value);
+            setSearch(event.target.value)
           }
         }}
       />
@@ -89,5 +66,5 @@ export default function SearchBar(props: { className?: string; style?: any }) {
         x
       </div>
     </div>
-  );
+  )
 }

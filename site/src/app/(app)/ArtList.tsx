@@ -4,7 +4,6 @@ import { useParams, usePathname } from "next/navigation"
 import { useQueryState } from "nuqs"
 import { VariantWithAuthor } from "./data"
 import VariantCard from "./VariantCard"
-import { Dialog, DialogContent, DialogOverlay, DialogPortal, DialogTrigger } from "@radix-ui/react-dialog"
 
 export default function ArtList(props: {
   variants: VariantWithAuthor[]

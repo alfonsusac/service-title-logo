@@ -26,7 +26,7 @@ export function SidebarContentAuthorList(props: {
   return (
     <>
       {
-        props.authors?.sort(stringSorter(props.authors![0], "handleName"))
+        props.authors?.sort((a, b) => ((b.groups?.length ?? 0) + (b.images?.length ?? 0)) - ((a.groups?.length ?? 0) + (a.images?.length ?? 0)))
           .map(author => {
             return (
               <SidebarItem

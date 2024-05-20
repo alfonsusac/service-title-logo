@@ -39,7 +39,7 @@ export default function SidebarItem(props: {
       <div className="flex-grow text-ellipsis overflow-hidden">
         {props.label}
       </div>
-      <div className="flex-none w-5 h-5 -mr-2 rounded-full text-center opacity-40 scale-90">
+      <div className="flex-none w-5 h-5 -mr-2 rounded-full text-end opacity-40 scale-90">
         {props.icon}
       </div>
     </Link>
