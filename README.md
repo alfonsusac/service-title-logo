@@ -10,7 +10,7 @@ The data are scraped using github action that is hosted on a separate repository
 
 Contributions are welcome! Check out this page for more information!
 
-- https://service-title-logo.vercel.app/request
+- https://vtuberlogos.alfon.dev/request
 
 ## Todo
 
