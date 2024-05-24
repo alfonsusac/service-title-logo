@@ -14,7 +14,7 @@ export default function ArtCard(props: {
   const image = props.image
   return (
     <div
-      className="relative  rounded-lg flex flex-col group animate-in fade-in-0 duration-300 slide-in-from-bottom-5"
+      className="relative  rounded-lg flex flex-col group animate-in fade-in-0 duration-300 slide-in-from-bottom-5 cursor-pointer"
       style={{
         animationDelay: `${ (props.order ?? 0) * 50 }ms`,
         animationFillMode: 'both',
