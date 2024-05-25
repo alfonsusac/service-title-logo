@@ -1,8 +1,10 @@
 import { SVGProps } from "react"
 import { Link } from "next-view-transitions"
-import { getAuthors } from "../data"
+import { getAuthors, getVariants } from "../data"
 import { Author } from "kawaii-logos-data"
 import { notFound } from "next/navigation"
+import SuspensedArtList from "../ArtList.server"
+import { stringSorter } from "@/util/sort"
 
 export async function generateStaticParams() {
   const authors = await getAuthors()
@@ -10,6 +12,7 @@ export async function generateStaticParams() {
 }
 
 export default async function AuthorPage(context: { params: { author: string } }) {
+  const variants = await getVariants()
   const authors = await getAuthors()
   const authorid = context.params.author
 
@@ -55,6 +58,9 @@ export default async function AuthorPage(context: { params: { author: string } }
           </p>
         }
       </div>
+      <section className="min-h-[50vh]">
+        <SuspensedArtList variants={variants.filter(variant => variant.author.handleName === author.handleName).sort(stringSorter(variants[0], "name"))} />
+      </section>
     </div>
   )
 }

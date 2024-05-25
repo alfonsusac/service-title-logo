@@ -5,15 +5,22 @@ import { useTheme } from "next-themes"
 import { themes } from "../themes"
 import { IconamoonArrowDown2Fill } from "./Searchbar"
 import { SVGProps } from "react"
+import { useMounted } from "./useMounted"
+import { cn } from "lazy-cn"
 
 export function ThemeDropdown() {
   const { theme, setTheme } = useTheme();
+  const mounted = useMounted();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <div
           role="button"
-          className="flex-none text-theme-text z-10 tracking-wider flex items-center justify-center px-3 md:px-4 rounded-lg hover:bg-theme-card gap-2"
+          className={cn(
+            "flex-none text-theme-text z-10 tracking-wider flex items-center justify-center px-3 md:px-4 rounded-lg hover:bg-theme-card gap-2"
+            , mounted ? "" : "opacity-0 pointer-events-none"
+          )}
+      
         >
           {/* <div className="hidden md:block">Theme</div> */}
           <MaterialSymbolsPalette className="text-2xl"/>

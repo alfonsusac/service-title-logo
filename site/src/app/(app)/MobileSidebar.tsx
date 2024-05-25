@@ -8,26 +8,27 @@ import { ThemeDropdown } from "./ThemeChanger"
 import { stringSorter } from "@/util/sort"
 import { getAuthors } from "./data"
 import { SidebarContent, SidebarContentAuthorList } from "./Sidebar"
+import { useMounted } from "./useMounted"
 
 const authorPromise = getAuthors()
 
 export default function MobileSidebar() {
   const authors = use(authorPromise)
+  const mounted = useMounted()
 
   const [open, setOpen] = useState(false)
   const close = () => setOpen(false)
 
   return (
     <div
-      className="md:hidden top-0 left-0 fixed flex items-center justify-between bg-transparent isolate z-20 select-none bg-red-500"
-      style={{
-        viewTransitionName: `mobile-sidebar`,
-      }}
+      className={cn(
+        "md:hidden top-0 left-0 fixed flex items-center justify-between bg-transparent isolate z-20 select-none",
+        mounted ? "" : "opacity-0 pointer-events-none"
+      )}
+      style={{ viewTransitionName: `mobile-sidebar` }}
     >
-      <div className="flex relative p-3 gap-2 w-screen bg-theme-bg z-10 "
-        style={{
-          viewTransitionName: "mobile-top-bar",
-        }}
+      <div className="flex relative p-3 gap-2 w-screen bg-theme-bg z-10"
+        style={{ viewTransitionName: "mobile-top-bar" }}
       >
         <div
           onClick={() => setOpen(!open)}
@@ -53,13 +54,13 @@ export default function MobileSidebar() {
       </div>
 
       {/* Sidebar Swing */}
-      <div className="absolute top-0 left-0 h-screen py-4 pt-20 flex flex-col">
+      <div className="absolute top-0 left-0 h-screen py-4 flex flex-col">
         <div
           className={cn(
             "transition-all duration-300  right-0 z-20 rotate-12 origin-top-right shadow-2xl",
             open ? "rotate-0" : "-translate-x-full ",
             "relative flex flex-col gap-3 p-5 rounded-r-2xl lg:rounded-l-2xl bg-theme-card",
-            "overflow-auto"
+            "overflow-auto overscroll-contain"
           )}
         >
           <SidebarContent onItemClick={close} />

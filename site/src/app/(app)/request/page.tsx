@@ -4,7 +4,7 @@ export default function RequestPage() {
 
   return (
     <>
-      <div className='relative overflow-visible'>
+      <div className='relative overflow-hidden'>
         <Link
           href="/"
           className="font-display text-theme-strong tracking-widest"

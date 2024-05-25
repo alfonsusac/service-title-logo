@@ -4,7 +4,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <div className='relative overflow-visible'>
+      <div className=''>
         <Link
           href="/"
           className="font-display text-theme-strong tracking-widest"

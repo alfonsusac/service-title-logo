@@ -6,52 +6,48 @@ import { sidebar, SidebarContent, SidebarContentAuthorList } from "./Sidebar"
 import { DesktopNavBar } from "./Navbar"
 import { Suspense } from "react"
 import VariantCard from "./VariantCard"
-import ArtListFiltered from "./ArtListFiltered"
+import ArtListFiltered from "./ArtList.client"
 import { ArtList } from "./ArtList"
+import { SidebarSeparator } from "./SidebarItem"
+import { cn } from "lazy-cn"
 
 export default async function GlobalLayout(props: any) {
   const authors = await getAuthors()
   return (
-    <div className="mx-auto max-w-screen-lg min-h-screen flex flex-col gap-8 font-display tracking-tight">
+    <div>
       <Suspense>
         <MobileSidebar />
       </Suspense>
-      <div className="grow flex items-stretch">
-        <div className="flex flex-none flex-col md:w-48 gap-px pt-60 rounded-lg ">
-          {/* Sidebar */}
-          <div className="py-5 sticky top-0 max-h-screen flex flex-col h-full gap-4">
-            <div
-              style={{ viewTransitionName: "sidebar" }}
-              className={sidebar("flex-none")}
-            >
+      {/* Centered content */}
+      <div className={cn(
+        "grow flex",
+        "max-w-screen-lg",
+        "mx-auto"
+      )}>
+        <div className="hidden md:flex flex-none flex-col md:w-48 gap-px relative z-20">
+          {/* Floating sidebar */}
+          <div className="fixed md:w-48 top-0 max-h-screen flex flex-col h-[100svh]">
+            {/* Sidebar list */}
+            <div className={sidebar("flex-none h-full my-2 mt-0 pb-0 overflow-hidden rounded-none block ")}>
               <SidebarContent />
+              <SidebarSeparator />
+              <div className="overflow-auto overscroll-contain -m-2 p-2 h-0 grow pb-6 -mr-6 pr-6 -ml-3 pl-3 -mt-3 pt-3 flex flex-col gap-3" >
+                <SidebarContentAuthorList authors={authors} />
+              </div>
             </div>
-            <div
-              style={{ viewTransitionName: "sidebar" }}
-              className={sidebar("h-full")}
-            >
-              <SidebarContentAuthorList authors={authors} />
-            </div>
+            {/* Left grey padding */}
+            <div className="bg-theme-card absolute right-0 w-[999rem] h-[999rem] origin-right -z-10" />
           </div>
         </div>
+        {/* Tab content */}
         <div className="grow px-4 md:px-8">
-          <main className="*:mb-2 pt-32">
-            <header>
-              <Suspense>
-                {props.children}
-              </Suspense>
-            </header>
-            <Suspense>
-              <DesktopNavBar />
-            </Suspense>
-            <section className="rounded-2xl min-h-[50vh]">
-              <ArtListServer />
-            </section>
+          <main className="pt-20">
+            {props.children}
           </main>
           <Footer />
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

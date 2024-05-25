@@ -2,7 +2,7 @@
 
 import { cn } from "lazy-cn"
 import { useQueryState } from "nuqs"
-import {  SVGProps } from "react"
+import { SVGProps } from "react"
 import { usePathname } from "next/navigation"
 
 export function IconamoonArrowDown2Fill(props: SVGProps<SVGSVGElement>) {
@@ -38,7 +38,7 @@ export default function SearchBar(props: { className?: string; style?: any }) {
       }}
       className={cn(
         "transition-all p-1 px-3 h-12 rounded-full bg-theme-card relative z-10 flex",
-        props.className
+        props.className,
       )}
     >
       <input
@@ -53,10 +53,12 @@ export default function SearchBar(props: { className?: string; style?: any }) {
           }
         }}
       />
-      <div className="flex-none flex items-center justify-center h-full aspect-square rounded-full -mr-2
+      <div className="flex-none items-center justify-center h-full aspect-square rounded-full -mr-2
         select-none cursor-pointer text-xl
         pointer-events-none data-[display=true]:pointer-events-auto
         text-transparent 
+        hidden
+        data-[display=true]:flex
         data-[display=true]:text-theme-text
         hover:data-[display=true]:text-theme-strong
       "
