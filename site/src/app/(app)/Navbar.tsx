@@ -25,7 +25,6 @@ export function DesktopNavBar() {
         <SearchBar />
       </div>
       <ThemeSwitcher />
-      {/* <div className="transition-all absolute left-0 right-0 top-16 h-12 rounded-t-xl shadow-[0_-40px_0_0_var(--bg)] bg-transparent" /> */}
     </div>
   )
 }

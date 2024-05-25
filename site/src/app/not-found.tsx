@@ -1,13 +1,8 @@
 "use client"
 
-import { useTheme } from "next-themes"
-import Footer from "./(app)/Footer"
-import Home from "./(app)/page"
 import { use } from "react"
 import { getData } from "./(app)/data"
-import { Header } from "./(app)/Header"
 import ago from "s-ago"
-import SidebarItem from "./(app)/SidebarItem"
 import Link from "next/link"
 import { IconParkSolidTwitter, UimGithubAlt } from "./(app)/[author]/page"
 import { ThemeDropdown } from "./(app)/ThemeChanger"
@@ -16,7 +11,6 @@ import { button } from "./(app)/AppButton"
 const getDataPromise = getData()
 
 export default function NotFoundPage() {
-  const theme = useTheme()
   const data = use(getDataPromise)
   return (
     <main className="font-display w-screen min-h-screen bg-theme-bg text-theme-text tracking-wider
