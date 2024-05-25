@@ -1,5 +1,4 @@
 import MobileSidebar, { } from "./MobileSidebar"
-import ArtList from "./ArtList"
 import { getAuthors, getVariants } from "./data"
 import { stringSorter } from "@/util/sort"
 import Footer from "./Footer"
@@ -7,6 +6,8 @@ import { sidebar, SidebarContent, SidebarContentAuthorList } from "./Sidebar"
 import { DesktopNavBar } from "./Navbar"
 import { Suspense } from "react"
 import VariantCard from "./VariantCard"
+import ArtListFiltered from "./ArtListFiltered"
+import { ArtList } from "./ArtList"
 
 export default async function GlobalLayout(props: any) {
   const authors = await getAuthors()
@@ -59,30 +60,10 @@ async function ArtListServer() {
   return (
     <>
       <Suspense>
-        <div
-          style={{
-            viewTransitionName: "artlist",
-          }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 gap-y-8 mt-8"
-        >
-          <ArtList variants={variants.sort(stringSorter(variants[0], "name"))} />
-        </div >
+        <ArtListFiltered variants={variants.sort(stringSorter(variants[0], "name"))} />
       </Suspense>
       <noscript>
-        <div
-          style={{
-            viewTransitionName: "artlist",
-          }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 gap-y-8 mt-8"
-        >
-          {
-            variants.map((variant, index) => {
-              return (
-                <VariantCard key={variant.author.handleName + variant.name} variant={variant} order={index} />
-              )
-            })
-          }
-        </div>
+        <ArtList variants={variants} />
       </noscript>
     </>
   )

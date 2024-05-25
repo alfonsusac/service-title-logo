@@ -22,62 +22,40 @@ export default async function AuthorPage(context: { params: { author: string } }
   const link = author.link as Author['link']
 
   return (
-    <>
-      <div className='relative overflow-visible'>
-        <Link
-          href="/"
-          className="font-display text-theme-strong tracking-widest"
-        // style={{ viewTransitionName: 'title-text' }}
-        >VTuber Service Logo</Link>
-        <h1 className="text-4xl font-display tracking-wider text-theme-stronger z-[1] sticky top-2">
-          {authorid}{' '}
-          <span className="text-xl align-middle">
-            {
-              link.github && <a className="text-theme-strong hover:underline" href={`https://github.com/${link.github}`} target="_blank"><UimGithubAlt className="inline" /></a>
-            }
-            {' '}
-            {
-              link.twitter && <a className="text-theme-strong hover:underline" href={`https://twitter.com/${link.twitter}`} target="_blank"><IconParkSolidTwitter className="inline" /></a>
-            }
-          </span>
+    <div className='tracking-widest'>
+      <Link href="/" className="text-theme-strong">VTuber Service Logo</Link>
+      <div className="flex gap-2 items-baseline">
+        <h1 className="text-4xl text-theme-stronger z-[1] sticky top-2">
+          {authorid}
         </h1>
-      </div>
-      <div className="font-display tracking-widest py-1 *:my-2 leading-tight">
-        <p className="text-pretty" style={{
-          // viewTransitionName: 'author-info'
-        }}>This is a collection of images by <span
-        // style={{ viewTransitionName: `author-info-${ authorid }` }}
-        >{authorid}</span></p>
-        {
-          license && license.label &&
-          <>
-          </>
+        {link.github &&
+          <a className="inline-flex text-theme-strong hover:underline" href={`https://github.com/${ link.github }`} target="_blank">
+            <UimGithubAlt className="inline" />
+          </a>
         }
-        <p className="text-pretty"
-        // style={{ viewTransitionName: `author-license-disclaimer` }}
-        >{`Please read the artist's license & readme before using!`}</p>
+        {link.twitter &&
+          <a className="inline-flex text-theme-strong hover:underline" href={`https://twitter.com/${ link.twitter }`} target="_blank">
+            <IconParkSolidTwitter className="inline" />
+          </a>}
+      </div>
+      <div className=" py-1 *:my-2 leading-tight">
+        <p className="text-pretty">This is a collection of images by <span>{authorid}</span></p>
+        <p className="text-pretty">{`Please read the artist's license & readme before using!`}</p>
         <p className="">
-          <span
-          // style={{ viewTransitionName: `author-license-label` }}
-          >license: </span>
+          <span>license: </span>
           {
             license?.href
-              ? <a className="text-theme-strong hover:underline" href={license.href} target="_blank"
-              // style={{ viewTransitionName: `author-license-label-${ license.label }` }}
-              >{license.label}</a>
+              ? <a className="text-theme-strong hover:underline" href={license.href} target="_blank">{license.label}</a>
               : <span className="">Unknown</span>
           }
-
         </p>
         {
-          author.repository && <p className=""
-          // style={{ viewTransitionName: `author-links-label` }}
-          ><span >links: </span>{' '}
+          author.repository && <p className=""><span >links: </span>{' '}
             <a className="text-theme-strong hover:underline" href={author.repository} target="_blank">repository</a>{' '}
           </p>
         }
       </div>
-    </>
+    </div>
   )
 }
 
@@ -87,7 +65,6 @@ export function IconParkSolidTwitter(props: SVGProps<SVGSVGElement>) {
     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48" {...props}><path fill="currentColor" stroke="currentColor" strokeLinejoin="round" strokeWidth="4" d="M5 35.762c1.929 1.067 15.891 9.115 25.82 2.912c9.928-6.203 9.38-16.89 9.38-21.788c.9-1.884 2.8-2.842 2.8-7.942c-1.866 1.724-3.721 2.31-5.565 1.76c-1.806-2.754-4.291-3.973-7.456-3.655c-4.746.477-6.482 5.133-5.971 11.158c-7.318 3.7-13.056-2.683-16.014-7.503c-.988 3.796-1.94 8.354 0 13.395c1.294 3.362 4.405 6.203 9.331 8.526C12.332 35.33 8.224 36.377 5 35.762Z"></path></svg>
   )
 }
-
 
 export function UimGithubAlt(props: SVGProps<SVGSVGElement>) {
   return (

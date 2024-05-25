@@ -20,7 +20,6 @@ const config: Config = {
           bg: 'var(--bg)', 
           card: 'var(--card)',
           cardHover: 'var(--cardHover)',
-          // cardStrong: `rgb(from var(--text) r g b / 0.4)`,
           text: 'var(--text)',
           strong: 'var(--strong)',
           stronger: 'var(--stronger)',

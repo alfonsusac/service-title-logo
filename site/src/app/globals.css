@@ -14,11 +14,10 @@
 ::view-transition-group(*) {
   animation-duration: 150ms;
 }
-::view-transition-group(variant-card-dialog-overlay){
+::view-transition-group(variant-card-dialog-overlay) {
   /* z-index: -10; */
 }
-::view-transition-group(){
-
+::view-transition-group() {
 }
 /* 
 ::view-transition-group(mobile-sidebar) {
@@ -27,7 +26,6 @@
 ::view-transition-group(sidebar) {
   animation-duration: 0ms;
 }
-
 
 @keyframes searchbarSqueeze {
   from {
@@ -38,7 +36,27 @@
   }
 }
 
-/* Unused */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #fdfdff;
+    --card: #f1f5f9; /* slate-100 */
+    --cardHover: #e2e8f0; /* slate-200 */
+    --text: #94a3b8; /* slate-400 */
+    --strong: #64748b; /* slate-500 */
+    --stronger: #475569; /* slate-600 */
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #292a30;
+    --card: #373942;
+    --cardHover: #484a53;
+    --text: #8e90a3;
+    --strong: #cccbde;
+    --stronger: rgb(219, 221, 245);
+  }
+}
 
 .light {
   --bg: #fdfdff;
@@ -73,12 +91,12 @@
   --stronger: #ffffff;
 }
 .nord {
-    --bg: #2E3440;
-  --card: #3B4252;
-  --cardHover: #434C5E;
-  --text: #D8DEE9;
-  --strong: #88C0D0;
-  --stronger: #ECEFF4;
+  --bg: #2e3440;
+  --card: #3b4252;
+  --cardHover: #434c5e;
+  --text: #d8dee9;
+  --strong: #88c0d0;
+  --stronger: #eceff4;
 }
 .monokai {
   --bg: #272822;
@@ -89,34 +107,34 @@
   --stronger: #e5b567;
 }
 .poimandres {
-  --bg: #252B37;
+  --bg: #252b37;
   --card: #313a4b;
   --cardHover: #3e495e;
-  --text: #91B4D5;
-  --strong: #5DE4C7;
-  --stronger: #E4F0FB;
+  --text: #91b4d5;
+  --strong: #5de4c7;
+  --stronger: #e4f0fb;
 }
 .vitesse {
   --bg: #121212;
   --card: #232623;
   --cardHover: #313631;
   --text: #677567;
-  --strong: #BD976A;
-  --stronger: #5EA994;
+  --strong: #bd976a;
+  --stronger: #5ea994;
 }
 .github {
-  --bg: #0D1116;
-  --card: #21262D;
-  --cardHover: #292E36;
-  --text: #848D97;
-  --strong: #4593F8;
-  --stronger: #E6EDF3;
+  --bg: #0d1116;
+  --card: #21262d;
+  --cardHover: #292e36;
+  --text: #848d97;
+  --strong: #4593f8;
+  --stronger: #e6edf3;
 }
 .dracula {
-  --bg: #282A36;
-  --card: #34394C;
-  --cardHover: #3D455E;
-  --text: #A0B1E2;
-  --strong: #FF79C6;
-  --stronger: #8BE9FD;
+  --bg: #282a36;
+  --card: #34394c;
+  --cardHover: #3d455e;
+  --text: #a0b1e2;
+  --strong: #ff79c6;
+  --stronger: #8be9fd;
 }

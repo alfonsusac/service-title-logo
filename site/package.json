@@ -17,6 +17,7 @@
     "kawaii-logos-data": "github:alfonsusac/kawaii-logos-data#types",
     "lazy-cn": "^1.0.0",
     "next": "14.2.2",
+    "next-axiom": "^1.2.0",
     "next-themes": "^0.3.0",
     "next-view-transitions": "^0.1.1",
     "nuqs": "^1.17.4",
