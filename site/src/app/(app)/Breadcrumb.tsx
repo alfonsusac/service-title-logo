@@ -1,6 +1,7 @@
 import { Fragment } from "react"
 import { IcRoundHome } from "./MobileSidebar"
 import { cn } from "lazy-cn"
+import Link from "next/link"
 
 export default function BreadcrumbBase(props: {
   pathname: string
@@ -28,12 +29,12 @@ export default function BreadcrumbBase(props: {
 
 function BreadcrumbItem({ href, children, current }: { href: string; children: React.ReactNode, current?: boolean }) {
   return (
-    <a href={href} className={cn(
+    <Link href={href} className={cn(
       "inline-flex items-center leading-none gap-1 -m-1 p-1 -mx-3 px-3 rounded-xl hover:bg-theme-card",
       current ? "pointer-events-none" : ""
     )}>
       {children}
-    </a>
+    </Link>
   )
 }
 
