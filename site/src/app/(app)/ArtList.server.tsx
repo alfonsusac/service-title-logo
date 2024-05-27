@@ -13,9 +13,9 @@ export default async function SuspensedArtList(props: {
       <Suspense>
         <ArtListFiltered variants={variants} />
       </Suspense>
-      {/* <noscript>
+      <noscript>
         <ArtList variants={variants} />
-      </noscript> */}
+      </noscript>
     </>
   )
 }

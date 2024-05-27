@@ -3,16 +3,16 @@ import { getAuthors, getVariants } from "./data"
 import { stringSorter } from "@/util/sort"
 import Footer from "./Footer"
 import { sidebar, SidebarContent, SidebarContentAuthorList } from "./Sidebar"
-import { DesktopNavBar } from "./Navbar"
 import { Suspense } from "react"
-import VariantCard from "./VariantCard"
 import ArtListFiltered from "./ArtList.client"
 import { ArtList } from "./ArtList"
 import { SidebarSeparator } from "./SidebarItem"
 import { cn } from "lazy-cn"
+import { Breadcrumb } from "./Breadcrumb.server"
 
 export default async function GlobalLayout(props: any) {
   const authors = await getAuthors()
+
   return (
     <div>
       <Suspense>
@@ -41,6 +41,9 @@ export default async function GlobalLayout(props: any) {
         </div>
         {/* Tab content */}
         <div className="grow px-4 md:px-8">
+          <div className="w-full h-12 flex items-center tracking-wider">
+            <Breadcrumb />
+          </div>
           <main className="pt-20">
             {props.children}
           </main>

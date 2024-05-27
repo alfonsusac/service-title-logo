@@ -26,7 +26,6 @@ export default async function AuthorPage(context: { params: { author: string } }
 
   return (
     <div className='tracking-widest'>
-      <Link href="/" className="text-theme-strong">VTuber Service Logo</Link>
       <div className="flex gap-2 items-baseline">
         <h1 className="text-4xl text-theme-stronger z-[1] sticky top-2">
           {authorid}

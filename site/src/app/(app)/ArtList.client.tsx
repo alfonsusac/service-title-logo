@@ -10,7 +10,7 @@ export default function ArtListFiltered(props: {
   variants: VariantWithAuthor[]
 
 }) {
-  const [search, setSearch] = useQueryState('search')
+  const [search] = useQueryState('search')
   const param = useParams()
 
   const pathname = usePathname()
