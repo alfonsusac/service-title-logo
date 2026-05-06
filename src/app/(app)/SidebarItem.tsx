@@ -33,6 +33,8 @@ export default function SidebarItem(props: {
       transition-all
       flex-none
       flex items-center justify-between
+      
+      h-12 md:h-10
 "
       data-active={props.href === pathname}
       onClick={props.onClick}
