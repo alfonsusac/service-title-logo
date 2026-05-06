@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ImagesWithAuthor } from "./data"
 
-export default function ArtCard(props: {
+export default function ArtListItem(props: {
   entry: ImagesWithAuthor[ 0 ],
   order?: number,
   opened?: boolean,

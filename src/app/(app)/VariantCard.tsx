@@ -1,6 +1,6 @@
 "use client"
 
-import ArtCard from "./ArtCard"
+import ArtListItem from "./ArtCard"
 import {
   Dialog,
 } from "radix-ui"
@@ -24,7 +24,7 @@ export default function VariantCard(props: {
 
   return (
     <>
-      <ArtCard
+      <ArtListItem
         key={firstImage.src}
         entry={props.entry}
         // entry={{
