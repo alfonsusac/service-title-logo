@@ -1,4 +1,3 @@
-import { Suspense } from "react"
 import { getAllEntries, getAuthors, getData } from "../data"
 import { Header } from "../Header"
 import { DesktopSearchBar } from "../Navbar"
@@ -21,13 +20,11 @@ export default async function Home() {
         <SidebarContentAuthorList authors={authors} />
       </noscript>
 
-      <Suspense>
-        <DesktopSearchBar />
+      <DesktopSearchBar />
 
-        <section className="min-h-[50vh] starting-bottom-fade-in-3">
-          <ArtListServer entries={entries} />
-        </section>
-      </Suspense>
+      <section className="min-h-[50vh] starting-bottom-fade-in-3">
+        <ArtListServer entries={entries} />
+      </section>
     </>
   )
 }

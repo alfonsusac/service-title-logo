@@ -78,11 +78,13 @@ export default async function AuthorPage(context: { params: Promise<{ author: st
             author.licenses.length === 0 && <span className="">Unknown</span>
           }
         </p>
-        {/* {
-          author.repository && <p className=""><span >links: </span>{' '}
-            <a className="text-theme-strong hover:underline" href={author.repository} target="_blank">repository</a>{' '}
-          </p>
-        } */}
+        {author.references.length > 0 && <p className="">
+          <span >links: </span>
+          {author.references.map((ref, i) => {
+            return <a key={i} className="text-theme-strong hover:underline" href={ref.url} target="_blank">{ref.urlType}</a>
+          })}
+        </p>
+        }
       </div>
       <section className="min-h-[50vh] starting-bottom-fade-in-1">
         <ArtListServer entries={entries.sort(stringSorter(entries[ 0 ], "id"))} />

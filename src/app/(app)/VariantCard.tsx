@@ -1,6 +1,6 @@
 "use client"
 
-import ArtListItem from "./ArtCard"
+import ArtListItem from "./ArtListItem"
 import {
   Dialog,
 } from "radix-ui"

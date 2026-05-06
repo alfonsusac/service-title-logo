@@ -83,6 +83,7 @@ export type AuthorOutput = {
 export type UrlType =
   | "github-repo-text-content"
   | "github-blob"
+  | "github-repo"
   | "github-raw"
   | "github-camo"
   | "github-unknown"
