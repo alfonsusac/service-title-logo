@@ -1,28 +1,31 @@
 import { SVGProps } from "react"
 import { Link } from "next-view-transitions"
-import { getAuthors, getVariants } from "../data"
-import { Author } from "kawaii-logos-data"
 import { notFound } from "next/navigation"
 import SuspensedArtList from "../ArtList.server"
 import { stringSorter } from "@/util/sort"
+import { getAllEntries, getAuthors } from "../data"
 
 export async function generateStaticParams() {
   const authors = await getAuthors()
-  return authors?.map(author => ({ author: author.handleName }))
+  return authors?.map(author => ({ author: author.id }))
 }
 
 export default async function AuthorPage(context: { params: Promise<{ author: string }> }) {
-  const variants = await getVariants()
-  const authors = await getAuthors()
   const authorid = (await context.params).author
-
-  if (authors?.findIndex(author => author.handleName === authorid) === -1) {
+  const authors = await getAuthors()
+  const author = authors?.find(a => a.id === authorid)
+  if (!author) {
     return notFound()
   }
 
-  const author = authors?.find(a => a.handleName === authorid) as Author
-  const license = author.license as Author['license']
-  const link = author.link as Author['link']
+  const socials = author.social
+
+  const allEntries = await getAllEntries()
+  const entries = allEntries.filter(entry => entry.author.id === author.id)
+
+  // console.log("Rendering AuthorPage for", authorid)
+  // console.log(entries)
+
 
   return (
     <div className='tracking-widest'>
@@ -30,40 +33,40 @@ export default async function AuthorPage(context: { params: Promise<{ author: st
         <h1 className="text-4xl text-theme-stronger z-[1] sticky top-2">
           {authorid}
         </h1>
-        {link.github &&
-          <a className="inline-flex text-theme-strong hover:underline" href={`https://github.com/${ link.github }`} target="_blank">
+        {socials.github &&
+          <a className="inline-flex text-theme-strong hover:underline" href={socials.github.url} target="_blank">
             <UimGithubAlt className="inline" />
           </a>
         }
-        {link.bluesky &&
-          <a className="inline-flex text-theme-strong hover:underline" href={`https://bsky.app/profile/${ link.bluesky }`} target="_blank">
+        {socials.bsky &&
+          <a className="inline-flex text-theme-strong hover:underline" href={socials.bsky.url} target="_blank">
             <SimpleIconsBluesky className="inline" />
           </a>
         }
-        {link.twitter &&
-          <a className="inline-flex text-theme-strong hover:underline" href={`https://twitter.com/${ link.twitter }`} target="_blank">
+        {socials.x &&
+          <a className="inline-flex text-theme-strong hover:underline" href={socials.x.url} target="_blank">
             <IconParkSolidTwitter className="inline" />
           </a>}
       </div>
       <div className=" py-1 *:my-2 leading-tight">
         <p className="text-pretty">This is a collection of images by <span>{authorid}</span></p>
         <p className="text-pretty">{`Please read the artist's license & readme before using!`}</p>
-        <p className="">
+        {/* <p className="">
           <span>license: </span>
           {
             license?.href
               ? <a className="text-theme-strong hover:underline" href={license.href} target="_blank">{license.label}</a>
               : <span className="">Unknown</span>
           }
-        </p>
-        {
+        </p> */}
+        {/* {
           author.repository && <p className=""><span >links: </span>{' '}
             <a className="text-theme-strong hover:underline" href={author.repository} target="_blank">repository</a>{' '}
           </p>
-        }
+        } */}
       </div>
       <section className="min-h-[50vh]">
-        <SuspensedArtList variants={variants.filter(variant => variant.author.handleName === author.handleName).sort(stringSorter(variants[0], "name"))} />
+        <SuspensedArtList entries={entries.sort(stringSorter(entries[ 0 ], "id"))} />
       </section>
     </div>
   )

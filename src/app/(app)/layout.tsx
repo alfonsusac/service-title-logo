@@ -1,14 +1,15 @@
 import MobileSidebar, { } from "./MobileSidebar"
-import { getAuthors, getVariants } from "./data"
-import { stringSorter } from "@/util/sort"
+// import { getAuthors, getVariants } from "./data"
+// import { stringSorter } from "@/util/sort"
 import Footer from "./Footer"
 import { sidebar, SidebarContent, SidebarContentAuthorList } from "./Sidebar"
 import { Suspense } from "react"
-import ArtListFiltered from "./ArtList.client"
-import { ArtList } from "./ArtList"
+// import ArtListFiltered from "./ArtList.client"
+// import { ArtList } from "./ArtList"
 import { SidebarSeparator } from "./SidebarItem"
 import { cn } from "lazy-cn"
 import { Breadcrumb } from "./Breadcrumb.server"
+import { getAuthors } from "./data"
 
 export default async function GlobalLayout(props: any) {
   const authors = await getAuthors()
@@ -54,17 +55,17 @@ export default async function GlobalLayout(props: any) {
   )
 }
 
-async function ArtListServer() {
-  const variants = await getVariants()
-  return (
-    <>
-      <Suspense>
-        <ArtListFiltered variants={variants.sort(stringSorter(variants[0], "name"))} />
-      </Suspense>
-      <noscript>
-        <ArtList variants={variants} />
-      </noscript>
-    </>
-  )
-}
+// async function ArtListServer() {
+//   const variants = await getVariants()
+//   return (
+//     <>
+//       <Suspense>
+//         <ArtListFiltered variants={variants.sort(stringSorter(variants[0], "name"))} />
+//       </Suspense>
+//       <noscript>
+//         <ArtList variants={variants} />
+//       </noscript>
+//     </>
+//   )
+// }
 

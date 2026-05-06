@@ -11,7 +11,6 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.2.4",
     "install": "^0.13.0",
-    "kawaii-logos-data": "github:alfonsusac/kawaii-logos-data#types",
     "lazy-cn": "^1.0.0",
     "next": "16.2.4",
     "next-axiom": "^1.10.0",

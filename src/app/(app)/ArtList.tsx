@@ -1,9 +1,12 @@
-import { VariantWithAuthor } from "./data"
+// import { VariantWithAuthor } from "./data"
+import type { EntryWithAuthor } from "./data"
 import VariantCard from "./VariantCard"
 
 export function ArtList(props: {
-  variants: VariantWithAuthor[]
+  entries: EntryWithAuthor[]
 }) {
+  // console.log("Rendering Artlist")
+  // console.log(props.entries)
   return (
     <div
       style={{
@@ -12,9 +15,9 @@ export function ArtList(props: {
       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 gap-y-8 mt-8"
     >
       {
-        props.variants.map((variant, index) => {
+        props.entries.map((entry, index) => {
           return (
-            <VariantCard key={variant.author.handleName + variant.name} variant={variant} order={index} />
+            <VariantCard key={entry.author.displayName + entry.title} entry={entry} order={index} />
           )
         })
       }

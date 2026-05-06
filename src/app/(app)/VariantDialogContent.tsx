@@ -1,5 +1,5 @@
 import { Dialog } from "radix-ui"
-import { VariantWithAuthor } from "./data"
+// import { VariantWithAuthor } from "./data"
 import { Link } from "next-view-transitions"
 import Image from "next/image"
 import { cn } from "lazy-cn"
@@ -8,20 +8,26 @@ import { makeTransition } from "./VariantCard"
 import { ThemeDropdown } from "./ThemeChanger"
 import { button } from "./AppButton"
 import toast from "react-hot-toast"
+import type { EntryWithAuthor } from "./data"
 // import Link from "next/link"
 
 const VariantDialogContent = forwardRef(
   function VariantDialogContent(props: {
-    variant: VariantWithAuthor,
+    // variant: VariantWithAuthor,
+    entry: EntryWithAuthor,
     onClose: () => void
   }, ref: Ref<HTMLDivElement>) {
-    const hasVariants = props.variant.files.length > 1
-    const firstImage = props.variant.files[0]
-    const [variantTitle, _setVariant] = useState(firstImage.title)
+    const hasVariants = props.entry.images.length > 1
+    const firstImage = props.entry.images[ 0 ]
+    const [ selectedImageIndex, _setSelectedImageIndex ] = useState(0)
+    // const [ variantTitle, _setVariant ] = useState(firstImage.label)
 
-    const setVariant = makeTransition(_setVariant)
+    const setSelectedImageIndex = makeTransition(_setSelectedImageIndex)
 
-    const variant = props.variant.files.find((file) => file.title === variantTitle) || firstImage
+    const selectedImage = props.entry.images[ selectedImageIndex ]
+
+    console.log(selectedImage)
+    // const variant = props.entry.images.find((file) => file.title === variantTitle) || firstImage
 
     return (
       <Dialog.Content className="z-[30] top-1/2 left-1/2 fixed -translate-x-1/2 -translate-y-1/2 
@@ -47,7 +53,7 @@ const VariantDialogContent = forwardRef(
             bg-theme-cardHover p-4 transition-all shadow-inner
           "
                 style={{
-                  overflow: variant.objectFit === 'contain' ? 'visible' : 'hidden',
+                  overflow: selectedImage.style?.objectFit === 'contain' ? 'visible' : 'hidden',
                 }}
               >
                 <div className="absolute top-2 right-2 h-10 z-10 flex rounded-bl-lg">
@@ -55,9 +61,9 @@ const VariantDialogContent = forwardRef(
                 </div>
                 <div className="relative w-full h-full mt-18">
                   <Image
-                    unoptimized src={variant.imgSrc} alt={variant.title} title={variant.title}
+                    unoptimized src={selectedImage.src} alt={selectedImage.label ?? ""} title={selectedImage.label}
                     fill style={{
-                      objectFit: variant.objectFit,
+                      objectFit: selectedImage.style?.objectFit,
                     }}
                     className={cn(`object-contain transition-all group-hover:scale-110 rounded-lg`)}
                   />
@@ -68,22 +74,22 @@ const VariantDialogContent = forwardRef(
                   <div className="h-20 bg-theme-cardHover shadow-inner
               flex items-stretch gap-2 overflow-auto rounded-xl p-2">
                     {
-                      props.variant.files.map((file) => {
+                      props.entry.images.map((image, index) => {
                         return (
-                          <div key={file.title} className="h-full aspect-video flex-none relative
+                          <div key={index} className="h-full aspect-video flex-none relative
                        rounded-lg p-1 cursor-pointer transition-all
                       "
-                            data-selected={file.title === variantTitle}
+                            data-selected={index === selectedImageIndex}
                             onClick={() => {
-                              setVariant(file.title)
+                              setSelectedImageIndex(index)
                             }}
                           >
                             <MdiCircleMedium className="absolute top-0 left-0 text-transparent data-[selected=true]:text-theme-strong"
-                              data-selected={file.title === variantTitle}
+                              data-selected={index === selectedImageIndex}
                             />
                             <div className="w-full h-full relative">
                               <Image
-                                unoptimized src={file.imgSrc} alt={file.title} title={file.title}
+                                unoptimized src={image.src} alt={image.label ?? ""} title={image.label}
                                 fill
                                 className={cn(`object-contain transition-all group-hover:scale-110`)}
                               />
@@ -105,8 +111,8 @@ const VariantDialogContent = forwardRef(
                     }
 
                     const a = document.createElement("a")
-                    a.href = await toDataURL(variant.imgSrc)
-                    a.download = variant.title
+                    a.href = await toDataURL(selectedImage.src)
+                    a.download = selectedImage.label ?? props.entry.title
                     document.body.appendChild(a)
                     a.click()
                     document.body.removeChild(a)
@@ -123,9 +129,9 @@ const VariantDialogContent = forwardRef(
                   onClick={async () => {
                     try {
                       // TODO: show toaster 
-                      const img = await fetch(variant.imgSrc)
+                      const img = await fetch(selectedImage.src)
                       const imgBlob = await img.blob()
-                      const clipboardData = [new ClipboardItem({ [imgBlob.type]: imgBlob })]
+                      const clipboardData = [ new ClipboardItem({ [ imgBlob.type ]: imgBlob }) ]
                       await navigator.clipboard.write(clipboardData)
                       toast.success('Image copied to clipboard!')
                     } catch (error) {
@@ -142,39 +148,39 @@ const VariantDialogContent = forwardRef(
             {/* RIGHT */}
             <div className="flex flex-col flex-none md:flex-1 text-lg">
               <header>
-                <div className="text-theme-stronger text-3xl">{props.variant.name}</div>
-                <div>by{' '}
+                <Dialog.Title className="text-theme-stronger text-3xl">{props.entry.title}</Dialog.Title>
+                <Dialog.Description>by{' '}
                   <Dialog.Close>
                     <Link
-                      href={`/${ props.variant.author.handleName }`}
+                      href={`/${ props.entry.author.displayName }`}
                       className="text-theme-strong hover:underline"
                       onClick={() => {
                         props.onClose()
                       }}
-                    >{props.variant.author.handleName}</Link>
+                    >{props.entry.author.displayName}</Link>
                   </Dialog.Close>
-                </div>
+                </Dialog.Description>
               </header>
               {
                 hasVariants && <section className="pt-4">
                   <div className="text-base">Variants:</div>
                   <div className="flex flex-col mt-1">
                     {
-                      props.variant.files.map((file) => {
+                      props.entry.images.map((file, index) => {
                         return (
                           <div
-                            key={file.title}
+                            key={index}
                             className="p-2 px-3 hover:bg-theme-cardHover -mx-3 -my-1 rounded-xl
                         data-[selected=true]:text-theme-strong
                         flex gap-2 items-center cursor-pointer transition-all
                         "
-                            data-selected={file.title === variantTitle}
-                            onClick={() => setVariant(file.title)}
+                            data-selected={index === selectedImageIndex}
+                            onClick={() => setSelectedImageIndex(index)}
                           >
                             <MdiCircleMedium className="text-transparent data-[selected=true]:text-theme-strong"
-                              data-selected={file.title === variantTitle}
+                              data-selected={index === selectedImageIndex}
                             />
-                            {file.title}
+                            {file.label}
                           </div>
                         )
                       })
@@ -183,12 +189,15 @@ const VariantDialogContent = forwardRef(
                 </section>
               }
               <section className="flex flex-col gap-2 flex-grow justify-end mt-4">
-                <Link href={variant.source} className={button('group hover:bg-theme-cardHover')}
-                  onClick={props.onClose}
-                >
-                  Visit File Source <span className="group-hover:text-theme-strong">{'>'}</span>
-                </Link>
-                <Link href={`/${ props.variant.author.handleName }`} className={button('group hover:bg-theme-cardHover')}
+                {
+                  selectedImage.references[ 0 ] &&
+                  <Link href={selectedImage.references[ 0 ].url} className={button('group hover:bg-theme-cardHover')}
+                    onClick={props.onClose}
+                  >
+                    Visit File Source <span className="group-hover:text-theme-strong">{'>'}</span>
+                  </Link>
+                }
+                <Link href={`/${ props.entry.author.displayName }`} className={button('group hover:bg-theme-cardHover')}
                   onClick={props.onClose}
                 >
                   Visit Author <span className="group-hover:text-theme-strong">{'>'}</span>

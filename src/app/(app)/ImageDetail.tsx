@@ -1,6 +1,5 @@
 "use client"
 
-import { Data, Entries } from "kawaii-logos-data"
 import { useQueryState } from "nuqs"
 import { ReactNode, use } from "react"
 import { flushSync } from "react-dom"

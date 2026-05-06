@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import { getAuthors, getData, getVariants } from "../data"
+import { getAllEntries, getAuthors, getData } from "../data"
 import { Header } from "../Header"
 import { DesktopNavBar } from "../Navbar"
 import { stringSorter } from "@/util/sort"
@@ -8,8 +8,8 @@ import { SidebarContentAuthorList } from "../Sidebar"
 
 export default async function Home() {
   const response = await getData()
-  const variants = await getVariants()
   const authors = await getAuthors()
+  const entries = await getAllEntries()
 
   return (
     <>
@@ -24,7 +24,7 @@ export default async function Home() {
         <DesktopNavBar />
       </Suspense>
       <section className="min-h-[50vh]">
-        <SuspensedArtList variants={variants.sort(stringSorter(variants[0], "name"))} />
+        <SuspensedArtList entries={entries} />
       </section>
     </>
   )

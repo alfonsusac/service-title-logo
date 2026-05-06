@@ -18,9 +18,6 @@ importers:
       install:
         specifier: ^0.13.0
         version: 0.13.0
-      kawaii-logos-data:
-        specifier: github:alfonsusac/kawaii-logos-data#types
-        version: types@https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/32588fd84c8d53d7ce91ecd36f9db78c27e45fb0
       lazy-cn:
         specifier: ^1.0.0
         version: 1.0.0
@@ -2778,10 +2775,6 @@ packages:
   typed-array-length@1.0.7:
     resolution: {integrity: sha512-3KS2b+kL7fsuk/eJZ7EQdnEmQoaho/r6KUef7hxvltNA5DR8NAUM+8wJMbJyZ4G9/7i3v5zPBIMN5aybAh2/Jg==}
     engines: {node: '>= 0.4'}
-
-  types@https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/32588fd84c8d53d7ce91ecd36f9db78c27e45fb0:
-    resolution: {tarball: https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/32588fd84c8d53d7ce91ecd36f9db78c27e45fb0}
-    version: 1.0.15
 
   typescript-eslint@8.59.2:
     resolution: {integrity: sha512-pJw051uomb3ZeCzGTpRb8RbEqB5Y4WWet8gl/GcTlU35BSx0PVdZ86/bqkQCyKKuraVQEK7r6kBHQXF+fBhkoQ==}
@@ -5823,8 +5816,6 @@ snapshots:
       is-typed-array: 1.1.15
       possible-typed-array-names: 1.1.0
       reflect.getprototypeof: 1.0.10
-
-  types@https://codeload.github.com/alfonsusac/kawaii-logos-data/tar.gz/32588fd84c8d53d7ce91ecd36f9db78c27e45fb0: {}
 
   typescript-eslint@8.59.2(eslint@9.39.4(jiti@2.7.0))(typescript@5.9.3):
     dependencies:

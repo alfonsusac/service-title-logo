@@ -1,38 +1,39 @@
 "use client"
 
 import ArtCard from "./ArtCard"
-import { VariantWithAuthor } from "./data"
 import {
   Dialog,
 } from "radix-ui"
 import { useState } from "react"
 import VariantDialogContent from "./VariantDialogContent"
+import type { EntryWithAuthor } from "./data"
 
 export default function VariantCard(props: {
-  variant: VariantWithAuthor
+  entry: EntryWithAuthor
   order?: number
 }) {
-  const firstImage = props.variant.files[ 0 ]
+  const firstImage = props.entry.images[ 0 ]
 
   const [ open, setOpen ] = useState(false)
   function changeOpen(open: boolean) {
     return setOpen(open)
-    return makeTransition(() => {
-      setOpen(open)
-    })()
+    // return makeTransition(() => {
+    //   setOpen(open)
+    // })()
   }
 
   return (
     <>
       <ArtCard
-        key={firstImage.imgSrc}
-        image={{
-          ...firstImage,
-          title: `${ props.variant.name }`,
-          author: props.variant.author,
-        }}
+        key={firstImage.src}
+        entry={props.entry}
+        // entry={{
+        //   ...firstImage,
+        //   title: `${ props.entry.name }`,
+        //   author: props.entry.author,
+        // }}
         order={props.order}
-        variantCount={props.variant.files.length}
+        variantCount={props.entry.images.length}
         opened={open}
         onClick={() => changeOpen(true)}
       />
@@ -45,7 +46,7 @@ export default function VariantCard(props: {
             }}
           />
           <VariantDialogContent
-            variant={props.variant}
+            entry={props.entry}
             onClose={() => {
               changeOpen(false)
             }}
