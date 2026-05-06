@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
-@theme static {
+@theme {
   --font-sans: 'var(--font-sans)';
   --font-mono: 'var(--font-mono)';
   --font-display: 'var(--font-display)';
 
   --color-theme-bg: var(--bg);
   --color-theme-card: var(--card);
-  --color-theme-card-hover: var(--cardHover);
+  --color-theme-cardHover: var(--cardHover);
   --color-theme-text: var(--text);
   --color-theme-strong: var(--strong);
   --color-theme-stronger: var(--stronger);

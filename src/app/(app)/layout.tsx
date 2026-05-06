@@ -54,18 +54,3 @@ export default async function GlobalLayout(props: any) {
     </div >
   )
 }
-
-// async function ArtListServer() {
-//   const variants = await getVariants()
-//   return (
-//     <>
-//       <Suspense>
-//         <ArtListFiltered variants={variants.sort(stringSorter(variants[0], "name"))} />
-//       </Suspense>
-//       <noscript>
-//         <ArtList variants={variants} />
-//       </noscript>
-//     </>
-//   )
-// }
-

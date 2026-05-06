@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter, Jua, Source_Code_Pro } from "next/font/google"
+import { Gamja_Flower, Inter, Jua, Source_Code_Pro } from "next/font/google"
 import "./globals.css"
 import { ViewTransitions } from "next-view-transitions"
 import { ThemeProvider } from "next-themes"
@@ -9,10 +9,16 @@ import { AxiomWebVitals } from "next-axiom"
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
 
-const sans = Inter({
+// const sans = Inter({
+//   subsets: [ "latin" ],
+//   display: 'swap',
+//   variable: '--font-sans'
+// })
+const sans = Gamja_Flower({
   subsets: [ "latin" ],
   display: 'swap',
-  variable: '--font-sans'
+  variable: '--font-sans',
+  weight: [ '400' ]
 })
 
 const mono = Source_Code_Pro({
@@ -26,6 +32,7 @@ const display = Jua({
   subsets: [ "latin" ],
   variable: '--font-display'
 })
+// alternatiev: Comic Relief
 
 export const metadata: Metadata = {
   title: "VTuber Service Icons",

@@ -23,34 +23,39 @@ export default async function AuthorPage(context: { params: Promise<{ author: st
   const allEntries = await getAllEntries()
   const entries = allEntries.filter(entry => entry.author.id === author.id)
 
-  // console.log("Rendering AuthorPage for", authorid)
-  // console.log(entries)
-
-
   return (
     <div className='tracking-widest'>
       <div className="flex gap-2 items-baseline">
         <h1 className="text-4xl text-theme-stronger z-[1] sticky top-2">
           {authorid}
         </h1>
+      </div>
+      <div className="flex gap-2 pb-2 pt-1">
         {socials.github &&
-          <a className="inline-flex text-theme-strong hover:underline" href={socials.github.url} target="_blank">
+          <a className="inline-flex text-theme-strong hover:underline"
+            href={socials.github.url}
+            target="_blank">
             <UimGithubAlt className="inline" />
           </a>
         }
         {socials.bsky &&
-          <a className="inline-flex text-theme-strong hover:underline" href={socials.bsky.url} target="_blank">
+          <a className="inline-flex text-theme-strong hover:underline"
+            href={socials.bsky.url}
+            target="_blank">
             <SimpleIconsBluesky className="inline" />
           </a>
         }
         {socials.x &&
-          <a className="inline-flex text-theme-strong hover:underline" href={socials.x.url} target="_blank">
+          <a className="inline-flex text-theme-strong hover:underline"
+            href={socials.x.url}
+            target="_blank">
             <IconParkSolidTwitter className="inline" />
           </a>}
       </div>
       <div className=" py-1 *:my-2 leading-tight">
         <p className="text-pretty">This is a collection of images by <span>{authorid}</span></p>
         <p className="text-pretty">{`Please read the artist's license & readme before using!`}</p>
+        <p className="text-pretty">{`${ entries.length } Images found`}</p>
         {/* <p className="">
           <span>license: </span>
           {
