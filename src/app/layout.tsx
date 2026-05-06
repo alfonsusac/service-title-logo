@@ -74,7 +74,7 @@ function AppToaster() {
         style: {
           background: "var(--card)",
           color: "var(--text)",
-          viewTransitionName: `toast`,
+          // viewTransitionName: `toast`,
         },
       }}
     />

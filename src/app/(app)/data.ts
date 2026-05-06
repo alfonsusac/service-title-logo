@@ -1,4 +1,4 @@
-import type { AuthorOutput, KawaiiLogoData } from "./data.types"
+import type { AuthorOutput, KawaiiLogoData, StandardLicenseType } from "./data.types"
 
 const src = 'https://raw.githubusercontent.com/alfonsusac/kawaii-logos-data/refs/heads/main-2-data/data.json'
 
@@ -16,6 +16,8 @@ export async function getAuthors() {
   return response.data.authors
 }
 
+type Response = Awaited<ReturnType<typeof getData>>
+
 
 
 export type EntryWithAuthor = AuthorOutput.EntryItem & { author: Omit<AuthorOutput, 'entries'> }
@@ -30,6 +32,10 @@ export async function getAllEntries() {
     }
   }
   return entryArray
+}
+
+export function getLicenseInfo(response: Response, licenseId: StandardLicenseType) {
+  return response.data.standardLicenses[ licenseId ]
 }
 
 

@@ -9,9 +9,9 @@ export function ArtList(props: {
   // console.log(props.entries)
   return (
     <div
-      style={{
-        viewTransitionName: "artlist",
-      }}
+      // style={{
+      //   viewTransitionName: "artlist",
+      // }}
       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 gap-y-8 mt-8"
     >
       {

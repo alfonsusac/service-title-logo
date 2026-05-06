@@ -1,8 +1,8 @@
 import { Suspense } from "react"
 import { getAllEntries, getAuthors, getData } from "../data"
 import { Header } from "../Header"
-import { DesktopNavBar } from "../Navbar"
-import SuspensedArtList from "../ArtList.server"
+import { DesktopSearchBar } from "../Navbar"
+import ArtListServer from "../ArtList.server"
 import { SidebarContentAuthorList } from "../Sidebar"
 
 export default async function Home() {
@@ -12,7 +12,7 @@ export default async function Home() {
 
   return (
     <>
-      <header className="mb-8">
+      <header className="mb-8 starting-bottom-fade-in-1">
         <Header updatedAt={response.updatedAt} />
       </header>
 
@@ -22,12 +22,12 @@ export default async function Home() {
       </noscript>
 
       <Suspense>
-        <DesktopNavBar />
-      </Suspense>
+        <DesktopSearchBar />
 
-      <section className="min-h-[50vh]">
-        <SuspensedArtList entries={entries} />
-      </section>
+        <section className="min-h-[50vh] starting-bottom-fade-in-3">
+          <ArtListServer entries={entries} />
+        </section>
+      </Suspense>
     </>
   )
 }

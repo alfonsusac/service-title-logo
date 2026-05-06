@@ -1,8 +1,14 @@
+import { cn } from "lazy-cn"
 import { IconParkSolidTwitter, UimGithubAlt } from "./[author]/page"
+import type { ComponentProps } from "react"
 
-export default function Footer() {
+export default function Footer(props: ComponentProps<"footer">) {
   return (
-    <footer className="my-20 py-16 bg-theme-card rounded-3xl flex flex-col items-center justify-center text-base md:text-sm px-6 font-display tracking-widest text-center">
+    <footer {...props} className={cn(
+      "my-20 py-16 bg-theme-card rounded-3xl flex flex-col items-center justify-center text-base md:text-sm px-6 font-display tracking-widest text-center",
+      "starting-bottom-fade-in-2",
+      props.className
+    )}>
       <p className="text-pretty text-2xl">
         All rights reserved to the respective artists ©{" "}
         {new Date().getFullYear()}

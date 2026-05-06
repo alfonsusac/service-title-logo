@@ -34,7 +34,7 @@ export default function SearchBar(props: { className?: string; style?: any }) {
   return (
     <div
       style={{
-        viewTransitionName: "searchbar",
+        // viewTransitionName: "searchbar",
       }}
       className={cn(
         "transition-all p-1 px-3 h-12 rounded-full bg-theme-card relative z-10 flex",

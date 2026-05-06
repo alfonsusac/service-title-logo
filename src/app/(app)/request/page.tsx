@@ -5,7 +5,7 @@ import { Link } from "next-view-transitions"
 export default function RequestPage() {
 
   return (
-    <>
+    <div className="starting-bottom-fade-in-0">
       <div className='relative overflow-hidden'>
         <Link
           href="/"
@@ -33,6 +33,6 @@ export default function RequestPage() {
         <p className="">If you have any feature requests for this website please head out to <a className="" href="https://github.com/alfonsusac/service-title-logo">service-title-logo&apos;s GitHub repository</a> instead and <a className="https://github.com/alfonsusac/service-title-logo/issues">create an issue</a> there. Its different, one is for the front-end, and the other is for the data collection.</p>
 
       </div>
-    </>
+    </div>
   )
 }

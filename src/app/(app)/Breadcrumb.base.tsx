@@ -29,9 +29,10 @@ export default function BreadcrumbBase(props: {
 
 function BreadcrumbItem({ href, children, current }: { href: string; children: React.ReactNode, current?: boolean }) {
   return (
-    <Link href={href} className={cn(
+    <Link href={href} key={href} className={cn(
       "inline-flex items-center leading-none gap-1 -m-1 p-1 -mx-3 px-3 rounded-xl hover:bg-theme-card",
-      current ? "pointer-events-none" : ""
+      current ? "pointer-events-none" : "",
+      "starting-breadcrumb",
     )}>
       {children}
     </Link>
@@ -40,7 +41,7 @@ function BreadcrumbItem({ href, children, current }: { href: string; children: R
 
 function BreadcrumbSeperator() {
   return (
-    <span className="inline-block mx-1 text-theme-cardHover">/</span>
+    <span className="inline-block mx-1 text-theme-cardHover starting-breadcrumb">/</span>
   )
 }
 

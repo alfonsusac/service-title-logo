@@ -15,7 +15,7 @@ export default async function GlobalLayout(props: any) {
   const authors = await getAuthors()
 
   return (
-    <div>
+    <div >
       <Suspense>
         <MobileSidebar />
       </Suspense>
@@ -41,14 +41,21 @@ export default async function GlobalLayout(props: any) {
           </div>
         </div>
         {/* Tab content */}
-        <div className="grow px-4 md:px-8">
-          <div className="w-full h-12 flex items-center tracking-wider">
+        <div className="grow ">
+
+          {/* Top Bar */}
+          <div className="hidden md:flex px-4 md:px-8 w-full h-12 items-center tracking-wider sticky top-0 bg-theme-bg z-50 ">
             <Breadcrumb />
           </div>
-          <main className="pt-20">
+
+
+          <main className="px-4 md:px-8 pt-20">
             {props.children}
           </main>
-          <Footer />
+
+          <div className="px-4 md:px-8">
+            <Footer />
+          </div>
         </div>
       </div>
     </div >

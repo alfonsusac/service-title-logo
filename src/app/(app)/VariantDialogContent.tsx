@@ -37,7 +37,7 @@ const VariantDialogContent = forwardRef(
           font-display text-theme-text tracking-wider 
           "
         style={{
-          viewTransitionName: `dialog-content`,
+          // viewTransitionName: `dialog-content`,
         }}
         ref={ref}
       >

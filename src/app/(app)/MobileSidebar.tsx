@@ -25,10 +25,10 @@ export default function MobileSidebar() {
         "md:hidden top-0 left-0 fixed flex items-center justify-between bg-transparent isolate z-20 select-none",
         mounted ? "" : "opacity-0 pointer-events-none"
       )}
-      style={{ viewTransitionName: `mobile-sidebar` }}
+      // style={{ viewTransitionName: `mobile-sidebar` }}
     >
       <div className="flex relative p-3 gap-2 w-screen bg-theme-bg z-10"
-        style={{ viewTransitionName: "mobile-top-bar" }}
+        // style={{ viewTransitionName: "mobile-top-bar" }}
       >
         <div
           onClick={() => setOpen(!open)}

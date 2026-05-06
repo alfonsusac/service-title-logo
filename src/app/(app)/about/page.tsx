@@ -5,7 +5,7 @@ import { Link } from "next-view-transitions"
 export default function AboutPage() {
 
   return (
-    <>
+    <div className="starting-bottom-fade-in-0">
       <div className=''>
         <Link
           href="/"
@@ -34,6 +34,6 @@ export default function AboutPage() {
           }
         </ul>
       </div>
-    </>
+    </div>
   )
 }

@@ -42,7 +42,7 @@ export default function VariantCard(props: {
           <Dialog.Overlay
             className="z-[30] top-0 left-0 fixed w-screen h-screen bg-black/80 animate-in fade-in-0"
             style={{
-              viewTransitionName: `variant-card-dialog-overlay`,
+              // viewTransitionName: `variant-card-dialog-overlay`,
             }}
           />
           <VariantDialogContent

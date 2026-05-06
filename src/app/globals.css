@@ -28,8 +28,8 @@
 ::view-transition-group(variant-card-dialog-overlay) {
   /* z-index: -10; */
 }
-/* ::view-transition-group() {
-} */
+::view-transition-group() {
+}
 /* 
 ::view-transition-group(mobile-sidebar) {
   animation-duration: 0ms;
@@ -151,3 +151,19 @@
 }
 
 
+@utility starting-bottom-fade-in-* {
+  @apply transition-[opacity,translate]
+  duration-150 ease-out 
+  starting:opacity-0
+  starting:translate-y-2
+  ;
+  transition-delay: calc(--value(integer) * 100ms + 0ms);
+}
+
+@utility starting-breadcrumb {
+  @apply transition-[opacity,translate]
+  duration-150 ease-out 
+  /* starting:opacity-0 */
+  starting:-translate-y-2
+  ;
+}
