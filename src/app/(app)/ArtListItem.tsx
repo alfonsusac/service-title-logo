@@ -3,6 +3,7 @@ import { cn } from "lazy-cn"
 import Image from "next/image"
 import Link from "next/link"
 import { ImagesWithAuthor } from "./data"
+import { ArtListItemImage } from "./ArtListItemImage"
 
 export default function ArtListItem(props: {
   entry: ImagesWithAuthor[ 0 ],
@@ -13,8 +14,7 @@ export default function ArtListItem(props: {
 }) {
   const title = props.entry.title
   const author = props.entry.author
-  const image = props.entry.images.find(img => img.src.endsWith('.png') || img.src.endsWith('.svg')) ?? props.entry.images[ 0 ]
-  // const image = props.entry.images[ 0 ]
+  const image = props.entry.images.find(img => img.src.endsWith('.png') || img.src.endsWith('.svg')) ?? props.entry.images[ 0 ] // Favor png/svg for better quality, but fallback to the first image if none found
   if (!image) return null
   return (
     <div
@@ -32,10 +32,10 @@ export default function ArtListItem(props: {
           overflow: image.style?.objectFit === 'cover' ? 'hidden' : 'visible',
         }}
       >
-        <Image
-          unoptimized src={image.src} alt={title} title={title}
-          fill style={{ objectFit: image.style?.objectFit }}
-          className={cn(`object-contain transition-all group-hover:scale-110 overflow-visible`)} />
+        <ArtListItemImage
+          src={image.src} alt={title} title={title}
+          style={{ objectFit: image.style?.objectFit }}
+        />
       </div>
       <div className="text-xs font-mono px-2 pt-2 pb-1">
         {title} {(props.variantCount ?? 0) > 1 ? `(${ props.variantCount })` : ''}
@@ -44,8 +44,7 @@ export default function ArtListItem(props: {
         <div className="flex items-center gap-1">
           {
             author.pfp &&
-            <div className="w-4 h-4 rounded-full bg-theme-text relative overflow-hidden"
-            >
+            <div className="w-4 h-4 rounded-full bg-theme-text relative overflow-hidden">
               <Image unoptimized src={author.pfp} fill className="object-cover" alt="" />
             </div>
           }
