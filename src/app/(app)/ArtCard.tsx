@@ -23,7 +23,9 @@ export default function ArtListItem(props: {
         animationDelay: `${ (props.order ?? 0) * 50 }ms`,
         animationFillMode: 'both',
       }}
-      onClick={props.onClick}
+      onClick={(ev) => {
+        props.onClick?.()
+      }}
     >
       <div className="relative aspect-video w-full overflow-visible rounded-2xl"
         style={{
@@ -49,7 +51,8 @@ export default function ArtListItem(props: {
           }
           <Link
             href={'/' + author.displayName}
-            className="hover:underline grow">{author?.displayName}</Link>
+            className="hover:underline grow"
+          >{author?.displayName}</Link>
         </div>
         {
           image.references[ 0 ].url && (
