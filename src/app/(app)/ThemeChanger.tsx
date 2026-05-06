@@ -1,6 +1,12 @@
 "use client"
 
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuPortal, DropdownMenuContent, DropdownMenuItem, DropdownMenuArrow } from "@radix-ui/react-dropdown-menu"
+import {
+  DropdownMenu,
+  // DropdownMenuTrigger,
+  // DropdownMenuPortal,
+  // DropdownMenuContent,
+  // DropdownMenuItem, DropdownMenuArrow
+} from "radix-ui"
 import { useTheme } from "next-themes"
 import { themes } from "../themes"
 import { IconamoonArrowDown2Fill } from "./Searchbar"
@@ -9,27 +15,27 @@ import { useMounted } from "./useMounted"
 import { cn } from "lazy-cn"
 
 export function ThemeDropdown() {
-  const { theme, setTheme } = useTheme();
-  const mounted = useMounted();
+  const { theme, setTheme } = useTheme()
+  const mounted = useMounted()
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+    <DropdownMenu.Root>
+      <DropdownMenu.Trigger asChild>
         <div
           role="button"
           className={cn(
             "flex-none text-theme-text z-10 tracking-wider flex items-center justify-center px-3 md:px-4 rounded-lg hover:bg-theme-card gap-2"
             , mounted ? "" : "opacity-0 pointer-events-none"
           )}
-      
+
         >
           {/* <div className="hidden md:block">Theme</div> */}
-          <MaterialSymbolsPalette className="text-2xl"/>
+          <MaterialSymbolsPalette className="text-2xl" />
           <IconamoonArrowDown2Fill />
         </div>
-      </DropdownMenuTrigger>
-      
-      <DropdownMenuPortal>
-        <DropdownMenuContent
+      </DropdownMenu.Trigger>
+
+      <DropdownMenu.Portal>
+        <DropdownMenu.Content
           collisionPadding={10}
           className="z-50 bg-theme-card rounded-xl p-3 font-display tracking-wider flex flex-col gap 
           *:cursor-pointer
@@ -41,10 +47,10 @@ export function ThemeDropdown() {
           overflow-y-auto
           "
         >
-          <DropdownMenuArrow width={30} height={10} className="fill-theme-card"/>
+          <DropdownMenu.Arrow width={30} height={10} className="fill-theme-card" />
           {themes.map((itheme, i) => {
             return (
-              <DropdownMenuItem
+              <DropdownMenu.Item
                 onClick={() => setTheme(itheme)}
                 key={i}
                 className="p-3 -m-1 hover:bg-theme-cardHover outline-none rounded-lg cursor-pointer data-[selected=true]:bg-theme-cardHover data-[selected=true]:text-theme-strong 
@@ -53,13 +59,13 @@ export function ThemeDropdown() {
                 data-selected={theme === itheme}
               >
                 {itheme}
-              </DropdownMenuItem>
-            );
+              </DropdownMenu.Item>
+            )
           })}
-        </DropdownMenuContent>
-      </DropdownMenuPortal>
-    </DropdownMenu>
-  );
+        </DropdownMenu.Content>
+      </DropdownMenu.Portal>
+    </DropdownMenu.Root>
+  )
 }
 
 

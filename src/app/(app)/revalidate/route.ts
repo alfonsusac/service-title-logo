@@ -1,4 +1,4 @@
-import { revalidatePath, revalidateTag } from "next/cache"
+import { revalidatePath, revalidateTag, updateTag } from "next/cache"
 import { redirect } from "next/navigation"
 import { NextRequest } from "next/server"
 
@@ -9,7 +9,8 @@ export function GET(request: NextRequest) {
   if (process.env.NODE_ENV !== "development" && searchParams.get('key') !== process.env.REVALIDATE_KEY)
     return redirect('/')
   revalidatePath('/')
-  revalidateTag('all')
+  // revalidateTag('all')
+  updateTag('all')
   return Response.json({
     message: 'Revalidated all routes and tags.'
   })

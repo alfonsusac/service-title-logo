@@ -1,27 +1,25 @@
 "use client"
 
-import ArtCard from "./ArtCard";
-import { VariantWithAuthor } from "./data";
+import ArtCard from "./ArtCard"
+import { VariantWithAuthor } from "./data"
 import {
   Dialog,
-  DialogOverlay,
-  DialogPortal,
-} from "@radix-ui/react-dialog";
-import { useState } from "react";
-import VariantDialogContent from "./VariantDialogContent";
+} from "radix-ui"
+import { useState } from "react"
+import VariantDialogContent from "./VariantDialogContent"
 
 export default function VariantCard(props: {
-  variant: VariantWithAuthor;
-  order?: number;
+  variant: VariantWithAuthor
+  order?: number
 }) {
-  const firstImage = props.variant.files[0];
+  const firstImage = props.variant.files[ 0 ]
 
-  const [open, setOpen] = useState(false);
+  const [ open, setOpen ] = useState(false)
   function changeOpen(open: boolean) {
     return setOpen(open)
     return makeTransition(() => {
-      setOpen(open);
-    })();
+      setOpen(open)
+    })()
   }
 
   return (
@@ -30,7 +28,7 @@ export default function VariantCard(props: {
         key={firstImage.imgSrc}
         image={{
           ...firstImage,
-          title: `${props.variant.name}`,
+          title: `${ props.variant.name }`,
           author: props.variant.author,
         }}
         order={props.order}
@@ -38,9 +36,9 @@ export default function VariantCard(props: {
         opened={open}
         onClick={() => changeOpen(true)}
       />
-      <Dialog open={open} onOpenChange={changeOpen}>
-        <DialogPortal>
-          <DialogOverlay
+      <Dialog.Root open={open} onOpenChange={changeOpen}>
+        <Dialog.Portal>
+          <Dialog.Overlay
             className="z-[30] top-0 left-0 fixed w-screen h-screen bg-black/80 animate-in fade-in-0"
             style={{
               viewTransitionName: `variant-card-dialog-overlay`,
@@ -49,13 +47,13 @@ export default function VariantCard(props: {
           <VariantDialogContent
             variant={props.variant}
             onClose={() => {
-              changeOpen(false);
+              changeOpen(false)
             }}
           />
-        </DialogPortal>
-      </Dialog>
+        </Dialog.Portal>
+      </Dialog.Root>
     </>
-  );
+  )
 }
 
 // https://www.kvin.me/posts/transitions-example
@@ -69,14 +67,14 @@ export function makeTransition<T extends any[]>(
     if (document.startViewTransition) {
       // @ts-ignore
       document.startViewTransition(() => {
-        transition(...args);
+        transition(...args)
 
         // flushSync(() => {
-          // transition(...args);
+        // transition(...args);
         // });
-      });
+      })
     } else {
-      transition(...args);
+      transition(...args)
     }
-  };
+  }
 }

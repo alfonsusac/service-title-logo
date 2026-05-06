@@ -1,6 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme static {
+  --font-sans: 'var(--font-sans)';
+  --font-mono: 'var(--font-mono)';
+  --font-display: 'var(--font-display)';
+
+  --color-theme-bg: var(--bg);
+  --color-theme-card: var(--card);
+  --color-theme-card-hover: var(--cardHover);
+  --color-theme-text: var(--text);
+  --color-theme-strong: var(--strong);
+  --color-theme-stronger: var(--stronger);
+}
 
 * {
   min-width: 0;
@@ -17,8 +28,8 @@
 ::view-transition-group(variant-card-dialog-overlay) {
   /* z-index: -10; */
 }
-::view-transition-group() {
-}
+/* ::view-transition-group() {
+} */
 /* 
 ::view-transition-group(mobile-sidebar) {
   animation-duration: 0ms;
@@ -138,3 +149,5 @@
   --strong: #ff79c6;
   --stronger: #8be9fd;
 }
+
+

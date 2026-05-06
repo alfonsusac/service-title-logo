@@ -1,19 +1,20 @@
-import { DialogClose, DialogContent } from "@radix-ui/react-dialog"
+import { Dialog } from "radix-ui"
 import { VariantWithAuthor } from "./data"
 import { Link } from "next-view-transitions"
 import Image from "next/image"
 import { cn } from "lazy-cn"
-import { forwardRef, LegacyRef, SVGProps, useState } from "react"
+import { forwardRef, Ref, SVGProps, useState } from "react"
 import { makeTransition } from "./VariantCard"
 import { ThemeDropdown } from "./ThemeChanger"
 import { button } from "./AppButton"
 import toast from "react-hot-toast"
+// import Link from "next/link"
 
 const VariantDialogContent = forwardRef(
   function VariantDialogContent(props: {
     variant: VariantWithAuthor,
     onClose: () => void
-  }, ref: LegacyRef<HTMLDivElement>) {
+  }, ref: Ref<HTMLDivElement>) {
     const hasVariants = props.variant.files.length > 1
     const firstImage = props.variant.files[0]
     const [variantTitle, _setVariant] = useState(firstImage.title)
@@ -23,7 +24,7 @@ const VariantDialogContent = forwardRef(
     const variant = props.variant.files.find((file) => file.title === variantTitle) || firstImage
 
     return (
-      <DialogContent className="z-[30] top-1/2 left-1/2 fixed -translate-x-1/2 -translate-y-1/2 
+      <Dialog.Content className="z-[30] top-1/2 left-1/2 fixed -translate-x-1/2 -translate-y-1/2 
            w-full max-w-screen-lg p-8 
           h-full md:h-auto
           flex flex-col md:justify-center items-start
@@ -37,9 +38,9 @@ const VariantDialogContent = forwardRef(
         <div className="
       bg-theme-card rounded-2xl shadow-2xl w-full p-8 relative my-auto overflow-auto
       ">
-          <DialogClose className="top-0 absolute right-0 m-4 p-3 px-5 text-lg rounded-xl hover:bg-theme-card">
+          <Dialog.Close className="top-0 absolute right-0 m-4 p-3 px-5 text-lg rounded-xl hover:bg-theme-card">
             X
-          </DialogClose>
+          </Dialog.Close>
           <div className="flex flex-col md:flex-row gap-8 w-full pt-10 md:pt-0">
             <div className=" flex flex-col flex-none md:flex-1 gap-2">
               <div className="flex-none relative aspect-video w-full overflow-hidden rounded-2xl
@@ -143,7 +144,7 @@ const VariantDialogContent = forwardRef(
               <header>
                 <div className="text-theme-stronger text-3xl">{props.variant.name}</div>
                 <div>by{' '}
-                  <DialogClose>
+                  <Dialog.Close>
                     <Link
                       href={`/${ props.variant.author.handleName }`}
                       className="text-theme-strong hover:underline"
@@ -151,7 +152,7 @@ const VariantDialogContent = forwardRef(
                         props.onClose()
                       }}
                     >{props.variant.author.handleName}</Link>
-                  </DialogClose>
+                  </Dialog.Close>
                 </div>
               </header>
               {
@@ -197,7 +198,7 @@ const VariantDialogContent = forwardRef(
           </div>
         </div>
 
-      </DialogContent>
+      </Dialog.Content>
     )
   }
 )

@@ -6,22 +6,24 @@ import { ThemeProvider } from "next-themes"
 import { themes } from "./themes"
 import { Toaster } from "react-hot-toast"
 import { AxiomWebVitals } from "next-axiom"
+import { NuqsAdapter } from 'nuqs/adapters/next/app'
+
 
 const sans = Inter({
-  subsets: ["latin"],
+  subsets: [ "latin" ],
   display: 'swap',
   variable: '--font-sans'
 })
 
 const mono = Source_Code_Pro({
-  subsets: ["latin"],
+  subsets: [ "latin" ],
   display: 'swap',
   variable: '--font-mono'
 })
 
 const display = Jua({
-  weight: ['400'],
-  subsets: ["latin"],
+  weight: [ '400' ],
+  subsets: [ "latin" ],
   variable: '--font-display'
 })
 
@@ -37,17 +39,21 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="en" suppressHydrationWarning>
-        <AxiomWebVitals />
-        <body className={`${ sans.variable } ${ mono.variable } ${ display.variable } bg-theme-bg text-theme-text transition-all font-display`}>
-          <ThemeProvider themes={themes} attribute="class">
-            <AppToaster />
-            {children}
-          </ThemeProvider>
-        </body>
-      </html>
-    </ViewTransitions>
+    <>
+      <ViewTransitions>
+        <html lang="en" suppressHydrationWarning>
+          <AxiomWebVitals />
+          <body className={`${ sans.variable } ${ mono.variable } ${ display.variable } bg-theme-bg text-theme-text transition-all font-display`}>
+            <ThemeProvider themes={themes} attribute="class">
+              <NuqsAdapter>
+                <AppToaster />
+                {children}
+              </NuqsAdapter>
+            </ThemeProvider>
+          </body>
+        </html>
+      </ViewTransitions>
+    </>
   )
 }
 

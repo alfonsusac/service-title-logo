@@ -11,10 +11,10 @@ export async function generateStaticParams() {
   return authors?.map(author => ({ author: author.handleName }))
 }
 
-export default async function AuthorPage(context: { params: { author: string } }) {
+export default async function AuthorPage(context: { params: Promise<{ author: string }> }) {
   const variants = await getVariants()
   const authors = await getAuthors()
-  const authorid = context.params.author
+  const authorid = (await context.params).author
 
   if (authors?.findIndex(author => author.handleName === authorid) === -1) {
     return notFound()

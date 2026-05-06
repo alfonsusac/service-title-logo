@@ -6,37 +6,39 @@
     "dev": "next dev",
     "build": "pnpm update kawaii-logos-data --latest && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@octokit/rest": "^20.1.1",
-    "@radix-ui/react-dialog": "^1.0.5",
-    "@radix-ui/react-dropdown-menu": "^2.0.6",
-    "@radix-ui/react-portal": "^1.0.4",
+    "@tailwindcss/postcss": "^4.2.4",
     "install": "^0.13.0",
     "kawaii-logos-data": "github:alfonsusac/kawaii-logos-data#types",
     "lazy-cn": "^1.0.0",
-    "next": "14.2.3",
-    "next-axiom": "^1.2.0",
-    "next-themes": "^0.3.0",
-    "next-view-transitions": "^0.1.1",
-    "nuqs": "^1.17.4",
-    "pnpm": "^9.1.1",
-    "react": "18.3.1",
-    "react-dom": "^18.3.1",
-    "react-hot-toast": "^2.4.1",
-    "react-intersection-observer": "^9.10.2",
-    "s-ago": "^2.2.0"
+    "next": "16.2.4",
+    "next-axiom": "^1.10.0",
+    "next-themes": "^0.4.6",
+    "next-view-transitions": "^0.3.5",
+    "nuqs": "^2.8.9",
+    "postcss": "^8.5.14",
+    "radix-ui": "^1.4.3",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "react-hot-toast": "^2.6.0",
+    "s-ago": "^2.2.0",
+    "tailwindcss": "^4.2.4",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20.12.12",
-    "@types/react": "18.3.1",
-    "@types/react-dom": "18.3.0",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "14.2.2",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3",
-    "tailwindcss-animate": "^1.0.7",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
     "typescript": "^5.4.5"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.2.14",
+      "@types/react-dom": "19.2.3"
+    }
   }
 }
