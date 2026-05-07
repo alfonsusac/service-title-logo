@@ -28,7 +28,7 @@ export default function ArtListItem(props: {
       // }}
     > 
       <Link
-        href={`/${ author }/${ props.entry.id }`}
+        href={`/${ author.id }/${ props.entry.id }`}
         className="absolute inset-0 z-10"
       />
 

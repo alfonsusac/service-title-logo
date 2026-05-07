@@ -10,9 +10,27 @@ export function SidebarContent(props: {
 }) {
   return (
     <>
-      <SidebarItem href="/" label="Home" icon={<IcRoundHome className="text-xl" />} onClick={props.onItemClick} />
-      <SidebarItem href="/about" label="About" icon={<IcRoundQuestionMark className="text-xl" />} onClick={props.onItemClick} />
-      <SidebarItem href="/request" label="Request" icon={<IcRoundPlus className="text-xl" />} onClick={props.onItemClick} />
+      <SidebarItem
+        href="/"
+        label="Home"
+        icon={<IcRoundHome className="text-xl" mode="" />}
+        onClick={props.onItemClick}
+        mode="exact"
+      />
+      <SidebarItem
+        href="/about"
+        label="About"
+        icon={<IcRoundQuestionMark className="text-xl" mode="" />}
+        onClick={props.onItemClick}
+        mode="startsWith"
+      />
+      <SidebarItem
+        href="/request"
+        label="Request"
+        icon={<IcRoundPlus className="text-xl" mode="" />}
+        onClick={props.onItemClick}
+        mode="startsWith"
+      />
     </>
   )
 }
@@ -32,6 +50,7 @@ export function SidebarContentAuthorList(props: {
                 href={"/" + author.id}
                 label={author.displayName}
                 icon={author.entries.length}
+                mode="startsWith"
               />
             )
           })
