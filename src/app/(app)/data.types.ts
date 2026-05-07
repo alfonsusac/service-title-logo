@@ -87,7 +87,7 @@ export type AuthorOutput = {
   references: Reference[],
   fundings: {
     label: string,
-    type: "patreon" | "ko-fi" | "buymeacoffee" | "saweria" | "github",
+    type: "patreon" | "ko-fi" | "buymeacoffee" | "saweria" | "github" | "paypal" | "skeb",
     url: string,
   }[]
 }

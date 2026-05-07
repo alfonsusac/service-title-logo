@@ -5,6 +5,7 @@ import NotFoundPage from "@/app/not-found"
 import { IconParkSolidTwitter, MaterialSymbolsGlobe, RiBehanceFill, SimpleIconsBluesky, SolarFigmaBold, TablerBrandDribbbleFilled, UimGithubAlt } from "../Icons"
 import { Fragment } from "react/jsx-runtime"
 import { LicenseLink } from "../License"
+import { FundingsIconList } from "../Fundings"
 
 export async function generateStaticParams() {
   const authors = await getAuthors()
@@ -23,6 +24,8 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
   }
 
   const socials = author.social
+  const fundings = author.fundings
+  const hasFundings = fundings.length > 0
 
   const allEntries = await getAllEntries()
   const entries = allEntries.filter(entry => entry.author.id === author.id)
@@ -86,6 +89,13 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
               target="_blank">
               <MaterialSymbolsGlobe className="inline" />
             </a>}
+
+          {hasFundings && <div>|</div>}
+
+          {hasFundings && <div className="">fundings:</div>}
+
+          {hasFundings && <FundingsIconList fundings={fundings} />}
+
 
         </div>
       </div>
