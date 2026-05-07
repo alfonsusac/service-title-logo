@@ -13,7 +13,7 @@ export function ArtListItemImage(props: ComponentProps<typeof Image>) {
         fill
         {...props}
         className={cn(
-          `object-contain transition-all group-hover:scale-110 overflow-visible`,
+          `object-contain transition-[scale] group-hover:scale-110 overflow-visible`,
           error && "opacity-0",
           props.className
         )}
@@ -24,7 +24,7 @@ export function ArtListItemImage(props: ComponentProps<typeof Image>) {
       />
       {error &&
         <div className={cn(
-          "flex flex-col items-center justify-center absolute inset-0 gap-1",
+          "flex flex-col items-center justify-center absolute inset-0 gap-1 transition-[scale] group-hover:scale-110",
           "text-theme-text/50"
         )}>
           <MaterialSymbolsBrokenImage className="size-6"/>
