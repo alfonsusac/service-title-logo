@@ -1,8 +1,8 @@
 import { cn } from "lazy-cn"
-import { IcBaselineDiscord, IconParkSolidTwitter, UimGithubAlt } from "./[authorid]/page"
 import type { ComponentProps } from "react"
 import ago from "s-ago"
 import { getData } from "./data"
+import { UimGithubAlt, IconParkSolidTwitter, IcBaselineDiscord } from "./Icons"
 
 const getDataPromise = getData()
 

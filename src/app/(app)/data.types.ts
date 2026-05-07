@@ -77,9 +77,6 @@ export type AuthorOutput = {
 
 
 
-
-
-
 export type UrlType =
   | "github-repo-text-content"
   | "github-blob"
@@ -97,13 +94,17 @@ export type UrlType =
 
 export type Reference = {
   url: string
-  urlType: UrlType,
+  urlType: {
+    type: UrlType,
+    label: string,
+  }
   dateAccessed?: string,
 }
 
 export type License = {
   reference?: Reference, // where the information was gathered
   label: string,
+  labelShort: string,
 } & (
     | { type: "unknown" }
     | { type: "custom", href: string }

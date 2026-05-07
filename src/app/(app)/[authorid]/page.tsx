@@ -87,7 +87,7 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
         {author.references.length > 0 && <p className="">
           <span >links: </span>
           {author.references.map((ref, i) => {
-            return <a key={i} className="text-theme-strong hover:underline" href={ref.url} target="_blank">{ref.urlType}</a>
+            return <a key={i} className="text-theme-strong hover:underline" href={ref.url} target="_blank">{ref.urlType.label}</a>
           })}
         </p>
         }

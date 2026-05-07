@@ -1,5 +1,5 @@
 import type { KawaiiLogoData } from "./data.types"
-import { IcRoundHome, IcRoundPlus, IcRoundQuestionMark } from "./MobileSidebar"
+import { IcRoundHome, IcRoundPlus, IcRoundQuestionMark } from "./Icons"
 import SidebarItem from "./SidebarItem"
 import { cn } from "lazy-cn"
 

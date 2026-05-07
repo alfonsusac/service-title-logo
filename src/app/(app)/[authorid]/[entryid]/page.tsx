@@ -3,6 +3,8 @@ import NotFoundPage from "@/app/not-found"
 import { ImageWithError } from "../../ArtListItemImage"
 import Link from "next/link"
 import { EntryPageVariantDisplay } from "./client"
+import { button } from "../../AppButton"
+import { MingcuteArrowDownFill, MingcuteArrowLeftFill, MingcuteArrowUpFill } from "../../Icons"
 
 export async function generateStaticParams() {
   const authors = await getAuthors()
@@ -26,10 +28,23 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
     return <NotFoundPage what="Entry" back={{ href: `/${ authorid }`, what: "Author Page" }} />
   }
 
-  const images = entry.images
+  const currentIndex = author.entries.findIndex(e => e.id === entryid)
+  const previousEntry = author.entries[ currentIndex - 1 ]
+  const nextEntry = author.entries[ currentIndex + 1 ]
+  const hasPrevious = !!previousEntry
+  const hasNext = !!nextEntry
 
   return (
     <div className="tracking-widest">
+
+      <div className="flex gap-2">
+        <Link href={`/${ author.id }`} className={button('inline-flex text-base p-2 px-4 mb-2 bg-theme-text/5')}><MingcuteArrowLeftFill /> Back</Link>
+        <div className="p-2" />
+        <Link href={previousEntry ? `/${ author.id }/${ previousEntry.id }` : '#'} className={button('inline-flex text-base p-2 px-4 mb-2 bg-theme-text/5')}><MingcuteArrowUpFill /> Previous</Link>
+        <Link href={nextEntry ? `/${ author.id }/${ nextEntry.id }` : '#'} className={button('inline-flex text-base p-2 px-4 mb-2 bg-theme-text/5')}><MingcuteArrowDownFill /> Next</Link>
+
+      </div>
+
       <EntryPageVariantDisplay entry={entry} author={author} />
 
       <div className="pt-8

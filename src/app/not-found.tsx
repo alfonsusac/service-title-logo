@@ -2,7 +2,7 @@ import ago from "s-ago"
 import Link from "next/link"
 import { ThemeDropdown } from "./(app)/ThemeChanger"
 import { button } from "./(app)/AppButton"
-import { MaterialSymbolsArrowLeftAltRounded } from "./(app)/Icons"
+import { MingcuteArrowLeftFill } from "./(app)/Icons"
 
 
 export default function NotFoundPage(props: {
@@ -28,7 +28,7 @@ export default function NotFoundPage(props: {
           <Untidy text={`${ props.what ?? "Page" } \nnot found`} />
         </div>
         <Link href={props.back?.href ?? "/"} className={button()}>
-          <MaterialSymbolsArrowLeftAltRounded className="size-8" />
+          <MingcuteArrowLeftFill className="size-8" />
           Back to {props.back?.what ?? "Home"}
         </Link>
       </div>
