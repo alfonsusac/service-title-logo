@@ -3,8 +3,11 @@
 import { useState, type JSX, type SVGProps } from "react"
 import { ImageWithError } from "../../ArtListItemImage"
 import type { AuthorOutput } from "../../data.types"
-import { IconParkSolidTwitter, SimpleIconsBluesky, UimGithubAlt } from "../../Icons"
+import { IconParkSolidTwitter, IcRoundDownload, IcRoundFileCopy, SimpleIconsBluesky, UimGithubAlt } from "../../Icons"
 import { cn } from "lazy-cn"
+import Link from "next/link"
+import toast from "react-hot-toast"
+import { button } from "../../AppButton"
 
 export function EntryPageVariantDisplay(props: {
   entry: AuthorOutput[ 'entries' ][ number ],
@@ -36,6 +39,7 @@ export function EntryPageVariantDisplay(props: {
 
         {/* Image Info Part */}
         <div className="flex items-end justify-between -my-1 p-6">
+          {/* Left */}
           <div className="">
             <div className="text-theme-strong">{selectedImage.label}</div>
             <div>by {author.displayName}</div>
@@ -63,12 +67,60 @@ export function EntryPageVariantDisplay(props: {
                 const Icon = iconMap[ ref.urlType.type ] || (() => <></>)
 
                 return <li key={index} className=" list-item list-disc list-inside truncate">
-                  <Icon className="inline mr-1" /> {ref.urlType.label}
+                  <Link href={ref.url} target="_blank" className="hover:text-theme-strong">
+                    <Icon className="inline mr-1" /> {ref.urlType.label}
+                  </Link>
                 </li>
               })}
             </ul>
           </div>
 
+          {/* Right */}
+          <div className="flex flex-col gap-2">
+            <button
+              className={button('group flex-1 bg-theme-text/10 hover:bg-theme-text/15 px-5 py-3 text-base cursor-pointer')}
+              onClick={async () => {
+                try {
+                  // TODO: show toaster 
+                  const img = await fetch(selectedImage.src)
+                  const imgBlob = await img.blob()
+                  const clipboardData = [ new ClipboardItem({ [ imgBlob.type ]: imgBlob }) ]
+                  await navigator.clipboard.write(clipboardData)
+                  toast.success('Image copied to clipboard!')
+                } catch (error) {
+                  console.log(error)
+                  toast.error('Failed to copy image to clipboard!')
+                }
+              }}
+            >
+              <IcRoundFileCopy className="flex-none text-xl group-hover:text-theme-strong" />
+              Copy
+            </button>
+
+            <button
+              className={button('group flex-1 bg-theme-text/10 hover:bg-theme-text/15 px-5 py-3 text-base cursor-pointer')}
+              onClick={async () => {
+                // TODO: actually download the image
+                async function toDataURL(url: string) {
+                  const blob = await fetch(url).then(res => res.blob())
+                  return URL.createObjectURL(blob)
+                }
+
+                const a = document.createElement("a")
+                a.href = await toDataURL(selectedImage.src)
+                a.download = selectedImage.label ?? props.entry.title
+                document.body.appendChild(a)
+                a.click()
+                document.body.removeChild(a)
+
+              }}
+            >
+              <IcRoundDownload
+                className="flex-none text-xl group-hover:text-theme-strong" />
+              Download
+            </button>
+
+          </div>
 
         </div>
       </div>

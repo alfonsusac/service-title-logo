@@ -51,7 +51,8 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
       <EntryPageVariantDisplay entry={entry} author={author} />
 
       <div className="pt-8
-        [&_h2]:text-2xl
+        [&_h2]:text-lg
+        [&_h2]:text-theme-strong
         [&_h2]:pt-8
         [&_h2]:tracking-widest
       ">
@@ -65,11 +66,13 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
           </Link>
         </p>
 
-
-        <h2>References</h2>
-        <p>
-          {entry.references.length} reference(s)
-        </p>
+        {entry.references.length > 0 && <>
+          <h2>References</h2>
+          <p>
+            {entry.references.length} reference(s)
+          </p>
+        </>
+        }
 
         <h2>License</h2>
         <p>
