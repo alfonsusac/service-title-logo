@@ -43,8 +43,21 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
       <div className="flex gap-2">
         <Link href={`/${ author.id }`} className={button('inline-flex text-base p-2 px-4 mb-2 bg-theme-text/5')}><MingcuteArrowLeftFill /> Back</Link>
         <div className="p-2" />
-        <Link href={previousEntry ? `/${ author.id }/${ previousEntry.id }` : '#'} className={button('inline-flex text-base p-2 px-4 mb-2 bg-theme-text/5')}><MingcuteArrowUpFill /> Previous</Link>
-        <Link href={nextEntry ? `/${ author.id }/${ nextEntry.id }` : '#'} className={button('inline-flex text-base p-2 px-4 mb-2 bg-theme-text/5')}><MingcuteArrowDownFill /> Next</Link>
+
+        <Link href={previousEntry ? `/${ author.id }/${ previousEntry.id }` : '#'}
+          className={
+            button(
+              'inline-flex text-base p-2 px-4 mb-2 bg-theme-text/5 select-none',
+              !hasPrevious && 'pointer-events-none opacity-50 '
+            )}
+        ><MingcuteArrowUpFill /> Previous</Link>
+        <Link href={nextEntry ? `/${ author.id }/${ nextEntry.id }` : '#'}
+          className={
+            button(
+              'inline-flex text-base p-2 px-4 mb-2 bg-theme-text/5 select-none',
+              !hasNext && 'pointer-events-none opacity-50 '
+            )}
+        ><MingcuteArrowDownFill /> Next</Link>
 
       </div>
 
@@ -65,6 +78,9 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
             {entry.author.displayName}
           </Link>
         </p>
+        <p>
+          {entry.images.length} file(s)
+        </p>
 
         {entry.references.length > 0 && <>
           <h2>References</h2>
@@ -75,14 +91,14 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
         }
 
         <h2>License</h2>
-        <p>
-          {entry.license.label}
+        <p className="text-2xl">
+          {entry.license.labelShort}
         </p>
-
+        {/* 
         <h2>Images</h2>
         <p>
           {entry.images.length} file(s)
-        </p>
+        </p> */}
       </div>
     </div>
   )
