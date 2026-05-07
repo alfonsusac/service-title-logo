@@ -27,7 +27,7 @@ export default function ArtListItem(props: {
         props.onClick?.()
       }}
     >
-      <div className="relative aspect-video w-full overflow-visible rounded-2xl"
+      <div className="relative aspect-video w-full overflow-visible rounded-2xl group-hover:scale-110 transition-[scale]"
         style={{
           overflow: image.style?.objectFit === 'cover' ? 'hidden' : 'visible',
         }}
