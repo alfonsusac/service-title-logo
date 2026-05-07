@@ -10,7 +10,9 @@ export async function generateStaticParams() {
 }
 
 export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
-  const { authorid } = await context.params
+  const { authorid: _authorid } = await context.params
+  const authorid = decodeURIComponent(_authorid)
+
   const response = await getData()
   const authors = await getAuthors()
   const author = authors?.find(a => a.id === authorid)
