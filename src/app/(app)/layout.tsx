@@ -44,7 +44,7 @@ export default async function GlobalLayout(props: any) {
         <div className="grow ">
 
           {/* Top Bar */}
-          <div className="hidden md:flex px-4 md:px-8 w-full h-12 items-center tracking-wider sticky top-0 bg-theme-bg z-50 ">
+          <div className="hidden md:flex px-4 md:px-8 w-full h-12 items-center tracking-wider sticky top-0 bg-theme-bg z-20 ">
             <Breadcrumb />
           </div>
 
