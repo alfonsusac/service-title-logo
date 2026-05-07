@@ -1,11 +1,7 @@
 import SidebarMobile, { } from "./SidebarMobile"
-// import { getAuthors, getVariants } from "./data"
-// import { stringSorter } from "@/util/sort"
 import Footer from "./Footer"
 import { sidebar, SidebarContent, SidebarContentAuthorList } from "./Sidebar"
 import { Suspense } from "react"
-// import ArtListFiltered from "./ArtList.client"
-// import { ArtList } from "./ArtList"
 import { SidebarSeparator } from "./SidebarItem"
 import { cn } from "lazy-cn"
 import { Breadcrumb } from "./Breadcrumb.server"
@@ -62,7 +58,7 @@ export default async function GlobalLayout(props: any) {
           </div>
 
 
-          <main className="px-4 md:px-8 pt-20">
+          <main className="px-4 md:px-8 pt-30 md:pt-20">
             {props.children}
           </main>
 

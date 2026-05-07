@@ -2,7 +2,7 @@ import ArtListServer from "../ArtList.server"
 import { stringSorter } from "@/util/sort"
 import { getAllEntries, getAuthors, getData, getLicenseInfo } from "../data"
 import NotFoundPage from "@/app/not-found"
-import { IconParkSolidTwitter, MaterialSymbolsGlobe, SimpleIconsBluesky, UimGithubAlt } from "../Icons"
+import { IconParkSolidTwitter, MaterialSymbolsGlobe, RiBehanceFill, SimpleIconsBluesky, SolarFigmaBold, TablerBrandDribbbleFilled, UimGithubAlt } from "../Icons"
 import { Fragment } from "react/jsx-runtime"
 import { LicenseLink } from "../License"
 
@@ -58,13 +58,35 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
               <IconParkSolidTwitter className="inline" />
             </a>}
 
+          {socials.behance &&
+            <a className="inline-flex text-theme-strong hover:underline"
+              href={socials.behance.url}
+              target="_blank">
+              <RiBehanceFill className="inline" />
+            </a>
+          }
+          {socials.dribbble &&
+            <a className="inline-flex text-theme-strong hover:underline"
+              href={socials.dribbble.url}
+              target="_blank">
+              <TablerBrandDribbbleFilled className="inline" />
+            </a>
+          }
+          {socials.figma &&
+            <a className="inline-flex text-theme-strong hover:underline"
+              href={socials.figma.url}
+              target="_blank">
+              <SolarFigmaBold className="inline" />
+            </a>
+          }
+
           {socials.site &&
             <a className="inline-flex text-theme-strong hover:underline"
               href={socials.site}
               target="_blank">
               <MaterialSymbolsGlobe className="inline" />
-            </a>
-          }
+            </a>}
+
         </div>
       </div>
       <div className=" py-1 *:my-2 leading-tight">

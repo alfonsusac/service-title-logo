@@ -68,7 +68,6 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
 
       <div className="pt-8
         [&_h2]:text-lg
-        [&_h2]:text-theme-strong
         [&_h2]:pt-8
         [&_h2]:tracking-widest
       ">
@@ -95,7 +94,7 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
         }
 
         <h2>License</h2>
-        <p className="text-2xl">
+        <p className="text-2xl text-theme-strong">
           {entry.license.labelShort} {entry.license.type === "standard" && <MingcuteCheckCircleFill className="inline align-[-0.16rem]" />}
         </p>
         {
@@ -107,7 +106,6 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
                 </a>
               </p>
             </> : <>
-
               <DisplayStandardLicenseInfo standardLicense={entry.license.id} />
             </>
         }

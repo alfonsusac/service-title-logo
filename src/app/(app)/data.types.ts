@@ -49,6 +49,14 @@ export type AuthorOutput = {
       username: string,
       url: string,
     },
+    figma?: {
+      username: string,
+      url: string,
+    },
+    dribbble?: {
+      username: string,
+      url: string,
+    },
     site?: string,
   },
   links: {

@@ -5,7 +5,8 @@ const src = 'https://raw.githubusercontent.com/alfonsusac/kawaii-logos-data/refs
 export async function getData() {
   const response = await fetch(src, {
     next: {
-      revalidate: 60 * 1 // 1 min
+      revalidate: 60 * 1, // 1 min
+      tags: [ 'all' ]
     }
   }).then(res => res.json()) as KawaiiLogoData
   return response
