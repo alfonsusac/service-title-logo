@@ -1,8 +1,8 @@
-import { notFound } from "next/navigation"
 import { getAllEntries, getAuthors, getData } from "../../data"
 import NotFoundPage from "@/app/not-found"
 import { ImageWithError } from "../../ArtListItemImage"
 import Link from "next/link"
+import { EntryPageVariantDisplay } from "./client"
 
 export async function generateStaticParams() {
   const authors = await getAuthors()
@@ -26,21 +26,11 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
     return <NotFoundPage what="Entry" back={{ href: `/${ authorid }`, what: "Author Page" }} />
   }
 
+  const images = entry.images
+
   return (
     <div className="tracking-widest">
-      <div className="w-full gap-2 grid grid-rows-[1fr_--spacing(24)] grid-cols-1 lg:grid-rows-1 lg:grid-cols-[1fr_--spacing(32)] ">
-        <div className="rounded-2xl aspect-video bg-theme-card relative p-4">
-          <div className="relative w-full h-full">
-            <ImageWithError
-              alt={entry.title}
-              src={entry.images[ 0 ].src}
-            />
-          </div>
-        </div>
-        <div className="rounded-2xl bg-theme-card w-full h-full">
-          asdfasdf
-        </div>
-      </div>
+      <EntryPageVariantDisplay entry={entry} author={author} />
 
       <div className="pt-8
         [&_h2]:text-2xl
