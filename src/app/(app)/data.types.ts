@@ -125,24 +125,24 @@ export type StandardLicenseMeta = {
   // Public restrictions are not absolute—they are default rules, not universal limits
   // These are for non-custom licenses, this is just informational and may be inaccurate
   permissions: {
-    use: Permission,
-    modify: Permission, // 
-    distribute: Permission, // Distribution implies someone else can access your copy.
-    commercial: Permission,
+    use: LicensePermission,
+    modify: LicensePermission, // 
+    distribute: LicensePermission, // Distribution implies someone else can access your copy.
+    commercial: LicensePermission,
     misc: {
-      liability: Permission,
-      trademark: Permission,
+      liability: LicensePermission,
+      trademark: LicensePermission,
     }
     conditions: {
-      sale_requires_modification: Condition,
-      disclose_source: Condition,
-      state_changes: Condition,
-      include_license: Condition,
-      include_copyright: Condition,
-      give_credit: Condition,
+      sale_requires_modification: LicenseCondition,
+      disclose_source: LicenseCondition,
+      state_changes: LicenseCondition,
+      include_license: LicenseCondition,
+      include_copyright: LicenseCondition,
+      give_credit: LicenseCondition,
     }
   }
 }
 
-type Permission = "allowed" | "disallowed" | "depends"
-type Condition = "required" | "recommended" | "not needed"
+export type LicensePermission = "allowed" | "disallowed" | "depends"
+export type LicenseCondition = "required" | "recommended" | "not needed"

@@ -3,7 +3,7 @@
 import { useState, type JSX, type SVGProps } from "react"
 import { ImageWithError } from "../../ArtListItemImage"
 import type { AuthorOutput } from "../../data.types"
-import { IconParkSolidTwitter, IcRoundDownload, IcRoundFileCopy, SimpleIconsBluesky, UimGithubAlt } from "../../Icons"
+import { IconParkSolidTwitter, IcRoundDownload, IcRoundFileCopy, MingcuteArrowRightUpFill, SimpleIconsBluesky, UimGithubAlt } from "../../Icons"
 import { cn } from "lazy-cn"
 import Link from "next/link"
 import toast from "react-hot-toast"
@@ -68,7 +68,7 @@ export function EntryPageVariantDisplay(props: {
 
                 return <li key={index} className=" list-item list-disc list-inside truncate">
                   <Link href={ref.url} target="_blank" className="hover:text-theme-strong">
-                    <Icon className="inline mr-1" /> {ref.urlType.label}
+                    <Icon className="inline mr-1" /> {ref.urlType.label}<MingcuteArrowRightUpFill className="inline align-[-0.16rem]" />
                   </Link>
                 </li>
               })}

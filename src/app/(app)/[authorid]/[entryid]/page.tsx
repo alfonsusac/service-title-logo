@@ -1,10 +1,13 @@
-import { getAllEntries, getAuthors, getData } from "../../data"
+import { getAllEntries, getAuthors, getData, getLicenseInfo } from "../../data"
 import NotFoundPage from "@/app/not-found"
 import { ImageWithError } from "../../ArtListItemImage"
 import Link from "next/link"
 import { EntryPageVariantDisplay } from "./client"
 import { button } from "../../AppButton"
-import { MingcuteArrowDownFill, MingcuteArrowLeftFill, MingcuteArrowUpFill } from "../../Icons"
+import { MaterialSymbolsQuestionMarkRounded, MingcuteArrowDownFill, MingcuteArrowLeftFill, MingcuteArrowRightUpFill, MingcuteArrowUpFill, MingcuteAsteriskFill, MingcuteCheckCircleFill, MingcuteCloseFill, MingcuteLineFill, MingcuteThumbUp2Fill, type IconElement } from "../../Icons"
+import type { KawaiiLogoData, LicenseCondition, LicensePermission, StandardLicenseType } from "../../data.types"
+import { cn } from "lazy-cn"
+import type { JSX, SVGProps } from "react"
 
 export async function generateStaticParams() {
   const authors = await getAuthors()
@@ -19,7 +22,6 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
   const authorid = decodeURIComponent(_authorid)
   const entryid = decodeURIComponent(_entryid)
 
-  const response = await getData()
   const authors = await getAuthors()
   const author = authors?.find(a => a.id === authorid)
   if (!author) {
@@ -92,8 +94,21 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
 
         <h2>License</h2>
         <p className="text-2xl">
-          {entry.license.labelShort}
+          {entry.license.labelShort} {entry.license.type === "standard" && <MingcuteCheckCircleFill className="inline align-[-0.16rem]" />}
         </p>
+        {
+          entry.license.type === "unknown" ? <></> :
+            entry.license.type === "custom" ? <>
+              <p>
+                <a href={entry.license.href} target="_blank" className="hover:text-theme-strong">
+                  View License <MingcuteArrowRightUpFill className="inline align-[-0.16rem]" />
+                </a>
+              </p>
+            </> : <>
+
+              <DisplayStandardLicenseInfo standardLicense={entry.license.id} />
+            </>
+        }
         {/* 
         <h2>Images</h2>
         <p>
@@ -101,5 +116,125 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
         </p> */}
       </div>
     </div>
+  )
+}
+
+async function DisplayStandardLicenseInfo(props: {
+  standardLicense: StandardLicenseType,
+  className?: string,
+}) {
+  const response = await getData()
+  const license = getLicenseInfo(response, props.standardLicense)
+
+  const permissionMap: Record<LicensePermission, {
+    label: string,
+    icon: IconElement,
+  }> = {
+    allowed: {
+      label: "Allowed",
+      icon: MingcuteCheckCircleFill
+    },
+    disallowed: {
+      label: "Disallowed",
+      icon: MingcuteCloseFill,
+    },
+    depends: {
+      label: "Depends",
+      icon: MaterialSymbolsQuestionMarkRounded
+    }
+  }
+
+  const conditionMap: Record<LicenseCondition, {
+    label: string,
+    icon: IconElement,
+  }> = {
+    required: {
+      label: "Required",
+      icon: MingcuteAsteriskFill
+    },
+    recommended: {
+      label: "Recommended",
+      icon: MingcuteThumbUp2Fill,
+    },
+    "not needed": {
+      label: "Not needed",
+      icon: MingcuteLineFill,
+    }
+  }
+
+  function renderPermission(permission: LicensePermission) {
+    const info = permissionMap[ permission ]
+    return (
+      <p><info.icon className="inline align-[-0.16rem]" /> {info.label}</p>
+    )
+  }
+
+  function renderCondition(condition: LicenseCondition) {
+    const info = conditionMap[ condition ]
+    return (
+      <p><info.icon className="inline align-[-0.16rem]" /> {info.label}</p>
+    )
+  }
+
+
+
+  return (
+    <>
+      <a href={license.href} target="_blank" className="hover:text-theme-strong">
+        View License <MingcuteArrowRightUpFill className="inline align-[-0.16rem]" />
+      </a>
+      <div className={cn("lg:grid grid-cols-[3fr_4fr] flex flex-col gap-x-2 gap-y-8 p-5 px-6 mt-2 rounded-2xl bg-theme-card", props.className)}>
+        <div>
+          <h3 className="text-theme-text/60">Permisisons:</h3>
+          <div className="h-1" />
+          <div className="grid grid-cols-[max-content_auto] gap-x-4">
+            <p>Use:</p>
+            <>{renderPermission(license.permissions.use)}</>
+
+            <p>Modify:</p>
+            <>{renderPermission(license.permissions.modify)}</>
+
+            <p>Distribute:</p>
+            <>{renderPermission(license.permissions.distribute)}</>
+
+            <p>Commercial Use:</p>
+            <>{renderPermission(license.permissions.commercial)}</>
+
+            <div className="col-2 h-4" />
+
+            <p>Liability:</p>
+            <>{renderPermission(license.permissions.misc.liability)}</>
+
+            <p>Trademark Use:</p>
+            <>{renderPermission(license.permissions.misc.trademark)}</>
+          </div>
+        </div>
+        <div>
+          <h3 className="text-theme-text/60">Conditions:</h3>
+          <div className="h-1" />
+          <div className="grid grid-cols-[max-content_auto] gap-x-4">
+            <p>Sale Requires Modification:</p>
+            <>{renderCondition(license.permissions.conditions.sale_requires_modification)}</>
+
+            <p>Must Disclose Source:</p>
+            <>{renderCondition(license.permissions.conditions.disclose_source)}</>
+
+            <p>Must Include License:</p>
+            <>{renderCondition(license.permissions.conditions.include_license)}</>
+
+            <p>Must Include Copyright:</p>
+            <>{renderCondition(license.permissions.conditions.include_copyright)}</>
+
+            <p>Must Give Credit:</p>
+            <>{renderCondition(license.permissions.conditions.give_credit)}</>
+          </div>
+        </div>
+        <p className="col-span-2 pt-2 text-sm text-theme-text/60">
+          These are not legal terms, just a simplified summary of the license conditions.
+          Public restrictions are not absolute, they are default rules, not universal limits.
+        </p>
+      </div>
+    </>
+
   )
 }

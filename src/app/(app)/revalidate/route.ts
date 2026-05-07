@@ -9,7 +9,6 @@ export function GET(request: NextRequest) {
   if (process.env.NODE_ENV !== "development" && searchParams.get('key') !== process.env.REVALIDATE_KEY)
     return redirect('/')
   revalidatePath('/')
-  // revalidateTag('all')
   updateTag('all')
   return Response.json({
     message: 'Revalidated all routes and tags.'

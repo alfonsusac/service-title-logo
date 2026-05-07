@@ -10,6 +10,8 @@ import { SidebarSeparator } from "./SidebarItem"
 import { cn } from "lazy-cn"
 import { Breadcrumb } from "./Breadcrumb.server"
 import { getAuthors } from "./data"
+import { refresh, revalidatePath, updateTag } from "next/cache"
+import { button } from "./AppButton"
 
 export default async function GlobalLayout(props: any) {
   const authors = await getAuthors()
@@ -46,6 +48,17 @@ export default async function GlobalLayout(props: any) {
           {/* Top Bar */}
           <div className="hidden md:flex px-4 md:px-8 w-full h-12 items-center tracking-wider sticky top-0 bg-theme-bg z-20 ">
             <Breadcrumb />
+
+            {process.env.NODE_ENV === "development" &&
+              <button onClick={async () => {
+                "use server"
+                revalidatePath("/")
+                updateTag("all")
+                refresh()
+              }}
+                className={button("p-2 px-4 ml-4 text-sm bg-theme-text/10 cursor-pointer")}
+              >Revalidate</button>
+            }
           </div>
 
 
