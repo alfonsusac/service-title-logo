@@ -1,4 +1,4 @@
-import MobileSidebar, { } from "./MobileSidebar"
+import SidebarMobile, { } from "./SidebarMobile"
 // import { getAuthors, getVariants } from "./data"
 // import { stringSorter } from "@/util/sort"
 import Footer from "./Footer"
@@ -17,7 +17,7 @@ export default async function GlobalLayout(props: any) {
   return (
     <div >
       <Suspense>
-        <MobileSidebar />
+        <SidebarMobile />
       </Suspense>
       {/* Centered content */}
       <div className={cn(

@@ -12,7 +12,7 @@ import { CharmChevronLeft, CharmMenuHamburger } from "./Icons"
 
 const authorPromise = getAuthors()
 
-export default function MobileSidebar() {
+export default function SidebarMobile() {
   const authors = use(authorPromise)
   const mounted = useMounted()
 
@@ -54,10 +54,12 @@ export default function MobileSidebar() {
       </div>
 
       {/* Sidebar Swing */}
-      <div className="absolute top-0 left-0 h-screen py-4 flex flex-col">
+      <div className="absolute top-0 left-0 h-screen py-4 flex flex-col pointer-events-none">
         <div
           className={cn(
-            "transition-all duration-300  right-0 z-20 rotate-12 origin-top-right shadow-2xl",
+            // "rotate-12",
+            "pointer-events-auto",
+            "transition-all duration-300  right-0 z-20 origin-top-right shadow-2xl",
             open ? "rotate-0" : "-translate-x-full ",
             "relative flex flex-col gap-3 p-5 rounded-r-2xl lg:rounded-l-2xl bg-theme-card",
             "overflow-auto overscroll-contain"
@@ -70,7 +72,7 @@ export default function MobileSidebar() {
       </div>
       {open && (
         <div
-          className="absolute inset-0 w-screen h-screen z-10 animate-in fade-in-0 bg-black/50"
+          className="absolute inset-0 w-screen h-screen z-10 starting:opacity-0 opacity-100 transition-[opacity] bg-black/50"
           onClick={event => {
             event.stopPropagation()
             setOpen(false)
