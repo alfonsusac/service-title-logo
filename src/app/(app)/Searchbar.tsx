@@ -2,27 +2,9 @@
 
 import { cn } from "lazy-cn"
 import { useQueryState } from "nuqs"
-import { SVGProps } from "react"
 import { usePathname } from "next/navigation"
 
-export function IconamoonArrowDown2Fill(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="1em"
-      height="1em"
-      viewBox="0 0 24 24"
-      {...props}
-    >
-      <path
-        fill="currentColor"
-        fillRule="evenodd"
-        d="M7 9a1 1 0 0 0-.707 1.707l5 5a1 1 0 0 0 1.414 0l5-5A1 1 0 0 0 17 9z"
-        clipRule="evenodd"
-      ></path>
-    </svg>
-  )
-}
+
 
 export default function SearchBar(props: { className?: string; style?: any }) {
   const [search, setSearch] = useQueryState("search")

@@ -3,7 +3,7 @@
 import { useState, type JSX, type SVGProps } from "react"
 import { ImageWithError } from "../../ArtListItemImage"
 import type { AuthorOutput } from "../../data.types"
-import { IconParkSolidTwitter, SimpleIconsBluesky, UimGithubAlt } from "../page"
+import { IconParkSolidTwitter, SimpleIconsBluesky, UimGithubAlt } from "../../Icons"
 
 export function EntryPageVariantDisplay(props: {
   entry: AuthorOutput[ 'entries' ][ number ],

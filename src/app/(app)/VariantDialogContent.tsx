@@ -3,12 +3,13 @@ import { Dialog } from "radix-ui"
 import { Link } from "next-view-transitions"
 import Image from "next/image"
 import { cn } from "lazy-cn"
-import { forwardRef, Ref, SVGProps, useState } from "react"
+import { forwardRef, Ref, useState } from "react"
 import { makeTransition } from "./VariantCard"
 import { ThemeDropdown } from "./ThemeChanger"
 import { button } from "./AppButton"
 import toast from "react-hot-toast"
 import type { EntryWithAuthor } from "./data"
+import { IcRoundDownload, IcRoundFileCopy, MdiCircleMedium } from "./Icons"
 // import Link from "next/link"
 
 const VariantDialogContent = forwardRef(
@@ -218,29 +219,3 @@ export default VariantDialogContent
 
 
 
-
-export function MdiCircleMedium(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M12 8a4 4 0 0 0-4 4a4 4 0 0 0 4 4a4 4 0 0 0 4-4a4 4 0 0 0-4-4"></path></svg>
-  )
-}
-
-
-export function IcRoundDownload(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M16.59 9H15V4c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v5H7.41c-.89 0-1.34 1.08-.71 1.71l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.63-.63.19-1.71-.7-1.71M5 19c0 .55.45 1 1 1h12c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1"></path></svg>
-  )
-}
-
-
-export function IcOutlineFileCopy(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"></path></svg>
-  )
-}
-
-export function IcRoundFileCopy(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M15 1H4c-1.1 0-2 .9-2 2v13c0 .55.45 1 1 1s1-.45 1-1V4c0-.55.45-1 1-1h10c.55 0 1-.45 1-1s-.45-1-1-1m.59 4.59l4.83 4.83c.37.37.58.88.58 1.41V21c0 1.1-.9 2-2 2H7.99C6.89 23 6 22.1 6 21l.01-14c0-1.1.89-2 1.99-2h6.17c.53 0 1.04.21 1.42.59M15 12h4.5L14 6.5V11c0 .55.45 1 1 1"></path></svg>
-  )
-}
