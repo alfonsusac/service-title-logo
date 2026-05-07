@@ -24,6 +24,8 @@ export namespace AuthorOutput {
   export type Entries = AuthorOutput[ 'entries' ]
   export type EntryItem = AuthorOutput[ 'entries' ][ number ]
   export type EntryItemImages = AuthorOutput.EntryItem[ 'images' ]
+  export type Fundings = AuthorOutput[ 'fundings' ]
+  export type FundingType = AuthorOutput.Fundings[ number ][ 'type' ]
 }
 
 export type AuthorOutput = {
@@ -43,11 +45,15 @@ export type AuthorOutput = {
       username: string,
       url: string,
     },
+    behance?: {
+      username: string,
+      url: string,
+    },
     site?: string,
   },
   links: {
     socials: {
-      type: "github" | "x" | "bsky",
+      type: "github" | "x" | "bsky" | "behance" | "figma" | "dribbble",
       username: string,
       url: string,
     }[],
@@ -71,6 +77,11 @@ export type AuthorOutput = {
   }[],
   licenses: License[],
   references: Reference[],
+  fundings: {
+    label: string,
+    type: "patreon" | "ko-fi" | "buymeacoffee" | "saweria" | "github",
+    url: string,
+  }[]
 }
 
 
@@ -89,6 +100,8 @@ export type UrlType =
   | "google-drive"
   | "twitter-post"
   | "bsky-post"
+  | "skeb-creator-page"
+  | "skeb-creator-guideline-page"
   | "unknown"
 
 
@@ -116,6 +129,7 @@ export type StandardLicenseType =
   | "CC BY-NC-SA 4.0"
   | "CC BY-SA 4.0"
   | "CC0-1.0"
+  | "All Rights Reserved"
 
 export type StandardLicenseOut = Record<StandardLicenseType, StandardLicenseMeta>
 

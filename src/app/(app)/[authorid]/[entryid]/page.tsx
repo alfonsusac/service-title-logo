@@ -8,6 +8,7 @@ import { MaterialSymbolsQuestionMarkRounded, MingcuteArrowDownFill, MingcuteArro
 import type { KawaiiLogoData, LicenseCondition, LicensePermission, StandardLicenseType } from "../../data.types"
 import { cn } from "lazy-cn"
 import type { JSX, SVGProps } from "react"
+import { ListOfReferences } from "../../Reference"
 
 export async function generateStaticParams() {
   const authors = await getAuthors()
@@ -89,6 +90,7 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
           <p>
             {entry.references.length} reference(s)
           </p>
+          <ListOfReferences references={entry.references} />
         </>
         }
 

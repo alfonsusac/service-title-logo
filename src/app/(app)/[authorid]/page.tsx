@@ -3,6 +3,8 @@ import { stringSorter } from "@/util/sort"
 import { getAllEntries, getAuthors, getData, getLicenseInfo } from "../data"
 import NotFoundPage from "@/app/not-found"
 import { IconParkSolidTwitter, MaterialSymbolsGlobe, SimpleIconsBluesky, UimGithubAlt } from "../Icons"
+import { Fragment } from "react/jsx-runtime"
+import { LicenseLink } from "../License"
 
 export async function generateStaticParams() {
   const authors = await getAuthors()
@@ -55,6 +57,7 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
               target="_blank">
               <IconParkSolidTwitter className="inline" />
             </a>}
+
           {socials.site &&
             <a className="inline-flex text-theme-strong hover:underline"
               href={socials.site}
@@ -70,18 +73,28 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
         <p className="text-pretty">{`${ entries.length } Images found`}</p>
         <p className="">
           <span>license: </span>
-          {author.licenses.map((license, i) => {
-            switch (license.type) {
-              case "unknown":
-                return <span key={i}>Unknown</span>
-              case "custom":
-                return <a key={i} className="text-theme-strong hover:underline" href={license.href} target="_blank">{license.label}</a>
-              case "standard":
-                const licenseInfo = getLicenseInfo(response, license.id)
-                // todo: add more UI for license info later.
-                return <a key={i} className="text-theme-strong hover:underline" href={licenseInfo.href} target="_blank">{license.id}</a>
-            }
-          })}
+          {author.licenses.length > 1
+            ? <>
+              Mixed (
+              {author.licenses.map((license, i) => {
+
+                const licenseLink = <LicenseLink
+                  license={license}
+                  response={response}
+                />
+
+                return <Fragment key={i}>
+                  {(i === author.licenses.length - 1) ? licenseLink : <>{licenseLink}, </>}
+                </Fragment>
+              })})
+            </>
+            : <>
+              <LicenseLink
+                license={author.licenses[ 0 ]}
+                response={response}
+              />
+            </>
+          }
           {
             author.licenses.length === 0 && <span className="">Unknown</span>
           }

@@ -3,11 +3,12 @@
 import { useState, type JSX, type SVGProps } from "react"
 import { ImageWithError } from "../../ArtListItemImage"
 import type { AuthorOutput } from "../../data.types"
-import { IconParkSolidTwitter, IcRoundDownload, IcRoundFileCopy, MingcuteArrowRightUpFill, SimpleIconsBluesky, UimGithubAlt } from "../../Icons"
+import { IconParkSolidTwitter, IcRoundDownload, IcRoundFileCopy, MingcuteArrowRightUpFill, SimpleIconsBluesky, TokenSkeb, UimGithubAlt } from "../../Icons"
 import { cn } from "lazy-cn"
 import Link from "next/link"
 import toast from "react-hot-toast"
 import { button } from "../../AppButton"
+import { ListOfReferences } from "../../Reference"
 
 export function EntryPageVariantDisplay(props: {
   entry: AuthorOutput[ 'entries' ][ number ],
@@ -46,33 +47,7 @@ export function EntryPageVariantDisplay(props: {
             <div>
               {entry.license.type === "standard" ? entry.license.id : entry.license.label}
             </div>
-            <ul className="text-ellipsis">
-              {selectedImage.references.map((ref, index) => {
-
-                const iconMap = {
-                  unknown: () => <></>,
-                  "github-repo-text-content": UimGithubAlt,
-                  "github-blob": UimGithubAlt,
-                  "github-repo": UimGithubAlt,
-                  "github-raw": UimGithubAlt,
-                  "github-camo": UimGithubAlt,
-                  "github-unknown": UimGithubAlt,
-                  "gist-raw": UimGithubAlt,
-                  "gist-page": UimGithubAlt,
-                  "google-drive": () => <></>,
-                  "twitter-post": IconParkSolidTwitter,
-                  "bsky-post": SimpleIconsBluesky
-                } satisfies Record<typeof ref.urlType.type, (props: SVGProps<SVGSVGElement>) => JSX.Element>
-
-                const Icon = iconMap[ ref.urlType.type ] || (() => <></>)
-
-                return <li key={index} className=" list-item list-disc list-inside truncate">
-                  <Link href={ref.url} target="_blank" className="hover:text-theme-strong">
-                    <Icon className="inline mr-1" /> {ref.urlType.label}<MingcuteArrowRightUpFill className="inline align-[-0.16rem]" />
-                  </Link>
-                </li>
-              })}
-            </ul>
+            <ListOfReferences references={selectedImage.references} />
           </div>
 
           {/* Right */}
@@ -105,14 +80,12 @@ export function EntryPageVariantDisplay(props: {
                   const blob = await fetch(url).then(res => res.blob())
                   return URL.createObjectURL(blob)
                 }
-
                 const a = document.createElement("a")
                 a.href = await toDataURL(selectedImage.src)
                 a.download = selectedImage.label ?? props.entry.title
                 document.body.appendChild(a)
                 a.click()
                 document.body.removeChild(a)
-
               }}
             >
               <IcRoundDownload
