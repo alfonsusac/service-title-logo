@@ -5,7 +5,7 @@ import Image from "next/image"
 import { useState, type ComponentProps, type SVGProps } from "react"
 import { BrokenLinkImagePlaceholder } from "./BrokenLink"
 
-export function ArtListItemImage(props: ComponentProps<typeof Image>) {
+export function ImageWithError(props: ComponentProps<typeof Image>) {
   const [ error, setError ] = useState(false)
   return (
     <>

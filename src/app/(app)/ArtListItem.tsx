@@ -3,7 +3,7 @@ import { cn } from "lazy-cn"
 import Image from "next/image"
 import Link from "next/link"
 import { ImagesWithAuthor } from "./data"
-import { ArtListItemImage } from "./ArtListItemImage"
+import { ImageWithError } from "./ArtListItemImage"
 
 export default function ArtListItem(props: {
   entry: ImagesWithAuthor[ 0 ],
@@ -28,7 +28,7 @@ export default function ArtListItem(props: {
       // }}
     > 
       <Link
-        href={`/${ author.displayName }/${ props.entry.id }`}
+        href={`/${ author }/${ props.entry.id }`}
         className="absolute inset-0 z-10"
       />
 
@@ -37,7 +37,7 @@ export default function ArtListItem(props: {
           overflow: image.style?.objectFit === 'cover' ? 'hidden' : 'visible',
         }}
       >
-        <ArtListItemImage
+        <ImageWithError
           src={image.src} alt={title} title={title}
           style={{ objectFit: image.style?.objectFit }}
         />
