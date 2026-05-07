@@ -1,5 +1,4 @@
 import { SVGProps } from "react"
-import { notFound } from "next/navigation"
 import ArtListServer from "../ArtList.server"
 import { stringSorter } from "@/util/sort"
 import { getAllEntries, getAuthors, getData, getLicenseInfo } from "../data"

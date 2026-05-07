@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation"
 import { getAllEntries, getAuthors, getData } from "../../data"
+import NotFoundPage from "@/app/not-found"
 
 export async function generateStaticParams() {
   const authors = await getAuthors()
@@ -15,14 +16,14 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
   const authors = await getAuthors()
   const author = authors?.find(a => a.id === authorid)
   if (!author) {
-    return notFound()
+    return <NotFoundPage what="Author" />
   }
   const allEntries = await getAllEntries()
   const entry = allEntries.find(entry => entry.id === entryid && entry.author.id === authorid)
   if (!entry) {
-    return notFound()
+    return <NotFoundPage what="Entry" back={{ href: `/${ authorid }`, what: "Author Page" }} />
   }
-  
+
   return (
     <div className="tracking-widest">
       <div className="">
