@@ -1,9 +1,8 @@
 import { cn } from "lazy-cn"
 import ago from "s-ago"
+import { UpdatedAt } from "./Footer"
 
-export function Header(props: {
-  updatedAt: string
-}) {
+export function Header() {
   return (
     <>
       <h1 className={cn(
@@ -24,7 +23,7 @@ export function Header(props: {
         A collection of service logos with the VTuber style.
       </p>
       <p className="text-center font-display tracking-widest text-xl text-pretty mt-1 ">
-        Last updated:{' '}{ago(new Date(props.updatedAt))}
+        Last updated:{' '}<UpdatedAt />
       </p>
     </>
   )

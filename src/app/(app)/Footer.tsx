@@ -1,35 +1,64 @@
 import { cn } from "lazy-cn"
-import { IconParkSolidTwitter, UimGithubAlt } from "./[authorid]/page"
+import { IcBaselineDiscord, IconParkSolidTwitter, UimGithubAlt } from "./[authorid]/page"
 import type { ComponentProps } from "react"
+import ago from "s-ago"
+import { getData } from "./data"
+
+const getDataPromise = getData()
 
 export default function Footer(props: ComponentProps<"footer">) {
   return (
     <footer {...props} className={cn(
-      "my-20 py-16 bg-theme-card rounded-3xl flex flex-col items-center justify-center text-base md:text-sm px-6 font-display tracking-widest text-center",
+      // "bg-theme-card rounded-3xl",
+      "my-20 py-16  flex flex-col items-center justify-center text-base md:text-sm px-6 font-display tracking-widest",
       "starting-bottom-fade-in-2",
       props.className
     )}>
-      <p className="text-pretty text-2xl">
-        All rights reserved to the respective artists ©{" "}
-        {new Date().getFullYear()}
-      </p>
-      <p className="text-pretty">Contributions are welcome!</p>
-      <div className="flex gap-2 text-4xl md:text-2xl mt-4">
-        <a
-          className="text-theme-strong hover:underline"
-          href={"https://github.com/alfonsusac/service-title-logo"}
-          target="_blank"
-        >
-          <UimGithubAlt className="inline" />
-        </a>
-        <a
-          className="text-theme-strong hover:underline"
-          href={"https://twitter.com/alfonsusac"}
-          target="_blank"
-        >
-          <IconParkSolidTwitter className="inline" />
-        </a>
-      </div>
+      <section className="flex flex-col items-center">
+
+
+        <h1 className="text-center text-2xl font-display tracking-wider text-theme-strong relative z-[1] text-pretty">
+          VTuber Service Logo
+        </h1>
+        <p className="text-center text-base text-pretty">
+          A collection of service logos with the VTuber style.
+        </p>
+        <p className="text-pretty text-base mt-6">
+          All artwork belongs to their respective artists.
+        </p>
+        <p className="text-center text-base text-pretty">
+          Last updated:{' '}<UpdatedAt />
+        </p>
+
+        <div className="flex gap-2 text-2xl md:text-2xl mt-4">
+          <a
+            className="text-theme-strong hover:underline"
+            href={"https://github.com/alfonsusac/service-title-logo"}
+            target="_blank"
+          >
+            <UimGithubAlt className="inline" />
+          </a>
+          <a
+            className="text-theme-strong hover:underline"
+            href={"https://twitter.com/alfonsusac"}
+            target="_blank"
+          >
+            <IconParkSolidTwitter className="inline" />
+          </a>
+          <a
+            className="text-theme-strong hover:underline"
+            href={"https://discord.gg/hb9TapzhQe"}
+            target="_blank"
+          >
+            <IcBaselineDiscord className="inline" />
+          </a>
+        </div>
+      </section>
     </footer>
   )
+}
+
+export async function UpdatedAt() {
+  const data = await getData()
+  return ago(new Date(data.updatedAt))
 }

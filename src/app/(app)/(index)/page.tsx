@@ -5,14 +5,13 @@ import ArtListServer from "../ArtList.server"
 import { SidebarContentAuthorList } from "../Sidebar"
 
 export default async function Home() {
-  const response = await getData()
   const authors = await getAuthors()
   const entries = await getAllEntries()
 
   return (
     <>
       <header className="mb-8 starting-bottom-fade-in-1">
-        <Header updatedAt={response.updatedAt} />
+        <Header />
       </header>
 
       <noscript className="md:hidden block mx-auto max-w-md bg-theme-card p-8 rounded-3xl">

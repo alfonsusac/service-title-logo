@@ -18,9 +18,16 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
     return notFound()
   }
   const allEntries = await getAllEntries()
-  const entries = allEntries.filter(entry => entry.author.id === author.id)
+  const entry = allEntries.find(entry => entry.id === entryid && entry.author.id === authorid)
+  if (!entry) {
+    return notFound()
+  }
   
   return (
-    <></>
+    <div className="tracking-widest">
+      <div className="">
+        {entry.author.id}
+      </div>
+    </div>
   )
 }

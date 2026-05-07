@@ -18,15 +18,20 @@ export default function ArtListItem(props: {
   if (!image) return null
   return (
     <div
-      className="relative  rounded-lg flex flex-col group animate-in fade-in-0 duration-300 slide-in-from-bottom-5 cursor-pointer"
+      className="relative rounded-lg flex flex-col group animate-in fade-in-0 duration-300 slide-in-from-bottom-5 cursor-pointer"
       style={{
         animationDelay: `${ (props.order ?? 0) * 50 }ms`,
         animationFillMode: 'both',
       }}
-      onClick={(ev) => {
-        props.onClick?.()
-      }}
-    >
+      // onClick={(ev) => {
+      //   props.onClick?.()
+      // }}
+    > 
+      <Link
+        href={`/${ author.displayName }/${ props.entry.id }`}
+        className="absolute inset-0 z-10"
+      />
+
       <div className="relative aspect-video w-full overflow-visible rounded-2xl group-hover:scale-110 transition-[scale]"
         style={{
           overflow: image.style?.objectFit === 'cover' ? 'hidden' : 'visible',
