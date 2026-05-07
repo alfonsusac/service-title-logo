@@ -4,6 +4,7 @@ import { IconParkSolidTwitter, UimGithubAlt } from "./(app)/[authorid]/page"
 import { ThemeDropdown } from "./(app)/ThemeChanger"
 import { button } from "./(app)/AppButton"
 import { UpdatedAt } from "./(app)/Footer"
+import type { SVGProps } from "react"
 
 
 export default function NotFoundPage(props: {
@@ -29,37 +30,11 @@ export default function NotFoundPage(props: {
           <Untidy text={`${ props.what ?? "Page" } \nnot found`} />
         </div>
         <Link href={props.back?.href ?? "/"} className={button()}>
+          <MaterialSymbolsArrowLeftAltRounded className="size-8" />
           Back to {props.back?.what ?? "Home"}
         </Link>
       </div>
-      <section className="flex flex-col items-center">
-        <h1 className="text-center text-xl font-display tracking-wider text-theme-strong relative z-[1] text-pretty mb-2">
-          VTuber Service Logo
-        </h1>
-        <p className="text-center font-display tracking-widest text-lg text-pretty">
-          A collection of service logos with the VTuber style.
-        </p>
-        <p className="text-center font-display tracking-widest text-lg text-pretty">
-          {/* Last updated:{' '}{ago(new Date(data.updatedAt))} */}
-          Last updated:{' '}<UpdatedAt />
-        </p>
-        <div className="flex gap-2 text-2xl md:text-2xl mt-4">
-          <a
-            className="text-theme-strong hover:underline"
-            href={"https://github.com/alfonsusac/service-title-logo"}
-            target="_blank"
-          >
-            <UimGithubAlt className="inline" />
-          </a>
-          <a
-            className="text-theme-strong hover:underline"
-            href={"https://twitter.com/alfonsusac"}
-            target="_blank"
-          >
-            <IconParkSolidTwitter className="inline" />
-          </a>
-        </div>
-      </section>
+
     </main>
   )
 }
@@ -86,4 +61,11 @@ export function Untidy(props: {
       >{char}</span>
     )
   })
+}
+
+
+export function MaterialSymbolsArrowLeftAltRounded(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}>{/* Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE */}<path fill="currentColor" d="m7.85 13l2.85 2.85q.3.3.288.7t-.288.7q-.3.3-.712.313t-.713-.288L4.7 12.7q-.3-.3-.3-.7t.3-.7l4.575-4.575q.3-.3.713-.287t.712.312q.275.3.288.7t-.288.7L7.85 11H19q.425 0 .713.288T20 12t-.288.713T19 13z" /></svg>
+  )
 }

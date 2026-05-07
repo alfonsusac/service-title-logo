@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import ArtListServer from "../ArtList.server"
 import { stringSorter } from "@/util/sort"
 import { getAllEntries, getAuthors, getData, getLicenseInfo } from "../data"
+import NotFoundPage from "@/app/not-found"
 
 export async function generateStaticParams() {
   const authors = await getAuthors()
@@ -15,7 +16,7 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
   const authors = await getAuthors()
   const author = authors?.find(a => a.id === authorid)
   if (!author) {
-    return notFound()
+    return <NotFoundPage what="Author" />
   }
 
   const socials = author.social

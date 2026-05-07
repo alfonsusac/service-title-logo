@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Gamja_Flower, Inter, Jua, Source_Code_Pro } from "next/font/google"
+import { Comic_Relief, Gamja_Flower, Inter, Jua, Source_Code_Pro } from "next/font/google"
 import "./globals.css"
 import { ViewTransitions } from "next-view-transitions"
 import { ThemeProvider } from "next-themes"
@@ -9,12 +9,7 @@ import { AxiomWebVitals } from "next-axiom"
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
 
-// const sans = Inter({
-//   subsets: [ "latin" ],
-//   display: 'swap',
-//   variable: '--font-sans'
-// })
-const sans = Gamja_Flower({
+const sans = Comic_Relief({
   subsets: [ "latin" ],
   display: 'swap',
   variable: '--font-sans',

@@ -42,10 +42,10 @@ export default function ArtListItem(props: {
           style={{ objectFit: image.style?.objectFit }}
         />
       </div>
-      <div className="text-xs font-mono px-2 pt-2 pb-1">
+      <div className="text-[0.9rem] px-2 pt-2 pb-0">
         {title} {(props.variantCount ?? 0) > 1 ? `(${ props.variantCount })` : ''}
       </div>
-      <div className="p-2 pt-0 flex justify-between text-xs font-mono text-theme-strong">
+      <div className="text-[0.9rem] p-2 pt-0 flex justify-between text text-theme-strong">
         <div className="flex items-center gap-1">
           {
             author.pfp &&
@@ -58,13 +58,13 @@ export default function ArtListItem(props: {
             className="hover:underline grow"
           >{author?.displayName}</Link>
         </div>
-        {
+        {/* {
           image.references[ 0 ].url && (
             <Link href={image.references[ 0 ].url} target="_blank" className="hover:underline">
               source
             </Link>
           )
-        }
+        } */}
       </div>
     </div>
   )
