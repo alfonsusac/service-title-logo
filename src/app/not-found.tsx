@@ -4,7 +4,7 @@ import { use } from "react"
 import { getData } from "./(app)/data"
 import ago from "s-ago"
 import Link from "next/link"
-import { IconParkSolidTwitter, UimGithubAlt } from "./(app)/[author]/page"
+import { IconParkSolidTwitter, UimGithubAlt } from "./(app)/[authorid]/page"
 import { ThemeDropdown } from "./(app)/ThemeChanger"
 import { button } from "./(app)/AppButton"
 

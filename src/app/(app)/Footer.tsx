@@ -1,5 +1,5 @@
 import { cn } from "lazy-cn"
-import { IconParkSolidTwitter, UimGithubAlt } from "./[author]/page"
+import { IconParkSolidTwitter, UimGithubAlt } from "./[authorid]/page"
 import type { ComponentProps } from "react"
 
 export default function Footer(props: ComponentProps<"footer">) {

@@ -1,5 +1,4 @@
 import { SVGProps } from "react"
-import { Link } from "next-view-transitions"
 import { notFound } from "next/navigation"
 import ArtListServer from "../ArtList.server"
 import { stringSorter } from "@/util/sort"
@@ -7,11 +6,11 @@ import { getAllEntries, getAuthors, getData, getLicenseInfo } from "../data"
 
 export async function generateStaticParams() {
   const authors = await getAuthors()
-  return authors?.map(author => ({ author: author.id }))
+  return authors?.map(author => ({ authorid: author.id }))
 }
 
-export default async function AuthorPage(context: { params: Promise<{ author: string }> }) {
-  const authorid = (await context.params).author
+export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
+  const { authorid } = await context.params
   const response = await getData()
   const authors = await getAuthors()
   const author = authors?.find(a => a.id === authorid)
