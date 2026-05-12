@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next"
 import { fetchAllEntries, fetchAuthors } from "./(app)/data"
+import { canonicalUrl } from "@/canonicalUrl"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
@@ -12,7 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   ): MetadataRoute.Sitemap[ 0 ] {
     return {
-      url: `https://vtuberlogos.alfon.dev${ path }`,
+      url: `${ canonicalUrl }${ path }`,
       lastModified: new Date(),
       changeFrequency: opts?.freq ?? "yearly",
       priority: priority,

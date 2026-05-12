@@ -1,0 +1,1 @@
+export const canonicalUrl = `https://vtuberlogos.alfon.dev` as const

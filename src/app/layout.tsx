@@ -7,6 +7,7 @@ import { themes } from "./themes"
 import { Toaster } from "react-hot-toast"
 import { AxiomWebVitals } from "next-axiom"
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
+import { canonicalUrl } from "@/canonicalUrl"
 
 const mono = Source_Code_Pro({
   subsets: [ "latin" ],
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Kawaii Logos"
   },
   description: "See all the VTuber-styled service/brand icons made by various artists.",
-  metadataBase: new URL('https://vtuberlogos.alfon.dev/')
+  metadataBase: new URL(`${ canonicalUrl }/`)
 }
 
 export default function RootLayout({

@@ -12,13 +12,17 @@ Contributions are welcome! Check out this page for more information!
 
 - https://vtuberlogos.alfon.dev/request
 
+Or consider joining our discord
+
+- https://discord.gg/hb9TapzhQe
+
 ## Todo
 
 - [ ] Localization
-- [ ] Better OG that showcases each of the artist’s logo
+- [v] Better OG that showcases each of the artist’s logo
 - [ ] Timeline view
-- [ ] Copy Link Button
-- [ ] Add Axiom for Better Logging
+- [v] Copy Link Button
+- [v] Add Axiom for Better Logging
 - [ ] Setup Google Console
 - [ ] Make more stickers
 
