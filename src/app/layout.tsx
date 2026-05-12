@@ -8,14 +8,6 @@ import { Toaster } from "react-hot-toast"
 import { AxiomWebVitals } from "next-axiom"
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
-
-const sans = Comic_Relief({
-  subsets: [ "latin" ],
-  display: 'swap',
-  variable: '--font-sans',
-  weight: [ '400' ]
-})
-
 const mono = Source_Code_Pro({
   subsets: [ "latin" ],
   display: 'swap',
@@ -48,7 +40,7 @@ export default function RootLayout({
       <ViewTransitions>
         <html lang="en" suppressHydrationWarning>
           <AxiomWebVitals />
-          <body className={`${ sans.variable } ${ mono.variable } ${ display.variable } bg-theme-bg text-theme-text transition-all font-display`}>
+          <body className={`${ mono.variable } ${ display.variable } bg-theme-bg text-theme-text transition-all font-display`}>
             <ThemeProvider themes={themes} attribute="class">
               <NuqsAdapter>
                 <AppToaster />
