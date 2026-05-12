@@ -1,6 +1,6 @@
 import { cn } from "lazy-cn"
 import ago from "s-ago"
-import { UpdatedAt } from "./Footer"
+import { UpdatedAt } from "../../components/footer"
 
 export function Header() {
   return (

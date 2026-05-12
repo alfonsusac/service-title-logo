@@ -1,16 +1,16 @@
 import SidebarMobile, { } from "./SidebarMobile"
-import Footer from "./Footer"
+import Footer from "../../components/footer"
 import { sidebar, SidebarContent, SidebarContentAuthorList } from "./Sidebar"
 import { Suspense } from "react"
 import { SidebarSeparator } from "./SidebarItem"
 import { cn } from "lazy-cn"
-import { Breadcrumb } from "./Breadcrumb.server"
-import { getAuthors } from "./data"
+import { fetchAuthors } from "./data"
 import { refresh, revalidatePath, updateTag } from "next/cache"
 import { button } from "./AppButton"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export default async function GlobalLayout(props: any) {
-  const authors = await getAuthors()
+  const authors = await fetchAuthors()
 
   return (
     <div >

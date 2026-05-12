@@ -1,7 +1,7 @@
-import { Fragment } from "react"
+import { IcRoundHome } from "@/app/(app)/Icons"
 import { cn } from "lazy-cn"
 import Link from "next/link"
-import { IcRoundHome } from "./Icons"
+import { Fragment } from "react/jsx-runtime"
 
 export default function BreadcrumbBase(props: {
   pathname: string
@@ -10,7 +10,9 @@ export default function BreadcrumbBase(props: {
     <div className="flex gap-2">
       <div className="hidden">{props.pathname}</div>
       <BreadcrumbSeperator />
-      <BreadcrumbItem href="/"><IcRoundHome className="block" />Home</BreadcrumbItem>
+      <BreadcrumbItem href="/">
+        <IcRoundHome className="block" />Home
+      </BreadcrumbItem>
       {
         props.pathname.split('/').map((param, index, array) => {
           if (param === '') return null
@@ -18,7 +20,11 @@ export default function BreadcrumbBase(props: {
           return (
             <Fragment key={index}>
               <BreadcrumbSeperator />
-              <BreadcrumbItem href={href} current={index === array.length - 1}>{param}</BreadcrumbItem>
+              <BreadcrumbItem
+                href={href}
+                isLast={index === array.length - 1}>
+                {param}
+              </BreadcrumbItem>
             </Fragment>
           )
         })
@@ -27,11 +33,20 @@ export default function BreadcrumbBase(props: {
   )
 }
 
-function BreadcrumbItem({ href, children, current }: { href: string; children: React.ReactNode, current?: boolean }) {
+
+function BreadcrumbItem({
+  href,
+  children,
+  isLast
+}: {
+  href: string
+  children: React.ReactNode,
+  isLast?: boolean
+}) {
   return (
-    <Link href={href} key={href} className={cn(
+    <Link href={href} className={cn(
       "inline-flex items-center leading-none gap-1 -m-1 p-1 -mx-3 px-3 rounded-xl hover:bg-theme-card",
-      current ? "pointer-events-none" : "",
+      isLast ? "pointer-events-none" : "",
       "starting-breadcrumb",
     )}>
       {children}
@@ -41,7 +56,8 @@ function BreadcrumbItem({ href, children, current }: { href: string; children: R
 
 function BreadcrumbSeperator() {
   return (
-    <span className="inline-block mx-1 text-theme-cardHover starting-breadcrumb">/</span>
+    <span className={cn(
+      "inline-block mx-1 text-theme-cardHover starting-breadcrumb"
+    )}>/</span>
   )
 }
-

@@ -1,4 +1,4 @@
-import type { KawaiiLogoData } from "./data.types"
+import type { KawaiiLogosData } from "./data.types"
 import { IcRoundHome, IcRoundPlus, IcRoundQuestionMark } from "./Icons"
 import SidebarItem from "./SidebarItem"
 import { cn } from "lazy-cn"
@@ -37,19 +37,20 @@ export function SidebarContent(props: {
 
 export function SidebarContentAuthorList(props: {
   onItemClick?: () => void
-  authors: KawaiiLogoData.Data[ 'authors' ]
+  authors: KawaiiLogosData.Author[]
 }) {
   return (
     <>
       {
-        props.authors?.sort((a, b) => (b.entries.length - a.entries.length))
+        props.authors
+          ?.sort((a, b) => (b.entryIds.length - a.entryIds.length))
           .map(author => {
             return (
               <SidebarItem
                 key={author.id}
                 href={"/" + author.id}
                 label={author.displayName}
-                icon={author.entries.length}
+                icon={author.entryIds.length}
                 mode="startsWith"
               />
             )

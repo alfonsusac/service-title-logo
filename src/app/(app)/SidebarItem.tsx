@@ -24,7 +24,7 @@ export default function SidebarItem(props: {
 
   const isActive = props.mode === "exact"
     ? pathname === props.href
-    : pathname.startsWith(props.href)
+    : pathname.startsWith(props.href + '/') || pathname === props.href
 
   return (
     <Link

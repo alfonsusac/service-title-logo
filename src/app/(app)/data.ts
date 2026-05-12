@@ -1,87 +1,67 @@
-import type { AuthorOutput, KawaiiLogoData, StandardLicenseType } from "./data.types"
+import type { KawaiiLogosData } from "./data.types"
 
-const src = 'https://raw.githubusercontent.com/alfonsusac/kawaii-logos-data/refs/heads/main-2-data/data.json'
-
-export async function getData() {
-  const response = await fetch(src, {
-    next: {
-      revalidate: 60 * 1, // 1 min
-      tags: [ 'all' ]
+async function fetchData() {
+  const response = await fetch(
+    'https://raw.githubusercontent.com/alfonsusac/kawaii-logos-data/refs/heads/main-2-data/data.json',
+    {
+      next: {
+        revalidate: 60 * 1, // 1 min
+        tags: [ 'all' ]
+      }
     }
-  }).then(res => res.json()) as KawaiiLogoData
+  ).then(res => res.json()) as KawaiiLogosData.Response
   return response
 }
-
-export async function getAuthors() {
-  const response = await getData()
+export async function fetchUpdatedAt() {
+  const response = await fetchData()
+  return response.updatedAt
+}
+export async function fetchAuthors() {
+  const response = await fetchData()
   return response.data.authors
 }
-
-type Response = Awaited<ReturnType<typeof getData>>
-
-
-
-export type EntryWithAuthor = AuthorOutput.EntryItem & { author: Omit<AuthorOutput, 'entries'> }
-
-export async function getAllEntries() {
-  const response = await getData()
-  const entryArray: EntryWithAuthor[] = []
-  for (const author of response.data.authors) {
-    const { entries, ...justAuthor } = author
-    for (const entry of entries) {
-      entryArray.push({ ...entry, author: justAuthor })
-    }
-  }
-  return entryArray
+export async function fetchAllEntries() {
+  const response = await fetchData()
+  return response.data.entries
+}
+export async function fetchAuthor(authorId: string) {
+  const response = await fetchData()
+  const author = response.data.authors.find(author => author.id === authorId)
+  return author
+}
+export async function fetchEntries(authorId: string) {
+  const response = await fetchData()
+  return response.data.entries.filter(entry => entry.authorId === authorId)
+}
+export async function fetchEntry(authorId: string, entryId: string) {
+  const response = await fetchData()
+  const entry = response.data.entries.find(entry => entry.authorId === authorId && entry.id === entryId)
+  return entry
+}
+export function getMissingEntries(entries: KawaiiLogosData.Entries) {
+  return entries.filter(entry => entry.imageCount === 0)
 }
 
-export function getLicenseInfo(response: Response, licenseId: StandardLicenseType) {
+export async function fetchStandardLicenses() {
+  const response = await fetchData()
+  return response.data.standardLicenses
+}
+export async function fetchStandardLicense(licenseId: KawaiiLogosData.StandardLicense.Type) {
+  const response = await fetchData()
   return response.data.standardLicenses[ licenseId ]
 }
 
 
-// export async function getAllEntriesOfAuthor(authorid: string) {
-//   const response = await getData()
-//   const author = response.data.authors.find(a => a.id === authorid)
-//   if (!author) {
-//     return null
-//   }
-//   const { entries, ...justAuthor } = author
-//   const entryArray: EntryWithAuthor[] = entries.map(entry => ({ ...entry, author: justAuthor }))
-//   return entryArray
-// }
+export function getAuthor(
+  authors: KawaiiLogosData.Author[],
+  authorId: string
+) {
+  return authors.find(author => author.id === authorId)
+}
 
-
-
-// export type VariantWithAuthor = Group & { author: Author }
-
-// export async function getVariants() {
-//   const response = await getData()
-//   return response.data.reduce<VariantWithAuthor[]>((acc, cur) => {
-
-//     // const hasGroups = cur.groups && cur.groups.length > 0
-
-//     const hasGroups = (en: Entry): en is Required<Entry> => {
-//       return !!(en.groups && en.groups.length > 0)
-//     }
-
-//     if (!hasGroups(cur) && cur.images) {
-//       acc.push(
-//         ...cur.images.map<VariantWithAuthor>(image => ({
-//           name: image.title,
-//           author: cur,
-//           files: [ image ],
-//         }))
-//       )
-//     }
-
-//     if (hasGroups(cur)) {
-//       acc.push(...cur.groups.map(image => ({ ...image, author: cur })))
-//     }
-
-//     return acc
-//   }, [])
-// }
-
-
-export type ImagesWithAuthor = Awaited<ReturnType<typeof getAllEntries>>
+export function getLicenseInfo(
+  standardLicenses: KawaiiLogosData.StandardLicense,
+  licenseId: KawaiiLogosData.StandardLicense.Type
+) {
+  return standardLicenses[ licenseId ]
+}

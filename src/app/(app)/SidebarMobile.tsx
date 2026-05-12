@@ -5,12 +5,12 @@ import { use, useState } from "react"
 import { SidebarSeparator } from "./SidebarItem"
 import SearchBar from "./Searchbar"
 import { ThemeDropdown } from "./ThemeChanger"
-import { getAuthors } from "./data"
+import { fetchAuthors } from "./data"
 import { SidebarContent, SidebarContentAuthorList } from "./Sidebar"
 import { useMounted } from "./useMounted"
 import { CharmChevronLeft, CharmMenuHamburger } from "./Icons"
 
-const authorPromise = getAuthors()
+const authorPromise = fetchAuthors()
 
 export default function SidebarMobile() {
   const authors = use(authorPromise)

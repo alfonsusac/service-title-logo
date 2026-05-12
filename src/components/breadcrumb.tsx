@@ -1,11 +1,11 @@
 "use client"
 
 import { usePathname } from "next/navigation"
-import BreadcrumbBase from "./Breadcrumb.base"
+import BreadcrumbBase from "./breadcrumb-ui"
 
-export default function BreadcrumbClient() {
+export function Breadcrumb() {
   const pathname = usePathname()
-  
+
   // Hide if on homepage
   if (pathname === "/") return
 

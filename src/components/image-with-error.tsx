@@ -3,7 +3,7 @@
 import { cn } from "lazy-cn"
 import Image from "next/image"
 import { useState, type ComponentProps } from "react"
-import { BrokenLinkImagePlaceholder } from "./BrokenLink"
+import { BrokenLinkImagePlaceholder } from "./image-broken-link-placeholder"
 
 export function ImageWithError(props: ComponentProps<typeof Image>) {
   const [ error, setError ] = useState(false)

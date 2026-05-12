@@ -1,14 +1,14 @@
-import ArtListServer from "../ArtList.server"
 import { stringSorter } from "@/util/sort"
-import { getAllEntries, getAuthors, getData, getLicenseInfo } from "../data"
+import { fetchAuthor, fetchAuthors, fetchEntries, fetchStandardLicenses, getMissingEntries } from "../data"
 import NotFoundPage from "@/app/not-found"
-import { IconParkSolidTwitter, MaterialSymbolsGlobe, RiBehanceFill, SimpleIconsBluesky, SolarFigmaBold, TablerBrandDribbbleFilled, UimGithubAlt } from "../Icons"
-import { Fragment } from "react/jsx-runtime"
-import { LicenseLink } from "../License"
-import { FundingsIconList } from "../Fundings"
+import { FundingsIconList } from "../../../components/author-fundings"
+import { AuthorSocialsIconArray } from "@/components/author-socials"
+import { AuthorInlineLicenseArray } from "@/components/author-license"
+import { EntryList } from "@/components/entry-list"
+import { ListOfReferences, ReferenceLink } from "@/components/references-ui"
 
 export async function generateStaticParams() {
-  const authors = await getAuthors()
+  const authors = await fetchAuthors()
   return authors?.map(author => ({ authorid: author.id }))
 }
 
@@ -16,19 +16,16 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
   const { authorid: _authorid } = await context.params
   const authorid = decodeURIComponent(_authorid)
 
-  const response = await getData()
-  const authors = await getAuthors()
-  const author = authors?.find(a => a.id === authorid)
-  if (!author) {
+  const author = await fetchAuthor(authorid)
+  if (!author)
     return <NotFoundPage what="Author" />
-  }
 
-  const socials = author.social
-  const fundings = author.fundings
+  const { socials, fundings, personalSites } = author
   const hasFundings = fundings.length > 0
 
-  const allEntries = await getAllEntries()
-  const entries = allEntries.filter(entry => entry.author.id === author.id)
+  const entries = await fetchEntries(authorid)
+  const standardLicenses = await fetchStandardLicenses()
+  const missingEntries = getMissingEntries(entries)
 
   return (
     <div className='tracking-widest'>
@@ -40,63 +37,13 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
       <div className="flex gap-2 pb-2 pt-1">
         socials:
         <div className="flex gap-2 items-center">
-          {socials.github &&
-            <a className="inline-flex text-theme-strong hover:underline"
-              href={socials.github.url}
-              target="_blank">
-              <UimGithubAlt className="inline" />
-            </a>
-          }
-          {socials.bsky &&
-            <a className="inline-flex text-theme-strong hover:underline"
-              href={socials.bsky.url}
-              target="_blank">
-              <SimpleIconsBluesky className="inline" />
-            </a>
-          }
-          {socials.x &&
-            <a className="inline-flex text-theme-strong hover:underline"
-              href={socials.x.url}
-              target="_blank">
-              <IconParkSolidTwitter className="inline" />
-            </a>}
-
-          {socials.behance &&
-            <a className="inline-flex text-theme-strong hover:underline"
-              href={socials.behance.url}
-              target="_blank">
-              <RiBehanceFill className="inline" />
-            </a>
-          }
-          {socials.dribbble &&
-            <a className="inline-flex text-theme-strong hover:underline"
-              href={socials.dribbble.url}
-              target="_blank">
-              <TablerBrandDribbbleFilled className="inline" />
-            </a>
-          }
-          {socials.figma &&
-            <a className="inline-flex text-theme-strong hover:underline"
-              href={socials.figma.url}
-              target="_blank">
-              <SolarFigmaBold className="inline" />
-            </a>
-          }
-
-          {socials.site &&
-            <a className="inline-flex text-theme-strong hover:underline"
-              href={socials.site}
-              target="_blank">
-              <MaterialSymbolsGlobe className="inline" />
-            </a>}
-
+          <AuthorSocialsIconArray
+            socials={socials}
+            personalSites={personalSites}
+          />
           {hasFundings && <div>|</div>}
-
           {hasFundings && <div className="">fundings:</div>}
-
           {hasFundings && <FundingsIconList fundings={fundings} />}
-
-
         </div>
       </div>
       <div className=" py-1 *:my-2 leading-tight">
@@ -105,43 +52,36 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
         <p className="text-pretty">{`${ entries.length } Images found`}</p>
         <p className="">
           <span>license: </span>
-          {author.licenses.length > 1
-            ? <>
-              Mixed (
-              {author.licenses.map((license, i) => {
-
-                const licenseLink = <LicenseLink
-                  license={license}
-                  response={response}
-                />
-
-                return <Fragment key={i}>
-                  {(i === author.licenses.length - 1) ? licenseLink : <>{licenseLink}, </>}
-                </Fragment>
-              })})
-            </>
-            : <>
-              <LicenseLink
-                license={author.licenses[ 0 ]}
-                response={response}
-              />
-            </>
-          }
-          {
-            author.licenses.length === 0 && <span className="">Unknown</span>
-          }
+          <AuthorInlineLicenseArray author={author} />
         </p>
-        {author.references.length > 0 && <p className="">
-          <span >links: </span>
-          {author.references.map((ref, i) => {
-            return <a key={i} className="text-theme-strong hover:underline" href={ref.url} target="_blank">{ref.urlType.label}</a>
-          })}
-        </p>
-        }
+
       </div>
       <section className="min-h-[50vh] starting-bottom-fade-in-1">
-        <ArtListServer entries={entries.sort(stringSorter(entries[ 0 ], "id"))} />
+        <EntryList
+          entries={entries.sort(stringSorter(entries[ 0 ], "id"))}
+          authors={[ author ]}
+        />
       </section>
+      <section className="starting-bottom-fade-in-1 mt-24">
+        <h2 className="text-2xl text-theme-strong mb-2">References</h2>
+        {author.references.length > 0 && <>
+          <ListOfReferences references={author.references} showUrl={true} />
+        </>
+        }
+      </section>
+      {missingEntries.length > 0 &&
+        <section className="starting-bottom-fade-in-1 mt-24">
+          <h2 className="text-2xl text-theme-strong">Missing Sources</h2>
+          <p className="mt-2">These are entries added by me from other sources (e.g. Twitter, Pixiv, etc.) that are not included in the author's data.
+            They may be added to the author's data in the future, but for now they are listed here for reference.
+          </p>
+          <EntryList
+            entries={entries.sort(stringSorter(entries[ 0 ], "id"))}
+            authors={[ author ]}
+            mode="missing-src-only"
+          />
+        </section>
+      }
     </div>
   )
 }
