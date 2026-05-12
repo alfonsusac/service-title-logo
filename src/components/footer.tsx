@@ -1,8 +1,7 @@
 import { cn } from "lazy-cn"
 import type { ComponentProps } from "react"
-import ago from "s-ago"
 import { UimGithubAlt, IconParkSolidTwitter, IcBaselineDiscord } from "../app/(app)/Icons"
-import { fetchUpdatedAt } from "../app/(app)/data"
+import { UpdatedAt } from "./updated-at"
 
 export default function Footer(props: ComponentProps<"footer">) {
   return (
@@ -56,7 +55,3 @@ export default function Footer(props: ComponentProps<"footer">) {
   )
 }
 
-export async function UpdatedAt() {
-  const updatedAt = await fetchUpdatedAt()
-  return ago(new Date(updatedAt))
-}

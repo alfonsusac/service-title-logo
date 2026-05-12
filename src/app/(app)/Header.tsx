@@ -1,6 +1,5 @@
+import { UpdatedAt } from "@/components/updated-at"
 import { cn } from "lazy-cn"
-import ago from "s-ago"
-import { UpdatedAt } from "../../components/footer"
 
 export function Header() {
   return (
