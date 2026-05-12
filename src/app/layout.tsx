@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Comic_Relief, Gamja_Flower, Inter, Jua, Source_Code_Pro } from "next/font/google"
+import { Comic_Relief, Jua, Source_Code_Pro } from "next/font/google"
 import "./globals.css"
 import { ViewTransitions } from "next-view-transitions"
 import { ThemeProvider } from "next-themes"

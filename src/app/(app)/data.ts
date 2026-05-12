@@ -1,6 +1,6 @@
 import type { KawaiiLogosData } from "./data.types"
 
-async function fetchData() {
+export async function fetchData() {
   const response = await fetch(
     'https://raw.githubusercontent.com/alfonsusac/kawaii-logos-data/refs/heads/main-2-data/data.json',
     {
