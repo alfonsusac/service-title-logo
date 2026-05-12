@@ -92,8 +92,8 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
         <h2 className="text-2xl text-theme-strong mb-2">References</h2>
         {author.references.length > 0 && <>
           <ListOfReferences references={author.references} showUrl={true} />
-        </>
-        }
+        </>}
+        {author.references.length === 0 && <p className="text-pretty">No references provided for the author. (Entries may be collected manually)</p>}
       </section>
       {missingEntries.length > 0 &&
         <section className="starting-bottom-fade-in-1 mt-24">
