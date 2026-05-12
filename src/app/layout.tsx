@@ -30,8 +30,11 @@ const display = Jua({
 // alternatiev: Comic Relief
 
 export const metadata: Metadata = {
-  title: "VTuber Service Icons",
-  description: "See all the VTuber-styled service icons made by artists.",
+  title: {
+    default: "Kawaii Logos",
+    template: "%s | Kawaii Logos"
+  },
+  description: "See all the VTuber-styled service/brand icons made by various artists.",
   metadataBase: new URL('https://vtuberlogos.alfon.dev/')
 }
 

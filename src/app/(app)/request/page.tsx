@@ -1,7 +1,10 @@
+import type { Metadata } from "next"
 import { Link } from "next-view-transitions"
 
-// import Link from "next/link"
-
+export const metadata: Metadata = {
+  title: "Request",
+  description: "Request a logo to be added or suggest an improvement to the website",
+}
 export default function RequestPage() {
 
   return (

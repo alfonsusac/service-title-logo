@@ -6,6 +6,7 @@ import { getAuthor } from "@/app/(app)/data"
 import { EntryCard } from "./entry-card"
 import { cn } from "lazy-cn"
 import { useQueryState } from "nuqs"
+import { EntryListBase } from "./entry-list-base"
 
 // EntryList
 
@@ -47,28 +48,36 @@ export function EntryList(props: {
     .sort(stringSorter(props.entries[ 0 ], "id"))
 
   return <>
-    <div
-      className={cn(
-        "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
-        "gap-2 gap-y-8",
-        "mt-8",
-      )}
-    >
-      {resultEntries.map(entry => {
-        return (
-          <EntryCard
-            key={entry.authorId + entry.id}
-            entry={entry}
-            author={getAuthor(props.authors, entry.authorId)}
-          />
-        )
-      })}
-      {resultEntries.length === 0 && <p className="text-theme-text/50 text-xl col-span-full">
-        {mode === "missing-src-only" ? "No missing sources found!" : "No entries found!"}
-      </p>
-      }
-    </div>
+    <EntryListBase
+      entries={resultEntries}
+      authors={props.authors}
+      mode={mode}
+    />
   </>
+  
+  // return <>
+  //   <div
+  //     className={cn(
+  //       "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+  //       "gap-2 gap-y-8",
+  //       "mt-8",
+  //     )}
+  //   >
+  //     {resultEntries.map(entry => {
+  //       return (
+  //         <EntryCard
+  //           key={entry.authorId + entry.id}
+  //           entry={entry}
+  //           author={getAuthor(props.authors, entry.authorId)}
+  //         />
+  //       )
+  //     })}
+  //     {resultEntries.length === 0 && <p className="text-theme-text/50 text-xl col-span-full">
+  //       {mode === "missing-src-only" ? "No missing sources found!" : "No entries found!"}
+  //     </p>
+  //     }
+  //   </div>
+  // </>
 }
 
 // would a no-js list even be beneficial?

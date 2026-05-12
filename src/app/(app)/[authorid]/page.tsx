@@ -6,11 +6,31 @@ import { AuthorSocialsIconArray } from "@/components/author-socials"
 import { AuthorInlineLicenseArray } from "@/components/author-license"
 import { EntryList } from "@/components/entry-list"
 import { ListOfReferences, ReferenceLink } from "@/components/references-ui"
+import type { Metadata } from "next"
+import { Suspense } from "react"
+import { EntryListBase } from "@/components/entry-list-base"
 
 export async function generateStaticParams() {
   const authors = await fetchAuthors()
   return authors?.map(author => ({ authorid: author.id }))
 }
+
+export async function generateMetadata(context: PageProps<'/[authorid]'>): Promise<Metadata> {
+  const { authorid: _authorid } = await context.params
+  const authorid = decodeURIComponent(_authorid)
+  const author = await fetchAuthor(authorid)
+  if (!author) {
+    return {
+      title: "Author Not Found",
+      description: `No author found with id ${ authorid }`,
+    }
+  }
+  return {
+    title: author.displayName,
+    description: `Explore kawaii icons created by ${ author.displayName }.`,
+  }
+}
+
 
 export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
   const { authorid: _authorid } = await context.params
@@ -57,10 +77,23 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
 
       </div>
       <section className="min-h-[50vh] starting-bottom-fade-in-1">
-        <EntryList
-          entries={entries.sort(stringSorter(entries[ 0 ], "id"))}
-          authors={[ author ]}
-        />
+        <Suspense fallback={
+          <EntryListBase
+            entries={entries.sort(stringSorter(entries[ 0 ], "id"))}
+            authors={[ author ]}
+          />
+        }>
+          <EntryList
+            entries={entries.sort(stringSorter(entries[ 0 ], "id"))}
+            authors={[ author ]}
+          />
+        </Suspense>
+        {/* <noscript>
+          <EntryListBase
+            entries={entries.sort(stringSorter(entries[ 0 ], "id"))}
+            authors={[ author ]}
+          />
+        </noscript> */}
       </section>
       <section className="starting-bottom-fade-in-1 mt-24">
         <h2 className="text-2xl text-theme-strong mb-2">References</h2>
@@ -75,11 +108,20 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
           <p className="mt-2">These are entries added by me from other sources (e.g. Twitter, Pixiv, etc.) that are not included in the author's data.
             They may be added to the author's data in the future, but for now they are listed here for reference.
           </p>
-          <EntryList
-            entries={entries.sort(stringSorter(entries[ 0 ], "id"))}
-            authors={[ author ]}
-            mode="missing-src-only"
-          />
+          <Suspense>
+            <EntryList
+              entries={entries.sort(stringSorter(entries[ 0 ], "id"))}
+              authors={[ author ]}
+              mode="missing-src-only"
+            />
+          </Suspense>
+          <noscript>
+            <EntryListBase
+              entries={entries.sort(stringSorter(entries[ 0 ], "id"))}
+              authors={[ author ]}
+              mode="missing-src-only"
+            />
+          </noscript>
         </section>
       }
     </div>

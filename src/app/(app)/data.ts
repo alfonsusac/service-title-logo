@@ -5,7 +5,9 @@ export async function fetchData() {
     'https://raw.githubusercontent.com/alfonsusac/kawaii-logos-data/refs/heads/main-2-data/data.json',
     {
       next: {
-        revalidate: 60 * 1, // 1 min
+        revalidate: process.env.NODE_ENV === "development"
+          ? 60 * 1 // 1 min
+          : Number.POSITIVE_INFINITY, // never revalidate
         tags: [ 'all' ]
       }
     }

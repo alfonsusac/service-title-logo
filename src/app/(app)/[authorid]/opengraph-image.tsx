@@ -1,8 +1,13 @@
 import { readFile } from "fs/promises"
 import { ImageResponse } from "next/og"
 import { join } from "path"
-import { fetchAuthor, fetchData, fetchEntries } from "../data"
+import { fetchAuthor, fetchAuthors, fetchData, fetchEntries } from "../data"
 import { NotFoundOgImage } from "@/components/og-image"
+
+export async function generateStaticParams() {
+  const authors = await fetchAuthors()
+  return authors?.map(author => ({ authorid: author.id }))
+}
 
 export default async function AuthorPageOGImage(context: {
   params: Promise<{ authorid: string }>
@@ -24,7 +29,10 @@ export default async function AuthorPageOGImage(context: {
 
   const displayImages = entries
     .filter(entry => entry.images.length > 0)
+    .filter(entry => entry.images.some(i => i.label.endsWith('png')) || entry.images[ 0 ])
     .map(e => e.images.find(i => i.label.endsWith('png')) || e.images[ 0 ])
+    .filter(i => !i.src.url.endsWith("svg"))
+    .filter(i => i)
 
   return new ImageResponse((
     <div style={{
@@ -40,7 +48,7 @@ export default async function AuthorPageOGImage(context: {
       fontFamily: "Jua, sans-serif",
     }}>
       {/* Random Background Images */}
-      {entries.length > 4 &&
+      {displayImages.length > 4 &&
         <div style={{ position: "absolute", top: 0, right: 0, display: 'flex' }}>
           <div style={{ position: "absolute", top: -50, right: -80, display: "flex", flexDirection: "column" }}>
             {[ 1, 2, 3, 4, 5, 6, 7 ].map(i => {
@@ -62,7 +70,7 @@ export default async function AuthorPageOGImage(context: {
           </div>
         </div>
       }
-      {entries.length <= 4 && (
+      {displayImages.length <= 4 && displayImages.length > 0 && (
         <div style={{ position: "absolute", top: 0, right: 0, display: 'flex' }}>
           <div style={{ position: "absolute", top: -50, right: 80, display: "flex", flexDirection: "column" }}>
             {[ 1, 2, 3, 4 ].map(i => {

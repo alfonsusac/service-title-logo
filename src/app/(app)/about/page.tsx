@@ -1,9 +1,14 @@
+import type { Metadata } from 'next'
 import { Link } from "next-view-transitions"
 
-// import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "Learn more about the purpose and technology behind this website",
+}
+
 
 export default function AboutPage() {
-
   return (
     <div className="starting-bottom-fade-in-0">
       <div className=''>

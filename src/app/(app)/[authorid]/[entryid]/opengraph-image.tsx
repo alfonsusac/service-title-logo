@@ -1,8 +1,17 @@
 import { readFile } from "fs/promises"
 import { join } from "path"
-import { fetchAuthor, fetchEntry } from "../../data"
+import { fetchAuthor, fetchAuthors, fetchEntry } from "../../data"
 import { NotFoundOgImage } from "@/components/og-image"
 import { ImageResponse } from "next/og"
+
+export async function generateStaticParams() {
+  const authors = await fetchAuthors()
+  return authors.map(
+    author => author.entryIds.map(
+      entryId => ({ authorid: author.id, entryid: entryId })
+    )
+  ).flat()
+}
 
 export default async function AuthorPageOGImage(context: {
   params: Promise<{ authorid: string, entryid: string }>
@@ -22,7 +31,7 @@ export default async function AuthorPageOGImage(context: {
     return NotFoundOgImage({ what: "Entry" })
   }
 
-  const displayImage = entry.images.find(i => i.label.endsWith('png')) || entry.images[ 0 ]
+  const displayImage = entry.images.find(i => i.label.endsWith('png')) || entry.images.at(0)
 
   return new ImageResponse((
     <div style={{
@@ -37,14 +46,45 @@ export default async function AuthorPageOGImage(context: {
       fontFamily: "Jua, sans-serif",
     }}>
       <div style={{ display: "flex", flexDirection: "column", position: 'relative', alignItems: 'center' }}>
-        <img
-          src={displayImage.src.url}
-          width={1000}
-          height={400}
-          style={{
-            objectFit: 'contain',
-          }}
-        />
+        {
+          displayImage ?
+            displayImage.src.url.endsWith('svg') ? 
+              <div style={{
+                width: 1000,
+                height: 400,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#DCDDF555',
+                fontSize: 48,
+                padding: '1rem',
+                textAlign: 'center',
+              }}>
+                Unable to render SVG Image.
+              </div>
+            :
+            <img
+              src={displayImage.src.url}
+              width={1000}
+              height={400}
+              style={{
+                objectFit: 'contain',
+              }}
+            /> :
+            <div style={{
+              width: 1000,
+              height: 400,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#DCDDF555',
+              fontSize: 48,
+              padding: '1rem',
+              textAlign: 'center',
+            }} >
+              Missing Image Source URL
+            </div>
+        }
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', alignItems: 'flex-end' }}>
         <div style={{ display: "flex", gap: "1rem", fontSize: 40, paddingTop: '1rem' }}>

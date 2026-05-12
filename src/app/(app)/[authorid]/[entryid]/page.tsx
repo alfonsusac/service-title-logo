@@ -1,4 +1,4 @@
-import { fetchAuthors, fetchEntry } from "../../data"
+import { fetchAuthor, fetchAuthors, fetchEntry } from "../../data"
 import NotFoundPage from "@/app/not-found"
 import Link from "next/link"
 import { EntryPageVariantDisplay } from "./client"
@@ -8,6 +8,7 @@ import { EntryLicenseDetailSection } from "@/components/entry-license"
 import { ListOfReferences } from "@/components/references-ui"
 import Image from "next/image"
 import { InlineCreatedAt } from "@/components/created-at"
+import type { Metadata } from "next"
 
 export async function generateStaticParams() {
   const authors = await fetchAuthors()
@@ -18,7 +19,29 @@ export async function generateStaticParams() {
   ).flat()
 }
 
-
+export async function generateMetadata(context: PageProps<'/[authorid]/[entryid]'>): Promise<Metadata> {
+  const { authorid: _authorid, entryid: _entryid } = await context.params
+  const authorid = decodeURIComponent(_authorid)
+  const entryid = decodeURIComponent(_entryid)
+  const author = await fetchAuthor(authorid)
+  if (!author) {
+    return {
+      title: "Author Not Found",
+      description: `No author found with id ${ authorid }`,
+    }
+  }
+  const entry = await fetchEntry(authorid, entryid)
+  if (!entry) {
+    return {
+      title: "Entry Not Found",
+      description: `No entry found with id ${ entryid } from author ${ author.displayName }`,
+    }
+  }
+  return {
+    title: `${entry.title} by ${ author.displayName }`,
+    description: `View ${ entry.title } by ${ author.displayName }. Created at ${ entry.createdAt ? new Date(entry.createdAt).toLocaleDateString() : "Unknown Date" }, licensed under ${ entry.license.labelShort }.`,
+  }
+}
 
 
 export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[entryid]'>) {
@@ -26,8 +49,7 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
   const authorid = decodeURIComponent(_authorid)
   const entryid = decodeURIComponent(_entryid)
 
-  const authors = await fetchAuthors()
-  const author = authors?.find(a => a.id === authorid)
+  const author = await fetchAuthor(authorid)
   if (!author)
     return <NotFoundPage what="Author" />
 
