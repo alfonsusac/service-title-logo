@@ -72,7 +72,7 @@ export default async function HomeOGImage() {
         style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", backgroundColor: "#292A31", opacity: 0.8 }}
       />
 
-      <div style={{ display: "flex", flexDirection: "column", zIndex: 10, position: 'relative' }}>
+      <div style={{ display: "flex", flexDirection: "column", position: 'relative' }}>
         <img src={logoSrc} width={124} />
         <div style={{ fontSize: 72, paddingTop: '1rem' }}>
           Kawaii Logos
