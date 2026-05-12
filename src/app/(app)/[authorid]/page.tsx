@@ -44,7 +44,6 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
   const hasFundings = fundings.length > 0
 
   const entries = await fetchEntries(authorid)
-  const standardLicenses = await fetchStandardLicenses()
   const missingEntries = getMissingEntries(entries)
 
   return (
@@ -88,12 +87,6 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
             authors={[ author ]}
           />
         </Suspense>
-        {/* <noscript>
-          <EntryListBase
-            entries={entries.sort(stringSorter(entries[ 0 ], "id"))}
-            authors={[ author ]}
-          />
-        </noscript> */}
       </section>
       <section className="starting-bottom-fade-in-1 mt-24">
         <h2 className="text-2xl text-theme-strong mb-2">References</h2>
@@ -108,20 +101,19 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
           <p className="mt-2">These are entries added by me from other sources (e.g. Twitter, Pixiv, etc.) that are not included in the author's data.
             They may be added to the author's data in the future, but for now they are listed here for reference.
           </p>
-          <Suspense>
+          <Suspense fallback={
+            <EntryListBase
+              entries={entries.sort(stringSorter(entries[ 0 ], "id"))}
+              authors={[ author ]}
+              mode="missing-src-only"
+            />
+          }>
             <EntryList
               entries={entries.sort(stringSorter(entries[ 0 ], "id"))}
               authors={[ author ]}
               mode="missing-src-only"
             />
           </Suspense>
-          <noscript>
-            <EntryListBase
-              entries={entries.sort(stringSorter(entries[ 0 ], "id"))}
-              authors={[ author ]}
-              mode="missing-src-only"
-            />
-          </noscript>
         </section>
       }
     </div>
