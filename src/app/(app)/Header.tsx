@@ -1,3 +1,4 @@
+import { appDescription, appName } from "@/app-info"
 import { UpdatedAt } from "@/components/updated-at"
 import { cn } from "lazy-cn"
 
@@ -6,22 +7,18 @@ export function Header() {
     <>
       <h1 className={cn(
         "text-center text-5xl font-display tracking-wider text-theme-stronger relative z-[1] text-pretty mb-2",
-        // "transition-[opacity,translate] duration-300 ease-in-out",
-        // "starting:opacity-0 starting:translate-y-2",
-        // "delay-150"
         ""
 
       )}>
-        VTuber Service Logo
+        {appName}
       </h1>
       <p className={cn(
-        "text-center font-display tracking-widest text-xl text-pretty",
+        "text-center font-display tracking-widest text-xl text-pretty max-w-120 mx-auto",
         ""
-
       )}>
-        A collection of service logos with the VTuber style.
+        {appDescription}
       </p>
-      <p className="text-center font-display tracking-widest text-xl text-pretty mt-1 ">
+      <p className="text-center font-display tracking-widest text-xl text-pretty mt-4 ">
         Last updated:{' '}<UpdatedAt />
       </p>
     </>

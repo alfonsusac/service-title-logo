@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next"
 import { fetchAllEntries, fetchAuthors } from "./(app)/data"
-import { canonicalUrl } from "@/canonicalUrl"
+import { canonicalUrl } from "@/app-info"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 

@@ -1,3 +1,7 @@
+export const appName = "Kawaii Service Logos" as const
+
+export const appDescription = "A collection of service/brand logos with the VTuber style made by various artists." as const
+
 export const canonicalUrl =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3000" as const

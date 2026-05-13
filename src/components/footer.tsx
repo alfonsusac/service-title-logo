@@ -2,6 +2,7 @@ import { cn } from "lazy-cn"
 import type { ComponentProps } from "react"
 import { UimGithubAlt, IconParkSolidTwitter, IcBaselineDiscord } from "../app/(app)/Icons"
 import { UpdatedAt } from "./updated-at"
+import { appDescription, appName } from "@/app-info"
 
 export default function Footer(props: ComponentProps<"footer">) {
   return (
@@ -15,10 +16,10 @@ export default function Footer(props: ComponentProps<"footer">) {
 
 
         <h1 className="text-center text-2xl font-display tracking-wider text-theme-strong relative z-[1] text-pretty">
-          VTuber Service Logo
+          {appName}
         </h1>
-        <p className="text-center text-base text-pretty">
-          A collection of service logos with the VTuber style.
+        <p className="text-center text-base text-pretty max-w-100">
+          {appDescription}
         </p>
         <p className="text-pretty text-base mt-6">
           All artwork belongs to their respective artists.

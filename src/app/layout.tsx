@@ -7,7 +7,7 @@ import { themes } from "./themes"
 import { Toaster } from "react-hot-toast"
 import { AxiomWebVitals } from "next-axiom"
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
-import { canonicalUrl } from "@/canonicalUrl"
+import { canonicalUrl } from "@/app-info"
 
 const mono = Source_Code_Pro({
   subsets: [ "latin" ],
@@ -30,8 +30,22 @@ const jpdisplay = Kiwi_Maru({
 
 export const metadata: Metadata = {
   title: {
-    default: "Kawaii Logos",
-    template: "%s | Kawaii Logos"
+    default: `${ process.env.NODE_ENV === "development"
+      ? "Dev | "
+      : process.env.VERCEL_ENV === 'preview'
+        ? "Preview | "
+        : process.env.VERCEL_ENV === 'development'
+          ? "V Dev | "
+          : ""
+      }Kawaii Logos`,
+    template: `${ process.env.NODE_ENV === "development"
+      ? "Dev | "
+      : process.env.VERCEL_ENV === 'preview'
+        ? "Preview | "
+        : process.env.VERCEL_ENV === 'development'
+          ? "V Dev | "
+          : ""
+      }%s | Kawaii Logos`
   },
   description: "See all the VTuber-styled service/brand icons made by various artists.",
   metadataBase: new URL(`${ canonicalUrl }/`)
