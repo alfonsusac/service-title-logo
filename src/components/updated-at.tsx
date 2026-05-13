@@ -6,8 +6,8 @@ export async function UpdatedAt() {
   const updatedAt = await fetchUpdatedAt()
 
   return (
-    <Suspense fallback={new Date(updatedAt).toLocaleString()}>
+    <Suspense fallback={<span>{new Date(updatedAt).toLocaleString()}</span>}>
       <UpdatedAtClient updatedAt={updatedAt} />
     </Suspense>
   )
-}
+} 

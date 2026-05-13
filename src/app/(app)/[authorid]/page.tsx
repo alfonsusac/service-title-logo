@@ -42,6 +42,7 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
 
   const { socials, fundings, personalSites } = author
   const hasFundings = fundings.length > 0
+  const hasSocials = socials.length > 0 || personalSites.length > 0
 
   const entries = await fetchEntries(authorid)
   const missingEntries = getMissingEntries(entries)
@@ -53,24 +54,26 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
           {authorid}
         </h1>
       </div>
-      <div className="flex gap-2 pb-2 pt-1">
-        socials:
-        <div className="flex gap-2 items-center">
-          <AuthorSocialsIconArray
-            socials={socials}
-            personalSites={personalSites}
-          />
-          {hasFundings && <div>|</div>}
-          {hasFundings && <div className="">fundings:</div>}
-          {hasFundings && <FundingsIconList fundings={fundings} />}
+      {(hasSocials || hasFundings) &&
+        <div className="flex gap-2 pb-2 pt-1">
+          socials:
+          <div className="flex gap-2 items-center">
+            <AuthorSocialsIconArray
+              socials={socials}
+              personalSites={personalSites}
+            />
+            {hasFundings && hasSocials && <div className="opacity-25">|</div>}
+            {hasFundings && <div className="">fundings:</div>}
+            {hasFundings && <FundingsIconList fundings={fundings} />}
+          </div>
         </div>
-      </div>
+      }
       <div className=" py-1 *:my-2 leading-tight">
         <p className="text-pretty">This is a collection of images by <span>{authorid}</span></p>
         <p className="text-pretty">{`Please read the artist's license & readme before using!`}</p>
         <p className="text-pretty">{`${ entries.length } Images found`}</p>
         <p className="">
-          <span>license: </span>
+          <span>License: </span>
           <AuthorInlineLicenseArray author={author} />
         </p>
 

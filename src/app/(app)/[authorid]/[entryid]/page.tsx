@@ -38,7 +38,7 @@ export async function generateMetadata(context: PageProps<'/[authorid]/[entryid]
     }
   }
   return {
-    title: `${entry.title} by ${ author.displayName }`,
+    title: `${ entry.title } by ${ author.displayName }`,
     description: `View ${ entry.title } by ${ author.displayName }. Created at ${ entry.createdAt ? new Date(entry.createdAt).toLocaleDateString() : "Unknown Date" }, licensed under ${ entry.license.labelShort }.`,
   }
 }
@@ -115,7 +115,7 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
           {entry.images.length} file(s)
         </p>
 
-        {(entry.references.length > 0 || author.references.length > 0) && <>
+        {(entry.references.length > 0) && <>
           <h2>References</h2>
           {entry.references.length > 0 && <>
             <p>
@@ -123,12 +123,6 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
             </p>
             <ListOfReferences references={entry.references} showUrl={true} />
           </>}
-          {/* {author.references.length > 0 && <>
-            <p className="mt-2">
-              from author: {author.references.length} reference(s)
-            </p>
-            <ListOfReferences references={author.references} showUrl={true} />
-          </>} */}
         </>
         }
 
