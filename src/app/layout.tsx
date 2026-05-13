@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Comic_Relief, Jua, Source_Code_Pro } from "next/font/google"
+import { Comic_Relief, Jua, Kiwi_Maru, Source_Code_Pro } from "next/font/google"
 import "./globals.css"
 import { ViewTransitions } from "next-view-transitions"
 import { ThemeProvider } from "next-themes"
@@ -12,13 +12,19 @@ import { canonicalUrl } from "@/canonicalUrl"
 const mono = Source_Code_Pro({
   subsets: [ "latin" ],
   display: 'swap',
-  variable: '--font-mono'
+  variable: '--font-source-code-pro'
 })
 
 const display = Jua({
   weight: [ '400' ],
   subsets: [ "latin" ],
-  variable: '--font-display'
+  variable: '--font-jua'
+})
+
+const jpdisplay = Kiwi_Maru({
+  weight: [ '400' ],
+  subsets: [ "latin" ],
+  variable: '--font-kiwiw-maru'
 })
 // alternatiev: Comic Relief
 
@@ -41,7 +47,7 @@ export default function RootLayout({
       <ViewTransitions>
         <html lang="en" suppressHydrationWarning>
           <AxiomWebVitals />
-          <body className={`${ mono.variable } ${ display.variable } bg-theme-bg text-theme-text transition-all font-display`}>
+          <body className={`${ mono.variable } ${ display.variable } ${ jpdisplay.variable } bg-theme-bg text-theme-text transition-all font-display`}>
             <ThemeProvider themes={themes} attribute="class">
               <NuqsAdapter>
                 <AppToaster />

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-@theme {
-  --font-mono: 'var(--font-mono)';
-  --font-display: 'var(--font-display)';
+@theme inline  {
+  --font-mono: var(--font-source-code-pro);
+  --font-display: var(--font-jua), var(--font-kiwiw-maru);
 
   --color-theme-bg: var(--bg);
   --color-theme-card: var(--card);
