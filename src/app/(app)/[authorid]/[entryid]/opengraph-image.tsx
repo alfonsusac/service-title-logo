@@ -28,8 +28,7 @@ export default async function AuthorPageOGImage(context: {
   const entry = await fetchEntry(authorid, entryid)
 
   if (!author || !entry) {
-    return null
-    // return NotFoundOgImage({ what: "Entry" })
+    return NotFoundOgImage({ what: "Entry" })
   }
 
   const displayImage = entry.images.find(i => i.label.endsWith('png')) || entry.images.at(0)

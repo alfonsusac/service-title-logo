@@ -21,10 +21,9 @@ export default async function AuthorPageOGImage(context: {
   const authorid = decodeURIComponent(_authorid)
 
   const author = await fetchAuthor(authorid)
-  if (!author) return null
-  // if (!author) {
-  //   return NotFoundOgImage({ what: "Author" })
-  // }
+  if (!author) {
+    return NotFoundOgImage({ what: "Author" })
+  }
 
   const entries = await fetchEntries(authorid)
 

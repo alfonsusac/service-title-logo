@@ -47,49 +47,6 @@ export async function NotFoundOgImage(props: {
 
       <img src={bgSrc} width={124} style={{ position: "absolute", width: '100%', height: '100%', top: 0, left: 0 }} />
 
-
-      {/* <div style={{ position: "absolute", top: 0, right: 0, display: 'flex' }}>
-        <div style={{ position: "absolute", top: -50, right: -80, display: "flex" }}>
-          {[ 3, 12, 24, 46, 68 ].map(i => {
-            const entry = displayEntries[ i ]
-            const image = entry.images[ 0 ]
-            return (<img key={i} style={{ marginLeft: "-3rem", objectFit: "contain" }} src={image.src.url} height={150} width={300} />)
-          })}
-        </div>
-        <div style={{ position: "absolute", top: -50 + 100, right: -200, display: "flex" }}>
-          {[ 5, 21, 14, 33 ].map(i => {
-            const entry = displayEntries[ i ]
-            const image = entry.images[ 0 ]
-            return (<img key={i} style={{ marginLeft: "-3rem", objectFit: "contain" }} src={image.src.url} height={150} width={300} />)
-          })}
-        </div>
-        <div style={{ position: "absolute", top: -50 + 100 + 100, right: -180, display: "flex" }}>
-          {[ 7, 32, 16 ].map(i => {
-            const entry = displayEntries[ i ]
-            const image = entry.images[ 0 ]
-            return (<img key={i} style={{ marginLeft: "-3rem", objectFit: "contain" }} src={image.src.url} height={150} width={300} />)
-          })}
-        </div>
-        <div style={{ position: "absolute", top: -50 + 100 + 100 + 100, right: -50, display: "flex" }}>
-          {[ 4, 9 ].map(i => {
-            const entry = displayEntries[ i ]
-            const image = entry.images[ 0 ]
-            return (<img key={i} style={{ marginLeft: "-3rem", objectFit: "contain" }} src={image.src.url} height={150} width={300} />)
-          })}
-        </div>
-        <div style={{ position: "absolute", top: -50 + 100 + 100 + 100 + 100, right: -180, display: "flex" }}>
-          {[ 11, 8 ].map(i => {
-            const entry = displayEntries[ i ]
-            const image = entry.images[ 0 ]
-            return (<img key={i} style={{ marginLeft: "-3rem", objectFit: "contain" }} src={image.src.url} height={150} width={300} />)
-          })}
-        </div>
-      </div>
-
-      <div
-        style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", backgroundColor: "#292A31", opacity: 0.8 }}
-      /> */}
-
       <div style={{ display: "flex", flexDirection: "column", position: 'relative' }}>
         <div style={{ display: "flex", fontSize: 120, paddingTop: '1rem' }}>
           404
