@@ -22,7 +22,7 @@ export function EntryPageVariantDisplay(props: {
   const selectedImage = images.at(selectedImageIndex)
 
   return (
-    <div className="w-full gap-2 flex flex-col lg:flex-row">
+    <div className="w-full gap-2 flex flex-col lg:flex-row starting-bottom-fade-in-0">
 
       {/* Image Variant Display */}
       <div className="rounded-2xl bg-theme-card relative flex flex-col w-full">

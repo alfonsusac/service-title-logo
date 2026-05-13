@@ -64,8 +64,8 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
   const hasNext = !!nextEntryId
 
   return (
-    <div className="tracking-widest">
-      <div className="flex gap-2">
+    <div className="tracking-widest ">
+      <div className="flex gap-2 ">
         <Link
           href={`/${ author.id }`}
           className={button('inline-flex text-base p-2 px-4 mb-2 bg-theme-text/5')}>
