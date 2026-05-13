@@ -1,14 +1,13 @@
 import { fetchAuthor, fetchAuthors, fetchEntry } from "../../data"
-import NotFoundPage from "@/app/not-found"
 import Link from "next/link"
 import { EntryPageVariantDisplay } from "./client"
 import { button } from "../../AppButton"
 import { MingcuteArrowDownFill, MingcuteArrowLeftFill, MingcuteArrowRightUpFill, MingcuteArrowUpFill, MingcuteCheckCircleFill } from "../../Icons"
 import { EntryLicenseDetailSection } from "@/components/entry-license"
 import { ListOfReferences } from "@/components/references-ui"
-import Image from "next/image"
 import { InlineCreatedAt } from "@/components/created-at"
 import type { Metadata } from "next"
+import NotFoundPage from "@/components/not-found"
 
 export async function generateStaticParams() {
   const authors = await fetchAuthors()
@@ -18,6 +17,8 @@ export async function generateStaticParams() {
     )
   ).flat()
 }
+
+export const dynamicParams = false
 
 export async function generateMetadata(context: PageProps<'/[authorid]/[entryid]'>): Promise<Metadata> {
   const { authorid: _authorid, entryid: _entryid } = await context.params
@@ -51,11 +52,11 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
 
   const author = await fetchAuthor(authorid)
   if (!author)
-    return <NotFoundPage what="Author" />
+    return <NotFoundPage what="Author" hideFooter />
 
   const entry = await fetchEntry(authorid, entryid)
   if (!entry)
-    return <NotFoundPage what="Entry" back={{ href: `/${ authorid }`, what: "Author Page" }} />
+    return <NotFoundPage what="Entry" back={{ href: `/${ authorid }`, what: "Author Page" }} hideFooter />
 
   const currentIndex = author.entryIds.findIndex(id => id === entryid)
   const previousEntryId = author.entryIds[ currentIndex - 1 ]

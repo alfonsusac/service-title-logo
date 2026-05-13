@@ -1,19 +1,21 @@
 import { stringSorter } from "@/util/sort"
-import { fetchAuthor, fetchAuthors, fetchEntries, fetchStandardLicenses, getMissingEntries } from "../data"
-import NotFoundPage from "@/app/not-found"
+import { fetchAuthor, fetchAuthors, fetchEntries, getMissingEntries } from "../data"
 import { FundingsIconList } from "../../../components/author-fundings"
 import { AuthorSocialsIconArray } from "@/components/author-socials"
 import { AuthorInlineLicenseArray } from "@/components/author-license"
 import { EntryList } from "@/components/entry-list"
-import { ListOfReferences, ReferenceLink } from "@/components/references-ui"
+import { ListOfReferences } from "@/components/references-ui"
 import type { Metadata } from "next"
 import { Suspense } from "react"
 import { EntryListBase } from "@/components/entry-list-base"
+import NotFoundPage from "@/components/not-found"
 
 export async function generateStaticParams() {
   const authors = await fetchAuthors()
   return authors?.map(author => ({ authorid: author.id }))
 }
+
+export const dynamicParams = false
 
 export async function generateMetadata(context: PageProps<'/[authorid]'>): Promise<Metadata> {
   const { authorid: _authorid } = await context.params
@@ -38,7 +40,7 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
 
   const author = await fetchAuthor(authorid)
   if (!author)
-    return <NotFoundPage what="Author" />
+    return <NotFoundPage what="Author" hideFooter />
 
   const { socials, fundings, personalSites } = author
   const hasFundings = fundings.length > 0

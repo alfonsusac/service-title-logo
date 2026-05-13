@@ -9,9 +9,11 @@ export async function generateStaticParams() {
   return authors?.map(author => ({ authorid: author.id }))
 }
 
+export const dynamicParams = false
+
 export default async function AuthorPageOGImage(context: {
   params: Promise<{ authorid: string }>
-}) {
+}): Promise<ImageResponse> {
 
   const juaRegular = await readFile(join(process.cwd(), 'src/assets/Jua-Regular.ttf'))
   const logoData = await readFile(join(process.cwd(), 'src/app/icon.png'), 'base64')

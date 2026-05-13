@@ -13,6 +13,8 @@ export async function generateStaticParams() {
   ).flat()
 }
 
+export const dynamicParams = false
+
 export default async function AuthorPageOGImage(context: {
   params: Promise<{ authorid: string, entryid: string }>
 }) {
