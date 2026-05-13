@@ -28,12 +28,10 @@ export async function getAppLogoBase64() {
 export async function NotFoundOgImage(props: {
   what: string
 }) {
-  const data = await fetchData()
   const logoSrc = await getAppLogoBase64()
-  const displayEntries = data.data.entries
-    .filter(entry => entry.images.length > 0)
-    .filter(entry => entry.images[ 0 ].label.endsWith('png'))
-    .filter(entry => [ 'andregans', 'sawaratsuki', 'aikoyori', 'sawaratsuki_archived' ].includes(entry.authorId))
+  const bgData = await readFile(join(process.cwd(), 'src/assets/og-image-generic-background.png'), 'base64')
+  const bgSrc = `data:image/png;base64,${ bgData }`
+
   return AppOGImage((
     <div style={{
       display: "flex",
@@ -47,7 +45,10 @@ export async function NotFoundOgImage(props: {
       fontFamily: "Jua, sans-serif",
     }}>
 
-      <div style={{ position: "absolute", top: 0, right: 0, display: 'flex' }}>
+      <img src={bgSrc} width={124} style={{ position: "absolute", width: '100%', height: '100%', top: 0, left: 0 }} />
+
+
+      {/* <div style={{ position: "absolute", top: 0, right: 0, display: 'flex' }}>
         <div style={{ position: "absolute", top: -50, right: -80, display: "flex" }}>
           {[ 3, 12, 24, 46, 68 ].map(i => {
             const entry = displayEntries[ i ]
@@ -87,7 +88,7 @@ export async function NotFoundOgImage(props: {
 
       <div
         style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", backgroundColor: "#292A31", opacity: 0.8 }}
-      />
+      /> */}
 
       <div style={{ display: "flex", flexDirection: "column", position: 'relative' }}>
         <div style={{ display: "flex", fontSize: 120, paddingTop: '1rem' }}>
