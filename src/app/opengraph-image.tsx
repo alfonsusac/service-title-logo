@@ -34,35 +34,40 @@ export default async function HomeOGImage() {
         <div style={{ position: "absolute", top: -50, right: -80, display: "flex" }}>
           {[ 3, 12, 24, 46, 68 ].map(i => {
             const entry = displayEntries[ i ]
-            const image = entry.images[ 0 ]
+            const image = entry?.images.at(0)
+            if (!image) return null
             return (<img key={i} style={{ marginLeft: "-3rem", objectFit: "contain" }} src={image.src.url} height={150} width={300} />)
           })}
         </div>
         <div style={{ position: "absolute", top: -50 + 100, right: -200, display: "flex" }}>
           {[ 5, 21, 14, 33 ].map(i => {
             const entry = displayEntries[ i ]
-            const image = entry.images[ 0 ]
+            const image = entry?.images.at(0)
+            if (!image) return null
             return (<img key={i} style={{ marginLeft: "-3rem", objectFit: "contain" }} src={image.src.url} height={150} width={300} />)
           })}
         </div>
         <div style={{ position: "absolute", top: -50 + 100 + 100, right: -180, display: "flex" }}>
           {[ 7, 32, 16 ].map(i => {
             const entry = displayEntries[ i ]
-            const image = entry.images[ 0 ]
+            const image = entry?.images.at(0)
+            if (!image) return null
             return (<img key={i} style={{ marginLeft: "-3rem", objectFit: "contain" }} src={image.src.url} height={150} width={300} />)
           })}
         </div>
         <div style={{ position: "absolute", top: -50 + 100 + 100 + 100, right: -50, display: "flex" }}>
           {[ 4, 9 ].map(i => {
             const entry = displayEntries[ i ]
-            const image = entry.images[ 0 ]
+            const image = entry?.images.at(0)
+            if (!image) return null
             return (<img key={i} style={{ marginLeft: "-3rem", objectFit: "contain" }} src={image.src.url} height={150} width={300} />)
           })}
         </div>
         <div style={{ position: "absolute", top: -50 + 100 + 100 + 100 + 100, right: -180, display: "flex" }}>
           {[ 11, 8 ].map(i => {
             const entry = displayEntries[ i ]
-            const image = entry.images[ 0 ]
+            const image = entry?.images.at(0)
+            if (!image) return null
             return (<img key={i} style={{ marginLeft: "-3rem", objectFit: "contain" }} src={image.src.url} height={150} width={300} />)
           })}
         </div>
