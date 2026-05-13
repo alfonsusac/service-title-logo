@@ -120,6 +120,7 @@ export function EntryPageVariantDisplay(props: {
               >
                 <div className="relative w-full h-full">
                   <ImageWithError
+                    draggable={false}
                     key={index}
                     alt={`${ entry.title } - ${ index + 1 }`}
                     src={image.src.url}
