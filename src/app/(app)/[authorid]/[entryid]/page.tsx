@@ -2,12 +2,13 @@ import { fetchAuthor, fetchAuthors, fetchEntry } from "../../data"
 import Link from "next/link"
 import { EntryPageVariantDisplay } from "./client"
 import { button } from "../../AppButton"
-import { MingcuteArrowDownFill, MingcuteArrowLeftFill, MingcuteArrowRightUpFill, MingcuteArrowUpFill, MingcuteCheckCircleFill } from "../../Icons"
+import { MingcuteArrowDownFill, MingcuteArrowLeftFill, MingcuteArrowRightUpFill, MingcuteArrowUpFill, MingcuteCheckCircleFill, TdesignAttach } from "../../Icons"
 import { EntryLicenseDetailSection } from "@/components/entry-license"
 import { ListOfReferences } from "@/components/references-ui"
 import { InlineCreatedAt } from "@/components/created-at"
 import type { Metadata } from "next"
 import NotFoundPage from "@/components/not-found"
+import { EntryCopyURLButton } from "@/components/share"
 
 export async function generateStaticParams() {
   const authors = await fetchAuthors()
@@ -94,6 +95,9 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
       </div>
 
       <EntryPageVariantDisplay entry={entry} author={author} />
+      <div className="flex gap-2 pt-2">
+        <EntryCopyURLButton />
+      </div>
 
       <div className="pt-8
         [&_h2]:text-xl

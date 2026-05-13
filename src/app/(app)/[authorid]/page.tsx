@@ -9,6 +9,7 @@ import type { Metadata } from "next"
 import { Suspense } from "react"
 import { EntryListBase } from "@/components/entry-list-base"
 import NotFoundPage from "@/components/not-found"
+import { AuthorCopyURLButton, AuthorShareButton } from "@/components/share"
 
 export async function generateStaticParams() {
   const authors = await fetchAuthors()
@@ -57,17 +58,31 @@ export default async function AuthorPage(context: PageProps<'/[authorid]'>) {
         </h1>
       </div>
       {(hasSocials || hasFundings) &&
-        <div className="flex gap-2 pb-2 pt-1">
-          socials:
-          <div className="flex gap-2 items-center">
-            <AuthorSocialsIconArray
-              socials={socials}
-              personalSites={personalSites}
-            />
-            {hasFundings && hasSocials && <div className="opacity-25">|</div>}
-            {hasFundings && <div className="">fundings:</div>}
-            {hasFundings && <FundingsIconList fundings={fundings} />}
+        <div className="flex gap-2 pb-2 pt-1 flex-wrap">
+
+          {hasSocials && <div className="flex gap-2">
+            <div>Socials:</div>
+            <div className="flex gap-2 items-center">
+              <AuthorSocialsIconArray
+                socials={socials}
+                personalSites={personalSites}
+              />
+            </div>
+          </div>}
+
+          {hasFundings && <div className="flex gap-2">
+            {hasSocials && <div className="opacity-25">|</div>}
+            <div>Fundings:</div>
+            <FundingsIconList fundings={fundings} />
+          </div>}
+
+          <div className="flex gap-2">
+            {(hasFundings || hasSocials) && <div className="opacity-25">|</div>}
+            <AuthorShareButton />
+            <div className="opacity-25">|</div>
+            <AuthorCopyURLButton />
           </div>
+
         </div>
       }
       <div className=" py-1 *:my-2 leading-tight">
