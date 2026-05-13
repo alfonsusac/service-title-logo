@@ -19,6 +19,16 @@ export function GET() {
     "     {",
     "       token: string      // must match process.env.REVALIDATE_KEY",
     "     }",
+    "",
+    "",
+    "Note to future self:",
+    "",
+    " - How to test",
+    "     Go to https://github.com/alfonsusac/kawaii-logos-data > Actions > 'Update Data' (on sidebar)",
+    "     Click 'Run workflow' and select main-2 branch. (Making commits to main-2 branch also works)",
+    "     Go to https://vercel.com/alfonsusacs-projects/service-title-logo > Logs",
+    "     Search for '/revalidate' and see if request is 200",
+    "     Go to https://kawaiilogos.alfon.dev/ and homepage's Last Updated should be 'Just Now'",
   ].join('\n'), { status: 200 })
 }
 
