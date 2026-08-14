@@ -44,7 +44,7 @@ export async function LicenseInlineLink(props: {
   const standardLicenses = await fetchStandardLicenses()
 
   if (license.type === "unknown")
-    return <span>Unknown</span>
+    return <span>Unknown (All Rights Reserved)</span>
 
   if (license.type === "custom")
     return (

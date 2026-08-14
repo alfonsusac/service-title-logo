@@ -42,6 +42,8 @@ export async function POST(request: NextRequest) {
       return new Response('Unauthorized', { status: 401 })
   }
   revalidatePath('/')
+  revalidatePath('/', "layout")
+  revalidatePath('/', "page")
   revalidateTag('all', "max")
   return Response.json({
     message: 'Revalidated all routes and tags.'
