@@ -34,7 +34,9 @@ export default async function AuthorPageOGImage(context: {
     return NotFoundOgImage({ what: "Entry" })
   }
 
-  const displayImage = entry.images.find(i => i.label.endsWith('png')) || entry.images.at(0)
+  const supportedFormat = [ 'png', 'webp', 'jpg', 'jpeg' ]
+  const displayImage = entry.images
+    .find(i => supportedFormat.some(f => i.label.endsWith(f)))
 
   try {
     return new ImageResponse((
