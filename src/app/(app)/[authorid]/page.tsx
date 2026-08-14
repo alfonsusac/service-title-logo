@@ -16,7 +16,7 @@ export async function generateStaticParams() {
   return authors?.map(author => ({ authorid: author.id }))
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 export async function generateMetadata(context: PageProps<'/[authorid]'>): Promise<Metadata> {
   const { authorid: _authorid } = await context.params
