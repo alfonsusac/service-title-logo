@@ -49,7 +49,7 @@ export default async function AuthorPageOGImage(context: {
     .filter(Boolean)
     .map(e => e!)
   
-  console.log(displayImages)
+  // console.log(displayImages)
   
   try {
     return new ImageResponse((
