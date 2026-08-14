@@ -1,6 +1,6 @@
 import type { KawaiiLogosData } from "@/app/(app)/data.types"
 import { InlineLink } from "./ui-icon-button"
-import { IconParkSolidTwitter, SimpleIconsBluesky, TokenSkeb, type IconElement, MingcuteArrowRightUpFill, UimGithubAlt, SolarFigmaBold, MaterialSymbolsGlobe, MaterialSymbolsShoppingCartRounded } from "@/app/(app)/Icons"
+import { IconParkSolidTwitter, SimpleIconsBluesky, TokenSkeb, type IconElement, MingcuteArrowRightUpFill, UimGithubAlt, SolarFigmaBold, MaterialSymbolsGlobe, MaterialSymbolsShoppingCartRounded, MaterialSymbolsPerson } from "@/app/(app)/Icons"
 import { Link } from "next-view-transitions"
 import type { SVGProps } from "react"
 
@@ -37,6 +37,7 @@ export const referenceIconMap: Record<KawaiiLogosData.Reference[ 'link' ][ 'type
   "figma-file": SolarFigmaBold,
   "official-website-usage": MaterialSymbolsGlobe,
   "shop-page": MaterialSymbolsShoppingCartRounded,
+  "contributor": MaterialSymbolsPerson,
 }
 
 export const referenceLabelMap: Record<KawaiiLogosData.Reference[ 'link' ][ 'type' ], string> = {
@@ -56,6 +57,7 @@ export const referenceLabelMap: Record<KawaiiLogosData.Reference[ 'link' ][ 'typ
   "skeb-creator-guideline-page": "Skeb Creator Guideline Page",
   "figma-file": "Figma File",
   "official-website-usage": "Official Website Usage Page",
+  "contributor": "Contributor",
   'shop-page': 'Shop Page',
 }
 

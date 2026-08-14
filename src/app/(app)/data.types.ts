@@ -83,9 +83,12 @@ export namespace KawaiiLogosData {
     | "skeb-creator-page"
     | "skeb-creator-guideline-page"
     | "figma-file"
+    | "unknown"
+
+    // "prefixed, like official: or shop:
     | "official-website-usage"
     | "shop-page"
-    | "unknown"
+    | "contributor"
     url: string
   }
   export namespace Link {
@@ -154,13 +157,3 @@ export namespace KawaiiLogosData {
     authorid: string
   }[]
 }
-
-
-
-
-
-
-
-
-
-
