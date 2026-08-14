@@ -60,8 +60,11 @@ export default function RootLayout({
     <>
       <ViewTransitions>
         <html lang="en" suppressHydrationWarning>
+          <head>
+            <meta name="google-site-verification" content="n61ksQeO-ICaE-O5ho8LFGjF6OdPRACzWbHNb3kL04A" />
+          </head>
           <AxiomWebVitals />
-          <body className={`${ mono.variable } ${ display.variable } ${ jpdisplay.variable } bg-theme-bg text-theme-text transition-all font-display`}>
+          <body className={`${ mono.variable } ${ display.variable } ${ jpdisplay.variable } bg-theme-bg text-theme-text transition-all font-display max-w-screen overflow-x-hidden`}>
             <ThemeProvider themes={themes} attribute="class">
               <NuqsAdapter>
                 <AppToaster />

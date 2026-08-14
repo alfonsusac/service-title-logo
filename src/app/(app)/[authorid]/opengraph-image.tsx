@@ -1,7 +1,7 @@
 import { readFile } from "fs/promises"
 import { join } from "path"
 import { fetchAuthor, fetchAuthors, fetchEntries } from "../data"
-import { NotFoundOgImage } from "@/components/og-image"
+import { NotFoundOgImage, supportedFormat } from "@/components/og-image"
 import ImageResponse from "takumi-js/response"
 
 export async function generateStaticParams() {
@@ -28,19 +28,6 @@ export default async function AuthorPageOGImage(context: {
   }
 
   const entries = await fetchEntries(authorid)
-
-  const unsupportedFormat = [ 'svg', 'avif' ]
-  const supportedFormat = [ 'png', 'webp', 'jpg', 'jpeg' ]
-
-  // const displayImages = entries
-  //   .filter(entry => entry.images.length > 0)
-  //   .filter(entry => entry.images.some(i => i.label.endsWith('png')) || entry.images[ 0 ])
-  //   .map(e => {
-  //     return e.images
-  //     return e.images.filter(i => unsupportedFormat.some(f => i.label.endsWith(f)))[ 0 ]
-  //   })
-  //   .filter(i => !i.src.url.endsWith("svg") || !i.src.url.endsWith('avif'))
-  //   .filter(i => i)
 
   const displayImages = entries
     .filter(e => e.images.length > 0) // skip no-image entry

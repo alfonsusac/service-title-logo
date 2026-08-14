@@ -2,10 +2,6 @@
 
 import {
   DropdownMenu,
-  // DropdownMenuTrigger,
-  // DropdownMenuPortal,
-  // DropdownMenuContent,
-  // DropdownMenuItem, DropdownMenuArrow
 } from "radix-ui"
 import { useTheme } from "next-themes"
 import { themes } from "../themes"

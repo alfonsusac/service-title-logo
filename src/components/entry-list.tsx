@@ -3,8 +3,6 @@
 import type { KawaiiLogosData } from "@/app/(app)/data.types"
 import { stringSorter } from "@/util/sort"
 import { getAuthor } from "@/app/(app)/data"
-import { EntryCard } from "./entry-card"
-import { cn } from "lazy-cn"
 import { useQueryState } from "nuqs"
 import { EntryListBase } from "./entry-list-base"
 

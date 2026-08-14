@@ -4,6 +4,8 @@ import { join } from "path"
 import type { JSXElementConstructor, ReactElement } from "react"
 import ImageResponse from "takumi-js/response"
 
+export const supportedFormat = [ 'png', 'webp', 'jpg', 'jpeg', 'svg' ] // svg and webp now supported. thanks takumi!
+
 export async function AppOGImage(
   element: ReactElement<unknown, string | JSXElementConstructor<any>>
 ) {

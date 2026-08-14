@@ -18,13 +18,11 @@ Or consider joining our discord
 
 ## Todo
 
-- [ ] Localization
+- [ ] Add Sort-by Dropdown
 - [v] Better OG that showcases each of the artist’s logo
 - [ ] Timeline view
 - [v] Copy Link Button
 - [v] Add Axiom for Better Logging
-- [ ] Setup Google Console
-- [ ] Make more stickers
 
 ## Related Projects
 

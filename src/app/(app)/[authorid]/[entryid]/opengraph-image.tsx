@@ -1,7 +1,7 @@
 import { readFile } from "fs/promises"
 import { join } from "path"
 import { fetchAuthor, fetchAuthors, fetchEntry } from "../../data"
-import { NotFoundOgImage } from "@/components/og-image"
+import { NotFoundOgImage, supportedFormat } from "@/components/og-image"
 import ImageResponse from "takumi-js/response"
 // import { ImageResponse } from "next/og"
 
@@ -34,7 +34,6 @@ export default async function AuthorPageOGImage(context: {
     return NotFoundOgImage({ what: "Entry" })
   }
 
-  const supportedFormat = [ 'png', 'webp', 'jpg', 'jpeg' ]
   const displayImage = entry.images
     .find(i => supportedFormat.some(f => i.label.endsWith(f)))
 
@@ -54,21 +53,21 @@ export default async function AuthorPageOGImage(context: {
         <div style={{ display: "flex", flexDirection: "column", position: 'relative', alignItems: 'center' }}>
           {
             displayImage ?
-              displayImage.src.url.endsWith('svg') ?
-                <div style={{
-                  width: 1000,
-                  height: 400,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#DCDDF555',
-                  fontSize: 48,
-                  padding: '1rem',
-                  textAlign: 'center',
-                }}>
-                  Unable to render SVG Image.
-                </div>
-                :
+              // displayImage.src.url.endsWith('svg') ?
+              //   <div style={{
+              //     width: 1000,
+              //     height: 400,
+              //     display: 'flex',
+              //     alignItems: 'center',
+              //     justifyContent: 'center',
+              //     color: '#DCDDF555',
+              //     fontSize: 48,
+              //     padding: '1rem',
+              //     textAlign: 'center',
+              //   }}>
+              //     Unable to render SVG Image.
+              //   </div>
+              //   :
                 <img
                   src={displayImage.src.url}
                   width={1000}

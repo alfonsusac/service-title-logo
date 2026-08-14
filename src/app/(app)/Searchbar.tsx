@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation"
 
 
 export default function SearchBar(props: { className?: string; style?: any }) {
-  const [search, setSearch] = useQueryState("search")
+  const [ search, setSearch ] = useQueryState("search")
 
   const pathname = usePathname()
   if (pathname === "/about") return
@@ -15,9 +15,7 @@ export default function SearchBar(props: { className?: string; style?: any }) {
 
   return (
     <div
-      style={{
-        // viewTransitionName: "searchbar",
-      }}
+      style={{}}
       className={cn(
         "transition-all p-1 px-3 h-12 rounded-full bg-theme-card relative z-10 flex",
         props.className,
