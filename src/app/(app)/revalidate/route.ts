@@ -44,7 +44,14 @@ export async function POST(request: NextRequest) {
   revalidatePath('/')
   revalidatePath('/', "layout")
   revalidatePath('/', "page")
+  revalidatePath('/(main)/[authorid]', 'layout')
+  revalidatePath('/(main)/[authorid]', 'page')
+  revalidatePath('/(main)/[authorid]')
+  revalidatePath('/(main)/[authorid]/[entryid]', 'layout')
+  revalidatePath('/(main)/[authorid]/[entryid]', 'page')
+  revalidatePath('/(main)/[authorid]/[entryid]')
   revalidateTag('all', "max")
+  updateTag('all')
   return Response.json({
     message: 'Revalidated all routes and tags.'
   })
