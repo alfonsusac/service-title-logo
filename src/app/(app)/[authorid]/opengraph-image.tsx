@@ -2,7 +2,6 @@ import { readFile } from "fs/promises"
 import { join } from "path"
 import { fetchAuthor, fetchAuthors, fetchEntries } from "../data"
 import { NotFoundOgImage } from "@/components/og-image"
-// import { ImageResponse } from "next/og"
 import ImageResponse from "takumi-js/response"
 
 export async function generateStaticParams() {
@@ -50,20 +49,17 @@ export default async function AuthorPageOGImage(context: {
     .filter(Boolean)
     .map(e => e!)
   
-  // console.log(displayImages)
-
+  console.log(displayImages)
+  
   try {
     return new ImageResponse((
       <div style={{
         display: "flex",
         flexDirection: "column",
         padding: "6rem",
-        // alignItems: "flex-end",
         justifyContent: "flex-end",
         width: "1200px",
         height: "630px",
-        // width: "100%",
-        // height: "100%",
         backgroundColor: "#292A31",
         color: "#DCDDF5",
         fontFamily: "Jua, sans-serif",
@@ -120,10 +116,6 @@ export default async function AuthorPageOGImage(context: {
             {entries.filter(e => e.images.length).length} entries
           </div>
         </div>
-
-
-
-
       </div>
     ), {
       fonts: [
@@ -135,12 +127,12 @@ export default async function AuthorPageOGImage(context: {
       ]
     })
   } catch (error) {
+    console.log(`Error generating og image for [${ authorid }]`)
     return new ImageResponse((
       <div style={{
         display: "flex",
         flexDirection: "column",
         padding: "6rem",
-        // alignItems: "flex-end",
         justifyContent: "flex-end",
         width: "100%",
         height: "100%",
