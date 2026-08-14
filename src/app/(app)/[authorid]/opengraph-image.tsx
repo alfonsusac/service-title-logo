@@ -1,8 +1,9 @@
 import { readFile } from "fs/promises"
-import { ImageResponse } from "next/og"
 import { join } from "path"
-import { fetchAuthor, fetchAuthors, fetchData, fetchEntries } from "../data"
+import { fetchAuthor, fetchAuthors, fetchEntries } from "../data"
 import { NotFoundOgImage } from "@/components/og-image"
+// import { ImageResponse } from "next/og"
+import ImageResponse from "takumi-js/response"
 
 export async function generateStaticParams() {
   const authors = await fetchAuthors()
@@ -29,13 +30,28 @@ export default async function AuthorPageOGImage(context: {
 
   const entries = await fetchEntries(authorid)
 
+  const unsupportedFormat = [ 'svg', 'avif' ]
+  const supportedFormat = [ 'png', 'webp', 'jpg', 'jpeg' ]
+
+  // const displayImages = entries
+  //   .filter(entry => entry.images.length > 0)
+  //   .filter(entry => entry.images.some(i => i.label.endsWith('png')) || entry.images[ 0 ])
+  //   .map(e => {
+  //     return e.images
+  //     return e.images.filter(i => unsupportedFormat.some(f => i.label.endsWith(f)))[ 0 ]
+  //   })
+  //   .filter(i => !i.src.url.endsWith("svg") || !i.src.url.endsWith('avif'))
+  //   .filter(i => i)
+
   const displayImages = entries
-    .filter(entry => entry.images.length > 0)
-    .filter(entry => entry.images.some(i => i.label.endsWith('png')) || entry.images[ 0 ])
-    .map(e => e.images.find(i => i.label.endsWith('png')) || e.images[ 0 ])
-    .filter(i => !i.src.url.endsWith("svg"))
-    .filter(i => i)
+    .filter(e => e.images.length > 0) // skip no-image entry
+    .filter(e => e.images.some(i => supportedFormat.some(f => i.label.endsWith(f)))) // skip entry with no supported format
+    .map(e => e.images.find(i => supportedFormat.some(f => i.label.endsWith(f)))) // find the first image with supported format
+    .filter(Boolean)
+    .map(e => e!)
   
+  // console.log(displayImages)
+
   try {
     return new ImageResponse((
       <div style={{
@@ -44,8 +60,10 @@ export default async function AuthorPageOGImage(context: {
         padding: "6rem",
         // alignItems: "flex-end",
         justifyContent: "flex-end",
-        width: "100%",
-        height: "100%",
+        width: "1200px",
+        height: "630px",
+        // width: "100%",
+        // height: "100%",
         backgroundColor: "#292A31",
         color: "#DCDDF5",
         fontFamily: "Jua, sans-serif",
@@ -95,10 +113,10 @@ export default async function AuthorPageOGImage(context: {
               Kawaii Logos
             </div>
           </div>
-          <div style={{ fontSize: author.displayName.length < 14 ? 120 : 86, paddingTop: '1rem' }}>
+          <div style={{ fontSize: author.displayName.length < 14 ? 120 : 86, paddingTop: '0.25rem' }}>
             {author.displayName}
           </div>
-          <div style={{ fontSize: 36, color: '#8F90A488', paddingTop: '1.5rem', display: 'flex', rotate: '10deg' }}>
+          <div style={{ fontSize: 36, color: '#8F90A488', paddingTop: '0rem', display: 'flex' }}>
             {entries.filter(e => e.images.length).length} entries
           </div>
         </div>
@@ -156,7 +174,7 @@ export default async function AuthorPageOGImage(context: {
           data: juaRegular,
           weight: 400,
         }
-      ]
+      ],
     })
   }
 }

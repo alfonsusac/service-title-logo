@@ -2,7 +2,8 @@ import { readFile } from "fs/promises"
 import { join } from "path"
 import { fetchAuthor, fetchAuthors, fetchEntry } from "../../data"
 import { NotFoundOgImage } from "@/components/og-image"
-import { ImageResponse } from "next/og"
+import ImageResponse from "takumi-js/response"
+// import { ImageResponse } from "next/og"
 
 export async function generateStaticParams() {
   const authors = await fetchAuthors()

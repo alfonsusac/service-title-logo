@@ -24,7 +24,8 @@
     "react-hot-toast": "^2.6.0",
     "s-ago": "^2.2.0",
     "tailwindcss": "^4.2.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "takumi-js": "^2.9.0"
   },
   "devDependencies": {
     "@types/node": "^20.12.12",

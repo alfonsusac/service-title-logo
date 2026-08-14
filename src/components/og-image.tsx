@@ -1,8 +1,8 @@
 import { fetchData } from "@/app/(app)/data"
 import { readFile } from "fs/promises"
-import { ImageResponse } from "next/og"
 import { join } from "path"
 import type { JSXElementConstructor, ReactElement } from "react"
+import ImageResponse from "takumi-js/response"
 
 export async function AppOGImage(
   element: ReactElement<unknown, string | JSXElementConstructor<any>>
