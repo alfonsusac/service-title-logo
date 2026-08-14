@@ -49,7 +49,12 @@ export function EntryPageVariantDisplay(props: {
             <div className="text-theme-strong">{selectedImage?.label}</div>
             <div>by {author.displayName}</div>
             <div>
-              {entry.license.type === "standard" ? entry.license.id : entry.license.label}
+              {entry.license.type === "standard"
+                ? entry.license.id
+                : entry.license.type === "unknown"
+                  ? "Unknown License (All Rights Reserved)"
+                  : entry.license.label
+              }
             </div>
             <ListOfReferences references={selectedImage?.references ?? []} />
           </div>

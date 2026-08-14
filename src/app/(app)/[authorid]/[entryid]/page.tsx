@@ -94,7 +94,9 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
         </Link>
       </div>
 
+      {/* The Big Card */}
       <EntryPageVariantDisplay entry={entry} author={author} />
+
       <div className="flex gap-2 pt-2">
         <EntryCopyURLButton />
       </div>
@@ -134,7 +136,11 @@ export default async function AuthorEntryPage(context: PageProps<'/[authorid]/[e
 
         <h2>License</h2>
         <p className="text-2xl text-theme-strong">
-          {entry.license.labelShort} {entry.license.type === "standard" && <MingcuteCheckCircleFill className="inline align-[-0.16rem]" />}
+          {
+            entry.license.type === "unknown"
+              ? "Unknown (All rights reserved)"
+              : entry.license.labelShort
+          } {entry.license.type === "standard" && <MingcuteCheckCircleFill className="inline align-[-0.16rem]" />}
         </p>
         {entry.license.type === "unknown" ? <></> :
           entry.license.type === "custom" ? <>
