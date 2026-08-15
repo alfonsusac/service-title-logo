@@ -32,7 +32,9 @@ export default async function AuthorPageOGImage(context: {
   const displayImages = entries
     .filter(e => e.images.length > 0) // skip no-image entry
     .filter(e => e.images.some(i => supportedFormat.some(f => i.label.endsWith(f)))) // skip entry with no supported format
-    .map(e => e.images.find(i => supportedFormat.some(f => i.label.endsWith(f)))) // find the first image with supported format
+    .map(e =>
+      e.images.find(i => i.label.endsWith('png')) // prioritises .png
+      || e.images.find(i => supportedFormat.some(f => i.label.endsWith(f)))) // find the first image with supported format
     .filter(Boolean)
     .map(e => e!)
   

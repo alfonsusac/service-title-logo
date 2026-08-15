@@ -20,8 +20,8 @@ export default async function AuthorPageOGImage(context: {
   params: Promise<{ authorid: string, entryid: string }>
 }) {
   const juaRegular = await readFile(join(process.cwd(), 'src/assets/Jua-Regular.ttf'))
-  const logoData = await readFile(join(process.cwd(), 'src/app/icon.png'), 'base64')
-  const logoSrc = `data:image/png;base64,${ logoData }`
+  // const logoData = await readFile(join(process.cwd(), 'src/app/icon.png'), 'base64')
+  // const logoSrc = `data:image/png;base64,${ logoData }`
 
   const { authorid: _authorid, entryid: _entryid } = await context.params
   const authorid = decodeURIComponent(_authorid)
@@ -35,7 +35,9 @@ export default async function AuthorPageOGImage(context: {
   }
 
   const displayImage = entry.images
-    .find(i => supportedFormat.some(f => i.label.endsWith(f)))
+    .find(i =>
+      i.label.endsWith('png') // prioritises .png
+      || supportedFormat.some(f => i.label.endsWith(f)))
 
   try {
     return new ImageResponse((
