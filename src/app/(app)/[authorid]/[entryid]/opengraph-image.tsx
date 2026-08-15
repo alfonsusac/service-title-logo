@@ -35,9 +35,10 @@ export default async function AuthorPageOGImage(context: {
   }
 
   const displayImage = entry.images
-    .find(i =>
-      i.label.endsWith('png') // prioritises .png
-      || supportedFormat.some(f => i.label.endsWith(f)))
+    .find(i => i.label.endsWith('png')) // prioritises png
+    ?? entry.images.find(i => supportedFormat.some(f => i.label.endsWith(f)))
+
+
 
   try {
     return new ImageResponse((
@@ -70,14 +71,14 @@ export default async function AuthorPageOGImage(context: {
               //     Unable to render SVG Image.
               //   </div>
               //   :
-                <img
-                  src={displayImage.src.url}
-                  width={1000}
-                  height={400}
-                  style={{
-                    objectFit: 'contain',
-                  }}
-                /> :
+              <img
+                src={displayImage.src.url}
+                width={1000}
+                height={400}
+                style={{
+                  objectFit: 'contain',
+                }}
+              /> :
               <div style={{
                 width: 1000,
                 height: 400,
