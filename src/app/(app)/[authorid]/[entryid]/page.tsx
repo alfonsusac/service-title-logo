@@ -19,7 +19,7 @@ export async function generateStaticParams() {
   ).flat()
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 export async function generateMetadata(context: PageProps<'/[authorid]/[entryid]'>): Promise<Metadata> {
   const { authorid: _authorid, entryid: _entryid } = await context.params
