@@ -8,6 +8,7 @@ import { Toaster } from "react-hot-toast"
 import { AxiomWebVitals } from "next-axiom"
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import { canonicalUrl } from "@/app-info"
+import { Analytics } from '@vercel/analytics/next';
 
 const mono = Source_Code_Pro({
   subsets: [ "latin" ],
@@ -69,6 +70,7 @@ export default function RootLayout({
               <NuqsAdapter>
                 <AppToaster />
                 {children}
+                <Analytics />
               </NuqsAdapter>
             </ThemeProvider>
           </body>

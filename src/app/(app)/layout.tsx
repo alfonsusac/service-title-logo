@@ -9,6 +9,7 @@ import { refresh, revalidatePath, updateTag } from "next/cache"
 import { button } from "./AppButton"
 import { Breadcrumb } from "@/components/breadcrumb"
 
+
 export default async function GlobalLayout(props: any) {
   const authors = await fetchAuthors()
 

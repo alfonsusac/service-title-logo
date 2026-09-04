@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.2.4",
+    "@vercel/analytics": "^2.0.1",
     "install": "^0.13.0",
     "lazy-cn": "^1.0.0",
     "next": "16.2.4",
