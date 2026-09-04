@@ -3,13 +3,14 @@ import { join } from "path"
 import { fetchAuthor, fetchAuthors, fetchEntries } from "../data"
 import { NotFoundOgImage, supportedFormat } from "@/components/og-image"
 import ImageResponse from "takumi-js/response"
+import { notFound } from "next/navigation"
 
 export async function generateStaticParams() {
   const authors = await fetchAuthors()
   return authors?.map(author => ({ authorid: author.id }))
 }
 
-export const dynamicParams = false
+// export const dynamicParams = false
 
 export default async function AuthorPageOGImage(context: {
   params: Promise<{ authorid: string }>
@@ -24,7 +25,9 @@ export default async function AuthorPageOGImage(context: {
 
   const author = await fetchAuthor(authorid)
   if (!author) {
-    return NotFoundOgImage({ what: "Author" })
+    return notFound()
+
+    // return NotFoundOgImage({ what: "Author" })
   }
 
   const entries = await fetchEntries(authorid)
@@ -37,7 +40,7 @@ export default async function AuthorPageOGImage(context: {
       || e.images.find(i => supportedFormat.some(f => i.label.endsWith(f)))) // find the first image with supported format
     .filter(Boolean)
     .map(e => e!)
-  
+
   try {
     return new ImageResponse((
       <div style={{

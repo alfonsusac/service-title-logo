@@ -3,6 +3,7 @@ import { join } from "path"
 import { fetchAuthor, fetchAuthors, fetchEntry } from "../../data"
 import { NotFoundOgImage, supportedFormat } from "@/components/og-image"
 import ImageResponse from "takumi-js/response"
+import { notFound } from "next/navigation"
 // import { ImageResponse } from "next/og"
 
 export async function generateStaticParams() {
@@ -14,7 +15,7 @@ export async function generateStaticParams() {
   ).flat()
 }
 
-export const dynamicParams = false
+// export const dynamicParams = false
 
 export default async function AuthorPageOGImage(context: {
   params: Promise<{ authorid: string, entryid: string }>
@@ -31,7 +32,8 @@ export default async function AuthorPageOGImage(context: {
   const entry = await fetchEntry(authorid, entryid)
 
   if (!author || !entry) {
-    return NotFoundOgImage({ what: "Entry" })
+    return notFound()
+    // return NotFoundOgImage({ what: "Entry" })
   }
 
   const displayImage = entry.images
