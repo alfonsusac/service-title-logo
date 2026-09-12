@@ -2,7 +2,7 @@ import type { KawaiiLogosData } from "./data.types"
 
 export async function fetchData() {
   const response = await fetch(
-    'https://raw.githubusercontent.com/alfonsusac/kawaii-logos-data/refs/heads/main-2-data/data.json',
+    'https://raw.githubusercontent.com/alfonsusac/kawaii-logos-data/refs/heads/data/data.json',
     {
       next: {
         revalidate: process.env.NODE_ENV === "development"

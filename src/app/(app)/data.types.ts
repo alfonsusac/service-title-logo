@@ -1,5 +1,5 @@
 // From 
-// https://github.com/alfonsusac/kawaii-logos-data/blob/main-2-data/types.ts
+// https://github.com/alfonsusac/kawaii-logos-data/blob/data/types.ts
 
 export type KawaiiLogosData = {
   authorCount: number,
